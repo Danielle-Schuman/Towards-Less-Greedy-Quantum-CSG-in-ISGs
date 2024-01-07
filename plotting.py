@@ -24,7 +24,7 @@ def get_barchart_win_lose_draw(algo1_name, algo2_name, results_dict, seed, note=
     fig, ax = plt.subplots()
     bottom = np.zeros(len(results_dict))
 
-    species = tuple(["n=" + str(i) for i in results_dict])
+    species = tuple(["num_agents=" + str(i) for i in results_dict])
     for boolean, weight_count in win_distribution.items():
         p = ax.bar(species, weight_count, width, label=boolean, bottom=bottom)
         bottom += weight_count

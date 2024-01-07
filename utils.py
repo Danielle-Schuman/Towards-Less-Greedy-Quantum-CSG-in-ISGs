@@ -1,11 +1,12 @@
+import copy
 from dwave_qbsolv import QBSolv
 import numpy as np
 
 
 
 # this function solves a given QUBO-Matrix Q with Qbsolv
-def solve_with_qbsolv(Q, n, seed):
-    response = QBSolv().sample_qubo(Q, num_repeats=100, timeout=5, seed=seed)
+def solve_with_qbsolv(Q, n, seed, timeout=10):
+    response = QBSolv().sample_qubo(Q, num_repeats=1000, timeout=timeout, seed=seed)
     solution = [response.samples()[0][i] for i in range(n)]
     return solution
 
@@ -22,8 +23,16 @@ def getValue(Q, solution):
     return value
 
 
+def transform(naeimeh_graph):
+    edges = {}
+    for key in naeimeh_graph.keys():
+        i, j = key.split(",")
+        i, j = int(i)-1, int(j)-1
+        edges[(i,j)] = naeimeh_graph[key]
+    return edges
 
-# this function prints the first n row/columns of a QUBO-Matrix Q
+
+# this function prints the first num_agents row/columns of a QUBO-Matrix Q
 def printQUBO(Q, n):
     for row in range(n):
         for column in range(n):
@@ -41,7 +50,7 @@ def printQUBO(Q, n):
 
 
 
-def generate_problem(n, mean=0.6):
+def generate_problem(n, mean=0.5):
     edges = {}
     for i in range(n):
         for j in range(n):
@@ -66,3 +75,37 @@ def value(c, edges):
             if i < j:
                 v += edges[(i,j)]
     return v
+
+
+def baseline(n, edges):
+
+    best_coalitions = None
+    best_value = 0
+
+    for _ in range(10):
+        agent_list = np.array(range(n))
+        np.random.shuffle(agent_list)
+        coalitions = sub_baseline(edges, agent_list)
+        v = np.sum([value(c,edges) for c in coalitions])
+        if v > best_value:
+            best_coalitions = coalitions
+            best_value = v
+
+    return best_coalitions
+
+
+def sub_baseline(edges, agent_list):
+    coalitions = [[agent_list[0]]]
+    for i in agent_list[1:]:
+        improvements = []
+        for c in coalitions:
+            old_v = value(c, edges)
+            new_c = copy.deepcopy(c)
+            new_c.append(i)
+            new_v = value(new_c, edges)
+            improvements.append(new_v - old_v)
+        if np.max(improvements) > 0:
+            coalitions[np.argmax(improvements)].append(i)
+        else:
+            coalitions.append([i])
+    return coalitions

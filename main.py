@@ -1,5 +1,7 @@
 import numpy as np
 import random
+import pickle
+import time
 
 import utils
 import plotting
@@ -7,6 +9,11 @@ from algorithm import Algorithm
 from GCSQ import GCSQ
 from jonas import Jonas
 from danielle import Danielle
+from min_k_cut_non_iterative import min_k_cut_non_iterative
+from ours_iterative_exactly import ours_iterative_exactly
+from ours_iterative_at_most import ours_iterative_at_most
+from min_k_cut_exactly import min_k_cut_exactly
+from min_k_cut_at_most import min_k_cut_at_most
 
 # Setting the seed
 seed = random.randint(0, 2**32 - 1)
@@ -14,8 +21,14 @@ random.seed(seed)
 np.random.seed(seed)
 print(f"Seed: {seed}")
 
+# loading data
+#data = pickle.load(open('data_new_20samples_4_28.pkl', 'rb'))
+
 tests = [10, 15, 20]
-algorithm_list = [GCSQ(seed=seed), Jonas(seed=seed, num_coalitions=6), Danielle(seed=seed)]
+# TODO: Find sensible k's to try, possibly everything between 2 and n
+k = 4
+algorithm_list = [GCSQ(seed=seed), Jonas(seed=seed, num_coalitions=6), Danielle(seed=seed), min_k_cut_non_iterative(seed=seed),
+                  ours_iterative_exactly(seed=seed, k=k), ours_iterative_at_most(seed=seed, k=k), min_k_cut_exactly(seed=seed, k=k), min_k_cut_at_most(seed=seed, k=k)]
 results_dict = {}
 
 for n in tests:

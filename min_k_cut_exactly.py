@@ -5,8 +5,8 @@ from algorithm import Algorithm
 
 
 class min_k_cut_exactly(Algorithm):
-    def __init__(self, seed, k, timeout=10):
-        super().__init__(seed, timeout)
+    def __init__(self, seed, num_graph_sizes, k, timeout=10):
+        super().__init__(seed=seed, num_graph_sizes=num_graph_sizes, timeout=timeout)
         self.name = "min_k_cut_exactly"
         self.k = k
 

@@ -4,8 +4,8 @@ from algorithm import Algorithm
 
 
 class GCSQ(Algorithm):
-    def __init__(self, seed, timeout=10):
-        super().__init__(seed, timeout)
+    def __init__(self, seed, num_graph_sizes, timeout=10):
+        super().__init__(seed=seed, num_graph_sizes=num_graph_sizes, timeout=timeout)
         self.name = "GCS-Q"
 
     def _split(self, c, edges):

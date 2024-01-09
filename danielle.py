@@ -5,8 +5,8 @@ from algorithm import Algorithm
 
 
 class Danielle(Algorithm):
-    def __init__(self, seed, num_coalitions=None, timeout=10):
-        super().__init__(seed, num_coalitions, timeout)
+    def __init__(self, seed, num_graph_sizes, num_coalitions=None, timeout=10):
+        super().__init__(seed=seed, num_graph_sizes=num_graph_sizes, num_coalitions=num_coalitions, timeout=timeout)
         self.name = "Danielle"
 
     def solve(self, num_agents, edges):

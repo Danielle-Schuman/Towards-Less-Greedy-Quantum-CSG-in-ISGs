@@ -4,10 +4,10 @@ import numpy as np
 from algorithm import Algorithm
 
 
-class min_k_cut_non_iterative(Algorithm):
+class n_split_GCSQ(Algorithm):
     def __init__(self, seed, num_graph_sizes, num_coalitions=None, timeout=10):
         super().__init__(seed=seed, num_graph_sizes=num_graph_sizes, num_coalitions=num_coalitions, timeout=timeout)
-        self.name = "min_k_cut_non_iterative"
+        self.name = "n_split_GCSQ"
 
     def solve(self, num_agents, edges):
         if not self.num_coalitions:  # self.num_coalitions is still None

@@ -5,11 +5,13 @@ from algorithm import Algorithm
 
 
 class Jonas(Algorithm):
-    def __init__(self, seed,  num_graph_sizes, num_coalitions=3, timeout=10):
+    def __init__(self, seed,  num_graph_sizes, num_coalitions=None, timeout=10):
         super().__init__(seed=seed,  num_graph_sizes=num_graph_sizes, num_coalitions=num_coalitions, timeout=timeout)
         self.name = "$Jonas_2$"
 
     def solve(self, num_agents, edges):
+        if not self.num_coalitions:  # self.num_coalitions is still None
+            self.num_coalitions = num_agents // 2
         # create the QUBO
         Q = {}
         # sum of all the edges absolute values to use as a penalty value later

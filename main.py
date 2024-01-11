@@ -10,11 +10,13 @@ from algorithm import Algorithm
 from GCSQ import GCSQ
 from jonas import Jonas
 from danielle import Danielle
-from min_k_cut_non_iterative import min_k_cut_non_iterative
+from n_split_GCSQ import n_split_GCSQ
 from ours_iterative_exactly import ours_iterative_exactly
 from ours_iterative_at_most import ours_iterative_at_most
-from min_k_cut_exactly import min_k_cut_exactly
-from min_k_cut_at_most import min_k_cut_at_most
+from k_split_GCSQ_exactly import k_split_GCSQ_exactly
+from k_split_GCSQ_at_most import k_split_GCSQ_at_most
+from r_qubo import r_qubo
+from r_qubo_iterative import r_qubo_iterative
 
 def create_data_synthetic_test(graph_sizes, num_graphs_per_size, seed, mean=0.5):
     data = {}
@@ -44,8 +46,9 @@ num_graph_sizes = len(graph_sizes)
 
 # TODO: Find sensible k's to try, possibly everything between 2 and n
 k = 4
-algorithm_list = [GCSQ(seed=seed, num_graph_sizes=num_graph_sizes), Jonas(seed=seed, num_graph_sizes=num_graph_sizes, num_coalitions=6), Danielle(seed=seed, num_graph_sizes=num_graph_sizes), min_k_cut_non_iterative(seed=seed, num_graph_sizes=num_graph_sizes),
-                  ours_iterative_exactly(seed=seed, num_graph_sizes=num_graph_sizes, k=k), ours_iterative_at_most(seed=seed, num_graph_sizes=num_graph_sizes, k=k), min_k_cut_exactly(seed=seed, num_graph_sizes=num_graph_sizes, k=k), min_k_cut_at_most(seed=seed, num_graph_sizes=num_graph_sizes, k=k)]
+algorithm_list = [GCSQ(seed=seed, num_graph_sizes=num_graph_sizes), Jonas(seed=seed, num_graph_sizes=num_graph_sizes), Danielle(seed=seed, num_graph_sizes=num_graph_sizes), n_split_GCSQ(seed=seed, num_graph_sizes=num_graph_sizes),
+                  ours_iterative_exactly(seed=seed, num_graph_sizes=num_graph_sizes, k=k), ours_iterative_at_most(seed=seed, num_graph_sizes=num_graph_sizes, k=k), k_split_GCSQ_exactly(seed=seed, num_graph_sizes=num_graph_sizes, k=k), k_split_GCSQ_at_most(seed=seed, num_graph_sizes=num_graph_sizes, k=k),
+                  r_qubo(seed=seed, num_graph_sizes=num_graph_sizes), r_qubo_iterative(seed=seed, num_graph_sizes=num_graph_sizes, k=k)]
 results_dict = {}
 run_id = str(datetime.datetime.now().date()) + '_' + str(datetime.datetime.now().time()).replace(':', '-')
 

@@ -5,9 +5,9 @@ from algorithm import Algorithm
 
 
 class r_qubo(Algorithm):
-    def __init__(self, seed, num_graph_sizes, num_coalitions=None, timeout=10):
-        super().__init__(seed=seed, num_graph_sizes=num_graph_sizes, num_coalitions=num_coalitions, timeout=timeout)
-        self.name = "R-QUBO"
+    def __init__(self, seed, num_graph_sizes, solver="qbsolv", num_coalitions=None, timeout=10):
+        super().__init__(seed=seed, num_graph_sizes=num_graph_sizes, num_coalitions=num_coalitions, solver=solver, timeout=timeout)
+        self.name = f"R-QUBO_{self.solver}"
 
     def solve(self, num_agents, edges):
         if not self.num_coalitions:  # self.num_coalitions is still None
@@ -44,7 +44,7 @@ class r_qubo(Algorithm):
                     utils.add(Q, q_ic1, q_ic2, penalty)
 
         # solve the QUBO
-        solution = utils.solve_with_qbsolv(Q, (self.num_coalitions - 1) * num_agents, self.seed, self.timeout)
+        solution = self.solve_qubo(Q, (self.num_coalitions - 1) * num_agents)
         # make a list of coalitions, with each coalition being a list with the numbers of the agents in these coalitions
         coalitions = []
         for c in range(self.num_coalitions - 1):

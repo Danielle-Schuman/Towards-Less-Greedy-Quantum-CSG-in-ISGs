@@ -1,18 +1,65 @@
 import copy
 from dwave_qbsolv import QBSolv
+from qiskit_optimization import QuadraticProgram
+from qiskit_algorithms import QAOA
+from qiskit_algorithms.optimizers import COBYLA
+from qiskit_optimization.algorithms import MinimumEigenOptimizer
+from qiskit_algorithms.utils import algorithm_globals
+from qiskit.primitives import Sampler
 import numpy as np
 
+QAOA_ALGORITHM = None
 
+def qaoa_init(seed, shots=1000):
+    algorithm_globals.random_seed = seed
+    global QAOA_ALGORITHM
+    # classical Optimizer (uses Machine Learning)
+    optimizer = COBYLA(maxiter=10, disp=False)  # disp = Whether it prints out information
+    sampler = Sampler()
+    sampler.set_options(shots=shots, seed=seed)
+    qaoa = QAOA(optimizer=optimizer, sampler=sampler)
+    QAOA_ALGORITHM = MinimumEigenOptimizer(qaoa)
 
-# this function solves a given QUBO-Matrix Q with Qbsolv
-def solve_with_qbsolv(Q, n, seed, timeout=10):
-    response = QBSolv().sample_qubo(Q, num_repeats=1000, timeout=timeout, seed=seed)
-    solution = [response.samples()[0][i] for i in range(n)]
+# this function solves a given QUBO-Matrix qubo with QB-solv
+def solve_with_qbsolv(qubo, num_qubits, seed, timeout=10):
+    response = QBSolv().sample_qubo(qubo, num_repeats=1000, timeout=timeout, seed=seed)
+    solution = [response.samples()[0][i] for i in range(num_qubits)]
     return solution
 
 
+def solve_with_dwave():
+    # TODO
+    pass
 
-# this function calculates the value of a solution for a given QUBO-Matrix Q
+
+def convert_dict_keys_to_strings(input_dict):
+    new_dict = {}
+    for key, value in input_dict.items():
+        new_key = tuple(str(i) for i in key)
+        new_dict[new_key] = value
+    return new_dict
+
+def convert_dict_to_list(input_dict):
+    max_key = max(map(int, input_dict.keys())) if input_dict else 0
+    result_list = [None] * (max_key + 1)
+    for key, value in input_dict.items():
+        result_list[int(key)] = value
+    return result_list
+
+
+def solve_with_qaoa(qubo, num_qubits):
+    # Convert qubo to right format
+    qubo_for_qaoa = QuadraticProgram('qubo')
+    for n in range(num_qubits):
+        qubo_for_qaoa.binary_var(name=str(n))
+    qubo = convert_dict_keys_to_strings(qubo)
+    qubo_for_qaoa.minimize(quadratic=qubo)
+    # Run quantum algorithm QAOA
+    result = QAOA_ALGORITHM.solve(qubo_for_qaoa)
+    return convert_dict_to_list(result.variables_dict)
+
+
+# this function calculates the value of a solution for a given QUBO-Matrix qubo
 def getValue(Q, solution):
     ones = [i for i in range(len(solution)) if solution[i] == 1]
     value = 0
@@ -32,7 +79,7 @@ def transform(naeimeh_graph):
     return edges
 
 
-# this function prints the first num_agents row/columns of a QUBO-Matrix Q
+# this function prints the first num_agents row/columns of a QUBO-Matrix qubo
 def printQUBO(Q, n):
     for row in range(n):
         for column in range(n):

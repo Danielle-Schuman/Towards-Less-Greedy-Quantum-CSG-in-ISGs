@@ -2,14 +2,28 @@ import copy
 import utils
 
 class Algorithm:
-    def __init__(self, seed, num_graph_sizes, num_coalitions=None, timeout=10):
+    def __init__(self, seed, num_graph_sizes, solver="qbsolv", num_coalitions=None, timeout=10):
         self.num_coalitions = num_coalitions
         self.seed = seed
         self.timeout = timeout
+        self.solver = solver  # can be qbsolv, dwave or qaoa
         # list of tupels (coalitions, value, total_time) for all graph evaluated so far
         self.data = []
         # list of sums of values for graphs of same size
         self.values_sums = [0] * num_graph_sizes
+
+
+    def solve_qubo(self, qubo, num_qubits):
+        if self.solver == "qbsolv":
+            solution = utils.solve_with_qbsolv(qubo, num_qubits, self.seed, self.timeout)
+        elif self.solver == "qaoa":
+            solution = utils.solve_with_qaoa(qubo, num_qubits)
+        elif self.solver == "dwave":
+            solution = utils.solve_with_dwave()
+        else:
+            print("Chosen solver not available. Solving with QB-Solv.")
+            solution = utils.solve_with_qbsolv(qubo, num_qubits, self.seed, self.timeout)
+        return solution
 
 
     # implementation is a tiny bit different from the one in the GCS-Q paper, but does the same thing

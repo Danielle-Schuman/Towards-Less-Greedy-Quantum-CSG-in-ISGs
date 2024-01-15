@@ -5,9 +5,9 @@ from algorithm import Algorithm
 
 
 class ours_iterative_exactly(Algorithm):
-    def __init__(self, seed, num_graph_sizes, k, timeout=10):
-        super().__init__(seed=seed, num_graph_sizes=num_graph_sizes, timeout=timeout)
-        self.name = "ours_iterative_exactly"
+    def __init__(self, seed, num_graph_sizes, k, solver="qbsolv", timeout=10):
+        super().__init__(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, timeout=timeout)
+        self.name = f"ours_iterative_exactly_{self.solver}"
         self.k = k
 
     def _split(self, coalition, edges):
@@ -36,7 +36,7 @@ class ours_iterative_exactly(Algorithm):
                     utils.add(Q, q_ic, q_ic2, 2 * penalty)
 
         # solve the QUBO
-        solution = utils.solve_with_qbsolv(Q, self.k * len(coalition), self.seed, self.timeout)
+        solution = self.solve_qubo(Q, self.k * len(coalition))
         # make a list of coalitions, with each coalition being a list with the numbers of the agents in these coalitions
         coalitions = []
         for c in range(self.k):

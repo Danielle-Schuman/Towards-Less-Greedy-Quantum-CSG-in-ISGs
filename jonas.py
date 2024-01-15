@@ -5,9 +5,9 @@ from algorithm import Algorithm
 
 
 class Jonas(Algorithm):
-    def __init__(self, seed,  num_graph_sizes, num_coalitions=None, timeout=10):
-        super().__init__(seed=seed,  num_graph_sizes=num_graph_sizes, num_coalitions=num_coalitions, timeout=timeout)
-        self.name = "$Jonas_2$"
+    def __init__(self, seed,  num_graph_sizes, solver="qbsolv", num_coalitions=None, timeout=10):
+        super().__init__(seed=seed,  num_graph_sizes=num_graph_sizes, solver=solver, num_coalitions=num_coalitions, timeout=timeout)
+        self.name = f"$Jonas_2$_{self.solver}"
 
     def solve(self, num_agents, edges):
         if not self.num_coalitions:  # self.num_coalitions is still None
@@ -40,7 +40,7 @@ class Jonas(Algorithm):
                             # add sum of all the edges absolute values as a penalty value to ensure that one agent cannot be in two coalitions at once
                             utils.add(Q, p_i, p_j, penalty)
         # solve the QUBO
-        solution = utils.solve_with_qbsolv(Q, self.num_coalitions * num_agents, self.seed, self.timeout)
+        solution = self.solve_qubo(Q, self.num_coalitions * num_agents)
         # make a list of coalitions, with each coalition being a list with the numbers of the agents in these coalitions
         coalitions = []
         for c in range(self.num_coalitions):

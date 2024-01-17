@@ -1,16 +1,15 @@
 import utils
 import numpy as np
 
-from algorithm import Algorithm
+from algorithm import IterativeAlgorithmWithK
 
 
-class ours_iterative_at_most(Algorithm):
-    def __init__(self, seed, num_graph_sizes, k, solver="qbsolv", timeout=10):
-        super().__init__(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, timeout=timeout)
-        self.name = f"ours_iterative_at_most_{self.solver}"
-        self.k = k
+class ours_iterative_at_most(IterativeAlgorithmWithK):
+    def __init__(self, seed, num_graph_sizes, k, solver="qbsolv", timeout=10, parallel=True):
+        super().__init__(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, timeout=timeout, k=k, parallel=parallel)
+        self.name = f"{self.k}_split_ours_iterative_at_most_{self.solver}_{'parallel' if self.parallel else 'sequential'}"
 
-    def _split(self, coalition, edges):
+    def _get_qubo(self, coalition, edges):
         Q = {}
         # TODO: Find good value for penalty using penalty engineering
         # sum of all the edges absolute values to use as a penalty value later
@@ -36,9 +35,9 @@ class ours_iterative_at_most(Algorithm):
                     q_ic2 = i * self.k + c2
                     # add penalty for putting agent in any coalition
                     utils.add(Q, q_ic1, q_ic2, penalty)
+        return Q, self.k * len(coalition)
 
-        # solve the QUBO
-        solution = self.solve_qubo(Q, self.k * len(coalition))
+    def _get_coalitions_from_qubo_solution(self, coalition, solution):
         # make a list of coalitions, with each coalition being a list with the numbers of the agents in these coalitions
         coalitions = []
         for c in range(self.k):

@@ -6,7 +6,6 @@ import datetime
 
 import utils
 import plotting
-from algorithm import Algorithm
 from GCSQ import GCSQ
 from jonas import Jonas
 from danielle import Danielle

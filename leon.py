@@ -14,7 +14,7 @@ def _find_region_edges(region_list):
 
 def _star_analysis(feeder_graph, region, region_list, edges_to_add):
     region_list_edges = _find_region_edges(region_list)
-def _planarize(num_agents, input_graph):
+def _planarize_old(num_agents, input_graph):
     # Step 0: Create minimal input graph K4
     feeder_graph = [(0,1), (0,2), (0,3), (1,2), (1,3), (2,3)]
     region_list = [[0, 1, 3], [1, 2, 3], [2, 0, 3], [0, 2, 1]]
@@ -32,6 +32,8 @@ def _planarize(num_agents, input_graph):
         # Step 7: Chose one representative from each isomorphic family
         pass  # TODO remove this line
 
+def _planarize(num_agents, input_graph):
+    pass
 
 class Leon(Algorithm):
     def __init__(self, seed, num_graph_sizes, solver="qbsolv", num_coalitions=None, timeout=10):
@@ -41,6 +43,7 @@ class Leon(Algorithm):
     def solve(self, num_agents, edges):
         #TODO
         # Step 1: Planarize
+        edges = _planarize(num_agents, edges)
         # Step 2: Create logical qubit lattice (see Fig. 7)
         # Step 3: Create physical qubit lattice
         # Step 3.5: Convert physical qubit lattice to qubo

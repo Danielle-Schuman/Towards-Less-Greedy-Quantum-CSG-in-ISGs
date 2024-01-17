@@ -7,7 +7,7 @@ from algorithm import Algorithm
 class Danielle(Algorithm):
     def __init__(self, seed, num_graph_sizes, solver="qbsolv", num_coalitions=None, timeout=10):
         super().__init__(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, num_coalitions=num_coalitions, timeout=timeout)
-        self.name = f"Danielle_{self.solver}"
+        self.name = f"ours_n_{self.solver}"
 
     def solve(self, num_agents, edges):
         if not self.num_coalitions:  # self.num_coalitions is still None

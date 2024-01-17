@@ -1,10 +1,10 @@
 import utils
 import numpy as np
 
-from algorithm import Algorithm
+from algorithm import QuantumAlgorithm
 
 
-class n_split_GCSQ(Algorithm):
+class n_split_GCSQ(QuantumAlgorithm):
     def __init__(self, seed, num_graph_sizes, solver="qbsolv", num_coalitions=None, timeout=10):
         super().__init__(seed=seed, num_graph_sizes=num_graph_sizes, num_coalitions=num_coalitions, solver=solver, timeout=timeout)
         self.name = f"n_split_GCSQ_{self.solver}"

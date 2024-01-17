@@ -4,15 +4,34 @@ import utils
 
 
 class Algorithm(ABC):
-    def __init__(self, seed, num_graph_sizes, solver="qbsolv", num_coalitions=None, timeout=10):
+    def __init__(self, seed, num_graph_sizes, category, num_coalitions=None, timeout=10):
+        self.category = category
         self.num_coalitions = num_coalitions
         self.seed = seed
         self.timeout = timeout
-        self.solver = solver  # can be qbsolv, dwave or qaoa
-        # list of tupels (coalitions, value, total_time) for all graph evaluated so far
+        # list of tupels (coalitions, value, total_time) for all graphs evaluated so far
         self.data = []
         # list of sums of values for graphs of same size
         self.values_sums = [0] * num_graph_sizes
+
+        self.name = "missing_algorithm_name"  # gets overwritten with the actual name in each of the classes
+
+    @abstractmethod
+    def solve(self, num_agents, edges):
+        pass
+
+
+class ClassicalAlgorithm(Algorithm, ABC):
+    def __init__(self, seed, num_graph_sizes, num_coalitions=None, timeout=10):
+        super().__init__(seed=seed, num_graph_sizes=num_graph_sizes, category="classical", num_coalitions=num_coalitions,
+                         timeout=timeout)
+
+
+class QuantumAlgorithm(Algorithm, ABC):
+    def __init__(self, seed, num_graph_sizes, solver="qbsolv", num_coalitions=None, timeout=10):
+        super().__init__(seed=seed, num_graph_sizes=num_graph_sizes, category="quantum", num_coalitions=num_coalitions,
+                         timeout=timeout)
+        self.solver = solver  # can be qbsolv, dwave or qaoa
 
     def solve_qubo(self, qubo, num_qubits):
         if self.solver == "qbsolv":
@@ -26,12 +45,8 @@ class Algorithm(ABC):
             solution = utils.solve_with_qbsolv(qubo, num_qubits, self.seed, self.timeout)
         return solution
 
-    @abstractmethod
-    def solve(self, num_agents, edges):
-        pass
 
-
-class IterativeAlgorithm(Algorithm, ABC):
+class IterativeQuantumAlgorithm(QuantumAlgorithm, ABC):
     def __init__(self, seed, num_graph_sizes, solver="qbsolv", num_coalitions=None, timeout=10, parallel=True):
         super().__init__(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, num_coalitions=num_coalitions, timeout=timeout)
         self.parallel = parallel
@@ -62,11 +77,11 @@ class IterativeAlgorithm(Algorithm, ABC):
         qubit_num_start_of_qubo = [0]
         for (qubo, num_qubits) in qubo_list[1:]:
             qubit_num_start_of_qubo.append(total_num_qubits)
-            qubo_with_new_numbers = IterativeAlgorithm.convert_qubo(qubo, total_num_qubits)
+            qubo_with_new_numbers = IterativeQuantumAlgorithm.convert_qubo(qubo, total_num_qubits)
             total_num_qubits = total_num_qubits + num_qubits
             converted_qubo.update(qubo_with_new_numbers)
         all_solutions = self.solve_qubo(converted_qubo, total_num_qubits)
-        solutions = IterativeAlgorithm.split_solution(all_solutions, qubit_num_start_of_qubo)
+        solutions = IterativeQuantumAlgorithm.split_solution(all_solutions, qubit_num_start_of_qubo)
         new_coalitions = []
         for i, solution in enumerate(solutions):
             new_coalitions.append(self._get_coalitions_from_qubo_solution(coalitions[i], solution))
@@ -125,7 +140,7 @@ class IterativeAlgorithm(Algorithm, ABC):
         pass
 
 
-class IterativeAlgorithmWithK(IterativeAlgorithm, ABC):
+class IterativeQuantumAlgorithmWithK(IterativeQuantumAlgorithm, ABC):
     def __init__(self, seed, num_graph_sizes, k, solver="qbsolv", num_coalitions=None, timeout=10, parallel=True):
         super().__init__(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, num_coalitions=num_coalitions, timeout=timeout, parallel=parallel)
         self.k = k

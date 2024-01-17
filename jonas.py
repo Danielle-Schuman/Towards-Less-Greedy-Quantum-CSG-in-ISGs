@@ -1,10 +1,10 @@
 import utils
 import numpy as np
 
-from algorithm import Algorithm
+from algorithm import QuantumAlgorithm
 
 
-class Jonas(Algorithm):
+class Jonas(QuantumAlgorithm):
     def __init__(self, seed,  num_graph_sizes, solver="qbsolv", num_coalitions=None, timeout=10):
         super().__init__(seed=seed,  num_graph_sizes=num_graph_sizes, solver=solver, num_coalitions=num_coalitions, timeout=timeout)
         self.name = f"ours_n_half_{self.solver}"

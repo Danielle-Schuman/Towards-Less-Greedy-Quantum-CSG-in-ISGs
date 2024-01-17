@@ -1,11 +1,11 @@
 import utils
 
-from algorithm import IterativeAlgorithm
+from algorithm import IterativeQuantumAlgorithm
 
 
-class GCSQ(IterativeAlgorithm):
-    def __init__(self, seed, num_graph_sizes, solver="qbsolv", timeout=10):
-        super().__init__(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, timeout=timeout)
+class GCSQ(IterativeQuantumAlgorithm):
+    def __init__(self, seed, num_graph_sizes, solver="qbsolv", timeout=10, parallel=True):
+        super().__init__(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, timeout=timeout, parallel=parallel)
         self.name = f"GCS-Q_{self.solver}_{'parallel' if self.parallel else 'sequential'}"
 
     def _get_qubo(self, coalition, edges):

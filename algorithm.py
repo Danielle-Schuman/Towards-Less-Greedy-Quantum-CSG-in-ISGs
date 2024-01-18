@@ -31,15 +31,17 @@ class QuantumAlgorithm(Algorithm, ABC):
     def __init__(self, seed, num_graph_sizes, solver="qbsolv", num_coalitions=None, timeout=10):
         super().__init__(seed=seed, num_graph_sizes=num_graph_sizes, category="quantum", num_coalitions=num_coalitions,
                          timeout=timeout)
-        self.solver = solver  # can be qbsolv, dwave or qaoa
+        self.solver = solver  # can be qbsolv, sa, dwave or qaoa
 
     def solve_qubo(self, qubo, num_qubits):
         if self.solver == "qbsolv":
             solution = utils.solve_with_qbsolv(qubo, num_qubits, self.seed, self.timeout)
+        elif self.solver == "sa":
+            solution = utils.solve_with_sa(qubo, num_qubits, self.seed)
         elif self.solver == "qaoa":
             solution = utils.solve_with_qaoa(qubo, num_qubits)
         elif self.solver == "dwave":
-            solution = utils.solve_with_dwave()
+            solution = utils.solve_with_dwave(qubo, num_qubits, self.solver)
         else:
             print("Chosen solver not available. Solving with QB-Solv.")
             solution = utils.solve_with_qbsolv(qubo, num_qubits, self.seed, self.timeout)

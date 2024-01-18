@@ -1,14 +1,20 @@
 import copy
+import numpy as np
 from dwave_qbsolv import QBSolv
+import dimod as di
+from neal import SimulatedAnnealingSampler
+from uqo.client.config import Config
+from uqo import Problem
 from qiskit_optimization import QuadraticProgram
 from qiskit_algorithms import QAOA
 from qiskit_algorithms.optimizers import COBYLA
 from qiskit_optimization.algorithms import MinimumEigenOptimizer
 from qiskit_algorithms.utils import algorithm_globals
 from qiskit.primitives import Sampler
-import numpy as np
 
 QAOA_ALGORITHM = None
+ADVANTAGE_SOLVER = None
+
 
 def qaoa_init(seed, shots=1000):
     algorithm_globals.random_seed = seed
@@ -20,16 +26,61 @@ def qaoa_init(seed, shots=1000):
     qaoa = QAOA(optimizer=optimizer, sampler=sampler)
     QAOA_ALGORITHM = MinimumEigenOptimizer(qaoa)
 
+
+def dwave_init():
+    global ADVANTAGE_SOLVER
+    config = Config(configpath="secrets/config.json")
+    connection = config.create_connection()
+    available_solvers = connection.get_available_dwave_solvers()
+    if 'Advantage_system6.3' in available_solvers:
+        ADVANTAGE_SOLVER = 'Advantage_system6.3'
+    elif 'Advantage_system4.1' in available_solvers:
+        ADVANTAGE_SOLVER = 'Advantage_system4.1'
+    else:
+        raise Exception("No know Advantage solver available.")
+    print(f"Running on {ADVANTAGE_SOLVER} ...")
+
+
 # this function solves a given QUBO-Matrix qubo with QB-solv
+# see: https://docs.ocean.dwavesys.com/projects/qbsolv/en/latest/source/generated/dwave_qbsolv.QBSolv.sample.html
 def solve_with_qbsolv(qubo, num_qubits, seed, timeout=10):
+    # num_repeats: Determines the number of times to repeat the main loop in qbsolv after determining a better sample. Default 50.
+    # timeout: Number of seconds before routine halts. Default is 2592000.
     response = QBSolv().sample_qubo(qubo, num_repeats=1000, timeout=timeout, seed=seed)
     solution = [response.samples()[0][i] for i in range(num_qubits)]
     return solution
 
 
-def solve_with_dwave():
-    # TODO
-    pass
+# see: https://docs.ocean.dwavesys.com/projects/neal/en/latest/reference/generated/neal.sampler.SimulatedAnnealingSampler.sample.html
+# (timeout with interrupt_function seems to degenerate performance, even when not hitting the timeout, for some reason -> not used)
+def solve_with_sa(qubo, num_qubits, seed):
+    # TODO: Find sensible values for these
+    sample_count = 100  # number of times the SA algorithms is executed, default is 1
+    anneal_steps = 1000  # number of updates of "qubits values" in SA algorithm, default is 1000
+    qubo_as_bqm = di.BQM(qubo, "BINARY")
+    response = SimulatedAnnealingSampler().sample(qubo_as_bqm, num_reads=sample_count, num_sweeps=anneal_steps, seed=seed)
+    solution = [response.samples()[0][i] for i in range(num_qubits)]
+    return solution
+
+
+def solve_with_dwave(qubo, num_qubits, solver):
+    sample_count = 100  # number of times the QA algorithms is executed, default is 1 -> TODO: Find good value
+    config = Config(configpath='secrets/config.json')
+    if solver == "test_uqo":
+        # qbsolv for testing uqo connection without decreasing our quota
+        response = Problem.Qubo(config, qubo).with_platform("qbsolv").solve(sample_count)
+    elif solver == "dwave":
+        global ADVANTAGE_SOLVER
+        # needs dwave quota
+        problem = Problem.Qubo(config, qubo).with_platform("dwave").with_solver(ADVANTAGE_SOLVER)
+        # calculate embedding
+        problem.find_pegasus_embedding()
+        try:
+            response = problem.solve(sample_count)
+        except:
+            response = problem.solve(sample_count)
+    solution = [response.solutions[0][i] for i in range(num_qubits)]
+    return solution
 
 
 def convert_dict_keys_to_strings(input_dict):

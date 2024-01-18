@@ -124,7 +124,8 @@ if __name__ == "__main__":
         num_graph_sizes = len(graph_sizes)
 
         # Simulate
-        solvers = ["qbsolv", "qaoa"]
+
+        solvers = ["qbsolv", "sa", "qaoa"]
         parallel = [True, False]
         k_list = [i for i in range(2, graph_sizes[-1]+1)]
 
@@ -138,10 +139,12 @@ if __name__ == "__main__":
         for solver in solvers:
             if solver == "qaoa":
                 utils.qaoa_init(seed=seed)
-            algorithm_list = [Jonas(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver),
-                              Danielle(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver),
-                              n_split_GCSQ(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver),
-                              r_qubo(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver)]
+            if solver == "dwave":
+                utils.dwave_init()
+            algorithm_list = [Jonas(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver)] #,
+                              #Danielle(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver),
+                              #n_split_GCSQ(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver),
+                              #r_qubo(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver)]
             directory = f"results/{data_name}/quantum/{solver}"
             directory_exists = create_nested_directory(directory)
             if directory_exists:

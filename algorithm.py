@@ -1,6 +1,7 @@
 import copy
 from abc import ABC, abstractmethod
 import utils
+import pickle
 
 
 class Algorithm(ABC):
@@ -99,7 +100,7 @@ class IterativeQuantumAlgorithm(QuantumAlgorithm, ABC):
         # initialize with grand coalition
         coalitions = [list(range(num_agents))]
         # for a maximum of num_agents steps (as we can at most have num_agents coalitions, one for each agent)
-        for _ in range(num_agents):
+        for n in range(num_agents):
             new_coalitions = copy.deepcopy(coalitions)
             # exclude coalitions that cannot be further split because they already contain only one agent
             real_coalitions = [coalition for coalition in coalitions if len(coalition) > 1]
@@ -131,6 +132,8 @@ class IterativeQuantumAlgorithm(QuantumAlgorithm, ABC):
             if len(coalitions) == len(new_coalitions):
                 break
             coalitions = new_coalitions
+            if self.solver == "dwave":
+                pickle.dump(coalitions, open(f"results/coalitions_{self.name}_after_n={n}.pkl", 'wb'))
         return coalitions
 
     @abstractmethod

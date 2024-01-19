@@ -141,10 +141,10 @@ if __name__ == "__main__":
                 utils.qaoa_init(seed=seed)
             if solver == "dwave":
                 utils.dwave_init()
-            algorithm_list = [Jonas(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver)] #,
-                              #Danielle(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver),
-                              #n_split_GCSQ(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver),
-                              #r_qubo(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver)]
+            algorithm_list = [Jonas(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver),
+                              Danielle(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver),
+                              n_split_GCSQ(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver),
+                              r_qubo(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver)]
             directory = f"results/{data_name}/quantum/{solver}"
             directory_exists = create_nested_directory(directory)
             if directory_exists:

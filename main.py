@@ -66,22 +66,44 @@ def run_algorithm(serialized_algorithm, serialized_edges, num_agents, serialized
 def main(algorithm_list, data, graph_sizes, num_graphs_per_size, experiment, directory):
     run_id = str(datetime.datetime.now().date()) + '_' + str(datetime.datetime.now().time()).replace(':', '-')
 
-    #for num_agents in graph_sizes:
-    num_agents = 4
-    print(f"\n\n\nTest for graphsize {num_agents}")
-    for graph_num in range(num_graphs_per_size):
-        print(f"\n\n     Graph {graph_num}")
-        graph = data[num_agents][graph_num]
-        if synthetic:
-            edges = graph
-        else:
-            edges = utils.transform(graph)
-        global CURRENT_GRAPH
-        CURRENT_GRAPH = edges
-        global CURRENT_ALGORITHM
-        for algorithm in algorithm_list:
-            if isinstance(algorithm, IterativeQuantumAlgorithmWithK):
-                if algorithm.k <= num_agents:
+    for num_agents in graph_sizes:
+        print(f"\n\n\nTest for graphsize {num_agents}")
+        for graph_num in range(num_graphs_per_size):
+            print(f"\n\n     Graph {graph_num}")
+            graph = data[num_agents][graph_num]
+            if synthetic:
+                edges = graph
+            else:
+                edges = utils.transform(graph)
+            global CURRENT_GRAPH
+            CURRENT_GRAPH = edges
+            global CURRENT_ALGORITHM
+            for algorithm in algorithm_list:
+                if isinstance(algorithm, IterativeQuantumAlgorithmWithK):
+                    if algorithm.k <= num_agents:
+                        print(f"\n          Running {algorithm.name}...")
+                        try:
+                            # Run algorithm in a subprocess to avoid a potential SIGKILL of the entire script
+                            # due to too much memory usage of this algorithm
+                            # Serialize the objects and strings to pass to sub-process
+                            serialized_algorithm = pickle.dumps(algorithm)
+                            serialized_graph = pickle.dumps(edges)
+                            serialized_run_id = pickle.dumps(run_id)
+                            serialized_directory = pickle.dumps(directory)
+                            # subprocess command
+                            command = [
+                                "python",
+                                "-c",
+                                f"from main import run_algorithm; "
+                                f"print(run_algorithm({serialized_algorithm}, {serialized_graph}, {num_agents}, {serialized_run_id}, {serialized_directory}))"
+                            ]
+                            # Run the subprocess with the memory limit
+                            subprocess.run(command, check=True)
+                        except subprocess.CalledProcessError as e:
+                            print("          Error: Running algorithm failed, most likely due to insufficient available memory. Error message: ", e)
+                    else:
+                        pass
+                else:
                     print(f"\n          Running {algorithm.name}...")
                     try:
                         # Run algorithm in a subprocess to avoid a potential SIGKILL of the entire script
@@ -102,29 +124,6 @@ def main(algorithm_list, data, graph_sizes, num_graphs_per_size, experiment, dir
                         subprocess.run(command, check=True)
                     except subprocess.CalledProcessError as e:
                         print("          Error: Running algorithm failed, most likely due to insufficient available memory. Error message: ", e)
-                else:
-                    pass
-            else:
-                print(f"\n          Running {algorithm.name}...")
-                try:
-                    # Run algorithm in a subprocess to avoid a potential SIGKILL of the entire script
-                    # due to too much memory usage of this algorithm
-                    # Serialize the objects and strings to pass to sub-process
-                    serialized_algorithm = pickle.dumps(algorithm)
-                    serialized_graph = pickle.dumps(edges)
-                    serialized_run_id = pickle.dumps(run_id)
-                    serialized_directory = pickle.dumps(directory)
-                    # subprocess command
-                    command = [
-                        "python",
-                        "-c",
-                        f"from main import run_algorithm; "
-                        f"print(run_algorithm({serialized_algorithm}, {serialized_graph}, {num_agents}, {serialized_run_id}, {serialized_directory}))"
-                    ]
-                    # Run the subprocess with the memory limit
-                    subprocess.run(command, check=True)
-                except subprocess.CalledProcessError as e:
-                    print("          Error: Running algorithm failed, most likely due to insufficient available memory. Error message: ", e)
     print(f"Done running tests for {experiment}.")
 
     '''
@@ -146,7 +145,7 @@ if __name__ == "__main__":
     num_seeds = 1
     for _ in range(num_seeds):
         # Setting the seed
-        seed = 42 #random.randint(0, 2 ** 32 - 1)
+        seed = random.randint(0, 2 ** 32 - 1)
         random.seed(seed)
         np.random.seed(seed)
         print(f"Seed: {seed}")
@@ -165,7 +164,7 @@ if __name__ == "__main__":
         num_graph_sizes = len(graph_sizes)
 
         # Simulate
-        solvers = ["qaoa", "qbsolv", "sa"]
+        solvers = ["qbsolv", "qaoa", "sa"]
         parallel = [True, False]
         k_list = [i for i in range(2, graph_sizes[-1]+1)]
 
@@ -177,7 +176,6 @@ if __name__ == "__main__":
         '''
 
         for solver in solvers:
-            '''
             algorithm_list = [Jonas(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver),
                               Danielle(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver),
                               n_split_GCSQ(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver),
@@ -187,7 +185,6 @@ if __name__ == "__main__":
             if directory_exists:
                 main(algorithm_list=algorithm_list, data=data, graph_sizes=graph_sizes, num_graphs_per_size=num_graphs_per_size,
                      experiment=f"non-iterative algorithms with {solver}", directory=directory)
-            '''
             for mode in parallel:
                 algorithm_list = [GCSQ(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode)]
                 directory = f"results/{data_name}/quantum/{solver}/{'parallel' if mode else 'sequential'}"

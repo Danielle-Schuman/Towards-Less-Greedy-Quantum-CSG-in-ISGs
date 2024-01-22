@@ -12,40 +12,14 @@ from qiskit_optimization.algorithms import MinimumEigenOptimizer
 from qiskit_algorithms.utils import algorithm_globals
 from qiskit.primitives import Sampler
 
-QAOA_ALGORITHM = None
-ADVANTAGE_SOLVER = None
-
-
-def qaoa_init(seed, shots=1000):
-    algorithm_globals.random_seed = seed
-    global QAOA_ALGORITHM
-    # classical Optimizer (uses Machine Learning)
-    optimizer = COBYLA(maxiter=10, disp=False)  # disp = Whether it prints out information
-    sampler = Sampler()
-    sampler.set_options(shots=shots, seed=seed)
-    qaoa = QAOA(optimizer=optimizer, sampler=sampler)
-    QAOA_ALGORITHM = MinimumEigenOptimizer(qaoa)
-
-
-def dwave_init():
-    global ADVANTAGE_SOLVER
-    config = Config(configpath="secrets/config.json")
-    connection = config.create_connection()
-    available_solvers = connection.get_available_dwave_solvers()
-    if 'Advantage_system6.3' in available_solvers:
-        ADVANTAGE_SOLVER = 'Advantage_system6.3'
-    elif 'Advantage_system4.1' in available_solvers:
-        ADVANTAGE_SOLVER = 'Advantage_system4.1'
-    else:
-        raise Exception("No know Advantage solver available.")
-    print(f"Running on {ADVANTAGE_SOLVER} ...")
-
 
 # this function solves a given QUBO-Matrix qubo with QB-solv
 # see: https://docs.ocean.dwavesys.com/projects/qbsolv/en/latest/source/generated/dwave_qbsolv.QBSolv.sample.html
-def solve_with_qbsolv(qubo, num_qubits, seed, timeout=10):
+def solve_with_qbsolv(qubo, num_qubits, seed, timeout=2592000):
     # num_repeats: Determines the number of times to repeat the main loop in qbsolv after determining a better sample. Default 50.
-    # timeout: Number of seconds before routine halts. Default is 2592000.
+    # timeout: Number of seconds before routine halts. Default is 2592000 = 1 month. Jonas has timeout=10, but that can marginally decrease performance.
+    # actually, this has sample_count = 1 -> for sample_count = 100, we'd need to run it 100 times with different seeds
+    # but it seems to perform just fine without
     response = QBSolv().sample_qubo(qubo, num_repeats=1000, timeout=timeout, seed=seed)
     solution = [response.samples()[0][i] for i in range(num_qubits)]
     return solution
@@ -54,31 +28,41 @@ def solve_with_qbsolv(qubo, num_qubits, seed, timeout=10):
 # see: https://docs.ocean.dwavesys.com/projects/neal/en/latest/reference/generated/neal.sampler.SimulatedAnnealingSampler.sample.html
 # (timeout with interrupt_function seems to degenerate performance, even when not hitting the timeout, for some reason -> not used)
 def solve_with_sa(qubo, num_qubits, seed):
-    # TODO: Find sensible values for these
-    sample_count = 100  # number of times the SA algorithms is executed, default is 1
+    shots = 100  # number of times the SA algorithms is executed, default is 1
     anneal_steps = 1000  # number of updates of "qubits values" in SA algorithm, default is 1000
     qubo_as_bqm = di.BQM(qubo, "BINARY")
-    response = SimulatedAnnealingSampler().sample(qubo_as_bqm, num_reads=sample_count, num_sweeps=anneal_steps, seed=seed)
+    response = SimulatedAnnealingSampler().sample(qubo_as_bqm, num_reads=shots, num_sweeps=anneal_steps, seed=seed)
     solution = [response.samples()[0][i] for i in range(num_qubits)]
     return solution
 
 
 def solve_with_dwave(qubo, num_qubits, solver):
-    sample_count = 100  # number of times the QA algorithms is executed, default is 1 -> TODO: Find good value
-    config = Config(configpath='secrets/config.json')
+    # get advantage solver for connection
+    config = Config(configpath="secrets/config.json")
+    connection = config.create_connection()
+    available_solvers = connection.get_available_dwave_solvers()
+    if 'Advantage_system6.3' in available_solvers:
+        advantage_solver = 'Advantage_system6.3'
+    elif 'Advantage_system4.1' in available_solvers:
+        advantage_solver = 'Advantage_system4.1'
+    else:
+        raise Exception("No know Advantage solver available.")
+    print(f"Running on {advantage_solver} ...")
+
+    shots = 100  # number of times the QA algorithms is executed, default is 1 -> TODO: Find good value
     if solver == "test_uqo":
         # qbsolv for testing uqo connection without decreasing our quota
-        response = Problem.Qubo(config, qubo).with_platform("qbsolv").solve(sample_count)
+        response = Problem.Qubo(config, qubo).with_platform("qbsolv").solve(shots)
     elif solver == "dwave":
         global ADVANTAGE_SOLVER
         # needs dwave quota
-        problem = Problem.Qubo(config, qubo).with_platform("dwave").with_solver(ADVANTAGE_SOLVER)
+        problem = Problem.Qubo(config, qubo).with_platform("dwave").with_solver(advantage_solver)
         # calculate embedding
         problem.find_pegasus_embedding()
         try:
-            response = problem.solve(sample_count)
+            response = problem.solve(shots)
         except:
-            response = problem.solve(sample_count)
+            response = problem.solve(shots)
     solution = [response.solutions[0][i] for i in range(num_qubits)]
     return solution
 
@@ -98,7 +82,21 @@ def convert_dict_to_list(input_dict):
     return result_list
 
 
-def solve_with_qaoa(qubo, num_qubits):
+def solve_with_qaoa(qubo, num_qubits, seed):
+    # init qaoa algorithm
+    # 100 shots would be "fair", but doesn't find the optimum even for small examples
+    shots = 1000
+    algorithm_globals.random_seed = seed
+    # classical Optimizer (uses Machine Learning)
+    # maxiter = num circuit evaluations -> a bit like num_repeats in QBsolv or num_sweeps in SA, default=1000
+    # (100 works too, but not much faster than 1000; 10 degrades performance)
+    optimizer = COBYLA(maxiter=1000, disp=False)  # disp = Whether it prints out information
+    # has "None" as default for shots -> in that case, it calculates probabilities
+    sampler = Sampler()
+    sampler.set_options(shots=shots, seed=seed)
+    qaoa = QAOA(optimizer=optimizer, sampler=sampler)
+    qaoa_algorithm = MinimumEigenOptimizer(qaoa)
+
     # Convert qubo to right format
     qubo_for_qaoa = QuadraticProgram('qubo')
     for n in range(num_qubits):
@@ -106,7 +104,7 @@ def solve_with_qaoa(qubo, num_qubits):
     qubo = convert_dict_keys_to_strings(qubo)
     qubo_for_qaoa.minimize(quadratic=qubo)
     # Run quantum algorithm QAOA
-    result = QAOA_ALGORITHM.solve(qubo_for_qaoa)
+    result = qaoa_algorithm.solve(qubo_for_qaoa)
     return convert_dict_to_list(result.variables_dict)
 
 

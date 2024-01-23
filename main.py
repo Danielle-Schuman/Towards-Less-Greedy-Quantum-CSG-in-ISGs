@@ -66,21 +66,19 @@ def run_algorithm(serialized_algorithm, serialized_edges, num_agents, serialized
 def main(algorithm_list, data, graph_sizes, num_graphs_per_size, experiment, directory):
     run_id = str(datetime.datetime.now().date()) + '_' + str(datetime.datetime.now().time()).replace(':', '-')
 
-    for num_agents in graph_sizes:
-        print(f"\n\n\nTest for graphsize {num_agents}")
-        for graph_num in range(num_graphs_per_size):
-            print(f"\n\n     Graph {graph_num}")
-            graph = data[num_agents][graph_num]
-            if synthetic:
-                edges = graph
-            else:
-                edges = utils.transform(graph)
-            global CURRENT_GRAPH
-            CURRENT_GRAPH = edges
-            global CURRENT_ALGORITHM
-            for algorithm in algorithm_list:
-                if isinstance(algorithm, IterativeQuantumAlgorithmWithK):
-                    if algorithm.k <= num_agents:
+    for algorithm in algorithm_list:
+        if isinstance(algorithm, IterativeQuantumAlgorithmWithK):
+            for num_agents in graph_sizes:
+                if algorithm.k <= num_agents:
+                    print(f"\n\n\nTest for graphsize {num_agents}")
+                    for graph_num in range(num_graphs_per_size):
+                        print(f"\n\n     Graph {graph_num}")
+                        graph = data[num_agents][graph_num]
+                        if synthetic:
+                            edges = graph
+                        else:
+                            edges = utils.transform(graph)
+
                         print(f"\n          Running {algorithm.name}...")
                         try:
                             # Run algorithm in a subprocess to avoid a potential SIGKILL of the entire script
@@ -101,9 +99,19 @@ def main(algorithm_list, data, graph_sizes, num_graphs_per_size, experiment, dir
                             subprocess.run(command, check=True)
                         except subprocess.CalledProcessError as e:
                             print("          Error: Running algorithm failed, most likely due to insufficient available memory. Error message: ", e)
-                    else:
-                        pass
                 else:
+                    pass
+        else:
+            for num_agents in graph_sizes:
+                print(f"\n\n\nTest for graphsize {num_agents}")
+                for graph_num in range(num_graphs_per_size):
+                    print(f"\n\n     Graph {graph_num}")
+                    graph = data[num_agents][graph_num]
+                    if synthetic:
+                        edges = graph
+                    else:
+                        edges = utils.transform(graph)
+
                     print(f"\n          Running {algorithm.name}...")
                     try:
                         # Run algorithm in a subprocess to avoid a potential SIGKILL of the entire script
@@ -145,7 +153,7 @@ if __name__ == "__main__":
     num_seeds = 1
     for _ in range(num_seeds):
         # Setting the seed
-        seed = random.randint(0, 2 ** 32 - 1)
+        seed = 454640551 #random.randint(0, 2 ** 32 - 1)
         random.seed(seed)
         np.random.seed(seed)
         print(f"Seed: {seed}")
@@ -164,9 +172,9 @@ if __name__ == "__main__":
         num_graph_sizes = len(graph_sizes)
 
         # Simulate
-        solvers = ["qbsolv", "qaoa", "sa"]
-        parallel = [True, False]
-        k_list = [i for i in range(2, graph_sizes[-1]+1)]
+        solvers = ["qbsolv"] #, "qaoa"]
+        parallel = [True]  #, False] -> Try sequential later
+        k_list = [i for i in range(4, graph_sizes[-1])]  # TODO: Set start back to 3
 
         # D-Wave -> uncomment this and comment simulate for running with D-Wave
         '''
@@ -176,6 +184,7 @@ if __name__ == "__main__":
         '''
 
         for solver in solvers:
+            '''
             algorithm_list = [Jonas(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver),
                               Danielle(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver),
                               n_split_GCSQ(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver),
@@ -185,7 +194,9 @@ if __name__ == "__main__":
             if directory_exists:
                 main(algorithm_list=algorithm_list, data=data, graph_sizes=graph_sizes, num_graphs_per_size=num_graphs_per_size,
                      experiment=f"non-iterative algorithms with {solver}", directory=directory)
+            '''
             for mode in parallel:
+                '''
                 algorithm_list = [GCSQ(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode)]
                 directory = f"results/{data_name}/quantum/{solver}/{'parallel' if mode else 'sequential'}"
                 directory_exists = create_nested_directory(directory)
@@ -193,6 +204,7 @@ if __name__ == "__main__":
                     main(algorithm_list=algorithm_list, data=data, graph_sizes=graph_sizes,
                          num_graphs_per_size=num_graphs_per_size, experiment=f"GCS-Q with {solver} in {mode} mode",
                          directory=directory)
+                '''
                 for k in k_list:
                     algorithm_list = [ours_iterative_exactly(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
                                       ours_iterative_at_most(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),

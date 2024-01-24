@@ -5,7 +5,7 @@ import pickle
 
 
 class Algorithm(ABC):
-    def __init__(self, seed, num_graph_sizes, category, num_coalitions=None, timeout=2592000):
+    def __init__(self, seed, num_graph_sizes, category, num_coalitions=None, timeout=600):
         self.category = category
         self.num_coalitions = num_coalitions
         self.seed = seed
@@ -24,13 +24,13 @@ class Algorithm(ABC):
 
 
 class ClassicalAlgorithm(Algorithm, ABC):
-    def __init__(self, seed, num_graph_sizes, num_coalitions=None, timeout=2592000):
+    def __init__(self, seed, num_graph_sizes, num_coalitions=None, timeout=600):
         super().__init__(seed=seed, num_graph_sizes=num_graph_sizes, category="classical", num_coalitions=num_coalitions,
                          timeout=timeout)
 
 
 class QuantumAlgorithm(Algorithm, ABC):
-    def __init__(self, seed, num_graph_sizes, solver="qbsolv", num_coalitions=None, timeout=2592000):
+    def __init__(self, seed, num_graph_sizes, solver="qbsolv", num_coalitions=None, timeout=600):
         super().__init__(seed=seed, num_graph_sizes=num_graph_sizes, category="quantum", num_coalitions=num_coalitions,
                          timeout=timeout)
         self.solver = solver  # can be qbsolv, sa, dwave or qaoa
@@ -51,7 +51,7 @@ class QuantumAlgorithm(Algorithm, ABC):
 
 
 class IterativeQuantumAlgorithm(QuantumAlgorithm, ABC):
-    def __init__(self, seed, num_graph_sizes, solver="qbsolv", num_coalitions=None, timeout=2592000, parallel=True):
+    def __init__(self, seed, num_graph_sizes, solver="qbsolv", num_coalitions=None, timeout=600, parallel=True):
         super().__init__(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, num_coalitions=num_coalitions, timeout=timeout)
         self.parallel = parallel
 
@@ -147,6 +147,6 @@ class IterativeQuantumAlgorithm(QuantumAlgorithm, ABC):
 
 
 class IterativeQuantumAlgorithmWithK(IterativeQuantumAlgorithm, ABC):
-    def __init__(self, seed, num_graph_sizes, k, solver="qbsolv", num_coalitions=None, timeout=2592000, parallel=True):
+    def __init__(self, seed, num_graph_sizes, k, solver="qbsolv", num_coalitions=None, timeout=600, parallel=True):
         super().__init__(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, num_coalitions=num_coalitions, timeout=timeout, parallel=parallel)
         self.k = k

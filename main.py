@@ -153,7 +153,7 @@ if __name__ == "__main__":
     num_seeds = 1
     for _ in range(num_seeds):
         # Setting the seed
-        seed = random.randint(0, 2 ** 32 - 1)
+        seed = 3949468976 #random.randint(0, 2 ** 32 - 1)
         random.seed(seed)
         np.random.seed(seed)
         print(f"Seed: {seed}")
@@ -172,9 +172,9 @@ if __name__ == "__main__":
         num_graph_sizes = len(graph_sizes)
 
         # Simulate
-        solvers = ["qbsolv", "qaoa"]
+        solvers = ["qbsolv"] #, "qaoa"]
         parallel = [True]  #, False] -> Try sequential later
-        k_list = [i for i in range(3, graph_sizes[-1])]
+        k_list = [4] #[i for i in range(3, graph_sizes[-1])]
 
         # D-Wave -> uncomment this and comment simulate for running with D-Wave
         '''
@@ -184,6 +184,7 @@ if __name__ == "__main__":
         '''
 
         for solver in solvers:
+            '''
             algorithm_list = [Jonas(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver),
                               Danielle(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver),
                               n_split_GCSQ(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver),
@@ -193,7 +194,9 @@ if __name__ == "__main__":
             if directory_exists:
                 main(algorithm_list=algorithm_list, data=data, graph_sizes=graph_sizes, num_graphs_per_size=num_graphs_per_size,
                      experiment=f"non-iterative algorithms with {solver}", directory=directory)
+            '''
             for mode in parallel:
+                '''
                 algorithm_list = [GCSQ(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode)]
                 directory = f"results/{data_name}/quantum/{solver}/{'parallel' if mode else 'sequential'}"
                 directory_exists = create_nested_directory(directory)
@@ -201,11 +204,16 @@ if __name__ == "__main__":
                     main(algorithm_list=algorithm_list, data=data, graph_sizes=graph_sizes,
                          num_graphs_per_size=num_graphs_per_size, experiment=f"GCS-Q with {solver} in {mode} mode",
                          directory=directory)
+                '''
                 for k in k_list:
+                    '''
                     algorithm_list = [ours_iterative_exactly(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
                                       ours_iterative_at_most(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
                                       k_split_GCSQ_exactly(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
                                       k_split_GCSQ_at_most(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
+                                      r_qubo_iterative(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k)]
+                    '''
+                    algorithm_list = [k_split_GCSQ_at_most(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
                                       r_qubo_iterative(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k)]
                     directory = f"results/{data_name}/quantum/{solver}/{'parallel' if mode else 'sequential'}/k={k}"
                     directory_exists = create_nested_directory(directory)

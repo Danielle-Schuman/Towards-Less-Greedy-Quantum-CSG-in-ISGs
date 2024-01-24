@@ -5,7 +5,7 @@ from algorithm import QuantumAlgorithm
 
 
 class n_split_GCSQ(QuantumAlgorithm):
-    def __init__(self, seed, num_graph_sizes, solver="qbsolv", num_coalitions=None, timeout=2592000):
+    def __init__(self, seed, num_graph_sizes, solver="qbsolv", num_coalitions=None, timeout=600):
         super().__init__(seed=seed, num_graph_sizes=num_graph_sizes, num_coalitions=num_coalitions, solver=solver, timeout=timeout)
         self.name = f"n_split_GCSQ_{self.solver}"
 

@@ -36,7 +36,7 @@ def _planarize(num_agents, input_graph):
     pass
 
 class Leon(QuantumAlgorithm):
-    def __init__(self, seed, num_graph_sizes, solver="qbsolv", num_coalitions=None, timeout=2592000):
+    def __init__(self, seed, num_graph_sizes, solver="qbsolv", num_coalitions=None, timeout=600):
         super().__init__(seed=seed, num_graph_sizes=num_graph_sizes, num_coalitions=num_coalitions, solver=solver, timeout=timeout)
         self.name = f"Leon19_{self.solver}"
 

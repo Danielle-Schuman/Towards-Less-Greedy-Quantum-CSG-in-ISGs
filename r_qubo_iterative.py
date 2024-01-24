@@ -5,7 +5,7 @@ from algorithm import IterativeQuantumAlgorithmWithK
 
 
 class r_qubo_iterative(IterativeQuantumAlgorithmWithK):
-    def __init__(self, seed, num_graph_sizes, k, solver="qbsolv", timeout=2592000, parallel=True):
+    def __init__(self, seed, num_graph_sizes, k, solver="qbsolv", timeout=600, parallel=True):
         super().__init__(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, timeout=timeout, k=k, parallel=parallel)
         self.name = f"{self.k}_split_R_QUBO-iterative_{self.solver}_{'parallel' if self.parallel else 'sequential'}"
 

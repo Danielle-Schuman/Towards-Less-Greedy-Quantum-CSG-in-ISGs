@@ -16,7 +16,7 @@ from qiskit.primitives import Sampler
 
 # this function solves a given QUBO-Matrix qubo with QB-solv
 # see: https://docs.ocean.dwavesys.com/projects/qbsolv/en/latest/source/generated/dwave_qbsolv.QBSolv.sample.html
-def solve_with_qbsolv(qubo, num_qubits, seed, timeout=2592000):
+def solve_with_qbsolv(qubo, num_qubits, seed, timeout=600):
     # num_repeats: Determines the number of times to repeat the main loop in qbsolv after determining a better sample. Default 50.
     # timeout: Number of seconds before routine halts. Default is 2592000 = 1 month. Jonas has timeout=10, but that can marginally decrease performance.
     # actually, this has sample_count = 1 -> for sample_count = 100, we'd need to run it 100 times with different seeds

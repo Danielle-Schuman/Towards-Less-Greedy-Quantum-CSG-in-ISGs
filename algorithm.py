@@ -10,8 +10,9 @@ class Algorithm(ABC):
         self.num_coalitions = num_coalitions
         self.seed = seed
         self.timeout = timeout
-        # list of tupels (coalitions, value, total_time) for all graphs evaluated so far
-        self.data = []
+        # list of tupel (coalitions, value, total_time) for last graph evaluated
+        # later for plotting: list of all such tuples
+        self.data = None
         # list of sums of values for graphs of same size
         self.values_sums = [0] * num_graph_sizes
 

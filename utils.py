@@ -1,5 +1,6 @@
 import copy
 import numpy as np
+import pickle
 from dwave_qbsolv import QBSolv
 import dimod as di
 from neal import SimulatedAnnealingSampler
@@ -106,6 +107,18 @@ def solve_with_qaoa(qubo, num_qubits, seed):
     # Run quantum algorithm QAOA
     result = qaoa_algorithm.solve(qubo_for_qaoa)
     return convert_dict_to_list(result.variables_dict)
+
+
+def append_to_pickle(data, file_path):
+    try:
+        with open(file_path, 'ab') as file:
+            pickle.dump(data, file)
+    except FileNotFoundError:
+        with open(file_path, 'wb') as file:
+            pickle.dump(data, file)
+        print(f"Created {file_path} and wrote first data.")
+    except Exception as e:
+        print(f"An error occurred trying to pickle the data {data} in the file {file_path}:", e)
 
 
 # this function calculates the value of a solution for a given QUBO-Matrix qubo

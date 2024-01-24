@@ -1,6 +1,23 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import pickle
 
+
+def read_pickle_data(file_path):
+    all_data = []
+    try:
+        with open(file_path, 'rb') as file:
+            while True:
+                data = pickle.load(file)
+                all_data.append(data)
+    except FileNotFoundError:
+        print(f"The file {file_path} does not exist.")
+    except EOFError:
+        # Reached end of file
+        pass
+    except Exception as e:
+        print(f"An error occurred while reading {file_path}: {e}")
+    return all_data
 
 def get_barchart_win_lose_draw(algo1_name, algo2_name, results_dict, seed, note=""):
     win_distribution = {
@@ -39,3 +56,8 @@ def get_barchart_win_lose_draw(algo1_name, algo2_name, results_dict, seed, note=
     plt.savefig(f"plots/{plotname}.pdf", format='pdf')
     plt.show()
     plt.close()
+
+if __name__ == "__main__":
+     data_path = "results/eon_data/quantum/qbsolv/data_ours_n_half_qbsolv__1334442952__2024-01-24_00-57-15.964398.pkl"
+     data = read_pickle_data(data_path)
+     print(data)

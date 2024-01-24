@@ -41,7 +41,7 @@ def create_data_synthetic_test(graph_sizes, num_graphs_per_size, seed, mean=0.5)
             graph = utils.generate_problem(n, mean=mean)
             graphs.append(graph)
         data[n] = graphs
-    pickle.dump(data, open(f"data/tests/data_{graph_sizes}_{num_graphs_per_size}_{seed}.pkl", 'wb'))
+    utils.append_to_pickle(data, f"data/tests/data_{graph_sizes}_{num_graphs_per_size}_{seed}.pkl")
     return data, True
 
 
@@ -56,8 +56,8 @@ def run_algorithm(serialized_algorithm, serialized_edges, num_agents, serialized
         end_time = time.time()
         value = np.sum([utils.value(c, edges) for c in coalitions])
         total_time = end_time - start_time
-        algorithm.data.append((coalitions, value, total_time))
-        pickle.dump(algorithm.data, open(f"{directory}/data_{algorithm.name}__{algorithm.seed}__{run_id}.pkl", 'wb'))
+        algorithm.data = (coalitions, value, total_time)
+        utils.append_to_pickle(algorithm.data, f"{directory}/data_{algorithm.name}__{algorithm.seed}__{run_id}.pkl")
         print(f"          Coalition structure value for {algorithm.name}: {value}   -   Time: {total_time}")
     except Exception as e:
         print("          Error (probably not enough logical qubits available): ", e)
@@ -153,7 +153,7 @@ if __name__ == "__main__":
     num_seeds = 1
     for _ in range(num_seeds):
         # Setting the seed
-        seed = 454640551 #random.randint(0, 2 ** 32 - 1)
+        seed = random.randint(0, 2 ** 32 - 1)
         random.seed(seed)
         np.random.seed(seed)
         print(f"Seed: {seed}")
@@ -172,9 +172,9 @@ if __name__ == "__main__":
         num_graph_sizes = len(graph_sizes)
 
         # Simulate
-        solvers = ["qbsolv"] #, "qaoa"]
+        solvers = ["qbsolv", "qaoa"]
         parallel = [True]  #, False] -> Try sequential later
-        k_list = [i for i in range(4, graph_sizes[-1])]  # TODO: Set start back to 3
+        k_list = [i for i in range(3, graph_sizes[-1])]
 
         # D-Wave -> uncomment this and comment simulate for running with D-Wave
         '''
@@ -184,7 +184,6 @@ if __name__ == "__main__":
         '''
 
         for solver in solvers:
-            '''
             algorithm_list = [Jonas(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver),
                               Danielle(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver),
                               n_split_GCSQ(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver),
@@ -194,9 +193,7 @@ if __name__ == "__main__":
             if directory_exists:
                 main(algorithm_list=algorithm_list, data=data, graph_sizes=graph_sizes, num_graphs_per_size=num_graphs_per_size,
                      experiment=f"non-iterative algorithms with {solver}", directory=directory)
-            '''
             for mode in parallel:
-                '''
                 algorithm_list = [GCSQ(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode)]
                 directory = f"results/{data_name}/quantum/{solver}/{'parallel' if mode else 'sequential'}"
                 directory_exists = create_nested_directory(directory)
@@ -204,7 +201,6 @@ if __name__ == "__main__":
                     main(algorithm_list=algorithm_list, data=data, graph_sizes=graph_sizes,
                          num_graphs_per_size=num_graphs_per_size, experiment=f"GCS-Q with {solver} in {mode} mode",
                          directory=directory)
-                '''
                 for k in k_list:
                     algorithm_list = [ours_iterative_exactly(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
                                       ours_iterative_at_most(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),

@@ -4,3 +4,6 @@ __pycache__/*
 secrets/private_keys
 secrets/public_keys
 secrets/config.json
+.envrc
+.direnv/
+.python-version

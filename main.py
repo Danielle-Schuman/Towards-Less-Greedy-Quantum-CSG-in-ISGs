@@ -45,19 +45,22 @@ def create_data_synthetic_test(graph_sizes, num_graphs_per_size, seed, mean=0.5)
     return data, True
 
 
-def run_algorithm(serialized_algorithm, serialized_edges, num_agents, serialized_run_id, serialized_directory_path):
+def run_algorithm(serialized_algorithm, serialized_edges, num_agents, serialized_run_id, serialized_directory_path, graph_num):
     try:
         algorithm = pickle.loads(serialized_algorithm)
         edges = pickle.loads(serialized_edges)
         run_id = pickle.loads(serialized_run_id)
         directory = pickle.loads(serialized_directory_path)
+        print(f"          Running {algorithm.name} for seed {algorithm.seed} for graph_size {num_agents} for graph {graph_num} ...")
         start_time = time.time()
         coalitions = algorithm.solve(num_agents, edges)
         end_time = time.time()
         value = np.sum([utils.value(c, edges) for c in coalitions])
         total_time = end_time - start_time
         algorithm.data = (coalitions, value, total_time)
+        done = (num_agents, graph_num)
         utils.append_to_pickle(algorithm.data, f"{directory}/data_{algorithm.name}__{algorithm.seed}__{run_id}.pkl")
+        utils.append_to_pickle(done, f"{directory}/done_{algorithm.name}__{algorithm.seed}__{run_id}.pkl")
         print(f"          Coalition structure value for {algorithm.name}: {value}   -   Time: {total_time}")
     except Exception as e:
         print("          Error (probably not enough logical qubits available): ", e)
@@ -93,7 +96,7 @@ def main(algorithm_list, data, graph_sizes, num_graphs_per_size, experiment, dir
                                 "python",
                                 "-c",
                                 f"from main import run_algorithm; "
-                                f"print(run_algorithm({serialized_algorithm}, {serialized_graph}, {num_agents}, {serialized_run_id}, {serialized_directory}))"
+                                f"print(run_algorithm({serialized_algorithm}, {serialized_graph}, {num_agents}, {serialized_run_id}, {serialized_directory}, {graph_num}))"
                             ]
                             # Run the subprocess with the memory limit
                             subprocess.run(command, check=True)
@@ -126,7 +129,7 @@ def main(algorithm_list, data, graph_sizes, num_graphs_per_size, experiment, dir
                             "python",
                             "-c",
                             f"from main import run_algorithm; "
-                            f"print(run_algorithm({serialized_algorithm}, {serialized_graph}, {num_agents}, {serialized_run_id}, {serialized_directory}))"
+                            f"print(run_algorithm({serialized_algorithm}, {serialized_graph}, {num_agents}, {serialized_run_id}, {serialized_directory}, {graph_num}))"
                         ]
                         # Run the subprocess with the memory limit
                         subprocess.run(command, check=True)

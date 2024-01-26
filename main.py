@@ -51,7 +51,7 @@ def run_algorithm(serialized_algorithm, serialized_edges, num_agents, serialized
         edges = pickle.loads(serialized_edges)
         run_id = pickle.loads(serialized_run_id)
         directory = pickle.loads(serialized_directory_path)
-        print(f"          Running {algorithm.name} for seed {algorithm.seed} for graph_size {num_agents} for graph {graph_num} ...")
+        print(f"                    Running {algorithm.name} for seed {algorithm.seed} for graph_size {num_agents} for graph {graph_num} ...")
         start_time = time.time()
         coalitions = algorithm.solve(num_agents, edges)
         end_time = time.time()
@@ -61,15 +61,18 @@ def run_algorithm(serialized_algorithm, serialized_edges, num_agents, serialized
         done = (num_agents, graph_num)
         utils.append_to_pickle(algorithm.data, f"{directory}/data_{algorithm.name}__{algorithm.seed}__{run_id}.pkl")
         utils.append_to_pickle(done, f"{directory}/done_{algorithm.name}__{algorithm.seed}__{run_id}.pkl")
-        print(f"          Coalition structure value for {algorithm.name}: {value}   -   Time: {total_time}")
-    except Exception as e:
-        print("          Error (probably not enough logical qubits available): ", e)
+        print(f"                    Coalition structure value for {algorithm.name}: {value}   -   Time: {total_time}")
+    except ValueError as e:
+        raise ValueError(f"                    Error (probably not enough logical qubits available): {str(e)}") from None
+    except np.core._exceptions._ArrayMemoryError as e:
+        raise Exception(f"                    Error (probably not enough memory available): {str(e)}") from None
 
 
 def main(algorithm_list, data, graph_sizes, num_graphs_per_size, experiment, directory):
     run_id = str(datetime.datetime.now().date()) + '_' + str(datetime.datetime.now().time()).replace(':', '-')
 
     for algorithm in algorithm_list:
+        too_large = False
         if isinstance(algorithm, IterativeQuantumAlgorithmWithK):
             for num_agents in graph_sizes:
                 if algorithm.k <= num_agents:
@@ -101,7 +104,11 @@ def main(algorithm_list, data, graph_sizes, num_graphs_per_size, experiment, dir
                             # Run the subprocess with the memory limit
                             subprocess.run(command, check=True)
                         except subprocess.CalledProcessError as e:
-                            print("          Error: Running algorithm failed, most likely due to insufficient available memory. Error message: ", e)
+                            print("                    Error: Running algorithm failed, most likely due to insufficient available memory. Error message: ", e)
+                            too_large = True
+                            break
+                if too_large:
+                    break
                 else:
                     pass
         else:
@@ -134,7 +141,11 @@ def main(algorithm_list, data, graph_sizes, num_graphs_per_size, experiment, dir
                         # Run the subprocess with the memory limit
                         subprocess.run(command, check=True)
                     except subprocess.CalledProcessError as e:
-                        print("          Error: Running algorithm failed, most likely due to insufficient available memory. Error message: ", e)
+                        print("                    Error: Running algorithm failed, most likely due to insufficient available memory. Error message: ", e)
+                        too_large = True
+                        break
+                if too_large:
+                    break
     print(f"Done running tests for {experiment}.")
 
     '''

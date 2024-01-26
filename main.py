@@ -153,7 +153,7 @@ if __name__ == "__main__":
     num_seeds = 1
     for _ in range(num_seeds):
         # Setting the seed
-        seed = 3949468976 #random.randint(0, 2 ** 32 - 1)
+        seed = random.randint(0, 2 ** 32 - 1)
         random.seed(seed)
         np.random.seed(seed)
         print(f"Seed: {seed}")
@@ -172,7 +172,7 @@ if __name__ == "__main__":
         num_graph_sizes = len(graph_sizes)
 
         # Simulate
-        solvers = ["qaoa"]  # "qbsolv"]
+        solvers = ["qbsolv", "qaoa"]
         parallel = [True]  #, False] -> Try sequential later (maybe)
         k_list = [i for i in range(3, graph_sizes[-1])]
 

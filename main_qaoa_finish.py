@@ -4,6 +4,7 @@ import pickle
 import time
 import datetime
 import os
+import argparse
 
 import subprocess
 
@@ -163,11 +164,15 @@ def main(algorithm_list, data, graph_sizes, num_graphs_per_size, experiment, dir
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--seed", type=int, required=True)
+    args = parser.parse_args()
+
     # TODO: Determine sensible number of seeds for statistical significance
     num_seeds = 1
     for _ in range(num_seeds):
         # Setting the seed
-        seed = 1364436995 #random.randint(0, 2 ** 32 - 1)
+        seed = args.seed
         random.seed(seed)
         np.random.seed(seed)
         print(f"Seed: {seed}")

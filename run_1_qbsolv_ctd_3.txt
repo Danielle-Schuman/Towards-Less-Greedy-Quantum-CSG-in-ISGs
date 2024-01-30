@@ -58173,3 +58173,79 @@ None
                     Running 27_split_R_QUBO-iterative_qbsolv_parallel for seed 3949468976 for graph_size 28 for graph 18 ...
                     Coalition structure value for 27_split_R_QUBO-iterative_qbsolv_parallel: 2.2661988687358203   -   Time: 48.35537505149841
 None
+                    Running 27_split_R_QUBO-iterative_qbsolv_parallel for seed 3949468976 for graph_size 28 for graph 19 ...
+                    Coalition structure value for 27_split_R_QUBO-iterative_qbsolv_parallel: 2.2211219918747673   -   Time: 71.15189504623413
+None
+
+          Running 27_split_R_QUBO-iterative_qbsolv_parallel...
+
+
+     Graph 6
+
+          Running 27_split_R_QUBO-iterative_qbsolv_parallel...
+
+
+     Graph 7
+
+          Running 27_split_R_QUBO-iterative_qbsolv_parallel...
+
+
+     Graph 8
+
+          Running 27_split_R_QUBO-iterative_qbsolv_parallel...
+
+
+     Graph 9
+
+          Running 27_split_R_QUBO-iterative_qbsolv_parallel...
+
+
+     Graph 10
+
+          Running 27_split_R_QUBO-iterative_qbsolv_parallel...
+
+
+     Graph 11
+
+          Running 27_split_R_QUBO-iterative_qbsolv_parallel...
+
+
+     Graph 12
+
+          Running 27_split_R_QUBO-iterative_qbsolv_parallel...
+
+
+     Graph 13
+
+          Running 27_split_R_QUBO-iterative_qbsolv_parallel...
+
+
+     Graph 14
+
+          Running 27_split_R_QUBO-iterative_qbsolv_parallel...
+
+
+     Graph 15
+
+          Running 27_split_R_QUBO-iterative_qbsolv_parallel...
+
+
+     Graph 16
+
+          Running 27_split_R_QUBO-iterative_qbsolv_parallel...
+
+
+     Graph 17
+
+          Running 27_split_R_QUBO-iterative_qbsolv_parallel...
+
+
+     Graph 18
+
+          Running 27_split_R_QUBO-iterative_qbsolv_parallel...
+
+
+     Graph 19
+
+          Running 27_split_R_QUBO-iterative_qbsolv_parallel...
+Done running tests for k-split algorithms with qbsolv in True mode for k=27.

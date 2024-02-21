@@ -185,7 +185,7 @@ if __name__ == "__main__":
         num_graph_sizes = len(graph_sizes)
 
         # Simulate
-        solver = "qbsolv"  # "qaoa"
+        solver = "qaoa"
         mode = True  # False -> Try sequential later (maybe)
         k = 2
 

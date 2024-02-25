@@ -77,7 +77,7 @@ def main(algorithm_list, data, graph_sizes, num_graphs_per_size, experiment, dir
             for num_agents in graph_sizes[4:]:
                 if algorithm.k <= num_agents:
                     print(f"\n\n\nTest for graphsize {num_agents}")
-                    for graph_num in num_graphs_per_size:
+                    for graph_num in range(num_graphs_per_size):
                         print(f"\n\n     Graph {graph_num}")
                         graph = data[num_agents][graph_num]
                         if synthetic:

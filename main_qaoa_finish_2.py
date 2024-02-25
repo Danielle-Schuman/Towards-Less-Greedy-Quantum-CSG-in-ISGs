@@ -74,10 +74,10 @@ def main(algorithm_list, data, graph_sizes, num_graphs_per_size, experiment, dir
     for algorithm in algorithm_list:
         too_large = False
         if isinstance(algorithm, IterativeQuantumAlgorithmWithK):
-            for num_agents in [10]: #graph_sizes:
+            for num_agents in graph_sizes[4:]:
                 if algorithm.k <= num_agents:
                     print(f"\n\n\nTest for graphsize {num_agents}")
-                    for graph_num in range(14, num_graphs_per_size):
+                    for graph_num in num_graphs_per_size:
                         print(f"\n\n     Graph {graph_num}")
                         graph = data[num_agents][graph_num]
                         if synthetic:
@@ -188,7 +188,7 @@ if __name__ == "__main__":
         # Simulate
         solvers = ["qaoa"]
         parallel = [True]  #, False] -> Try sequential later (maybe)
-        k_list = [i for i in range(3, 6)]  #graph_sizes[-1])]
+        k_list = [3]  #[i for i in range(3, 6)]  #graph_sizes[-1])]
 
         # D-Wave -> uncomment this and comment simulate for running with D-Wave
         '''

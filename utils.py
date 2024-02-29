@@ -4,8 +4,8 @@ import pickle
 from dwave_qbsolv import QBSolv
 import dimod as di
 from neal import SimulatedAnnealingSampler
-from dwave.cloud import Client
-import minorminer
+#from dwave.cloud import Client
+#import minorminer
 from uqo.client.config import Config
 from uqo import Problem
 from qiskit_optimization import QuadraticProgram
@@ -15,7 +15,7 @@ from qiskit_optimization.algorithms import MinimumEigenOptimizer
 from qiskit_algorithms.utils import algorithm_globals
 from qiskit.primitives import Sampler
 
-from secrets_folder.dwave_token import TOKEN
+#from secrets_folder.dwave_token import TOKEN
 
 # this function solves a given QUBO-Matrix qubo with QB-solv
 # see: https://docs.ocean.dwavesys.com/projects/qbsolv/en/latest/source/generated/dwave_qbsolv.QBSolv.sample.html
@@ -40,14 +40,16 @@ def solve_with_sa(qubo, num_qubits, seed):
     return solution
 
 
+'''
 def find_embedding_with_client(qubo, advantage_solver):
         client = Client(token=TOKEN, solver=advantage_solver)
         # get graph of specified solver
         graph = client.get_solver().edges
-        print("                    Searching for embedding...")
         # find embedding
         embedding = minorminer.find_embedding(qubo, graph)
         return embedding
+'''
+
 
 def solve_with_dwave(qubo, num_qubits, solver):
     # get advantage solver for connection
@@ -58,6 +60,8 @@ def solve_with_dwave(qubo, num_qubits, solver):
         advantage_solver = 'Advantage_system6.3'
     elif 'Advantage_system4.1' in available_solvers:
         advantage_solver = 'Advantage_system4.1'
+    elif 'Advantage_system6.4' in available_solvers:
+        advantage_solver = 'Advantage_system6.4'
     else:
         raise Exception("No know Advantage solver available.")
     print(f"                    Running on {advantage_solver} ...")
@@ -73,17 +77,18 @@ def solve_with_dwave(qubo, num_qubits, solver):
         embedding_not_found = True
         try:
             # calculate embedding
-            #problem.find_pegasus_embedding()
-            problem.embedding = find_embedding_with_client(qubo, advantage_solver)
+            print("                    Searching for embedding...")
+            problem.find_pegasus_embedding()
+            #problem.embedding = find_embedding_with_client(qubo, advantage_solver)
             print("                    Embedding found")
             embedding_not_found = False
             try:
                 print("                      Start running D-Wave")
-                #response = problem.solve(shots)
+                response = problem.solve(shots)
                 print("                      Running D-Wave done")
             except:
                 print("                      Something went wrong... Trying again: Start running D-Wave")
-                #response = problem.solve(shots)
+                response = problem.solve(shots)
                 print("                      Running D-Wave done")
         except:
             if embedding_not_found:

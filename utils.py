@@ -4,6 +4,8 @@ import pickle
 from dwave_qbsolv import QBSolv
 import dimod as di
 from neal import SimulatedAnnealingSampler
+#from dwave.cloud import Client
+#import minorminer
 from uqo.client.config import Config
 from uqo import Problem
 from qiskit_optimization import QuadraticProgram
@@ -13,6 +15,7 @@ from qiskit_optimization.algorithms import MinimumEigenOptimizer
 from qiskit_algorithms.utils import algorithm_globals
 from qiskit.primitives import Sampler
 
+#from secrets_folder.dwave_token import TOKEN
 
 # this function solves a given QUBO-Matrix qubo with QB-solv
 # see: https://docs.ocean.dwavesys.com/projects/qbsolv/en/latest/source/generated/dwave_qbsolv.QBSolv.sample.html
@@ -37,18 +40,31 @@ def solve_with_sa(qubo, num_qubits, seed):
     return solution
 
 
+'''
+def find_embedding_with_client(qubo, advantage_solver):
+        client = Client(token=TOKEN, solver=advantage_solver)
+        # get graph of specified solver
+        graph = client.get_solver().edges
+        # find embedding
+        embedding = minorminer.find_embedding(qubo, graph)
+        return embedding
+'''
+
+
 def solve_with_dwave(qubo, num_qubits, solver):
     # get advantage solver for connection
-    config = Config(configpath="secrets/config.json")
+    config = Config(configpath="secrets_folder/config.json")
     connection = config.create_connection()
     available_solvers = connection.get_available_dwave_solvers()
     if 'Advantage_system6.3' in available_solvers:
         advantage_solver = 'Advantage_system6.3'
     elif 'Advantage_system4.1' in available_solvers:
         advantage_solver = 'Advantage_system4.1'
+    elif 'Advantage_system6.4' in available_solvers:
+        advantage_solver = 'Advantage_system6.4'
     else:
         raise Exception("No know Advantage solver available.")
-    print(f"Running on {advantage_solver} ...")
+    print(f"                    Running on {advantage_solver} ...")
 
     shots = 100  # number of times the QA algorithms is executed, default is 1 -> TODO: Find good value
     if solver == "test_uqo":
@@ -58,12 +74,27 @@ def solve_with_dwave(qubo, num_qubits, solver):
         global ADVANTAGE_SOLVER
         # needs dwave quota
         problem = Problem.Qubo(config, qubo).with_platform("dwave").with_solver(advantage_solver)
-        # calculate embedding
-        problem.find_pegasus_embedding()
+        embedding_not_found = True
         try:
-            response = problem.solve(shots)
+            # calculate embedding
+            print("                    Searching for embedding...")
+            problem.find_pegasus_embedding()
+            #problem.embedding = find_embedding_with_client(qubo, advantage_solver)
+            print("                    Embedding found")
+            embedding_not_found = False
+            try:
+                print("                      Start running D-Wave")
+                response = problem.solve(shots)
+                print("                      Running D-Wave done")
+            except:
+                print("                      Something went wrong... Trying again: Start running D-Wave")
+                response = problem.solve(shots)
+                print("                      Running D-Wave done")
         except:
-            response = problem.solve(shots)
+            if embedding_not_found:
+                raise Exception("No embedding found")
+            else:
+                raise Exception("Something went wrong... Probably connection error to D-Wave")
     solution = [response.solutions[0][i] for i in range(num_qubits)]
     return solution
 

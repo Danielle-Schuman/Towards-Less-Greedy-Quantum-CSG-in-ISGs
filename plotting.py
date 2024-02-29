@@ -139,12 +139,29 @@ def remove_substring_from_keys(input_dict, substring):
     return new_dict
 
 
-def split_dicts_by_graphsizes(original_dict):
-    graphsize_dicts = [{} for _ in range(13)]
+def split_dicts_by_graphsizes(original_dict, graph_sizes):
+    graphsize_dicts = {graph_size: {} for graph_size in graph_sizes}
 
     for algorithm_name, all_results_for_algo in original_dict.items():
-        for graph_size_index, results_for_graphsize in enumerate(all_results_for_algo):
-            graphsize_dicts[graph_size_index][algorithm_name] = results_for_graphsize
+        start_name = algorithm_name.split("_", 1)[0]
+        if start_name.isnumeric() and start_name != '2':
+            k = int(start_name)
+            index_k = graph_sizes.index(k) if k in graph_sizes else graph_sizes.index(k + 1)
+            # Insert measured values and times into graphsize_dicts
+            for i, graph_size in enumerate(graph_sizes[index_k:]):
+                graphsize_dicts[graph_size][algorithm_name] = all_results_for_algo[i]
+        elif start_name == 'GCS-Q' or start_name == '2':
+            # k = 2
+            index_k = 0
+            # Insert measured values and times into graphsize_dicts
+            for i, graph_size in enumerate(graph_sizes[index_k:]):
+                graphsize_dicts[graph_size][algorithm_name] = all_results_for_algo[i]
+        elif start_name == 'n' or "ours" or "R-QUBO":
+            # Insert measured values and times into graphsize_dicts
+            for i, graph_size in enumerate(graph_sizes):
+                graphsize_dicts[graph_size][algorithm_name] = all_results_for_algo[i]
+        else:
+            raise Exception("k for split not known")
 
     return graphsize_dicts
 
@@ -155,42 +172,89 @@ def compare_ks_GCSQ_exactly(dict_sums):
     dict_k_split_GCSQ = filter_dict_by_substring(dict_sums, "_split_GCSQ_exactly")
     dict_n_split_GCSQ = filter_dict_by_substring(dict_sums, "n_split_GCSQ")
     dict_all = {**dict_GCSQ, **dict_k_split_GCSQ, **dict_n_split_GCSQ}
-    plot_values_and_times(dict_all, "GCS_Q exactly")
+    plot_values_and_times(dict_all, "GCS-Q exactly")
 
+
+def compare_ks_GCSQ_at_most(dict_sums):
+    # get results from k=2 (GCS-Q) to k=n-1, and combine them into one dict
+    dict_GCSQ = filter_dict_by_substring(dict_sums, "GCS-Q_")
+    dict_k_split_GCSQ = filter_dict_by_substring(dict_sums, "_split_GCSQ_at_most")
+    dict_all = {**dict_GCSQ, **dict_k_split_GCSQ}
+    plot_values_and_times(dict_all, "GCS-Q at most")
+
+
+def compare_ours_iterative_exactly(dict_sums):
+    # get results from k=2 to k=n (ours_n), and combine them into one dict
+    dict_k_split = filter_dict_by_substring(dict_sums, "_split_ours_iterative_exactly")
+    dict_n_split = filter_dict_by_substring(dict_sums, "ours_n_q")  # added the q to exclude the ours_n_half
+    dict_all = {**dict_k_split, **dict_n_split}
+    plot_values_and_times(dict_all, "Ours exactly")
+
+
+def compare_ours_iterative_at_most(dict_sums):
+    # get results from k=2 to k=n (ours_n_half), and combine them into one dict
+    dict_k_split = filter_dict_by_substring(dict_sums, "_split_ours_iterative_at_most")
+    dict_n_split = filter_dict_by_substring(dict_sums, "ours_n_half")
+    dict_all = {**dict_k_split, **dict_n_split}
+    plot_values_and_times(dict_all, "Ours at most")
+
+
+def compare_r_qubo_iterative(dict_sums):
+    # get results from k=2 to k=n (r_qubo), and combine them into one dict
+    dict_k_split = filter_dict_by_substring(dict_sums, "_split_R_QUBO-iterative")
+    dict_n_split = filter_dict_by_substring(dict_sums, "R-QUBO")
+    dict_all = {**dict_k_split, **dict_n_split}
+    plot_values_and_times(dict_all, "R-QUBO")
+
+
+def get_labels_x_axis(input_dict, title):
+    if "GCS-Q exactly" in title:
+        return ['GCS-Q'] + sorted(int(key) for key in input_dict.keys() if key.isdigit()) + ['n']
+    elif "GCS-Q at most" in title:
+        return ['GCS-Q'] + sorted(int(key) for key in input_dict.keys() if key.isdigit())
+    elif "Ours exactly" in title:
+        return sorted(int(key) for key in input_dict.keys() if key.isdigit()) + ['ours_n']  # TODO: Or Glover?
+    elif "Ours at most" in title:
+        # TODO: Put ours_n_half in middle, next to k = n/2
+        return sorted(int(key) for key in input_dict.keys() if key.isdigit()) + ['ours_n_half']  # TODO: Or just ours?
+    elif "R-QUBO" in title:
+        return sorted(int(key) for key in input_dict.keys() if key.isdigit()) + ['R-QUBO']
+    else:
+        raise Exception("Algorithm to plot unknown -> Don't know how to label x-axis")
 
 def plot_values_and_times(dict_all, title):
     # split dict for different solvers
     dict_qbsolv = remove_substring_from_keys(filter_dict_by_substring(dict_all, "_qbsolv"), "_qbsolv")
     dict_qaoa = remove_substring_from_keys(filter_dict_by_substring(dict_all, "_qaoa"), "_qaoa")
     # split dicts according to graph sizes
-    dicts_qbsolv = split_dicts_by_graphsizes(dict_qbsolv)
-    dicts_qaoa = split_dicts_by_graphsizes(dict_qaoa)
+    graph_sizes = [4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28]
+    dicts_qbsolv = split_dicts_by_graphsizes(dict_qbsolv, graph_sizes)
+    dicts_qaoa = split_dicts_by_graphsizes(dict_qaoa, graph_sizes)
     # plot value-sums and time-sums for every graph size
-    graph_sizes = [4,6,8,10,12,14,16,18,20,22,24,26,28]
-    for n in range(13):
+    for graph_size in graph_sizes:
         # split dicts into coalition values and times
-        dict_qbsolv_values = {key: value[0] for key, value in dicts_qbsolv[n].items()}
-        dict_qbsolv_times = {key: value[1] for key, value in dicts_qbsolv[n].items()}
-        dict_qaoa_values = {key: value[0] for key, value in dicts_qaoa[n].items()}
-        dict_qaoa_times = {key: value[1] for key, value in dicts_qaoa[n].items()}
-        plot_bar_chart(dict_qbsolv_values, dict_qaoa_values, "Sums of coalition values", f"Sums of coalition values of 20 graphs of size {graph_sizes[n]} for {title}", "k for k-split")
+        dict_qbsolv_values = {key: value[0] for key, value in dicts_qbsolv[graph_size].items()}
+        dict_qbsolv_times = {key: value[1] for key, value in dicts_qbsolv[graph_size].items()}
+        dict_qaoa_values = {key: value[0] for key, value in dicts_qaoa[graph_size].items()}
+        dict_qaoa_times = {key: value[1] for key, value in dicts_qaoa[graph_size].items()}
+        plot_bar_chart(dict_qbsolv_values, dict_qaoa_values, "Sums of coalition values", f"Sums of coalition values of 20 graphs of size {graph_size} for {title}", "k for k-split")
         plot_bar_chart(dict_qbsolv_times, dict_qaoa_times, "Sums of times in seconds",
-                   f"Time taken for 20 graphs of size {graph_sizes[n]} for {title}", "k for k-split")
+                   f"Time taken for 20 graphs of size {graph_size} for {title}", "k for k-split")
 
 
 def split_keys_at_underscore(original_dict):
     new_dict = {}
 
     for key, value in original_dict.items():
-        new_key = key.split('_', 1)[0]  # Split at the first occurrence of '_'
+        if "split" in key:
+            new_key = key.split('_', 1)[0]  # Split at the first occurrence of '_', before "split"
+        elif "parallel" in key:
+            new_key = key.split('_p', 1)[0]  # Split of the '_parallel'
+        else:
+            new_key = key
         new_dict[new_key] = value
 
     return new_dict
-
-
-def get_labels_x_axis(input_dict, title):
-    if "GCS_Q exactly" in title:
-        return ['GCS-Q'] + sorted(int(key) for key in input_dict.keys() if key.isdigit()) + ['n']
 
 
 def plot_bar_chart(dict_qbsolv, dict_qaoa, y_label, title, label_x_axis):
@@ -231,7 +295,7 @@ def plot_bar_chart(dict_qbsolv, dict_qaoa, y_label, title, label_x_axis):
                     ha='center', va='bottom', rotation=90, fontsize=8)  # Rotate and reduce font size
 
     plt.savefig(f"plots/{title.replace(' ', '_')}.pdf", format='pdf')
-    plt.show()
+    #plt.show()
     plt.close()
 
 
@@ -271,7 +335,7 @@ def get_barchart_win_lose_draw(algo1_name, algo2_name, results_dict, seed, note=
         plotname = f"barchart_win_lose_draw_{algo1_name}_{algo2_name}_seed_{seed}"
 
     plt.savefig(f"plots/{plotname}.pdf", format='pdf')
-    plt.show()
+    #plt.show()
     plt.close()
 
 if __name__ == "__main__":
@@ -280,8 +344,13 @@ if __name__ == "__main__":
      data = process_folder(data_path)
      #data = read_pickle_data(data_path)
      #print(data)
+
      data_avgs, data_stds = calculate_statistics_over_seeds(data)
      print(data_avgs, "\n", data_stds)
      avg_data_summed = sum_over_same_sized_graphs(data_avgs)
      print(avg_data_summed)
      compare_ks_GCSQ_exactly(avg_data_summed)
+     compare_ks_GCSQ_at_most(avg_data_summed)
+     compare_ours_iterative_exactly(avg_data_summed)
+     compare_ours_iterative_at_most(avg_data_summed)
+     compare_r_qubo_iterative(avg_data_summed)

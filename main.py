@@ -66,18 +66,21 @@ def run_algorithm(serialized_algorithm, serialized_edges, num_agents, serialized
         raise ValueError(f"                    Error (probably not enough logical qubits available): {str(e)}") from None
     except np.core._exceptions._ArrayMemoryError as e:
         raise Exception(f"                    Error (probably not enough memory available): {str(e)}") from None
+    except Exception as e:
+        # for e.g. "No embedding found" exception
+        raise Exception(f"{str(e)}") from None
 
 
 def main(algorithm_list, data, graph_sizes, num_graphs_per_size, experiment, directory):
     run_id = str(datetime.datetime.now().date()) + '_' + str(datetime.datetime.now().time()).replace(':', '-')
 
     for algorithm in algorithm_list:
-        too_large = False
+        #too_large = False
         if isinstance(algorithm, IterativeQuantumAlgorithmWithK):
-            for num_agents in graph_sizes:
+            for num_agents in [28]:  #graph_sizes:
                 if algorithm.k <= num_agents:
                     print(f"\n\n\nTest for graphsize {num_agents}")
-                    for graph_num in range(num_graphs_per_size):
+                    for graph_num in range(1): #range(num_graphs_per_size):
                         print(f"\n\n     Graph {graph_num}")
                         graph = data[num_agents][graph_num]
                         if synthetic:
@@ -105,16 +108,16 @@ def main(algorithm_list, data, graph_sizes, num_graphs_per_size, experiment, dir
                             subprocess.run(command, check=True)
                         except subprocess.CalledProcessError as e:
                             print("                    Error: Running algorithm failed, most likely due to insufficient available memory. Error message: ", e)
-                            too_large = True
-                            break
-                if too_large:
-                    break
-                else:
-                    pass
+                            #too_large = True
+                            #break
+                #if too_large:
+                    #break
+                #else:
+                    #pass
         else:
-            for num_agents in graph_sizes:
+            for num_agents in [28]: #graph_sizes:
                 print(f"\n\n\nTest for graphsize {num_agents}")
-                for graph_num in range(num_graphs_per_size):
+                for graph_num in range(1): #range(num_graphs_per_size):
                     print(f"\n\n     Graph {graph_num}")
                     graph = data[num_agents][graph_num]
                     if synthetic:
@@ -142,10 +145,10 @@ def main(algorithm_list, data, graph_sizes, num_graphs_per_size, experiment, dir
                         subprocess.run(command, check=True)
                     except subprocess.CalledProcessError as e:
                         print("                    Error: Running algorithm failed, most likely due to insufficient available memory. Error message: ", e)
-                        too_large = True
-                        break
-                if too_large:
-                    break
+                        #too_large = True
+                        #break
+                #if too_large:
+                    #break
     print(f"Done running tests for {experiment}.")
 
     '''
@@ -167,7 +170,8 @@ if __name__ == "__main__":
     num_seeds = 1
     for _ in range(num_seeds):
         # Setting the seed
-        seed = random.randint(0, 2 ** 32 - 1)
+        #seed = random.randint(0, 2 ** 32 - 1)
+        seed = 0  # Seed not relevant for D-Wave
         random.seed(seed)
         np.random.seed(seed)
         print(f"Seed: {seed}")
@@ -186,27 +190,29 @@ if __name__ == "__main__":
         num_graph_sizes = len(graph_sizes)
 
         # Simulate
+        '''
         solvers = ["qbsolv", "qaoa"]
         parallel = [True]  #, False] -> Try sequential later (maybe)
         k_list = [i for i in range(3, graph_sizes[-1])]
+        '''
 
         # D-Wave -> uncomment this and comment simulate for running with D-Wave
-        '''
         solvers = ["dwave"]
         parallel = [True]
-        k_list = [4]  # TODO: Come up with sensible values based on simulation
-        '''
+        k_list = [4] #, 3, 5]
 
         for solver in solvers:
             algorithm_list = [Jonas(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver),
-                              Danielle(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver),
-                              n_split_GCSQ(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver),
-                              r_qubo(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver)]
+                              #Danielle(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver),
+                              ## n_split_GCSQ(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver),
+                              #r_qubo(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver)
+                              ]
             directory = f"results/{data_name}/quantum/{solver}"
             directory_exists = create_nested_directory(directory)
             if directory_exists:
                 main(algorithm_list=algorithm_list, data=data, graph_sizes=graph_sizes, num_graphs_per_size=num_graphs_per_size,
                      experiment=f"non-iterative algorithms with {solver}", directory=directory)
+            '''
             for mode in parallel:
                 algorithm_list = [GCSQ(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode)]
                 directory = f"results/{data_name}/quantum/{solver}/{'parallel' if mode else 'sequential'}"
@@ -215,18 +221,21 @@ if __name__ == "__main__":
                     main(algorithm_list=algorithm_list, data=data, graph_sizes=graph_sizes,
                          num_graphs_per_size=num_graphs_per_size, experiment=f"GCS-Q with {solver} in {mode} mode",
                          directory=directory)
+
                 for k in k_list:
-                    algorithm_list = [ours_iterative_exactly(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
-                                      ours_iterative_at_most(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
-                                      k_split_GCSQ_exactly(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
-                                      k_split_GCSQ_at_most(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
-                                      r_qubo_iterative(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k)]
+                    algorithm_list = [#ours_iterative_exactly(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
+                                      #ours_iterative_at_most(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
+                                      #k_split_GCSQ_exactly(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
+                                      ## k_split_GCSQ_at_most(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
+                                      #r_qubo_iterative(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k)
+                                      ]
                     directory = f"results/{data_name}/quantum/{solver}/{'parallel' if mode else 'sequential'}/k={k}"
                     directory_exists = create_nested_directory(directory)
                     if directory_exists:
                         main(algorithm_list=algorithm_list, data=data, graph_sizes=graph_sizes,
                              num_graphs_per_size=num_graphs_per_size, experiment=f"k-split algorithms with {solver} in {mode} mode for k={k}",
                              directory=directory)
+                '''
 
         # Classical algorithms
         '''

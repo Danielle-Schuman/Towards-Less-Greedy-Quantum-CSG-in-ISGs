@@ -1,7 +1,7 @@
 from uqo.client.config import Config
 from uqo.examples.examples import *
 
-config = Config(configpath="secrets/config.json")
+config = Config(configpath="secrets_folder/config.json")
 connection = config.create_connection()
 
 ping(config)

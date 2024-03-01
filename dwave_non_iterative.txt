@@ -2877,3 +2877,647 @@ None
                       Running D-Wave done
                     Coalition structure value for ours_n_dwave: 0.019041857170840615   -   Time: 155.58515071868896
 None
+                    Running ours_n_dwave for seed 0 for graph_size 12 for graph 10 ...
+                    Running on Advantage_system4.1 ...
+                    Searching for embedding...
+
+          Running ours_n_half_dwave...
+
+
+     Graph 6
+
+          Running ours_n_half_dwave...
+
+
+     Graph 7
+
+          Running ours_n_half_dwave...
+
+
+     Graph 8
+
+          Running ours_n_half_dwave...
+
+
+     Graph 9
+
+          Running ours_n_half_dwave...
+
+
+     Graph 10
+
+          Running ours_n_half_dwave...
+
+
+     Graph 11
+
+          Running ours_n_half_dwave...
+
+
+     Graph 12
+
+          Running ours_n_half_dwave...
+
+
+     Graph 13
+
+          Running ours_n_half_dwave...
+
+
+     Graph 14
+
+          Running ours_n_half_dwave...
+
+
+     Graph 15
+
+          Running ours_n_half_dwave...
+
+
+     Graph 16
+
+          Running ours_n_half_dwave...
+
+
+     Graph 17
+
+          Running ours_n_half_dwave...
+
+
+     Graph 18
+
+          Running ours_n_half_dwave...
+
+
+     Graph 19
+
+          Running ours_n_half_dwave...
+
+
+
+Test for graphsize 20
+
+
+     Graph 1
+
+          Running ours_n_half_dwave...
+
+
+     Graph 2
+
+          Running ours_n_half_dwave...
+
+
+     Graph 3
+
+          Running ours_n_half_dwave...
+
+
+     Graph 4
+
+          Running ours_n_half_dwave...
+
+
+     Graph 5
+
+          Running ours_n_half_dwave...
+
+
+     Graph 6
+
+          Running ours_n_half_dwave...
+
+
+     Graph 7
+
+          Running ours_n_half_dwave...
+
+
+     Graph 8
+
+          Running ours_n_half_dwave...
+
+
+     Graph 9
+
+          Running ours_n_half_dwave...
+
+
+     Graph 10
+
+          Running ours_n_half_dwave...
+
+
+     Graph 11
+
+          Running ours_n_half_dwave...
+
+
+     Graph 12
+
+          Running ours_n_half_dwave...
+
+
+     Graph 13
+
+          Running ours_n_half_dwave...
+
+
+     Graph 14
+
+          Running ours_n_half_dwave...
+
+
+     Graph 15
+
+          Running ours_n_half_dwave...
+
+
+     Graph 16
+
+          Running ours_n_half_dwave...
+
+
+     Graph 17
+
+          Running ours_n_half_dwave...
+
+
+     Graph 18
+
+          Running ours_n_half_dwave...
+
+
+     Graph 19
+
+          Running ours_n_half_dwave...
+
+
+
+Test for graphsize 4
+
+
+     Graph 0
+
+          Running ours_n_dwave...
+
+
+     Graph 1
+
+          Running ours_n_dwave...
+
+
+     Graph 2
+
+          Running ours_n_dwave...
+
+
+     Graph 3
+
+          Running ours_n_dwave...
+
+
+     Graph 4
+
+          Running ours_n_dwave...
+
+
+     Graph 5
+
+          Running ours_n_dwave...
+
+
+     Graph 6
+
+          Running ours_n_dwave...
+
+
+     Graph 7
+
+          Running ours_n_dwave...
+
+
+     Graph 8
+
+          Running ours_n_dwave...
+
+
+     Graph 9
+
+          Running ours_n_dwave...
+
+
+     Graph 10
+
+          Running ours_n_dwave...
+
+
+     Graph 11
+
+          Running ours_n_dwave...
+
+
+     Graph 12
+
+          Running ours_n_dwave...
+
+
+     Graph 13
+
+          Running ours_n_dwave...
+
+
+     Graph 14
+
+          Running ours_n_dwave...
+
+
+     Graph 15
+
+          Running ours_n_dwave...
+
+
+     Graph 16
+
+          Running ours_n_dwave...
+
+
+     Graph 17
+
+          Running ours_n_dwave...
+
+
+     Graph 18
+
+          Running ours_n_dwave...
+
+
+     Graph 19
+
+          Running ours_n_dwave...
+
+
+
+Test for graphsize 6
+
+
+     Graph 0
+
+          Running ours_n_dwave...
+
+
+     Graph 1
+
+          Running ours_n_dwave...
+
+
+     Graph 2
+
+          Running ours_n_dwave...
+
+
+     Graph 3
+
+          Running ours_n_dwave...
+
+
+     Graph 4
+
+          Running ours_n_dwave...
+
+
+     Graph 5
+
+          Running ours_n_dwave...
+
+
+     Graph 6
+
+          Running ours_n_dwave...
+
+
+     Graph 7
+
+          Running ours_n_dwave...
+
+
+     Graph 8
+
+          Running ours_n_dwave...
+
+
+     Graph 9
+
+          Running ours_n_dwave...
+
+
+     Graph 10
+
+          Running ours_n_dwave...
+
+
+     Graph 11
+
+          Running ours_n_dwave...
+
+
+     Graph 12
+
+          Running ours_n_dwave...
+
+
+     Graph 13
+
+          Running ours_n_dwave...
+
+
+     Graph 14
+
+          Running ours_n_dwave...
+
+
+     Graph 15
+
+          Running ours_n_dwave...
+
+
+     Graph 16
+
+          Running ours_n_dwave...
+
+
+     Graph 17
+
+          Running ours_n_dwave...
+
+
+     Graph 18
+
+          Running ours_n_dwave...
+
+
+     Graph 19
+
+          Running ours_n_dwave...
+
+
+
+Test for graphsize 8
+
+
+     Graph 0
+
+          Running ours_n_dwave...
+
+
+     Graph 1
+
+          Running ours_n_dwave...
+
+
+     Graph 2
+
+          Running ours_n_dwave...
+
+
+     Graph 3
+
+          Running ours_n_dwave...
+
+
+     Graph 4
+
+          Running ours_n_dwave...
+
+
+     Graph 5
+
+          Running ours_n_dwave...
+
+
+     Graph 6
+
+          Running ours_n_dwave...
+
+
+     Graph 7
+
+          Running ours_n_dwave...
+
+
+     Graph 8
+
+          Running ours_n_dwave...
+
+
+     Graph 9
+
+          Running ours_n_dwave...
+
+
+     Graph 10
+
+          Running ours_n_dwave...
+
+
+     Graph 11
+
+          Running ours_n_dwave...
+
+
+     Graph 12
+
+          Running ours_n_dwave...
+
+
+     Graph 13
+
+          Running ours_n_dwave...
+
+
+     Graph 14
+
+          Running ours_n_dwave...
+
+
+     Graph 15
+
+          Running ours_n_dwave...
+
+
+     Graph 16
+
+          Running ours_n_dwave...
+
+
+     Graph 17
+
+          Running ours_n_dwave...
+
+
+     Graph 18
+
+          Running ours_n_dwave...
+
+
+     Graph 19
+
+          Running ours_n_dwave...
+
+
+
+Test for graphsize 10
+
+
+     Graph 0
+
+          Running ours_n_dwave...
+
+
+     Graph 1
+
+          Running ours_n_dwave...
+
+
+     Graph 2
+
+          Running ours_n_dwave...
+
+
+     Graph 3
+
+          Running ours_n_dwave...
+
+
+     Graph 4
+
+          Running ours_n_dwave...
+
+
+     Graph 5
+
+          Running ours_n_dwave...
+
+
+     Graph 6
+
+          Running ours_n_dwave...
+
+
+     Graph 7
+
+          Running ours_n_dwave...
+
+
+     Graph 8
+
+          Running ours_n_dwave...
+
+
+     Graph 9
+
+          Running ours_n_dwave...
+
+
+     Graph 10
+
+          Running ours_n_dwave...
+
+
+     Graph 11
+
+          Running ours_n_dwave...
+
+
+     Graph 12
+
+          Running ours_n_dwave...
+
+
+     Graph 13
+
+          Running ours_n_dwave...
+
+
+     Graph 14
+
+          Running ours_n_dwave...
+
+
+     Graph 15
+
+          Running ours_n_dwave...
+
+
+     Graph 16
+
+          Running ours_n_dwave...
+
+
+     Graph 17
+
+          Running ours_n_dwave...
+
+
+     Graph 18
+
+          Running ours_n_dwave...
+
+
+     Graph 19
+
+          Running ours_n_dwave...
+
+
+
+Test for graphsize 12
+
+
+     Graph 1
+
+          Running ours_n_dwave...
+
+
+     Graph 2
+
+          Running ours_n_dwave...
+
+
+     Graph 3
+
+          Running ours_n_dwave...
+
+
+     Graph 4
+
+          Running ours_n_dwave...
+
+
+     Graph 5
+
+          Running ours_n_dwave...
+
+
+     Graph 6
+
+          Running ours_n_dwave...
+
+
+     Graph 7
+
+          Running ours_n_dwave...
+
+
+     Graph 8
+
+          Running ours_n_dwave...
+
+
+     Graph 9
+
+          Running ours_n_dwave...
+
+
+     Graph 10
+
+          Running ours_n_dwave...

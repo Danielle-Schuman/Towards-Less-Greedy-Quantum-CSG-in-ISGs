@@ -3417,3 +3417,198 @@ None
                       Running D-Wave done
                     Coalition structure value for 5_split_ours_iterative_exactly_dwave_parallel: 1.4694883094479039   -   Time: 157.24056577682495
 None
+
+          Running 5_split_ours_iterative_exactly_dwave_parallel...
+
+
+     Graph 12
+
+          Running 5_split_ours_iterative_exactly_dwave_parallel...
+
+
+     Graph 13
+
+          Running 5_split_ours_iterative_exactly_dwave_parallel...
+
+
+     Graph 14
+
+          Running 5_split_ours_iterative_exactly_dwave_parallel...
+
+
+     Graph 15
+
+          Running 5_split_ours_iterative_exactly_dwave_parallel...
+
+
+     Graph 16
+
+          Running 5_split_ours_iterative_exactly_dwave_parallel...
+
+
+     Graph 17
+
+          Running 5_split_ours_iterative_exactly_dwave_parallel...
+
+
+     Graph 18
+
+          Running 5_split_ours_iterative_exactly_dwave_parallel...
+
+
+     Graph 19
+
+          Running 5_split_ours_iterative_exactly_dwave_parallel...
+
+
+
+Test for graphsize 26
+
+
+     Graph 0
+
+          Running 5_split_ours_iterative_exactly_dwave_parallel...
+
+
+     Graph 1
+
+          Running 5_split_ours_iterative_exactly_dwave_parallel...
+
+
+     Graph 2
+
+          Running 5_split_ours_iterative_exactly_dwave_parallel...
+
+
+     Graph 3
+
+          Running 5_split_ours_iterative_exactly_dwave_parallel...
+
+
+     Graph 4
+
+          Running 5_split_ours_iterative_exactly_dwave_parallel...
+
+
+     Graph 5
+
+          Running 5_split_ours_iterative_exactly_dwave_parallel...
+
+
+     Graph 6
+
+          Running 5_split_ours_iterative_exactly_dwave_parallel...
+
+
+     Graph 7
+
+          Running 5_split_ours_iterative_exactly_dwave_parallel...
+
+
+     Graph 8
+
+          Running 5_split_ours_iterative_exactly_dwave_parallel...
+
+
+     Graph 9
+
+          Running 5_split_ours_iterative_exactly_dwave_parallel...
+
+
+     Graph 10
+
+          Running 5_split_ours_iterative_exactly_dwave_parallel...
+
+
+     Graph 11
+
+          Running 5_split_ours_iterative_exactly_dwave_parallel...
+
+
+     Graph 12
+
+          Running 5_split_ours_iterative_exactly_dwave_parallel...
+
+
+     Graph 13
+
+          Running 5_split_ours_iterative_exactly_dwave_parallel...
+
+
+     Graph 14
+
+          Running 5_split_ours_iterative_exactly_dwave_parallel...
+
+
+     Graph 15
+
+          Running 5_split_ours_iterative_exactly_dwave_parallel...
+
+
+     Graph 16
+
+          Running 5_split_ours_iterative_exactly_dwave_parallel...
+
+
+     Graph 17
+
+          Running 5_split_ours_iterative_exactly_dwave_parallel...
+
+
+     Graph 18
+
+          Running 5_split_ours_iterative_exactly_dwave_parallel...
+
+
+     Graph 19
+
+          Running 5_split_ours_iterative_exactly_dwave_parallel...
+
+
+
+Test for graphsize 28
+
+
+     Graph 0
+
+          Running 5_split_ours_iterative_exactly_dwave_parallel...
+
+
+     Graph 1
+
+          Running 5_split_ours_iterative_exactly_dwave_parallel...
+
+
+     Graph 2
+
+          Running 5_split_ours_iterative_exactly_dwave_parallel...
+
+
+     Graph 3
+
+          Running 5_split_ours_iterative_exactly_dwave_parallel...
+
+
+     Graph 4
+
+          Running 5_split_ours_iterative_exactly_dwave_parallel...
+
+
+     Graph 5
+
+          Running 5_split_ours_iterative_exactly_dwave_parallel...
+
+
+     Graph 6
+
+          Running 5_split_ours_iterative_exactly_dwave_parallel...
+
+
+     Graph 7
+
+          Running 5_split_ours_iterative_exactly_dwave_parallel...
+
+
+     Graph 8
+
+          Running 5_split_ours_iterative_exactly_dwave_parallel...

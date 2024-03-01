@@ -119,15 +119,15 @@ def main(algorithm_list, data, graph_sizes, num_graphs_per_size, experiment, dir
                 #else:
                     #pass
         else:
-            if isinstance(algorithm, Jonas):
-                agents = graph_sizes[:-4]
-            elif isinstance(algorithm, Danielle):
-                agents = graph_sizes[:-7]
+            if isinstance(algorithm, Danielle):
+                agents = graph_sizes[4:-7]
             else:
                 agents = graph_sizes[:-8]
             for num_agents in agents:
                 print(f"\n\n\nTest for graphsize {num_agents}")
-                if num_agents == 20 or num_agents == 12 or num_agents == 14:
+                if num_agents == 12 and isinstance(algorithm, Danielle):
+                    this_range = range(10, num_graphs_per_size)
+                elif num_agents == 12 or num_agents == 14:
                     this_range = range(1, num_graphs_per_size)
                 else:
                     this_range = range(num_graphs_per_size)
@@ -217,7 +217,7 @@ if __name__ == "__main__":
 
         for solver in solvers:
 
-            algorithm_list = [Jonas(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver),
+            algorithm_list = [#Jonas(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver),
                               Danielle(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver),
                               ##n_split_GCSQ(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver),
                               r_qubo(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver)

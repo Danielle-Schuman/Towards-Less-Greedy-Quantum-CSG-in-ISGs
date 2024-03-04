@@ -113,9 +113,13 @@ def main(algorithm_list, data, graph_sizes, num_graphs_per_size, experiment, dir
                 else:
                     pass
         else:
-            for num_agents in graph_sizes:
+            for num_agents in graph_sizes[-3]:
                 print(f"\n\n\nTest for graphsize {num_agents}")
-                for graph_num in range(num_graphs_per_size):
+                if num_agents == 24:
+                    this_range = range(6, num_graphs_per_size)
+                else:
+                    this_range = range(num_graphs_per_size)
+                for graph_num in this_range:
                     print(f"\n\n     Graph {graph_num}")
                     graph = data[num_agents][graph_num]
                     if synthetic:
@@ -203,6 +207,7 @@ if __name__ == "__main__":
         '''
 
         for solver in solvers:
+            '''
             algorithm_list = [ #Jonas(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver),
                               Danielle(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver),
                               n_split_GCSQ(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver),
@@ -212,6 +217,7 @@ if __name__ == "__main__":
             if directory_exists:
                 main(algorithm_list=algorithm_list, data=data, graph_sizes=graph_sizes, num_graphs_per_size=num_graphs_per_size,
                      experiment=f"non-iterative algorithms with {solver}", directory=directory)
+            '''
             for mode in parallel:
                 algorithm_list = [GCSQ(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode)]
                 directory = f"results/{data_name}/quantum/{solver}/{'parallel' if mode else 'sequential'}"

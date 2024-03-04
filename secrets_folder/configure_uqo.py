@@ -9,7 +9,7 @@ generate_certificates(os.path.dirname(os.path.realpath(__file__)))
 #      "method": "token",
 #      "endpoint": "uq.mobile.ifi.lmu.de:30000",
 #      "credentials": "YOUR_TOKEN",
-#      "private_key_file": "secrets/private_keys/client.key_secret"
+#      "private_key_file": "secrets_folder/private_keys/client.key_secret"
 # }
 #
 # where YOUR_TOKEN is your uqo-token

@@ -113,7 +113,7 @@ def main(algorithm_list, data, graph_sizes, num_graphs_per_size, experiment, dir
                 else:
                     pass
         else:
-            for num_agents in graph_sizes[-3]:
+            for num_agents in graph_sizes[-3:]:
                 print(f"\n\n\nTest for graphsize {num_agents}")
                 if num_agents == 24:
                     this_range = range(6, num_graphs_per_size)

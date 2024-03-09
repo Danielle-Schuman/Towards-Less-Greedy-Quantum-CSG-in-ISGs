@@ -8413,3 +8413,191 @@ None
                       Running D-Wave done
                     Coalition structure value for 5_split_R_QUBO-iterative_dwave_parallel: 0.573947062340757   -   Time: 62.02820110321045
 None
+                    Running 5_split_R_QUBO-iterative_dwave_parallel for seed 0 for graph_size 10 for graph 12 ...
+                    Running on Advantage_system4.1 ...
+                    Searching for embedding...
+                    Embedding found
+                      Start running D-Wave
+                      Running D-Wave done
+                    Running on Advantage_system4.1 ...
+                    Searching for embedding...
+                    Embedding found
+                      Start running D-Wave
+                      Running D-Wave done
+                    Running on Advantage_system4.1 ...
+                    Searching for embedding...
+
+          Running 5_split_R_QUBO-iterative_dwave_parallel...
+
+
+
+Test for graphsize 8
+
+
+     Graph 0
+
+          Running 5_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 1
+
+          Running 5_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 2
+
+          Running 5_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 3
+
+          Running 5_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 4
+
+          Running 5_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 5
+
+          Running 5_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 6
+
+          Running 5_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 7
+
+          Running 5_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 8
+
+          Running 5_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 9
+
+          Running 5_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 10
+
+          Running 5_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 11
+
+          Running 5_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 12
+
+          Running 5_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 13
+
+          Running 5_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 14
+
+          Running 5_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 15
+
+          Running 5_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 16
+
+          Running 5_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 17
+
+          Running 5_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 18
+
+          Running 5_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 19
+
+          Running 5_split_R_QUBO-iterative_dwave_parallel...
+
+
+
+Test for graphsize 10
+
+
+     Graph 0
+
+          Running 5_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 1
+
+          Running 5_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 2
+
+          Running 5_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 3
+
+          Running 5_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 4
+
+          Running 5_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 5
+
+          Running 5_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 6
+
+          Running 5_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 7
+
+          Running 5_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 8
+
+          Running 5_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 9
+
+          Running 5_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 10
+
+          Running 5_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 11
+
+          Running 5_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 12
+
+          Running 5_split_R_QUBO-iterative_dwave_parallel...

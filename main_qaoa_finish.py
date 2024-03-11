@@ -113,12 +113,9 @@ def main(algorithm_list, data, graph_sizes, num_graphs_per_size, experiment, dir
                 else:
                     pass
         else:
-            for num_agents in graph_sizes[-3:]:
+            for num_agents in graph_sizes:
                 print(f"\n\n\nTest for graphsize {num_agents}")
-                if num_agents == 24:
-                    this_range = range(6, num_graphs_per_size)
-                else:
-                    this_range = range(num_graphs_per_size)
+                this_range = range(num_graphs_per_size)
                 for graph_num in this_range:
                     print(f"\n\n     Graph {graph_num}")
                     graph = data[num_agents][graph_num]
@@ -197,7 +194,7 @@ if __name__ == "__main__":
         # Simulate
         solvers = ["qaoa"]
         parallel = [True]  #, False] -> Try sequential later (maybe)
-        k_list = [i for i in range(3, graph_sizes[-1])]
+        k_list = [3, 4]
 
         # D-Wave -> uncomment this and comment simulate for running with D-Wave
         '''
@@ -219,6 +216,7 @@ if __name__ == "__main__":
                      experiment=f"non-iterative algorithms with {solver}", directory=directory)
             '''
             for mode in parallel:
+                '''
                 algorithm_list = [GCSQ(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode)]
                 directory = f"results/{data_name}/quantum/{solver}/{'parallel' if mode else 'sequential'}"
                 directory_exists = create_nested_directory(directory)
@@ -226,12 +224,26 @@ if __name__ == "__main__":
                     main(algorithm_list=algorithm_list, data=data, graph_sizes=graph_sizes,
                          num_graphs_per_size=num_graphs_per_size, experiment=f"GCS-Q with {solver} in {mode} mode",
                          directory=directory)
+                '''
                 for k in k_list:
-                    algorithm_list = [ours_iterative_exactly(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
-                                      ours_iterative_at_most(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
-                                      k_split_GCSQ_exactly(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
-                                      k_split_GCSQ_at_most(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
-                                      r_qubo_iterative(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k)]
+                    if k == 3:
+                        algorithm_list = [#ours_iterative_exactly(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
+                                          #ours_iterative_at_most(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
+                                          #k_split_GCSQ_exactly(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
+                                          k_split_GCSQ_at_most(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
+                                          r_qubo_iterative(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k)]
+                    else: # k == 4
+                        algorithm_list = [
+                            ours_iterative_exactly(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver,
+                                                   parallel=mode, k=k),
+                            ours_iterative_at_most(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver,
+                                                   parallel=mode, k=k),
+                            k_split_GCSQ_exactly(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver,
+                                                 parallel=mode, k=k),
+                            k_split_GCSQ_at_most(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver,
+                                                 parallel=mode, k=k),
+                            r_qubo_iterative(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode,
+                                             k=k)]
                     directory = f"results/{data_name}/quantum/{solver}/{'parallel' if mode else 'sequential'}/k={k}"
                     directory_exists = create_nested_directory(directory)
                     if directory_exists:

@@ -77,17 +77,11 @@ def main(algorithm_list, data, graph_sizes, num_graphs_per_size, experiment, dir
     for algorithm in algorithm_list:
         #too_large = False
         if isinstance(algorithm, IterativeQuantumAlgorithmWithK):
-            if isinstance(algorithm, ours_iterative_exactly):
-                agents = [28]
-            else:
-                agents = graph_sizes
+            agents = graph_sizes[3:]
             for num_agents in agents:
                 if algorithm.k <= num_agents:
                     print(f"\n\n\nTest for graphsize {num_agents}")
-                    if isinstance(algorithm, ours_iterative_exactly):
-                        this_range = range(8, num_graphs_per_size)
-                    else:
-                        this_range = range(num_graphs_per_size)
+                    this_range = range(12, num_graphs_per_size)
                     for graph_num in this_range:
                         print(f"\n\n     Graph {graph_num}")
                         graph = data[num_agents][graph_num]
@@ -244,9 +238,9 @@ if __name__ == "__main__":
                          directory=directory)
                 '''
                 for k in k_list:
-                    algorithm_list = [ours_iterative_exactly(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
-                                      ours_iterative_at_most(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
-                                      k_split_GCSQ_exactly(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
+                    algorithm_list = [#ours_iterative_exactly(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
+                                      #ours_iterative_at_most(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
+                                      #k_split_GCSQ_exactly(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
                                       ## k_split_GCSQ_at_most(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
                                       r_qubo_iterative(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k)
                                       ]

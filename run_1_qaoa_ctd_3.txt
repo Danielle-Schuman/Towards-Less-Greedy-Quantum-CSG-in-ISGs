@@ -1035,3 +1035,9 @@ None
                     Running 4_split_ours_iterative_exactly_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 0 ...
                     Coalition structure value for 4_split_ours_iterative_exactly_qaoa_parallel: 0.3845667451989172   -   Time: 22048.83214879036
 None
+                    Running 4_split_ours_iterative_exactly_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 1 ...
+                    Coalition structure value for 4_split_ours_iterative_exactly_qaoa_parallel: 0.09565385438810381   -   Time: 21638.957065820694
+None
+                    Running 4_split_ours_iterative_exactly_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 2 ...
+                    Coalition structure value for 4_split_ours_iterative_exactly_qaoa_parallel: 0.0032570984217556997   -   Time: 24039.640327692032
+None

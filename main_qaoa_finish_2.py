@@ -75,9 +75,15 @@ def main(algorithm_list, data, graph_sizes, num_graphs_per_size, experiment, dir
         too_large = False
         if isinstance(algorithm, IterativeQuantumAlgorithmWithK):
             if isinstance(algorithm, r_qubo_iterative):
-                agents = [4, 6]
+                if algorithm.k == 3:
+                    agents = [4, 6, 8, 10]
+                else:
+                    agents = [4, 6]
             else:
-                agents = [4]
+                if algorithm.k == 3:
+                    agents = [4, 6]
+                else:
+                    agents = [4]
             for num_agents in agents:
                 if algorithm.k <= num_agents:
                     print(f"\n\n\nTest for graphsize {num_agents}")
@@ -117,9 +123,9 @@ def main(algorithm_list, data, graph_sizes, num_graphs_per_size, experiment, dir
                 else:
                     pass
         else:
-            for num_agents in graph_sizes:
+            for num_agents in [24]:
                 print(f"\n\n\nTest for graphsize {num_agents}")
-                for graph_num in range(num_graphs_per_size):
+                for graph_num in range(10, num_graphs_per_size):
                     print(f"\n\n     Graph {graph_num}")
                     graph = data[num_agents][graph_num]
                     if synthetic:
@@ -172,7 +178,7 @@ if __name__ == "__main__":
     num_seeds = 1
     for _ in range(num_seeds):
         # Setting the seed
-        seed = 1364436995 #random.randint(0, 2 ** 32 - 1)
+        seed = 2777013863 #random.randint(0, 2 ** 32 - 1)
         random.seed(seed)
         np.random.seed(seed)
         print(f"Seed: {seed}")
@@ -193,7 +199,7 @@ if __name__ == "__main__":
         # Simulate
         solvers = ["qaoa"]
         parallel = [True]  #, False] -> Try sequential later (maybe)
-        k_list = [4]
+        k_list = [3, 4]
 
         # D-Wave -> uncomment this and comment simulate for running with D-Wave
         '''

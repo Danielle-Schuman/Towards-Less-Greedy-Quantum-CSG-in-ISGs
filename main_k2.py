@@ -72,14 +72,12 @@ def main(algorithm_list, data, graph_sizes, num_graphs_per_size, experiment, dir
     run_id = str(datetime.datetime.now().date()) + '_' + str(datetime.datetime.now().time()).replace(':', '-')
 
     for algorithm in algorithm_list:
-        #too_large = False
+        too_large = False
         if isinstance(algorithm, IterativeQuantumAlgorithmWithK):
             for num_agents in graph_sizes:
                 if algorithm.k <= num_agents:
                     print(f"\n\n\nTest for graphsize {num_agents}")
                     for graph_num in range(num_graphs_per_size):
-                        # Sleep for a second
-                        time.sleep(1)
                         print(f"\n\n     Graph {graph_num}")
                         graph = data[num_agents][graph_num]
                         if synthetic:
@@ -107,12 +105,12 @@ def main(algorithm_list, data, graph_sizes, num_graphs_per_size, experiment, dir
                             subprocess.run(command, check=True)
                         except subprocess.CalledProcessError as e:
                             print("                    Error: Running algorithm failed, most likely due to insufficient available memory. Error message: ", e)
-                            #too_large = True
-                            #break
-                #if too_large:
-                    #break
-                #else:
-                    #pass
+                            too_large = True
+                            break
+                if too_large:
+                    break
+                else:
+                    pass
         else:
             for num_agents in graph_sizes:
                 print(f"\n\n\nTest for graphsize {num_agents}")
@@ -144,10 +142,10 @@ def main(algorithm_list, data, graph_sizes, num_graphs_per_size, experiment, dir
                         subprocess.run(command, check=True)
                     except subprocess.CalledProcessError as e:
                         print("                    Error: Running algorithm failed, most likely due to insufficient available memory. Error message: ", e)
-                        #too_large = True
-                        #break
-                #if too_large:
-                    #break
+                        too_large = True
+                        break
+                if too_large:
+                    break
     print(f"Done running tests for {experiment}.")
 
     '''
@@ -166,8 +164,7 @@ def main(algorithm_list, data, graph_sizes, num_graphs_per_size, experiment, dir
 
 if __name__ == "__main__":
     # TODO: Determine sensible number of seeds for statistical significance
-    #seeds = [3949468976, 2223921875, 1665964778, 1980386705, 2777013863, 3875681486, 1364436995, 2881126339, 4038098247, 3748732874]
-    seeds = [0]
+    seeds = [3949468976, 2223921875, 1665964778, 1980386705, 1364436995, 2881126339, 2777013863, 3875681486, 4038098247, 3748732874]
     for seed in seeds:
         # Setting the seed
         random.seed(seed)
@@ -188,7 +185,7 @@ if __name__ == "__main__":
         num_graph_sizes = len(graph_sizes)
 
         # Simulate
-        solver = "dwave"  #"qaoa"
+        solver = "qaoa"
         mode = True  # False -> Try sequential later (maybe)
         k = 2
 

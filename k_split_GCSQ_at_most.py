@@ -43,4 +43,9 @@ class k_split_GCSQ_at_most(IterativeQuantumAlgorithmWithK):
         for c in range(self.k):
             new_coalition = [coalition[i] for i in range(len(coalition)) if solution[i * self.k + c] == 1]
             coalitions.append(new_coalition)
+        # add singleton coalitions that didn't get "coalition number" (previously missing)
+        rest = [coalition[i] for i in range(len(coalition)) if
+                solution[(i * self.k):((i + 1) * self.k)] == ([0] * self.k)]
+        for i in rest:
+            coalitions.append([i])
         return coalitions

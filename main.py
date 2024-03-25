@@ -4,6 +4,7 @@ import pickle
 import time
 import datetime
 import os
+import argparse
 
 import subprocess
 
@@ -77,17 +78,11 @@ def main(algorithm_list, data, graph_sizes, num_graphs_per_size, experiment, dir
     for algorithm in algorithm_list:
         #too_large = False
         if isinstance(algorithm, IterativeQuantumAlgorithmWithK):
-            if isinstance(algorithm, ours_iterative_at_most):
-                agents = graph_sizes[3:]
-            else:
-                agents = graph_sizes
+            agents = graph_sizes
             for num_agents in agents:
                 if algorithm.k <= num_agents:
                     print(f"\n\n\nTest for graphsize {num_agents}")
-                    if isinstance(algorithm, ours_iterative_at_most) and num_agents == 10:
-                        this_range = [19]
-                    else:
-                        this_range = range(num_graphs_per_size)
+                    this_range = range(num_graphs_per_size)
                     for graph_num in this_range:
                         print(f"\n\n     Graph {graph_num}")
                         graph = data[num_agents][graph_num]
@@ -178,12 +173,16 @@ def main(algorithm_list, data, graph_sizes, num_graphs_per_size, experiment, dir
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--seed", type=int, required=True)
+    args = parser.parse_args()
     # TODO: Determine sensible number of seeds for statistical significance
     num_seeds = 1
     for _ in range(num_seeds):
         # Setting the seed
         #seed = random.randint(0, 2 ** 32 - 1)
-        seed = 0  # Seed not relevant for D-Wave
+        #seed = 0  # Seed not relevant for D-Wave
+        seed = args.seed
         random.seed(seed)
         np.random.seed(seed)
         print(f"Seed: {seed}")
@@ -202,16 +201,16 @@ if __name__ == "__main__":
         num_graph_sizes = len(graph_sizes)
 
         # Simulate
-        '''
-        solvers = ["qbsolv", "qaoa"]
+        solvers = ["qbsolv"] #"qaoa"]
         parallel = [True]  #, False] -> Try sequential later (maybe)
-        k_list = [i for i in range(3, graph_sizes[-1])]
-        '''
+        k_list = [i for i in range(2, graph_sizes[-1])]
 
         # D-Wave -> uncomment this and comment simulate for running with D-Wave
+        '''
         solvers = ["dwave"]
         parallel = [True]
         k_list = [4]
+        '''
 
         for solver in solvers:
             '''
@@ -239,9 +238,9 @@ if __name__ == "__main__":
                 for k in k_list:
                     algorithm_list = [#ours_iterative_exactly(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
                                       ours_iterative_at_most(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
-                                      k_split_GCSQ_exactly(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
-                                      ## k_split_GCSQ_at_most(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
-                                      r_qubo_iterative(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k)
+                                      #k_split_GCSQ_exactly(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
+                                      k_split_GCSQ_at_most(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
+                                      #r_qubo_iterative(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k)
                                       ]
                     directory = f"results/{data_name}/quantum/{solver}/{'parallel' if mode else 'sequential'}/k={k}"
                     directory_exists = create_nested_directory(directory)

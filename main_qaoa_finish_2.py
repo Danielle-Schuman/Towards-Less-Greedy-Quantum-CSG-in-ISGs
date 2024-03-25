@@ -221,7 +221,7 @@ if __name__ == "__main__":
                      experiment=f"non-iterative algorithms with {solver}", directory=directory)
             '''
             for mode in parallel:
-                '''
+
                 algorithm_list = [GCSQ(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode)]
                 directory = f"results/{data_name}/quantum/{solver}/{'parallel' if mode else 'sequential'}"
                 directory_exists = create_nested_directory(directory)
@@ -242,6 +242,7 @@ if __name__ == "__main__":
                         main(algorithm_list=algorithm_list, data=data, graph_sizes=graph_sizes,
                              num_graphs_per_size=num_graphs_per_size, experiment=f"k-split algorithms with {solver} in {mode} mode for k={k}",
                              directory=directory)
+                                             '''
 
         # Classical algorithms
         '''

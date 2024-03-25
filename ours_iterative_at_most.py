@@ -33,7 +33,7 @@ class ours_iterative_at_most(IterativeQuantumAlgorithmWithK):
                 for c2 in range(c1 + 1, self.k):
                     # get number of logical qubit horizontally (columns)
                     q_ic2 = i * self.k + c2
-                    # add penalty for putting agent in any coalition
+                    # add penalty for putting agent in any two different coalitions
                     utils.add(Q, q_ic1, q_ic2, penalty)
         return Q, self.k * len(coalition)
 
@@ -43,4 +43,8 @@ class ours_iterative_at_most(IterativeQuantumAlgorithmWithK):
         for c in range(self.k):
             new_coalition = [coalition[i] for i in range(len(coalition)) if solution[i * self.k + c] == 1]
             coalitions.append(new_coalition)
+        # add singleton coalitions that didn't get "coalition number" (previously missing)
+        rest = [coalition[i] for i in range(len(coalition)) if solution[(i * self.k):((i + 1) * self.k)] == ([0] * self.k)]
+        for i in rest:
+            coalitions.append([i])
         return coalitions

@@ -120,10 +120,7 @@ def main(algorithm_list, data, graph_sizes, num_graphs_per_size, experiment, dir
         else:
             for num_agents in graph_sizes:
                 print(f"\n\n\nTest for graphsize {num_agents}")
-                if num_agents == 28:
-                    this_range = range(2, num_graphs_per_size)
-                else:
-                    this_range = range(num_graphs_per_size)
+                this_range = range(num_graphs_per_size)
                 for graph_num in this_range:
                     print(f"\n\n     Graph {graph_num}")
                     graph = data[num_agents][graph_num]
@@ -213,20 +210,17 @@ if __name__ == "__main__":
         '''
 
         for solver in solvers:
-            '''
             algorithm_list = [Jonas(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver),
-                              #Danielle(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver),
-                              ## n_split_GCSQ(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver),
-                              #r_qubo(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver)
+                              Danielle(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver),
+                              n_split_GCSQ(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver),
+                              r_qubo(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver)
                               ]
             directory = f"results/{data_name}/quantum/{solver}"
             directory_exists = create_nested_directory(directory)
             if directory_exists:
                 main(algorithm_list=algorithm_list, data=data, graph_sizes=graph_sizes, num_graphs_per_size=num_graphs_per_size,
                      experiment=f"non-iterative algorithms with {solver}", directory=directory)
-            '''
             for mode in parallel:
-                '''
                 algorithm_list = [GCSQ(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode)]
                 directory = f"results/{data_name}/quantum/{solver}/{'parallel' if mode else 'sequential'}"
                 directory_exists = create_nested_directory(directory)
@@ -234,13 +228,12 @@ if __name__ == "__main__":
                     main(algorithm_list=algorithm_list, data=data, graph_sizes=graph_sizes,
                          num_graphs_per_size=num_graphs_per_size, experiment=f"GCS-Q with {solver} in {mode} mode",
                          directory=directory)
-                '''
                 for k in k_list:
-                    algorithm_list = [#ours_iterative_exactly(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
-                                      ours_iterative_at_most(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
-                                      #k_split_GCSQ_exactly(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
-                                      k_split_GCSQ_at_most(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
-                                      #r_qubo_iterative(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k)
+                    algorithm_list = [ours_iterative_exactly(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
+                                      #ours_iterative_at_most(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
+                                      k_split_GCSQ_exactly(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
+                                      #k_split_GCSQ_at_most(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
+                                      r_qubo_iterative(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k)
                                       ]
                     directory = f"results/{data_name}/quantum/{solver}/{'parallel' if mode else 'sequential'}/k={k}"
                     directory_exists = create_nested_directory(directory)

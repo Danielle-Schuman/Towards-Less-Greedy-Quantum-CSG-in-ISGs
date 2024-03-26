@@ -1,4 +1,5 @@
 import copy
+import datetime
 import numpy as np
 import pickle
 from dwave_qbsolv import QBSolv
@@ -6,6 +7,8 @@ import dimod as di
 from neal import SimulatedAnnealingSampler
 #from dwave.cloud import Client
 #import minorminer
+import dwave_networkx
+from matplotlib import pyplot as plt
 from uqo.client.config import Config
 from uqo import Problem
 from qiskit_optimization import QuadraticProgram
@@ -79,9 +82,20 @@ def solve_with_dwave(qubo, num_qubits, solver):
             # calculate embedding
             print("                    Searching for embedding...")
             problem.find_pegasus_embedding()
+            try:
+                dwave_networkx.draw_pegasus_embedding(dwave_networkx.pegasus_graph(16), emb=problem.embedding, node_size=3, width=.3)
+                time_stamp = str(datetime.datetime.now().date()) + '_' + str(datetime.datetime.now().time()).replace(':', '-')
+                with open(f"embeddings/embedding_{time_stamp}.pkl", 'wb') as file:
+                    pickle.dump(problem.embedding, file)
+                plt.savefig(f"embeddings/embedding_{time_stamp}.pdf")
+                print(f"                        Saved embedding at {time_stamp}")
+            except:
+                print("                         Embedding could not be saved")
             #problem.embedding = find_embedding_with_client(qubo, advantage_solver)
             print("                    Embedding found")
             embedding_not_found = False
+            physical_qubits = sum(len(l) for l in problem.embedding.values())
+            print("                    Physical qubits: ", physical_qubits)
             try:
                 print("                      Start running D-Wave")
                 response = problem.solve(shots)

@@ -2,6 +2,7 @@ import copy
 from abc import ABC, abstractmethod
 import utils
 import pickle
+import datetime
 
 
 class Algorithm(ABC):
@@ -97,7 +98,7 @@ class IterativeQuantumAlgorithm(QuantumAlgorithm, ABC):
         return self._get_coalitions_from_qubo_solution(coalition, solution)
 
     # implementation is a tiny bit different from the one in the GCS-Q paper, but does the same thing
-    def solve(self, num_agents, edges):
+    def solve(self, num_agents, edges, graph_num=None):
         # initialize with grand coalition
         coalitions = [list(range(num_agents))]
         # for a maximum of num_agents steps (as we can at most have num_agents coalitions, one for each agent)
@@ -134,7 +135,8 @@ class IterativeQuantumAlgorithm(QuantumAlgorithm, ABC):
                 break
             coalitions = new_coalitions
             if self.solver == "dwave":
-                pickle.dump(coalitions, open(f"results/coalitions_{self.name}_after_n={n}.pkl", 'wb'))
+                time_stamp = str(datetime.datetime.now().date()) + '_' + str(datetime.datetime.now().time()).replace(':', '-')
+                pickle.dump(coalitions, open(f"results/coalitions_{self.name}_{num_agents}_{graph_num}_after_n={n}__{time_stamp}.pkl", 'wb'))
         return coalitions
 
     @abstractmethod

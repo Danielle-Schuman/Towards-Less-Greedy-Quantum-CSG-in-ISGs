@@ -53,7 +53,7 @@ def run_algorithm(serialized_algorithm, serialized_edges, num_agents, serialized
         directory = pickle.loads(serialized_directory_path)
         print(f"                    Running {algorithm.name} for seed {algorithm.seed} for graph_size {num_agents} for graph {graph_num} ...")
         start_time = time.time()
-        coalitions = algorithm.solve(num_agents, edges)
+        coalitions = algorithm.solve(num_agents, edges, graph_num)
         end_time = time.time()
         value = np.sum([utils.value(c, edges) for c in coalitions])
         total_time = end_time - start_time
@@ -77,12 +77,14 @@ def main(algorithm_list, data, graph_sizes, num_graphs_per_size, experiment, dir
     for algorithm in algorithm_list:
         #too_large = False
         if isinstance(algorithm, IterativeQuantumAlgorithmWithK):
-            agents = graph_sizes[4:]
+            agents = graph_sizes
             for num_agents in agents:
+                time.sleep(5)
                 if algorithm.k <= num_agents:
                     print(f"\n\n\nTest for graphsize {num_agents}")
-                    this_range = range(12)
+                    this_range = range(num_graphs_per_size)
                     for graph_num in this_range:
+                        time.sleep(1)
                         print(f"\n\n     Graph {graph_num}")
                         graph = data[num_agents][graph_num]
                         if synthetic:
@@ -211,7 +213,7 @@ if __name__ == "__main__":
         # D-Wave -> uncomment this and comment simulate for running with D-Wave
         solvers = ["dwave"]
         parallel = [True]
-        k_list = [5]
+        k_list = [4, 3, 5, 2]
 
         for solver in solvers:
             '''
@@ -239,10 +241,10 @@ if __name__ == "__main__":
                 '''
                 for k in k_list:
                     algorithm_list = [#ours_iterative_exactly(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
-                                      #ours_iterative_at_most(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
+                                      ours_iterative_at_most(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
                                       #k_split_GCSQ_exactly(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
                                       ## k_split_GCSQ_at_most(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
-                                      r_qubo_iterative(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k)
+                                      #r_qubo_iterative(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k)
                                       ]
                     directory = f"results/{data_name}/quantum/{solver}/{'parallel' if mode else 'sequential'}/k={k}"
                     directory_exists = create_nested_directory(directory)
@@ -250,6 +252,8 @@ if __name__ == "__main__":
                         main(algorithm_list=algorithm_list, data=data, graph_sizes=graph_sizes,
                              num_graphs_per_size=num_graphs_per_size, experiment=f"k-split algorithms with {solver} in {mode} mode for k={k}",
                              directory=directory)
+                    print("Taking 2 Minute break...")
+                    time.sleep(120)
 
         # Classical algorithms
         '''

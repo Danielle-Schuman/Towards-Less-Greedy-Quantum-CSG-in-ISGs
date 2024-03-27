@@ -1,0 +1,2324 @@
+Seed: 0
+
+
+
+Test for graphsize 4
+
+
+     Graph 0
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 4 for graph 0 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-26-46.272679
+                    Physical qubits:  8
+None
+
+
+     Graph 1
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 4 for graph 1 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-26-59.031862
+                    Physical qubits:  8
+None
+
+
+     Graph 2
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 4 for graph 2 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-27-10.534212
+                    Physical qubits:  8
+None
+
+
+     Graph 3
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 4 for graph 3 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-27-22.041045
+                    Physical qubits:  8
+None
+
+
+     Graph 4
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 4 for graph 4 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-27-32.772707
+                    Physical qubits:  8
+None
+
+
+     Graph 5
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 4 for graph 5 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-27-43.068932
+                    Physical qubits:  8
+None
+
+
+     Graph 6
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 4 for graph 6 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-27-53.746414
+                    Physical qubits:  8
+None
+
+
+     Graph 7
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 4 for graph 7 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-28-03.264177
+                    Physical qubits:  8
+None
+
+
+     Graph 8
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 4 for graph 8 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-28-12.961523
+                    Physical qubits:  8
+None
+
+
+     Graph 9
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 4 for graph 9 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-28-22.562242
+                    Physical qubits:  8
+None
+
+
+     Graph 10
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 4 for graph 10 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-28-33.335182
+                    Physical qubits:  8
+None
+
+
+     Graph 11
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 4 for graph 11 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-28-43.673593
+                    Physical qubits:  8
+None
+
+
+     Graph 12
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 4 for graph 12 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-28-53.564403
+                    Physical qubits:  8
+None
+
+
+     Graph 13
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 4 for graph 13 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-29-03.100039
+                    Physical qubits:  8
+None
+
+
+     Graph 14
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 4 for graph 14 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-29-12.689079
+                    Physical qubits:  8
+None
+
+
+     Graph 15
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 4 for graph 15 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-29-22.505921
+                    Physical qubits:  8
+None
+
+
+     Graph 16
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 4 for graph 16 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-29-32.931421
+                    Physical qubits:  8
+None
+
+
+     Graph 17
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 4 for graph 17 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-29-43.597734
+                    Physical qubits:  8
+None
+
+
+     Graph 18
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 4 for graph 18 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-29-53.757235
+                    Physical qubits:  8
+None
+
+
+     Graph 19
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 4 for graph 19 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-30-04.765554
+                    Physical qubits:  10
+None
+
+
+
+Test for graphsize 6
+
+
+     Graph 0
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 6 for graph 0 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-30-15.044206
+                    Physical qubits:  30
+None
+
+
+     Graph 1
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 6 for graph 1 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-30-26.168863
+                    Physical qubits:  32
+None
+
+
+     Graph 2
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 6 for graph 2 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-30-37.760407
+                    Physical qubits:  31
+None
+
+
+     Graph 3
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 6 for graph 3 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-30-47.711718
+                    Physical qubits:  34
+None
+
+
+     Graph 4
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 6 for graph 4 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-30-57.374563
+                    Physical qubits:  30
+None
+
+
+     Graph 5
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 6 for graph 5 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-31-06.903867
+                    Physical qubits:  32
+None
+
+
+     Graph 6
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 6 for graph 6 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-31-18.089661
+                    Physical qubits:  33
+None
+
+
+     Graph 7
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 6 for graph 7 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-31-27.592695
+                    Physical qubits:  33
+None
+
+
+     Graph 8
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 6 for graph 8 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-31-42.136252
+                    Physical qubits:  32
+None
+
+
+     Graph 9
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 6 for graph 9 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-32-00.400900
+                    Physical qubits:  30
+None
+
+
+     Graph 10
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 6 for graph 10 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-32-13.319449
+                    Physical qubits:  31
+None
+
+
+     Graph 11
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 6 for graph 11 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-32-24.622714
+                    Physical qubits:  30
+None
+
+
+     Graph 12
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 6 for graph 12 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-32-35.098660
+                    Physical qubits:  35
+None
+
+
+     Graph 13
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 6 for graph 13 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-32-45.112108
+                    Physical qubits:  31
+None
+
+
+     Graph 14
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 6 for graph 14 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-32-55.257459
+                    Physical qubits:  31
+None
+
+
+     Graph 15
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 6 for graph 15 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-33-06.153247
+                    Physical qubits:  31
+None
+
+
+     Graph 16
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 6 for graph 16 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-33-16.310805
+                    Physical qubits:  34
+None
+
+
+     Graph 17
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 6 for graph 17 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-33-26.426021
+                    Physical qubits:  32
+None
+
+
+     Graph 18
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 6 for graph 18 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-33-36.452051
+                    Physical qubits:  32
+None
+
+
+     Graph 19
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 6 for graph 19 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-33-46.561503
+                    Physical qubits:  31
+None
+
+
+
+Test for graphsize 8
+
+
+     Graph 0
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 8 for graph 0 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-33-57.047539
+                    Physical qubits:  91
+None
+
+
+     Graph 1
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 8 for graph 1 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-34-07.889800
+                    Physical qubits:  87
+None
+
+
+     Graph 2
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 8 for graph 2 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-34-19.171586
+                    Physical qubits:  89
+None
+
+
+     Graph 3
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 8 for graph 3 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-34-30.151496
+                    Physical qubits:  87
+None
+
+
+     Graph 4
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 8 for graph 4 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-34-41.578126
+                    Physical qubits:  92
+None
+
+
+     Graph 5
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 8 for graph 5 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-34-52.593787
+                    Physical qubits:  88
+None
+
+
+     Graph 6
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 8 for graph 6 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-35-03.882549
+                    Physical qubits:  89
+None
+
+
+     Graph 7
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 8 for graph 7 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-35-16.001422
+                    Physical qubits:  91
+None
+
+
+     Graph 8
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 8 for graph 8 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-35-26.280539
+                    Physical qubits:  88
+None
+
+
+     Graph 9
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 8 for graph 9 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-35-37.386222
+                    Physical qubits:  85
+None
+
+
+     Graph 10
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 8 for graph 10 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-35-48.357966
+                    Physical qubits:  92
+None
+
+
+     Graph 11
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 8 for graph 11 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-35-59.609500
+                    Physical qubits:  90
+None
+
+
+     Graph 12
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 8 for graph 12 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-36-11.135632
+                    Physical qubits:  92
+None
+
+
+     Graph 13
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 8 for graph 13 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-36-22.401823
+                    Physical qubits:  86
+None
+
+
+     Graph 14
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 8 for graph 14 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-36-33.708845
+                    Physical qubits:  92
+None
+
+
+     Graph 15
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 8 for graph 15 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-36-44.790962
+                    Physical qubits:  86
+None
+
+
+     Graph 16
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 8 for graph 16 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-36-56.002941
+                    Physical qubits:  87
+None
+
+
+     Graph 17
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 8 for graph 17 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-37-07.160229
+                    Physical qubits:  91
+None
+
+
+     Graph 18
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 8 for graph 18 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-37-18.510138
+                    Physical qubits:  90
+None
+
+
+     Graph 19
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 8 for graph 19 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-37-30.481009
+                    Physical qubits:  92
+None
+
+
+
+Test for graphsize 10
+
+
+     Graph 0
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 10 for graph 0 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-37-45.917893
+                    Physical qubits:  192
+None
+
+
+     Graph 1
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 10 for graph 1 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-38-00.104568
+                    Physical qubits:  202
+None
+
+
+     Graph 2
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 10 for graph 2 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-38-14.028493
+                    Physical qubits:  210
+None
+
+
+     Graph 3
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 10 for graph 3 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-38-27.042810
+                    Physical qubits:  212
+None
+
+
+     Graph 4
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 10 for graph 4 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-38-40.462368
+                    Physical qubits:  211
+None
+
+
+     Graph 5
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 10 for graph 5 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-38-55.714017
+                    Physical qubits:  202
+None
+
+
+     Graph 6
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 10 for graph 6 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-39-11.081356
+                    Physical qubits:  214
+None
+
+
+     Graph 7
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 10 for graph 7 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-39-25.635897
+                    Physical qubits:  205
+None
+
+
+     Graph 8
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 10 for graph 8 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-39-39.559185
+                    Physical qubits:  216
+None
+
+
+     Graph 9
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 10 for graph 9 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-39-56.150569
+                    Physical qubits:  190
+None
+
+
+     Graph 10
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 10 for graph 10 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-40-11.395359
+                    Physical qubits:  203
+None
+
+
+     Graph 11
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 10 for graph 11 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-40-26.661631
+                    Physical qubits:  203
+None
+
+
+     Graph 12
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 10 for graph 12 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-40-41.040177
+                    Physical qubits:  211
+None
+
+
+     Graph 13
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 10 for graph 13 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-40-56.434113
+                    Physical qubits:  205
+None
+
+
+     Graph 14
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 10 for graph 14 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-41-17.569299
+                    Physical qubits:  204
+None
+
+
+     Graph 15
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 10 for graph 15 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-41-31.676718
+                    Physical qubits:  209
+None
+
+
+     Graph 16
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 10 for graph 16 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-41-46.490834
+                    Physical qubits:  201
+None
+
+
+     Graph 17
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 10 for graph 17 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-42-01.431515
+                    Physical qubits:  200
+None
+
+
+     Graph 18
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 10 for graph 18 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-42-17.017683
+                    Physical qubits:  200
+None
+
+
+     Graph 19
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 10 for graph 19 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-42-32.331650
+                    Physical qubits:  219
+None
+
+
+
+Test for graphsize 12
+
+
+     Graph 0
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 12 for graph 0 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-42-48.377256
+                    Physical qubits:  389
+None
+
+
+     Graph 1
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 12 for graph 1 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-43-11.855417
+                    Physical qubits:  415
+None
+
+
+     Graph 2
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 12 for graph 2 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-43-28.667779
+                    Physical qubits:  423
+None
+
+
+     Graph 3
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 12 for graph 3 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-43-46.179814
+                    Physical qubits:  420
+None
+
+
+     Graph 4
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 12 for graph 4 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-44-15.358542
+                    Physical qubits:  368
+None
+
+
+     Graph 5
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 12 for graph 5 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-44-31.234481
+                    Physical qubits:  426
+None
+
+
+     Graph 6
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 12 for graph 6 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-44-50.023696
+                    Physical qubits:  409
+None
+
+
+     Graph 7
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 12 for graph 7 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-45-09.630445
+                    Physical qubits:  428
+None
+
+
+     Graph 8
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 12 for graph 8 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-45-26.124114
+                    Physical qubits:  487
+None
+
+
+     Graph 9
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 12 for graph 9 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-45-48.181345
+                    Physical qubits:  419
+None
+
+
+     Graph 10
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 12 for graph 10 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-46-07.271906
+                    Physical qubits:  396
+None
+
+
+     Graph 11
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 12 for graph 11 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-46-33.926403
+                    Physical qubits:  393
+None
+
+
+     Graph 12
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 12 for graph 12 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-46-57.812866
+                    Physical qubits:  426
+None
+
+
+     Graph 13
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 12 for graph 13 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-47-17.261681
+                    Physical qubits:  400
+None
+
+
+     Graph 14
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 12 for graph 14 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-47-36.512455
+                    Physical qubits:  381
+None
+
+
+     Graph 15
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 12 for graph 15 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-47-53.770205
+                    Physical qubits:  436
+None
+
+
+     Graph 16
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 12 for graph 16 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-48-20.680902
+                    Physical qubits:  381
+None
+
+
+     Graph 17
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 12 for graph 17 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-48-40.497249
+                    Physical qubits:  437
+None
+
+
+     Graph 18
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 12 for graph 18 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-49-02.208398
+                    Physical qubits:  365
+None
+
+
+     Graph 19
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 12 for graph 19 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-49-24.673874
+                    Physical qubits:  445
+None
+
+
+
+Test for graphsize 14
+
+
+     Graph 0
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 14 for graph 0 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-49-52.854354
+                    Physical qubits:  835
+None
+
+
+     Graph 1
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 14 for graph 1 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-50-18.375126
+                    Physical qubits:  825
+None
+
+
+     Graph 2
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 14 for graph 2 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-50-50.463446
+                    Physical qubits:  702
+None
+
+
+     Graph 3
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 14 for graph 3 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-51-32.544445
+                    Physical qubits:  715
+None
+
+
+     Graph 4
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 14 for graph 4 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-51-54.173823
+                    Physical qubits:  799
+None
+
+
+     Graph 5
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 14 for graph 5 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-52-36.259782
+                    Physical qubits:  748
+None
+
+
+     Graph 6
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 14 for graph 6 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-53-38.697201
+                    Physical qubits:  742
+None
+
+
+     Graph 7
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 14 for graph 7 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-54-22.714526
+                    Physical qubits:  792
+None
+
+
+     Graph 8
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 14 for graph 8 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-55-34.161874
+                    Physical qubits:  755
+None
+
+
+     Graph 9
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 14 for graph 9 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-56-17.886918
+                    Physical qubits:  749
+None
+
+
+     Graph 10
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 14 for graph 10 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-56-54.328342
+                    Physical qubits:  746
+None
+
+
+     Graph 11
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 14 for graph 11 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-57-31.938671
+                    Physical qubits:  753
+None
+
+
+     Graph 12
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 14 for graph 12 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-58-06.368191
+                    Physical qubits:  799
+None
+
+
+     Graph 13
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 14 for graph 13 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-58-52.034184
+                    Physical qubits:  765
+None
+
+
+     Graph 14
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 14 for graph 14 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_00-59-55.128919
+                    Physical qubits:  697
+None
+
+
+     Graph 15
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 14 for graph 15 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_01-00-32.042804
+                    Physical qubits:  714
+None
+
+
+     Graph 16
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 14 for graph 16 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_01-01-09.387167
+                    Physical qubits:  717
+None
+
+
+     Graph 17
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 14 for graph 17 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_01-02-11.003586
+                    Physical qubits:  720
+None
+
+
+     Graph 18
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 14 for graph 18 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_01-02-47.555418
+                    Physical qubits:  806
+None
+
+
+     Graph 19
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 14 for graph 19 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_01-03-26.677334
+                    Physical qubits:  743
+None
+
+
+
+Test for graphsize 16
+
+
+     Graph 0
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 16 for graph 0 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_01-04-48.134894
+                    Physical qubits:  1214
+None
+
+
+     Graph 1
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 16 for graph 1 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_01-06-00.185883
+                    Physical qubits:  1312
+None
+
+
+     Graph 2
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 16 for graph 2 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_01-07-19.242927
+                    Physical qubits:  1277
+None
+
+
+     Graph 3
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 16 for graph 3 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_01-08-31.253024
+                    Physical qubits:  1308
+None
+
+
+     Graph 4
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 16 for graph 4 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_01-09-19.982520
+                    Physical qubits:  1459
+None
+
+
+     Graph 5
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 16 for graph 5 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_01-10-54.434335
+                    Physical qubits:  1298
+None
+
+
+     Graph 6
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 16 for graph 6 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_01-12-21.673066
+                    Physical qubits:  1251
+None
+
+
+     Graph 7
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 16 for graph 7 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_01-13-33.761057
+                    Physical qubits:  1191
+None
+
+
+     Graph 8
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 16 for graph 8 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_01-14-24.640010
+                    Physical qubits:  1173
+None
+
+
+     Graph 9
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 16 for graph 9 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_01-15-43.815778
+                    Physical qubits:  1306
+None
+
+
+     Graph 10
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 16 for graph 10 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_01-16-36.153161
+                    Physical qubits:  1351
+None
+
+
+     Graph 11
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 16 for graph 11 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_01-17-41.895813
+                    Physical qubits:  1214
+None
+
+
+     Graph 12
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 16 for graph 12 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_01-18-58.580231
+                    Physical qubits:  1273
+None
+
+
+     Graph 13
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 16 for graph 13 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_01-19-47.785999
+                    Physical qubits:  1286
+None
+
+
+     Graph 14
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 16 for graph 14 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_01-21-53.597136
+                    Physical qubits:  1257
+None
+
+
+     Graph 15
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 16 for graph 15 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_01-23-01.761325
+                    Physical qubits:  1345
+None
+
+
+     Graph 16
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 16 for graph 16 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_01-24-36.836986
+                    Physical qubits:  1229
+None
+
+
+     Graph 17
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 16 for graph 17 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_01-25-52.948106
+                    Physical qubits:  1257
+None
+
+
+     Graph 18
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 16 for graph 18 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_01-26-38.367288
+                    Physical qubits:  1387
+None
+
+
+     Graph 19
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 16 for graph 19 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_01-27-48.153010
+                    Physical qubits:  1234
+None
+
+
+
+Test for graphsize 18
+
+
+     Graph 0
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 18 for graph 0 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_01-30-05.421466
+                    Physical qubits:  1973
+None
+
+
+     Graph 1
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 18 for graph 1 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_01-32-52.899521
+                    Physical qubits:  2018
+None
+
+
+     Graph 2
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 18 for graph 2 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_01-34-20.797226
+                    Physical qubits:  2087
+None
+
+
+     Graph 3
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 18 for graph 3 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_01-35-43.360215
+                    Physical qubits:  2116
+None
+
+
+     Graph 4
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 18 for graph 4 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_01-37-28.921457
+                    Physical qubits:  1942
+None
+
+
+     Graph 5
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 18 for graph 5 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_01-41-11.828818
+                    Physical qubits:  1837
+None
+
+
+     Graph 6
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 18 for graph 6 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_01-43-04.659220
+                    Physical qubits:  1967
+None
+
+
+     Graph 7
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 18 for graph 7 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_01-44-42.911882
+                    Physical qubits:  1942
+None
+
+
+     Graph 8
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 18 for graph 8 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_01-46-13.767238
+                    Physical qubits:  2017
+None
+
+
+     Graph 9
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 18 for graph 9 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_01-48-01.429179
+                    Physical qubits:  2091
+None
+
+
+     Graph 10
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 18 for graph 10 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_01-50-25.765431
+                    Physical qubits:  1975
+None
+
+
+     Graph 11
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 18 for graph 11 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_01-52-05.896096
+                    Physical qubits:  2015
+None
+
+
+     Graph 12
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 18 for graph 12 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_01-53-49.895560
+                    Physical qubits:  2032
+None
+
+
+     Graph 13
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 18 for graph 13 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_01-56-55.384938
+                    Physical qubits:  1921
+None
+
+
+     Graph 14
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 18 for graph 14 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_01-59-13.795119
+                    Physical qubits:  1980
+None
+
+
+     Graph 15
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 18 for graph 15 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_02-01-06.242975
+                    Physical qubits:  2006
+None
+
+
+     Graph 16
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 18 for graph 16 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_02-02-22.744501
+                    Physical qubits:  2382
+None
+
+
+     Graph 17
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 18 for graph 17 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_02-03-46.381167
+                    Physical qubits:  2097
+None
+
+
+     Graph 18
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 18 for graph 18 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_02-05-39.556652
+                    Physical qubits:  1954
+None
+
+
+     Graph 19
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 18 for graph 19 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_02-08-08.642790
+                    Physical qubits:  1960
+None
+
+
+
+Test for graphsize 20
+
+
+     Graph 0
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 20 for graph 0 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_02-10-43.579582
+                    Physical qubits:  2839
+None
+
+
+     Graph 1
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 20 for graph 1 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_02-11-55.550064
+                    Physical qubits:  3714
+None
+
+
+     Graph 2
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 20 for graph 2 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_02-15-05.362825
+                    Physical qubits:  2977
+None
+
+
+     Graph 3
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 20 for graph 3 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_02-17-23.716191
+                    Physical qubits:  3222
+None
+
+
+     Graph 4
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 20 for graph 4 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_02-19-25.539840
+                    Physical qubits:  3230
+None
+
+
+     Graph 5
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 20 for graph 5 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_02-22-46.942362
+                    Physical qubits:  2985
+None
+
+
+     Graph 6
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 20 for graph 6 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_02-24-31.772149
+                    Physical qubits:  3454
+None
+
+
+     Graph 7
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 20 for graph 7 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_02-27-23.962389
+                    Physical qubits:  3074
+None
+
+
+     Graph 8
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 20 for graph 8 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_02-30-50.996935
+                    Physical qubits:  2868
+None
+
+
+     Graph 9
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 20 for graph 9 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_02-33-18.563702
+                    Physical qubits:  2943
+None
+
+
+     Graph 10
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 20 for graph 10 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_02-35-47.166961
+                    Physical qubits:  3025
+None
+
+
+     Graph 11
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 20 for graph 11 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_02-39-42.673749
+                    Physical qubits:  2907
+None
+
+
+     Graph 12
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 20 for graph 12 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_02-41-53.075450
+                    Physical qubits:  3191
+None
+
+
+     Graph 13
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 20 for graph 13 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_02-43-16.473576
+                    Physical qubits:  3476
+None
+
+
+     Graph 14
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 20 for graph 14 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_02-45-39.985019
+                    Physical qubits:  3066
+None
+
+
+     Graph 15
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 20 for graph 15 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_02-47-15.564615
+                    Physical qubits:  3350
+None
+
+
+     Graph 16
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 20 for graph 16 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_02-48-48.233682
+                    Physical qubits:  3534
+None
+
+
+     Graph 17
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 20 for graph 17 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_02-50-52.520589
+                    Physical qubits:  3059
+None
+
+
+     Graph 18
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 20 for graph 18 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_02-52-42.356274
+                    Physical qubits:  3265
+None
+
+
+     Graph 19
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 20 for graph 19 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_02-55-45.513667
+                    Physical qubits:  2997
+None
+
+
+
+Test for graphsize 22
+
+
+     Graph 0
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 22 for graph 0 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_02-59-05.840991
+                    Physical qubits:  4250
+None
+
+
+     Graph 1
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 22 for graph 1 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_03-01-48.855252
+                    Physical qubits:  4416
+None
+
+
+     Graph 2
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 22 for graph 2 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_03-05-32.399952
+                    Physical qubits:  4325
+None
+
+
+     Graph 3
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 22 for graph 3 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_03-09-39.309946
+                    Physical qubits:  4412
+None
+
+
+     Graph 4
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 22 for graph 4 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_03-13-25.124800
+                    Physical qubits:  4437
+None
+
+
+     Graph 5
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 22 for graph 5 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_03-17-22.503443
+                    Physical qubits:  4408
+None
+
+
+     Graph 6
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 22 for graph 6 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_03-21-06.846939
+                    Physical qubits:  4370
+None
+
+
+     Graph 7
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 22 for graph 7 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_03-24-29.096634
+                    Physical qubits:  4494
+None
+
+
+     Graph 8
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 22 for graph 8 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_03-27-26.668304
+                    Physical qubits:  4366
+None
+
+
+     Graph 9
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 22 for graph 9 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_03-31-57.944912
+                    Physical qubits:  4047
+None
+
+
+     Graph 10
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 22 for graph 10 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_03-36-35.151938
+                    Physical qubits:  4138
+None
+
+
+     Graph 11
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 22 for graph 11 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_03-41-09.760105
+                    Physical qubits:  4146
+None
+
+
+     Graph 12
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 22 for graph 12 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_03-44-30.228627
+                    Physical qubits:  4389
+None
+
+
+     Graph 13
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 22 for graph 13 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_03-48-19.199797
+                    Physical qubits:  4389
+None
+
+
+     Graph 14
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 22 for graph 14 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_03-52-13.695978
+                    Physical qubits:  4141
+None
+
+
+     Graph 15
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 22 for graph 15 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_03-56-35.685787
+                    Physical qubits:  4164
+None
+
+
+     Graph 16
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 22 for graph 16 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_03-59-36.075196
+                    Physical qubits:  4501
+None
+
+
+     Graph 17
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 22 for graph 17 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_04-03-27.627821
+                    Physical qubits:  4408
+None
+
+
+     Graph 18
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 22 for graph 18 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_04-07-59.307926
+                    Physical qubits:  4383
+None
+
+
+     Graph 19
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 22 for graph 19 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_04-15-00.211294
+                    Physical qubits:  4336
+None
+
+
+
+Test for graphsize 24
+
+
+     Graph 0
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 24 for graph 0 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_04-32-04.940638
+                    Physical qubits:  0
+None
+
+
+     Graph 1
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 24 for graph 1 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_04-49-09.835588
+                    Physical qubits:  0
+None
+
+
+     Graph 2
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 24 for graph 2 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_05-06-17.302368
+                    Physical qubits:  0
+None
+
+
+     Graph 3
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 24 for graph 3 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_05-23-22.090252
+                    Physical qubits:  0
+None
+
+
+     Graph 4
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 24 for graph 4 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_05-40-27.010094
+                    Physical qubits:  0
+None
+
+
+     Graph 5
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 24 for graph 5 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_05-57-28.473054
+                    Physical qubits:  0
+None
+
+
+     Graph 6
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 24 for graph 6 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_06-14-31.730043
+                    Physical qubits:  0
+None
+
+
+     Graph 7
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 24 for graph 7 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_06-31-38.713065
+                    Physical qubits:  0
+None
+
+
+     Graph 8
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 24 for graph 8 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_06-48-42.184786
+                    Physical qubits:  0
+None
+
+
+     Graph 9
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 24 for graph 9 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_07-05-43.765413
+                    Physical qubits:  0
+None
+
+
+     Graph 10
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 24 for graph 10 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_07-22-44.528847
+                    Physical qubits:  0
+None
+
+
+     Graph 11
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 24 for graph 11 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_07-39-47.723067
+                    Physical qubits:  0
+None
+
+
+     Graph 12
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 24 for graph 12 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_07-56-53.253147
+                    Physical qubits:  0
+None
+
+
+     Graph 13
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 24 for graph 13 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_08-13-57.400003
+                    Physical qubits:  0
+None
+
+
+     Graph 14
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 24 for graph 14 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_08-31-03.329130
+                    Physical qubits:  0
+None
+
+
+     Graph 15
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 24 for graph 15 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_08-48-08.120485
+                    Physical qubits:  0
+None
+
+
+     Graph 16
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 24 for graph 16 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_09-05-10.640267
+                    Physical qubits:  0
+None
+
+
+     Graph 17
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 24 for graph 17 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_09-22-15.517376
+                    Physical qubits:  0
+None
+
+
+     Graph 18
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 24 for graph 18 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_09-39-16.921864
+                    Physical qubits:  0
+None
+
+
+     Graph 19
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 24 for graph 19 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_09-56-16.990621
+                    Physical qubits:  0
+None
+
+
+
+Test for graphsize 26
+
+
+     Graph 0
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 26 for graph 0 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_10-13-15.048464
+                    Physical qubits:  0
+None
+
+
+     Graph 1
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 26 for graph 1 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_10-30-14.184804
+                    Physical qubits:  0
+None
+
+
+     Graph 2
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 26 for graph 2 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_10-47-20.185218
+                    Physical qubits:  0
+None
+
+
+     Graph 3
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 26 for graph 3 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_11-04-21.043159
+                    Physical qubits:  0
+None
+
+
+     Graph 4
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 26 for graph 4 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-03-27_11-21-23.334107
+                    Physical qubits:  0
+None
+
+
+     Graph 5
+
+          Running ours_n_half_dwave...
+                    Measuring embedding of ours_n_half_dwave for graph_size 26 for graph 5 ...
+                    Searching for embedding...
+Traceback (most recent call last):
+  File "/Users/Daantje/Desktop/LMU_Studium/Informatik/Skripte & Co./Master/Masterarbeit/quantum_graph_coalition_structure/main_embedding.py", line 172, in <module>
+    main(algorithm_list=algorithm_list, data=data, graph_sizes=graph_sizes, num_graphs_per_size=num_graphs_per_size,
+  File "/Users/Daantje/Desktop/LMU_Studium/Informatik/Skripte & Co./Master/Masterarbeit/quantum_graph_coalition_structure/main_embedding.py", line 127, in main
+    subprocess.run(command, check=True)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/subprocess.py", line 503, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/subprocess.py", line 1141, in communicate
+    self.wait()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/subprocess.py", line 1204, in wait
+    return self._wait(timeout=timeout)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/subprocess.py", line 1938, in _wait
+    (pid, sts) = self._try_wait(0)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/subprocess.py", line 1896, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+KeyboardInterrupt
+
+Process finished with exit code 130 (interrupted by signal 2:SIGINT)

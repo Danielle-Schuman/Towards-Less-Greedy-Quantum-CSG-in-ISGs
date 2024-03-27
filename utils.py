@@ -1,11 +1,14 @@
 import copy
+import datetime
 import numpy as np
 import pickle
 from dwave_qbsolv import QBSolv
 import dimod as di
 from neal import SimulatedAnnealingSampler
-#from dwave.cloud import Client
-#import minorminer
+from dwave.cloud import Client
+import minorminer
+import dwave_networkx
+from matplotlib import pyplot as plt
 from uqo.client.config import Config
 from uqo import Problem
 from qiskit_optimization import QuadraticProgram
@@ -15,7 +18,7 @@ from qiskit_optimization.algorithms import MinimumEigenOptimizer
 from qiskit_algorithms.utils import algorithm_globals
 from qiskit.primitives import Sampler
 
-#from secrets_folder.dwave_token import TOKEN
+from secrets_folder.dwave_token import TOKEN
 
 # this function solves a given QUBO-Matrix qubo with QB-solv
 # see: https://docs.ocean.dwavesys.com/projects/qbsolv/en/latest/source/generated/dwave_qbsolv.QBSolv.sample.html
@@ -40,7 +43,7 @@ def solve_with_sa(qubo, num_qubits, seed):
     return solution
 
 
-'''
+
 def find_embedding_with_client(qubo, advantage_solver):
         client = Client(token=TOKEN, solver=advantage_solver)
         # get graph of specified solver
@@ -48,7 +51,32 @@ def find_embedding_with_client(qubo, advantage_solver):
         # find embedding
         embedding = minorminer.find_embedding(qubo, graph)
         return embedding
-'''
+
+
+def measure_embedding(algorithm, qubo):
+    # get advantage solver for connection
+    advantage_solver = 'Advantage_system4.1'
+    try:
+        # calculate embedding
+        print("                    Searching for embedding...")
+        embedding = find_embedding_with_client(qubo, advantage_solver)
+        try:
+            dwave_networkx.draw_pegasus_embedding(dwave_networkx.pegasus_graph(16), emb=embedding, node_size=3, width=.3)
+            time_stamp = str(datetime.datetime.now().date()) + '_' + str(datetime.datetime.now().time()).replace(':', '-')
+            with open(f"embeddings/embedding_{algorithm.name}_{time_stamp}.pkl", 'wb') as file:
+                pickle.dump(embedding, file)
+            plt.savefig(f"embeddings/embedding_{algorithm.name}_{time_stamp}.pdf")
+            print(f"                        Saved embedding at {time_stamp}")
+        except:
+            print("                         Embedding could not be saved")
+            raise Exception("No embedding saved")
+        physical_qubits = sum(len(l) for l in embedding.values())
+        append_to_pickle(physical_qubits, f"embeddings/physical_qubits_{algorithm.name}.pkl")
+        print("                    Physical qubits: ", physical_qubits)
+        if physical_qubits == 0:
+            raise Exception("No embedding found")
+    except:
+        raise Exception("No embedding found")
 
 
 def solve_with_dwave(qubo, num_qubits, solver):
@@ -78,10 +106,24 @@ def solve_with_dwave(qubo, num_qubits, solver):
         try:
             # calculate embedding
             print("                    Searching for embedding...")
-            problem.find_pegasus_embedding()
-            #problem.embedding = find_embedding_with_client(qubo, advantage_solver)
+            #problem.find_pegasus_embedding()
+            problem.embedding = find_embedding_with_client(qubo, advantage_solver)
+            try:
+                dwave_networkx.draw_pegasus_embedding(dwave_networkx.pegasus_graph(16), emb=problem.embedding, node_size=3, width=.3)
+                time_stamp = str(datetime.datetime.now().date()) + '_' + str(datetime.datetime.now().time()).replace(':', '-')
+                with open(f"embeddings/embedding_{time_stamp}.pkl", 'wb') as file:
+                    pickle.dump(problem.embedding, file)
+                plt.savefig(f"embeddings/embedding_{time_stamp}.pdf")
+                print(f"                        Saved embedding at {time_stamp}")
+            except:
+                print("                         Embedding could not be saved")
             print("                    Embedding found")
-            embedding_not_found = False
+            physical_qubits = sum(len(l) for l in problem.embedding.values())
+            print("                    Physical qubits: ", physical_qubits)
+            if physical_qubits == 0:
+                embedding_not_found = True
+            else:
+                embedding_not_found = False
             try:
                 print("                      Start running D-Wave")
                 response = problem.solve(shots)

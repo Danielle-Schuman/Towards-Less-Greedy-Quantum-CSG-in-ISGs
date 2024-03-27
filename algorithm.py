@@ -50,6 +50,9 @@ class QuantumAlgorithm(Algorithm, ABC):
             solution = utils.solve_with_qbsolv(qubo, num_qubits, self.seed, self.timeout)
         return solution
 
+    def measure_embedding(self, qubo):
+        utils.measure_embedding(self, qubo)
+
 
 class IterativeQuantumAlgorithm(QuantumAlgorithm, ABC):
     def __init__(self, seed, num_graph_sizes, solver="qbsolv", num_coalitions=None, timeout=600, parallel=True):
@@ -92,10 +95,25 @@ class IterativeQuantumAlgorithm(QuantumAlgorithm, ABC):
             new_coalitions.append(self._get_coalitions_from_qubo_solution(coalitions[i], solution))
         return new_coalitions
 
+    def measure_embedding_qubos(self, qubo_list):
+        converted_qubo = qubo_list[0][0]
+        total_num_qubits = qubo_list[0][1]
+        qubit_num_start_of_qubo = [0]
+        for (qubo, num_qubits) in qubo_list[1:]:
+            qubit_num_start_of_qubo.append(total_num_qubits)
+            qubo_with_new_numbers = IterativeQuantumAlgorithm.convert_qubo(qubo, total_num_qubits)
+            total_num_qubits = total_num_qubits + num_qubits
+            converted_qubo.update(qubo_with_new_numbers)
+        self.measure_embedding(converted_qubo)
+
     def _split(self, coalition, edges):
         Q, num_qubits = self._get_qubo(coalition, edges)
         solution = self.solve_qubo(Q, num_qubits)
         return self._get_coalitions_from_qubo_solution(coalition, solution)
+
+    def _measure_embedding_split(self, coalition, edges):
+        Q, num_qubits = self._get_qubo(coalition, edges)
+        self.measure_embedding_qubos(Q)
 
     # implementation is a tiny bit different from the one in the GCS-Q paper, but does the same thing
     def solve(self, num_agents, edges, graph_num=None):
@@ -138,6 +156,25 @@ class IterativeQuantumAlgorithm(QuantumAlgorithm, ABC):
                 time_stamp = str(datetime.datetime.now().date()) + '_' + str(datetime.datetime.now().time()).replace(':', '-')
                 pickle.dump(coalitions, open(f"results/coalitions_{self.name}_{num_agents}_{graph_num}_after_n={n}__{time_stamp}.pkl", 'wb'))
         return coalitions
+
+    def measure_embedding_run(self, num_agents, edges, graph_num=None):
+        # initialize with grand coalition
+        coalitions = [list(range(num_agents))]
+        # for a maximum of num_agents steps (as we can at most have num_agents coalitions, one for each agent)
+        for n in range(num_agents):
+            new_coalitions = copy.deepcopy(coalitions)
+            # exclude coalitions that cannot be further split because they already contain only one agent
+            real_coalitions = [coalition for coalition in coalitions if len(coalition) > 1]
+            if self.parallel:
+                qubo_list = []
+            for coalition in real_coalitions:
+                if self.parallel:
+                    qubo, num_qubits = self._get_qubo(coalition, edges)
+                    qubo_list.append((qubo, num_qubits))
+                else:
+                    self._measure_embedding_split(coalition, edges)
+            if self.parallel:
+                self.measure_embedding_qubos(qubo_list)
 
     @abstractmethod
     def _get_qubo(self, coalition, edges):

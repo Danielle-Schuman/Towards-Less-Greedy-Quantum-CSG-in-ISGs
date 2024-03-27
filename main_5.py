@@ -77,12 +77,18 @@ def main(algorithm_list, data, graph_sizes, num_graphs_per_size, experiment, dir
     for algorithm in algorithm_list:
         #too_large = False
         if isinstance(algorithm, IterativeQuantumAlgorithmWithK):
-            agents = graph_sizes
+            if algorithm.k == 5:
+                agents = [20,22,24,26,28]
+            else:
+                agents = graph_sizes
             for num_agents in agents:
-                time.sleep(5)
+                time.sleep(10)
                 if algorithm.k <= num_agents:
                     print(f"\n\n\nTest for graphsize {num_agents}")
-                    this_range = range(num_graphs_per_size)
+                    if algorithm.k == 5 and num_agents == 20:
+                        this_range = range(11, num_graphs_per_size)
+                    else:
+                        this_range = range(num_graphs_per_size)
                     for graph_num in this_range:
                         time.sleep(1)
                         print(f"\n\n     Graph {graph_num}")
@@ -213,7 +219,7 @@ if __name__ == "__main__":
         # D-Wave -> uncomment this and comment simulate for running with D-Wave
         solvers = ["dwave"]
         parallel = [True]
-        k_list = [4, 3, 5, 2]
+        k_list = [5, 2]
 
         for solver in solvers:
             '''
@@ -252,8 +258,8 @@ if __name__ == "__main__":
                         main(algorithm_list=algorithm_list, data=data, graph_sizes=graph_sizes,
                              num_graphs_per_size=num_graphs_per_size, experiment=f"k-split algorithms with {solver} in {mode} mode for k={k}",
                              directory=directory)
-                    print("Taking 2 Minute break...")
-                    time.sleep(120)
+                    print("Taking 10 Minute break...")
+                    time.sleep(600)
 
         # Classical algorithms
         '''

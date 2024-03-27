@@ -74,15 +74,15 @@ def main(algorithm_list, data, graph_sizes, num_graphs_per_size, experiment, dir
     for algorithm in algorithm_list:
         too_large = False
         if isinstance(algorithm, IterativeQuantumAlgorithmWithK):
-            if isinstance(algorithm, ours_iterative_at_most) and algorithm.seed == 1665964778:
+            if isinstance(algorithm, ours_iterative_exactly) and algorithm.seed == 1364436995:
                 agents = [10]
             else:
                 agents = graph_sizes[:4]
             for num_agents in agents:
                 if algorithm.k <= num_agents:
                     print(f"\n\n\nTest for graphsize {num_agents}")
-                    if isinstance(algorithm, ours_iterative_at_most) and algorithm.seed == 1665964778:
-                        this_range = range(8, num_graphs_per_size)
+                    if isinstance(algorithm, ours_iterative_exactly) and algorithm.seed == 1364436995:
+                        this_range = range(14, num_graphs_per_size)
                     else:
                         this_range = range(num_graphs_per_size)
                     for graph_num in this_range:
@@ -172,7 +172,8 @@ def main(algorithm_list, data, graph_sizes, num_graphs_per_size, experiment, dir
 
 if __name__ == "__main__":
     # TODO: Determine sensible number of seeds for statistical significance
-    seeds = [1665964778, 1980386705, 1364436995, 2881126339, 2777013863, 3875681486, 4038098247, 3748732874]
+    seeds = [1364436995, 2881126339]
+    #seeds = [1665964778, 1980386705, 1364436995, 2881126339, 2777013863, 3875681486, 4038098247, 3748732874]
     for seed in seeds:
         # Setting the seed
         random.seed(seed)
@@ -203,13 +204,7 @@ if __name__ == "__main__":
         parallel = [True]
         k_list = [4]  # TODO: Come up with sensible values based on simulation
         '''
-        if seed == 1665964778:
-                    algorithm_list = [#ours_iterative_exactly(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
-                          ours_iterative_at_most(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
-                          r_qubo_iterative(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k)
-                        ]
-        else:
-                    algorithm_list = [ours_iterative_exactly(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
+        algorithm_list = [ours_iterative_exactly(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
                           ours_iterative_at_most(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
                           r_qubo_iterative(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k)
                         ]

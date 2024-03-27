@@ -1,0 +1,1150 @@
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 16 for graph 0 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 0.822906633005644   -   Time: 12.871210813522339
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 16 for graph 1 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.02240091914733   -   Time: 12.428692817687988
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 16 for graph 2 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 0.8919407950075495   -   Time: 13.035398960113525
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 16 for graph 3 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 0.7966595129909422   -   Time: 17.368757963180542
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 16 for graph 4 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 0.6262725262860229   -   Time: 12.142971277236938
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 16 for graph 5 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 3.2643274461642093   -   Time: 11.724366188049316
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 16 for graph 6 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.3304850667358323   -   Time: 11.8538179397583
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 16 for graph 7 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.0160665942924254   -   Time: 12.039165019989014
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 16 for graph 8 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 0.9121356510589749   -   Time: 12.630228519439697
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 16 for graph 9 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 0.9543621161819686   -   Time: 13.124118566513062
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 16 for graph 10 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 0.8229066330056085   -   Time: 13.280925512313843
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 16 for graph 11 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.0224009191474863   -   Time: 13.032195568084717
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 16 for graph 12 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 0.8919407950071729   -   Time: 13.63463306427002
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 16 for graph 13 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 0.7966595129899972   -   Time: 18.267462968826294
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 16 for graph 14 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 0.6262725262863498   -   Time: 12.376156568527222
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 16 for graph 15 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 0.5325696747462771   -   Time: 11.99048924446106
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 16 for graph 16 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 0.9404045759696231   -   Time: 11.552659511566162
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 16 for graph 17 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.11076397406012   -   Time: 13.722251892089844
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 16 for graph 18 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 0.29503932839396185   -   Time: 13.274693727493286
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 16 for graph 19 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.3821471550545326   -   Time: 13.230865478515625
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 18 for graph 0 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.22958232134755   -   Time: 15.21857738494873
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 18 for graph 1 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 0.9642698128749885   -   Time: 14.7401704788208
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 18 for graph 2 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 0.7324635199480483   -   Time: 15.000577449798584
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 18 for graph 3 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 0.9489845542806634   -   Time: 14.544445514678955
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 18 for graph 4 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 0.5284612501546704   -   Time: 12.587717294692993
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 18 for graph 5 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 0.5018053650561924   -   Time: 18.91438865661621
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 18 for graph 6 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 0.4521889657959477   -   Time: 12.831437587738037
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 18 for graph 7 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.0735780103342094   -   Time: 20.469380617141724
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 18 for graph 8 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 0.9280845774882422   -   Time: 15.002928256988525
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 18 for graph 9 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.2154281540707146   -   Time: 24.901061534881592
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 18 for graph 10 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 0.4225599222920451   -   Time: 9.15665602684021
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 18 for graph 11 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.2671337334371202   -   Time: 5.782975912094116
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 18 for graph 12 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 0.550146932461665   -   Time: 9.183436632156372
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 18 for graph 13 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 0.23850950742086496   -   Time: 14.220964193344116
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 18 for graph 14 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 0.5123579767928774   -   Time: 13.22718620300293
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 18 for graph 15 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 0.7876205949141379   -   Time: 16.44227695465088
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 18 for graph 16 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.0064599804971195   -   Time: 17.691728353500366
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 18 for graph 17 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 0.9666033216792229   -   Time: 14.853655338287354
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 18 for graph 18 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 0.9374991290561567   -   Time: 23.479471683502197
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 18 for graph 19 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 0.8620304898268571   -   Time: 20.956963777542114
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 20 for graph 0 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.2286198003634965   -   Time: 14.316044330596924
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 20 for graph 1 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.146804753056955   -   Time: 14.805280208587646
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 20 for graph 2 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.094474541048065   -   Time: 19.84768271446228
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 20 for graph 3 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 0.9308740224380188   -   Time: 14.653816938400269
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 20 for graph 4 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.759847876834371   -   Time: 16.738347053527832
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 20 for graph 5 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 0.8219631553506161   -   Time: 20.59880566596985
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 20 for graph 6 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.2720059272304098   -   Time: 15.685726642608643
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 20 for graph 7 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 0.9889087271904486   -   Time: 16.38288688659668
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 20 for graph 8 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 0.9555164697122933   -   Time: 14.693423986434937
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 20 for graph 9 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.1140725334617159   -   Time: 20.635579109191895
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 20 for graph 10 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.1078456778961936   -   Time: 479.4612157344818
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 20 for graph 11 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.3901409670808889   -   Time: 14.412001371383667
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 20 for graph 12 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.8273616108029387   -   Time: 18.356211185455322
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 20 for graph 13 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.5096587190417594   -   Time: 24.053702354431152
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 20 for graph 14 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.142733334196528   -   Time: 20.270233869552612
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 20 for graph 15 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.338581728684872   -   Time: 14.915900468826294
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 20 for graph 16 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.4018693972730745   -   Time: 18.12708830833435
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 20 for graph 17 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.516596878262611   -   Time: 14.126713037490845
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 20 for graph 18 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.0512632971854572   -   Time: 13.523154258728027
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 20 for graph 19 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 0.7348132032658938   -   Time: 17.450152158737183
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 22 for graph 0 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.374993063408958   -   Time: 17.046926975250244
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 22 for graph 1 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.1445445552090874   -   Time: 45.704580307006836
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 22 for graph 2 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.141115088340186   -   Time: 21.466770887374878
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 22 for graph 3 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 0.8386235254101209   -   Time: 18.332565784454346
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 22 for graph 4 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.4044985614480368   -   Time: 16.034238815307617
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 22 for graph 5 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.2310423936949846   -   Time: 14.912261486053467
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 22 for graph 6 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.9295166795682377   -   Time: 15.029744625091553
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 22 for graph 7 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.4630552318570835   -   Time: 15.051080226898193
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 22 for graph 8 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.221000462496292   -   Time: 17.57199478149414
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 22 for graph 9 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.3166678866445665   -   Time: 14.344776153564453
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 22 for graph 10 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.4844338943951811   -   Time: 14.209126710891724
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 22 for graph 11 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.2168436433696357   -   Time: 26.660338163375854
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 22 for graph 12 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.67675443249464   -   Time: 14.867936611175537
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 22 for graph 13 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.7578130307228719   -   Time: 18.41526484489441
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 22 for graph 14 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.3645584596682312   -   Time: 20.90636897087097
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 22 for graph 15 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.2724212548784877   -   Time: 19.142266511917114
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 22 for graph 16 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.364142430821964   -   Time: 18.766281366348267
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 22 for graph 17 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.0959925258529069   -   Time: 33.04017472267151
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 22 for graph 18 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.3414015011873701   -   Time: 19.686819553375244
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 22 for graph 19 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.7336006664884351   -   Time: 17.930371522903442
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 24 for graph 0 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.7010052388675874   -   Time: 19.910026788711548
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 24 for graph 1 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.3886139829530038   -   Time: 27.885005950927734
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 24 for graph 2 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.5827599824100815   -   Time: 19.8489031791687
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 24 for graph 3 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.5610125424796948   -   Time: 19.167053699493408
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 24 for graph 4 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.5279434440053024   -   Time: 24.742868423461914
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 24 for graph 5 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.3426834078204877   -   Time: 16.308544635772705
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 24 for graph 6 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.4807224392826015   -   Time: 26.913437604904175
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 24 for graph 7 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.3171557162028549   -   Time: 28.760791778564453
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 24 for graph 8 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.62116363968439   -   Time: 16.747586965560913
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 24 for graph 9 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.122410326314359   -   Time: 22.62031650543213
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 24 for graph 10 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.3721065249381823   -   Time: 18.936254739761353
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 24 for graph 11 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.5708787552799706   -   Time: 22.65633535385132
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 24 for graph 12 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.3241178248075869   -   Time: 20.876323223114014
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 24 for graph 13 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.811060936422372   -   Time: 18.310683012008667
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 24 for graph 14 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.816278325728014   -   Time: 26.36453413963318
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 24 for graph 15 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.4883841820783488   -   Time: 23.727699995040894
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 24 for graph 16 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.3053591773912316   -   Time: 18.862173557281494
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 24 for graph 17 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.7032345231154267   -   Time: 26.835841417312622
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 24 for graph 18 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.447440198799562   -   Time: 28.909515619277954
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 24 for graph 19 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.9196240992240305   -   Time: 19.260821104049683
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 26 for graph 0 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.924372461402875   -   Time: 19.230730295181274
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 26 for graph 1 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.9082577259881361   -   Time: 21.493720531463623
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 26 for graph 2 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.5589930495787598   -   Time: 22.902722120285034
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 26 for graph 3 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.9495594623709493   -   Time: 21.76702618598938
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 26 for graph 4 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.4934622057652263   -   Time: 29.56033444404602
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 26 for graph 5 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.4744191862071574   -   Time: 25.64659571647644
+None
+Seed: 3949468976
+
+
+
+Test for graphsize 16
+
+
+     Graph 0
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 1
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 2
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 3
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 4
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 5
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 6
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 7
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 8
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 9
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 10
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 11
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 12
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 13
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 14
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 15
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 16
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 17
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 18
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 19
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+
+Test for graphsize 18
+
+
+     Graph 0
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 1
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 2
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 3
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 4
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 5
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 6
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 7
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 8
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 9
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 10
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 11
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 12
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 13
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 14
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 15
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 16
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 17
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 18
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 19
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+
+Test for graphsize 20
+
+
+     Graph 0
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 1
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 2
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 3
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 4
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 5
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 6
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 7
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 8
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 9
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 10
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 11
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 12
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 13
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 14
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 15
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 16
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 17
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 18
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 19
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+
+Test for graphsize 22
+
+
+     Graph 0
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 1
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 2
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 3
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 4
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 5
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 6
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 7
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 8
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 9
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 10
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 11
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 12
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 13
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 14
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 15
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 16
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 17
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 18
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 19
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+
+Test for graphsize 24
+
+
+     Graph 0
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 1
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 2
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 3
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 4
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 5
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 6
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 7
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 8
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 9
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 10
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 11
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 12
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 13
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 14
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 15
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 16
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 17
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 18
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 19
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+
+Test for graphsize 26
+
+
+     Graph 0
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 1
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 2
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 3
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 4
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 5
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 6
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 26 for graph 6 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 2.1619977227798017   -   Time: 22.16945791244507
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 26 for graph 7 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.6957513120350214   -   Time: 25.449556827545166
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 26 for graph 8 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.7549079138181227   -   Time: 17.00174117088318
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 26 for graph 9 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 2.073396499533189   -   Time: 16.410858154296875
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 26 for graph 10 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.837086002332633   -   Time: 19.2179696559906
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 26 for graph 11 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.2340014372116315   -   Time: 23.084194898605347
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 26 for graph 12 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.6393130073607196   -   Time: 25.686299562454224
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 26 for graph 13 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.9679025942398454   -   Time: 16.772792100906372
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 26 for graph 14 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.6557715426500152   -   Time: 22.52981400489807
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 26 for graph 15 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.9392763337633028   -   Time: 28.385606288909912
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 26 for graph 16 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.6469585027068945   -   Time: 35.225972414016724
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 26 for graph 17 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.7729039084590497   -   Time: 17.246349573135376
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 26 for graph 18 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 2.0167658061418194   -   Time: 31.979303121566772
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 26 for graph 19 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 2.2023526251088157   -   Time: 16.452998161315918
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 28 for graph 0 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 2.087205590228095   -   Time: 24.909151792526245
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 28 for graph 1 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.7564689501037805   -   Time: 19.422356605529785
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 28 for graph 2 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.936609183744217   -   Time: 24.315021753311157
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 28 for graph 3 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.7278676435872669   -   Time: 25.02407670021057
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 28 for graph 4 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.8609201417147858   -   Time: 17.862868070602417
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 28 for graph 5 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.844443706537085   -   Time: 30.52557682991028
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 28 for graph 6 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.7312049145472272   -   Time: 33.1246018409729
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 28 for graph 7 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 2.1060511880158543   -   Time: 19.183459758758545
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 28 for graph 8 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 2.4373068247309533   -   Time: 20.961589336395264
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 28 for graph 9 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 2.632817062897253   -   Time: 18.84918785095215
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 28 for graph 10 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 2.0368985620604505   -   Time: 20.927199602127075
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 28 for graph 11 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.824350813344246   -   Time: 21.137396812438965
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 28 for graph 12 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.8952849205203819   -   Time: 27.162427186965942
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 28 for graph 13 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 2.6283230490957337   -   Time: 18.69873571395874
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 28 for graph 14 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.640450401947703   -   Time: 21.070261240005493
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 28 for graph 15 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 2.2798980536038087   -   Time: 31.782357215881348
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 28 for graph 16 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 2.569843289461332   -   Time: 18.61473822593689
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 28 for graph 17 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 1.8604912623196768   -   Time: 21.55594491958618
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 28 for graph 18 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 2.2661988687358203   -   Time: 37.665844202041626
+None
+                    Running 12_split_GCSQ_exactly_qbsolv_parallel for seed 3949468976 for graph_size 28 for graph 19 ...
+                    Coalition structure value for 12_split_GCSQ_exactly_qbsolv_parallel: 2.220827152406841   -   Time: 21.27565884590149
+None
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 7
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 8
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 9
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 10
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 11
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 12
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 13
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 14
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 15
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 16
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 17
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 18
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 19
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+
+Test for graphsize 28
+
+
+     Graph 0
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 1
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 2
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 3
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 4
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 5
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 6
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 7
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 8
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 9
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 10
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 11
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 12
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 13
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 14
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 15
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 16
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 17
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 18
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+
+
+     Graph 19
+
+          Running 12_split_GCSQ_exactly_qbsolv_parallel...
+Done running tests for k-split algorithms with qbsolv in True mode for k=12.

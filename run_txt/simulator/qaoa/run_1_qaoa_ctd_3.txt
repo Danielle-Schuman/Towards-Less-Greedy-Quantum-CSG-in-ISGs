@@ -1,0 +1,2007 @@
+                    Running 3_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 0 ...
+                    Coalition structure value for 3_split_GCSQ_at_most_qaoa_parallel: 0.028954843277226416   -   Time: 9.364352941513062
+None
+                    Running 3_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 1 ...
+                    Coalition structure value for 3_split_GCSQ_at_most_qaoa_parallel: 0.5097074774093997   -   Time: 5.417156934738159
+None
+                    Running 3_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 2 ...
+                    Coalition structure value for 3_split_GCSQ_at_most_qaoa_parallel: 0.00712843874983804   -   Time: 8.886040449142456
+None
+                    Running 3_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 3 ...
+                    Coalition structure value for 3_split_GCSQ_at_most_qaoa_parallel: 0.06152625301075432   -   Time: 4.00791072845459
+None
+                    Running 3_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 4 ...
+                    Coalition structure value for 3_split_GCSQ_at_most_qaoa_parallel: 0.06396917936914548   -   Time: 4.031825304031372
+None
+                    Running 3_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 5 ...
+                    Coalition structure value for 3_split_GCSQ_at_most_qaoa_parallel: 0.10380144569396066   -   Time: 4.32106614112854
+None
+                    Running 3_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 6 ...
+                    Coalition structure value for 3_split_GCSQ_at_most_qaoa_parallel: 0.05554082850606079   -   Time: 4.320393800735474
+None
+                    Running 3_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 7 ...
+                    Coalition structure value for 3_split_GCSQ_at_most_qaoa_parallel: 0.038931269477402   -   Time: 7.574358701705933
+None
+                    Running 3_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 8 ...
+                    Coalition structure value for 3_split_GCSQ_at_most_qaoa_parallel: 0.042007430425400116   -   Time: 4.379543781280518
+None
+                    Running 3_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 9 ...
+                    Coalition structure value for 3_split_GCSQ_at_most_qaoa_parallel: 0.0010690439865044254   -   Time: 8.144692420959473
+None
+                    Running 3_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 10 ...
+                    Coalition structure value for 3_split_GCSQ_at_most_qaoa_parallel: 0.2197142340515299   -   Time: 12.23745608329773
+None
+                    Running 3_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 11 ...
+                    Coalition structure value for 3_split_GCSQ_at_most_qaoa_parallel: 0.2770576453315883   -   Time: 10.141531705856323
+None
+                    Running 3_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 12 ...
+                    Coalition structure value for 3_split_GCSQ_at_most_qaoa_parallel: 0.06753117632182892   -   Time: 4.031683444976807
+None
+                    Running 3_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 13 ...
+                    Coalition structure value for 3_split_GCSQ_at_most_qaoa_parallel: 0.01673789206527232   -   Time: 4.793665647506714
+None
+                    Running 3_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 14 ...
+                    Coalition structure value for 3_split_GCSQ_at_most_qaoa_parallel: 0.03599345154763256   -   Time: 4.85451340675354
+None
+                    Running 3_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 15 ...
+                    Coalition structure value for 3_split_GCSQ_at_most_qaoa_parallel: 0.10695262062797894   -   Time: 7.78323769569397
+None
+                    Running 3_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 16 ...
+                    Coalition structure value for 3_split_GCSQ_at_most_qaoa_parallel: 0.06090302529973002   -   Time: 3.7201216220855713
+None
+                    Running 3_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 17 ...
+                    Coalition structure value for 3_split_GCSQ_at_most_qaoa_parallel: 0.37306828772501177   -   Time: 6.882680654525757
+None
+                    Running 3_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 18 ...
+                    Coalition structure value for 3_split_GCSQ_at_most_qaoa_parallel: 0.06615960564805334   -   Time: 4.33061671257019
+None
+                    Running 3_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 19 ...
+                    Coalition structure value for 3_split_GCSQ_at_most_qaoa_parallel: 0.24253747559571082   -   Time: 5.190056085586548
+None
+                    Running 3_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 0 ...
+                    Coalition structure value for 3_split_GCSQ_at_most_qaoa_parallel: 0.3105910123281248   -   Time: 280.67282342910767
+None
+                    Running 3_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 1 ...
+                    Coalition structure value for 3_split_GCSQ_at_most_qaoa_parallel: 0.02611926164139078   -   Time: 190.3937861919403
+None
+                    Running 3_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 2 ...
+                    Coalition structure value for 3_split_GCSQ_at_most_qaoa_parallel: 0.11391786237636126   -   Time: 304.6139853000641
+None
+                    Running 3_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 3 ...
+                    Coalition structure value for 3_split_GCSQ_at_most_qaoa_parallel: 0.07235380764402066   -   Time: 234.2457194328308
+None
+                    Running 3_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 4 ...
+                    Coalition structure value for 3_split_GCSQ_at_most_qaoa_parallel: 0.17307079918131762   -   Time: 239.43504643440247
+None
+                    Running 3_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 5 ...
+                    Coalition structure value for 3_split_GCSQ_at_most_qaoa_parallel: 0.17725093691964844   -   Time: 218.76076197624207
+None
+                    Running 3_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 6 ...
+                    Coalition structure value for 3_split_GCSQ_at_most_qaoa_parallel: 0.09104242959229225   -   Time: 298.21334290504456
+None
+                    Running 3_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 7 ...
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 0 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.028954843277226416   -   Time: 2.408141613006592
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 1 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.5708825220945002   -   Time: 2.431586503982544
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 2 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.00712843874983804   -   Time: 2.5934364795684814
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 3 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.06152625301075432   -   Time: 1.4647762775421143
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 4 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.06396917936914548   -   Time: 1.4914915561676025
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 5 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.10380144569396066   -   Time: 1.23716402053833
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 6 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.05554082850606079   -   Time: 1.5512161254882812
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 7 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.038931269477402   -   Time: 2.598212718963623
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 8 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.042007430425400116   -   Time: 1.3826370239257812
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 9 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.0010690439865044254   -   Time: 2.1769497394561768
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 10 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.2197142340515299   -   Time: 2.7321865558624268
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 11 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.2770576453315883   -   Time: 2.4840097427368164
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 12 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.06753117632182892   -   Time: 1.253554105758667
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 13 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.01673789206527232   -   Time: 1.5596027374267578
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 14 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.03599345154763256   -   Time: 1.3428497314453125
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 15 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.10695262062797894   -   Time: 2.7171683311462402
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 16 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.06090302529973002   -   Time: 1.6459448337554932
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 17 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.37306828772501177   -   Time: 2.3054721355438232
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 18 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.06615960564805334   -   Time: 1.5402543544769287
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 19 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.24253747559571082   -   Time: 1.5265889167785645
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 0 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.4037548984604129   -   Time: 10.467020988464355
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 1 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.14602401068624005   -   Time: 7.4318602085113525
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 2 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.12639840396634128   -   Time: 8.65344524383545
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 3 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.11563627235494067   -   Time: 7.654846906661987
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 4 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.2074140190053555   -   Time: 8.1312997341156
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 5 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.21629539194693592   -   Time: 9.100219011306763
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 6 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.1032573088773745   -   Time: 10.385382652282715
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 7 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.08555938986791745   -   Time: 9.699000597000122
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 8 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.13737909873700005   -   Time: 11.968504905700684
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 9 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.23536312556377226   -   Time: 10.334068059921265
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 10 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.2985191363911497   -   Time: 7.45661735534668
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 11 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.1310541476422742   -   Time: 7.923759460449219
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 12 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.20825406819544412   -   Time: 9.825752973556519
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 13 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.2924666692276716   -   Time: 7.9699342250823975
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 14 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.8758237641815896   -   Time: 6.0102150440216064
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 15 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.29878868277545223   -   Time: 6.694960117340088
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 16 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.5885124948454461   -   Time: 9.67784070968628
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 17 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.19838467424926165   -   Time: 8.359272480010986
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 18 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.11297024288754187   -   Time: 8.753064155578613
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 19 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.9194011936254896   -   Time: 8.967749834060669
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 8 for graph 0 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.4037548984604129   -   Time: 114.31940984725952
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 8 for graph 1 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.14602401068624005   -   Time: 58.67987084388733
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 8 for graph 2 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.12639840396634128   -   Time: 68.17049598693848
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 8 for graph 3 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.1447468748308225   -   Time: 103.54752588272095
+None
+Seed: 3949468976
+
+
+
+Test for graphsize 4
+
+
+     Graph 0
+
+          Running 3_split_GCSQ_at_most_qaoa_parallel...
+
+
+     Graph 1
+
+          Running 3_split_GCSQ_at_most_qaoa_parallel...
+
+
+     Graph 2
+
+          Running 3_split_GCSQ_at_most_qaoa_parallel...
+
+
+     Graph 3
+
+          Running 3_split_GCSQ_at_most_qaoa_parallel...
+
+
+     Graph 4
+
+          Running 3_split_GCSQ_at_most_qaoa_parallel...
+
+
+     Graph 5
+
+          Running 3_split_GCSQ_at_most_qaoa_parallel...
+
+
+     Graph 6
+
+          Running 3_split_GCSQ_at_most_qaoa_parallel...
+
+
+     Graph 7
+
+          Running 3_split_GCSQ_at_most_qaoa_parallel...
+
+
+     Graph 8
+
+          Running 3_split_GCSQ_at_most_qaoa_parallel...
+
+
+     Graph 9
+
+          Running 3_split_GCSQ_at_most_qaoa_parallel...
+
+
+     Graph 10
+
+          Running 3_split_GCSQ_at_most_qaoa_parallel...
+
+
+     Graph 11
+
+          Running 3_split_GCSQ_at_most_qaoa_parallel...
+
+
+     Graph 12
+
+          Running 3_split_GCSQ_at_most_qaoa_parallel...
+
+
+     Graph 13
+
+          Running 3_split_GCSQ_at_most_qaoa_parallel...
+
+
+     Graph 14
+
+          Running 3_split_GCSQ_at_most_qaoa_parallel...
+
+
+     Graph 15
+
+          Running 3_split_GCSQ_at_most_qaoa_parallel...
+
+
+     Graph 16
+
+          Running 3_split_GCSQ_at_most_qaoa_parallel...
+
+
+     Graph 17
+
+          Running 3_split_GCSQ_at_most_qaoa_parallel...
+
+
+     Graph 18
+
+          Running 3_split_GCSQ_at_most_qaoa_parallel...
+
+
+     Graph 19
+
+          Running 3_split_GCSQ_at_most_qaoa_parallel...
+
+
+
+Test for graphsize 6
+
+
+     Graph 0
+
+          Running 3_split_GCSQ_at_most_qaoa_parallel...
+
+
+     Graph 1
+
+          Running 3_split_GCSQ_at_most_qaoa_parallel...
+
+
+     Graph 2
+
+          Running 3_split_GCSQ_at_most_qaoa_parallel...
+
+
+     Graph 3
+
+          Running 3_split_GCSQ_at_most_qaoa_parallel...
+
+
+     Graph 4
+
+          Running 3_split_GCSQ_at_most_qaoa_parallel...
+
+
+     Graph 5
+
+          Running 3_split_GCSQ_at_most_qaoa_parallel...
+
+
+     Graph 6
+
+          Running 3_split_GCSQ_at_most_qaoa_parallel...
+
+
+     Graph 7
+
+          Running 3_split_GCSQ_at_most_qaoa_parallel...
+                    Error: Running algorithm failed, most likely due to insufficient available memory. Error message:  Command '['python', '-c', 'from main import run_algorithm; print(run_algorithm(b\'\\x80\\x04\\x95\\xe8\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x8c\\x14k_split_GCSQ_at_most\\x94h\\x00\\x93\\x94)\\x81\\x94}\\x94(\\x8c\\x08category\\x94\\x8c\\x07quantum\\x94\\x8c\\x0enum_coalitions\\x94N\\x8c\\x04seed\\x94\\x8a\\x050\\x1dh\\xeb\\x00\\x8c\\x07timeout\\x94MX\\x02\\x8c\\x04data\\x94N\\x8c\\x0bvalues_sums\\x94]\\x94(K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00e\\x8c\\x04name\\x94\\x8c"3_split_GCSQ_at_most_qaoa_parallel\\x94\\x8c\\x06solver\\x94\\x8c\\x04qaoa\\x94\\x8c\\x08parallel\\x94\\x88\\x8c\\x01k\\x94K\\x03ub.\', b\'\\x80\\x04\\x95\\xd1\\x01\\x00\\x00\\x00\\x00\\x00\\x00}\\x94(K\\x00K\\x01\\x86\\x94\\x8c\\x15numpy.core.multiarray\\x94\\x8c\\x06scalar\\x94\\x93\\x94\\x8c\\x05numpy\\x94\\x8c\\x05dtype\\x94\\x93\\x94\\x8c\\x02f8\\x94\\x89\\x88\\x87\\x94R\\x94(K\\x03\\x8c\\x01<\\x94NNNJ\\xff\\xff\\xff\\xffJ\\xff\\xff\\xff\\xffK\\x00t\\x94bC\\x08\\x00\\xf08\\xc5\\xba!\\x91\\xbf\\x94\\x86\\x94R\\x94K\\x00K\\x02\\x86\\x94h\\x04h\\nC\\x08\\x0006d~\\xad\\x9f?\\x94\\x86\\x94R\\x94K\\x00K\\x03\\x86\\x94h\\x04h\\nC\\x08\\x00\\xf0\\xc3\\xa3O+\\x81?\\x94\\x86\\x94R\\x94K\\x00K\\x04\\x86\\x94h\\x04h\\nC\\x08\\x00\\x00S\\x128\\xa9X?\\x94\\x86\\x94R\\x94K\\x00K\\x05\\x86\\x94h\\x04h\\nC\\x08\\x00\\xfcO`\\x13U\\xc1\\xbf\\x94\\x86\\x94R\\x94K\\x01K\\x02\\x86\\x94h\\x04h\\nC\\x08\\x00\\xa0\\xd4\\xa6vu\\x81\\xbf\\x94\\x86\\x94R\\x94K\\x01K\\x03\\x86\\x94h\\x04h\\nC\\x08\\x00\\x9c=t7d\\xa3?\\x94\\x86\\x94R\\x94K\\x01K\\x04\\x86\\x94h\\x04h\\nC\\x08\\x00P\\xaa6\\xaf\\x99\\x85\\xbf\\x94\\x86\\x94R\\x94K\\x01K\\x05\\x86\\x94h\\x04h\\nC\\x08\\x006V\\x81\\xb8\\x01\\xbd\\xbf\\x94\\x86\\x94R\\x94K\\x02K\\x03\\x86\\x94h\\x04h\\nC\\x08\\x00\\x00\\xac\\x9bPe\\x81\\xbf\\x94\\x86\\x94R\\x94K\\x02K\\x04\\x86\\x94h\\x04h\\nC\\x08\\x00\\xe0\\xaaX\\xfa\\x91v\\xbf\\x94\\x86\\x94R\\x94K\\x02K\\x05\\x86\\x94h\\x04h\\nC\\x08\\x00xwE\\xf3\\xcc\\xb2\\xbf\\x94\\x86\\x94R\\x94K\\x03K\\x04\\x86\\x94h\\x04h\\nC\\x08\\x00\\x80\\xd4\\xb2\\x96F[\\xbf\\x94\\x86\\x94R\\x94K\\x03K\\x05\\x86\\x94h\\x04h\\nC\\x08\\x00\\xd4\\xa1fQ`\\xa0?\\x94\\x86\\x94R\\x94K\\x04K\\x05\\x86\\x94h\\x04h\\nC\\x08\\x00`\\xb3(\\xf4&\\x91?\\x94\\x86\\x94R\\x94u.\', 6, b\'\\x80\\x04\\x95\\x1e\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x8c\\x1a2024-03-12_00-00-05.978293\\x94.\', b\'\\x80\\x04\\x95.\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x8c*results/eon_data/quantum/qaoa/parallel/k=3\\x94.\', 7))']' returned non-zero exit status 1.
+
+
+
+Test for graphsize 4
+
+
+     Graph 0
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 1
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 2
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 3
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 4
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 5
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 6
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 7
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 8
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 9
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 10
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 11
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 12
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 13
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 14
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 15
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 16
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 17
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 18
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 19
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+
+Test for graphsize 6
+
+
+     Graph 0
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 1
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 2
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 3
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 4
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 5
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 6
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 7
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 8
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 9
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 10
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 11
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 12
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 13
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 14
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 15
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 16
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 17
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 18
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 19
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+
+Test for graphsize 8
+
+
+     Graph 0
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 1
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 2
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 3
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 4
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 8 for graph 4 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.2074140190053555   -   Time: 99.28238010406494
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 8 for graph 5 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.21629539194693592   -   Time: 118.37504863739014
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 8 for graph 6 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.1032573088773745   -   Time: 113.2765600681305
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 8 for graph 7 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.08555938986791745   -   Time: 86.11888265609741
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 8 for graph 8 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.13737909873700005   -   Time: 111.53555512428284
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 8 for graph 9 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.23337935599673898   -   Time: 88.77196907997131
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 8 for graph 10 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.2696326279161383   -   Time: 69.55439019203186
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 8 for graph 11 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.1310541476422742   -   Time: 115.52620077133179
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 8 for graph 12 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.20825406819544412   -   Time: 92.6649911403656
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 8 for graph 13 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.2541452579719845   -   Time: 107.03264808654785
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 8 for graph 14 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.8758237641815896   -   Time: 61.694737911224365
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 8 for graph 15 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.29878868277545223   -   Time: 92.688241481781
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 8 for graph 16 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.5885124948454461   -   Time: 103.82856917381287
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 8 for graph 17 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.19838467424926165   -   Time: 53.21382522583008
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 8 for graph 18 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.11297024288754187   -   Time: 60.89151859283447
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 8 for graph 19 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.9194011936254896   -   Time: 107.30250263214111
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 10 for graph 0 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.6886895808801796   -   Time: 1788.5758202075958
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 10 for graph 1 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 2.0184300160127577   -   Time: 1707.4539935588837
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 10 for graph 2 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.31902299606347384   -   Time: 1411.4823672771454
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 10 for graph 3 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.37980457435667603   -   Time: 1223.6921236515045
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 10 for graph 4 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.1380157581332142   -   Time: 2204.134839773178
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 10 for graph 5 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.6722993968348092   -   Time: 1840.4926059246063
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 10 for graph 6 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.10160660589460946   -   Time: 2463.3514111042023
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 10 for graph 7 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.6112872365902007   -   Time: 1167.5530605316162
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 10 for graph 8 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.6082958422656759   -   Time: 1435.4568433761597
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 10 for graph 9 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.3307093509821897   -   Time: 1408.0728178024292
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 10 for graph 10 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.5482607077980219   -   Time: 1116.7934834957123
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 10 for graph 11 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.6283434120368909   -   Time: 1389.9858074188232
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 10 for graph 12 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.5822116327559712   -   Time: 1946.1574394702911
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 10 for graph 13 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.20515138590104698   -   Time: 1077.1171596050262
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 10 for graph 14 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.31822194753207356   -   Time: 1772.8422281742096
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 10 for graph 15 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.8279277720103266   -   Time: 1712.2495503425598
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 10 for graph 16 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.4442564282766597   -   Time: 2542.866251707077
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 10 for graph 17 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.5009762330199123   -   Time: 2043.1364414691925
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 10 for graph 18 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.43901380344390617   -   Time: 1304.00638961792
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 10 for graph 19 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 1.1643035436402869   -   Time: 1814.8760378360748
+None
+                    Running 3_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 12 for graph 0 ...
+                    Coalition structure value for 3_split_R_QUBO-iterative_qaoa_parallel: 0.5280077470797551   -   Time: 26470.77152824402
+None
+                    Running 4_split_ours_iterative_exactly_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 0 ...
+                    Coalition structure value for 4_split_ours_iterative_exactly_qaoa_parallel: 0.028954843277226416   -   Time: 97.54086208343506
+None
+                    Running 4_split_ours_iterative_exactly_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 1 ...
+                    Coalition structure value for 4_split_ours_iterative_exactly_qaoa_parallel: 0.5708825220945002   -   Time: 63.71874165534973
+None
+                    Running 4_split_ours_iterative_exactly_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 2 ...
+                    Coalition structure value for 4_split_ours_iterative_exactly_qaoa_parallel: 0.00712843874983804   -   Time: 94.61171460151672
+None
+                    Running 4_split_ours_iterative_exactly_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 3 ...
+                    Coalition structure value for 4_split_ours_iterative_exactly_qaoa_parallel: 0.06152625301075432   -   Time: 47.22288680076599
+None
+                    Running 4_split_ours_iterative_exactly_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 4 ...
+                    Coalition structure value for 4_split_ours_iterative_exactly_qaoa_parallel: 0.06396917936914548   -   Time: 51.80630922317505
+None
+                    Running 4_split_ours_iterative_exactly_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 5 ...
+                    Coalition structure value for 4_split_ours_iterative_exactly_qaoa_parallel: 0.10380144569396066   -   Time: 54.982693910598755
+None
+                    Running 4_split_ours_iterative_exactly_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 6 ...
+                    Coalition structure value for 4_split_ours_iterative_exactly_qaoa_parallel: 0.05554082850606079   -   Time: 46.71245050430298
+None
+                    Running 4_split_ours_iterative_exactly_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 7 ...
+                    Coalition structure value for 4_split_ours_iterative_exactly_qaoa_parallel: 0.038931269477402   -   Time: 149.66106700897217
+None
+                    Running 4_split_ours_iterative_exactly_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 8 ...
+                    Coalition structure value for 4_split_ours_iterative_exactly_qaoa_parallel: 0.042007430425400116   -   Time: 43.0065336227417
+None
+                    Running 4_split_ours_iterative_exactly_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 9 ...
+                    Coalition structure value for 4_split_ours_iterative_exactly_qaoa_parallel: 0.000690821587468804   -   Time: 40.17177128791809
+None
+                    Running 4_split_ours_iterative_exactly_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 10 ...
+                    Coalition structure value for 4_split_ours_iterative_exactly_qaoa_parallel: 0.20458485738154053   -   Time: 90.13905668258667
+None
+                    Running 4_split_ours_iterative_exactly_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 11 ...
+                    Coalition structure value for 4_split_ours_iterative_exactly_qaoa_parallel: 0.2889856534090427   -   Time: 18256.094188690186
+None
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 5
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 6
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 7
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 8
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 9
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 10
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 11
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 12
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 13
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 14
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 15
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 16
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 17
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 18
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 19
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+
+Test for graphsize 10
+
+
+     Graph 0
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 1
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 2
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 3
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 4
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 5
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 6
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 7
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 8
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 9
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 10
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 11
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 12
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 13
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 14
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 15
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 16
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 17
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 18
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 19
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+
+Test for graphsize 12
+
+
+     Graph 0
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 1
+
+          Running 3_split_R_QUBO-iterative_qaoa_parallel...
+                    Error: Running algorithm failed, most likely due to insufficient available memory. Error message:  Command '['python', '-c', 'from main import run_algorithm; print(run_algorithm(b\'\\x80\\x04\\x95\\xe8\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x8c\\x10r_qubo_iterative\\x94h\\x00\\x93\\x94)\\x81\\x94}\\x94(\\x8c\\x08category\\x94\\x8c\\x07quantum\\x94\\x8c\\x0enum_coalitions\\x94N\\x8c\\x04seed\\x94\\x8a\\x050\\x1dh\\xeb\\x00\\x8c\\x07timeout\\x94MX\\x02\\x8c\\x04data\\x94N\\x8c\\x0bvalues_sums\\x94]\\x94(K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00e\\x8c\\x04name\\x94\\x8c&3_split_R_QUBO-iterative_qaoa_parallel\\x94\\x8c\\x06solver\\x94\\x8c\\x04qaoa\\x94\\x8c\\x08parallel\\x94\\x88\\x8c\\x01k\\x94K\\x03ub.\', b\'\\x80\\x04\\x95\\xcc\\x06\\x00\\x00\\x00\\x00\\x00\\x00}\\x94(K\\x00K\\x01\\x86\\x94\\x8c\\x15numpy.core.multiarray\\x94\\x8c\\x06scalar\\x94\\x93\\x94\\x8c\\x05numpy\\x94\\x8c\\x05dtype\\x94\\x93\\x94\\x8c\\x02f8\\x94\\x89\\x88\\x87\\x94R\\x94(K\\x03\\x8c\\x01<\\x94NNNJ\\xff\\xff\\xff\\xffJ\\xff\\xff\\xff\\xffK\\x00t\\x94bC\\x08\\x00\\xf0\\xfc\\t\\xeb\\xef\\x85?\\x94\\x86\\x94R\\x94K\\x00K\\x02\\x86\\x94h\\x04h\\nC\\x08\\x00\\xfc\\x08y\\t\\x9c\\xac?\\x94\\x86\\x94R\\x94K\\x00K\\x03\\x86\\x94h\\x04h\\nC\\x08\\x008J\\xe2\\x1c\\xdf\\x97\\xbf\\x94\\x86\\x94R\\x94K\\x00K\\x04\\x86\\x94h\\x04h\\nC\\x08\\x00\\xf4Ymm\\x84\\xb5?\\x94\\x86\\x94R\\x94K\\x00K\\x05\\x86\\x94h\\x04h\\nC\\x08\\x00\\x08\\xae\\xf5\\x96\\xce\\xa9?\\x94\\x86\\x94R\\x94K\\x00K\\x06\\x86\\x94h\\x04h\\nC\\x08\\x00$\\x85\\xf8cK\\xac\\xbf\\x94\\x86\\x94R\\x94K\\x00K\\x07\\x86\\x94h\\x04h\\nC\\x08\\x00\\x00\\xcb\\xc3\\xe4\\x1e\\xa2\\xbf\\x94\\x86\\x94R\\x94K\\x00K\\x08\\x86\\x94h\\x04h\\nC\\x08\\x00$\\x18\\x8867\\xa0\\xbf\\x94\\x86\\x94R\\x94K\\x00K\\t\\x86\\x94h\\x04h\\nC\\x08\\x00\\\\\\xbe\\xd9\\xd5\\xbf\\xbd?\\x94\\x86\\x94R\\x94K\\x00K\\n\\x86\\x94h\\x04h\\nC\\x08\\x00\\xf4x\\r: \\xb4?\\x94\\x86\\x94R\\x94K\\x00K\\x0b\\x86\\x94h\\x04h\\nC\\x08\\x00\\xecC\\xbd\\xbe~\\xb4\\xbf\\x94\\x86\\x94R\\x94K\\x01K\\x02\\x86\\x94h\\x04h\\nC\\x08\\x00p\\xad\\x086!\\x8a\\xbf\\x94\\x86\\x94R\\x94K\\x01K\\x03\\x86\\x94h\\x04h\\nC\\x08\\x00x\\xe5\\xf8&K\\x92\\xbf\\x94\\x86\\x94R\\x94K\\x01K\\x04\\x86\\x94h\\x04h\\nC\\x08\\x00\\x80\\xd9}\\x1e\\x82d\\xbf\\x94\\x86\\x94R\\x94K\\x01K\\x05\\x86\\x94h\\x04h\\nC\\x08\\x00\\x00\\xd1Y\\x80\\x07\\x87?\\x94\\x86\\x94R\\x94K\\x01K\\x06\\x86\\x94h\\x04h\\nC\\x08\\x00\\x00F\\x07Sm\\x83?\\x94\\x86\\x94R\\x94K\\x01K\\x07\\x86\\x94h\\x04h\\nC\\x08\\x00 \\x19\\x1c\\x8e\\x13\\x8c\\xbf\\x94\\x86\\x94R\\x94K\\x01K\\x08\\x86\\x94h\\x04h\\nC\\x08\\x00\\x00\\x80\\xff\\xc5\\x17z\\xbf\\x94\\x86\\x94R\\x94K\\x01K\\t\\x86\\x94h\\x04h\\nC\\x08\\x00\\xa9\\x08~4\\x84\\xd3?\\x94\\x86\\x94R\\x94K\\x01K\\n\\x86\\x94h\\x04h\\nC\\x08\\x00H\\x07\\\\j6\\x9d\\xbf\\x94\\x86\\x94R\\x94K\\x01K\\x0b\\x86\\x94h\\x04h\\nC\\x08@)~\\xc6\\xae\\xd2\\xe2\\xbf\\x94\\x86\\x94R\\x94K\\x02K\\x03\\x86\\x94h\\x04h\\nC\\x08\\x00`6\\xfe\\x91u\\x7f?\\x94\\x86\\x94R\\x94K\\x02K\\x04\\x86\\x94h\\x04h\\nC\\x08\\x00h\\x91N\\xc4\\x9e\\xa7\\xbf\\x94\\x86\\x94R\\x94K\\x02K\\x05\\x86\\x94h\\x04h\\nC\\x08\\x00 [\\x81N\\x97\\x86\\xbf\\x94\\x86\\x94R\\x94K\\x02K\\x06\\x86\\x94h\\x04h\\nC\\x08\\x00\\xb0\\xe3\\xe2\\x15\\x98\\x8d\\xbf\\x94\\x86\\x94R\\x94K\\x02K\\x07\\x86\\x94h\\x04h\\nC\\x08\\x00\\xf8\\np\\xfa\\xf9\\x97\\xbf\\x94\\x86\\x94R\\x94K\\x02K\\x08\\x86\\x94h\\x04h\\nC\\x08\\x00 :\\\'\\x8c\\xd2y?\\x94\\x86\\x94R\\x94K\\x02K\\t\\x86\\x94h\\x04h\\nC\\x08\\x00(\\x89\\xaaR#\\xb7?\\x94\\x86\\x94R\\x94K\\x02K\\n\\x86\\x94h\\x04h\\nC\\x08\\x00\\xc0\\xf9\\xbe\\xceK\\x9f?\\x94\\x86\\x94R\\x94K\\x02K\\x0b\\x86\\x94h\\x04h\\nC\\x08\\x00\\x08S\\x04\\x06L\\xbb\\xbf\\x94\\x86\\x94R\\x94K\\x03K\\x04\\x86\\x94h\\x04h\\nC\\x08\\x00\\x00\\xa9k\\xa9\\xf5B\\xbf\\x94\\x86\\x94R\\x94K\\x03K\\x05\\x86\\x94h\\x04h\\nC\\x08\\x008\\x15\\x1c\\x1c=\\x9e?\\x94\\x86\\x94R\\x94K\\x03K\\x06\\x86\\x94h\\x04h\\nC\\x08\\x00X1\\xb3\\xe36\\x95\\xbf\\x94\\x86\\x94R\\x94K\\x03K\\x07\\x86\\x94h\\x04h\\nC\\x08\\x00 \\xb2\\x1d\\x97\\xa5q\\xbf\\x94\\x86\\x94R\\x94K\\x03K\\x08\\x86\\x94h\\x04h\\nC\\x08\\x00\\xf0E<\\xf3\\xde\\x89?\\x94\\x86\\x94R\\x94K\\x03K\\t\\x86\\x94h\\x04h\\nC\\x08\\x80[\\xbd\\xee\\x90S\\xd2?\\x94\\x86\\x94R\\x94K\\x03K\\n\\x86\\x94h\\x04h\\nC\\x08\\x00`m\\x11B\\xa7\\x83\\xbf\\x94\\x86\\x94R\\x94K\\x03K\\x0b\\x86\\x94h\\x04h\\nC\\x08\\xc0\\x06_\\xca>+\\xe2\\xbf\\x94\\x86\\x94R\\x94K\\x04K\\x05\\x86\\x94h\\x04h\\nC\\x08\\x00 \\xd6o\\xaaU\\x98\\xbf\\x94\\x86\\x94R\\x94K\\x04K\\x06\\x86\\x94h\\x04h\\nC\\x08\\x00@\\xa2\\xfdw|j\\xbf\\x94\\x86\\x94R\\x94K\\x04K\\x07\\x86\\x94h\\x04h\\nC\\x08\\x00\\xd0\\xd6\\xd9\\xc0*\\x94\\xbf\\x94\\x86\\x94R\\x94K\\x04K\\x08\\x86\\x94h\\x04h\\nC\\x08\\x00\\x80\\x89\\xe1\\xe3H}?\\x94\\x86\\x94R\\x94K\\x04K\\t\\x86\\x94h\\x04h\\nC\\x08\\x00$l\\x83\\xd8W\\xa4?\\x94\\x86\\x94R\\x94K\\x04K\\n\\x86\\x94h\\x04h\\nC\\x08\\x00\\xd8ER{?\\x94?\\x94\\x86\\x94R\\x94K\\x04K\\x0b\\x86\\x94h\\x04h\\nC\\x08\\x00\\r0:"\\xe1\\xc2\\xbf\\x94\\x86\\x94R\\x94K\\x05K\\x06\\x86\\x94h\\x04h\\nC\\x08\\x00\\x80\\x14\\xe5U\\xd3\\x8b?\\x94\\x86\\x94R\\x94K\\x05K\\x07\\x86\\x94h\\x04h\\nC\\x08\\x00`;"\\xdeH\\x80?\\x94\\x86\\x94R\\x94K\\x05K\\x08\\x86\\x94h\\x04h\\nC\\x08\\x00\\xc0\\xf7\\x98\\x9a9\\x88\\xbf\\x94\\x86\\x94R\\x94K\\x05K\\t\\x86\\x94h\\x04h\\nC\\x08\\x00\\xe0N\\x95\\x0cs\\x8d\\xbf\\x94\\x86\\x94R\\x94K\\x05K\\n\\x86\\x94h\\x04h\\nC\\x08\\x00\\x00\\xe1s\\xa8\\xcfY?\\x94\\x86\\x94R\\x94K\\x05K\\x0b\\x86\\x94h\\x04h\\nC\\x08\\x00lk;w\\x99\\xc3\\xbf\\x94\\x86\\x94R\\x94K\\x06K\\x07\\x86\\x94h\\x04h\\nC\\x08\\x00\\xfc\\n\\xeb\\xdf\\x01\\xb0?\\x94\\x86\\x94R\\x94K\\x06K\\x08\\x86\\x94h\\x04h\\nC\\x08\\x00\\xb0\\xe2\\xea\\xc1q\\x95?\\x94\\x86\\x94R\\x94K\\x06K\\t\\x86\\x94h\\x04h\\nC\\x08\\x00\\x80\\x93\\\'\\x14\\xee\\x89\\xbf\\x94\\x86\\x94R\\x94K\\x06K\\n\\x86\\x94h\\x04h\\nC\\x08\\x00\\xc0\\x16\\xe6\\xa87b\\xbf\\x94\\x86\\x94R\\x94K\\x06K\\x0b\\x86\\x94h\\x04h\\nC\\x08\\x00\\x82\\x8e\\x17Ig\\xb7\\xbf\\x94\\x86\\x94R\\x94K\\x07K\\x08\\x86\\x94h\\x04h\\nC\\x08\\x00@\\x9a\\xd5\\x84\\n\\x87?\\x94\\x86\\x94R\\x94K\\x07K\\t\\x86\\x94h\\x04h\\nC\\x08\\x00\\xc0\\xf0\\xd5\\xdb\\x83\\x82\\xbf\\x94\\x86\\x94R\\x94K\\x07K\\n\\x86\\x94h\\x04h\\nC\\x08\\x00d\\x11G\\x14\\x91\\xa2?\\x94\\x86\\x94R\\x94K\\x07K\\x0b\\x86\\x94h\\x04h\\nC\\x08\\x00\\xba\\x93\\x98\\xf1\\x87\\xbc\\xbf\\x94\\x86\\x94R\\x94K\\x08K\\t\\x86\\x94h\\x04h\\nC\\x08\\x00\\xc0\\xad\\xf5n\\xabf\\xbf\\x94\\x86\\x94R\\x94K\\x08K\\n\\x86\\x94h\\x04h\\nC\\x08\\x00xe8bS\\x93?\\x94\\x86\\x94R\\x94K\\x08K\\x0b\\x86\\x94h\\x04h\\nC\\x08\\x00/c+@\\x9a\\xc1\\xbf\\x94\\x86\\x94R\\x94K\\tK\\n\\x86\\x94h\\x04h\\nC\\x08\\x00\\xd0\\xecJ\\x8e\\x04\\xbb\\xbf\\x94\\x86\\x94R\\x94K\\tK\\x0b\\x86\\x94h\\x04h\\nC\\x08\\x80P\\xffJ\\xb6\\\'\\xde?\\x94\\x86\\x94R\\x94K\\nK\\x0b\\x86\\x94h\\x04h\\nC\\x08\\x00\\xdc[0\\xe4\\xb4\\xc7\\xbf\\x94\\x86\\x94R\\x94u.\', 12, b\'\\x80\\x04\\x95\\x1e\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x8c\\x1a2024-03-12_00-00-05.978293\\x94.\', b\'\\x80\\x04\\x95.\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x8c*results/eon_data/quantum/qaoa/parallel/k=3\\x94.\', 1))']' died with <Signals.SIGKILL: 9>.
+Done running tests for k-split algorithms with qaoa in True mode for k=3.
+
+
+
+Test for graphsize 4
+
+
+     Graph 0
+
+          Running 4_split_ours_iterative_exactly_qaoa_parallel...
+
+
+     Graph 1
+
+          Running 4_split_ours_iterative_exactly_qaoa_parallel...
+
+
+     Graph 2
+
+          Running 4_split_ours_iterative_exactly_qaoa_parallel...
+
+
+     Graph 3
+
+          Running 4_split_ours_iterative_exactly_qaoa_parallel...
+
+
+     Graph 4
+
+          Running 4_split_ours_iterative_exactly_qaoa_parallel...
+
+
+     Graph 5
+
+          Running 4_split_ours_iterative_exactly_qaoa_parallel...
+
+
+     Graph 6
+
+          Running 4_split_ours_iterative_exactly_qaoa_parallel...
+
+
+     Graph 7
+
+          Running 4_split_ours_iterative_exactly_qaoa_parallel...
+
+
+     Graph 8
+
+          Running 4_split_ours_iterative_exactly_qaoa_parallel...
+
+
+     Graph 9
+
+          Running 4_split_ours_iterative_exactly_qaoa_parallel...
+
+
+     Graph 10
+
+          Running 4_split_ours_iterative_exactly_qaoa_parallel...
+
+
+     Graph 11
+
+          Running 4_split_ours_iterative_exactly_qaoa_parallel...
+
+
+     Graph 12
+                    Running 4_split_ours_iterative_exactly_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 12 ...
+                    Coalition structure value for 4_split_ours_iterative_exactly_qaoa_parallel: 0.06753117632182892   -   Time: 48.518657207489014
+None
+                    Running 4_split_ours_iterative_exactly_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 13 ...
+                    Coalition structure value for 4_split_ours_iterative_exactly_qaoa_parallel: 0.01673789206527232   -   Time: 43.91231393814087
+None
+                    Running 4_split_ours_iterative_exactly_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 14 ...
+                    Coalition structure value for 4_split_ours_iterative_exactly_qaoa_parallel: 0.03599345154763256   -   Time: 40.08148789405823
+None
+                    Running 4_split_ours_iterative_exactly_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 15 ...
+                    Coalition structure value for 4_split_ours_iterative_exactly_qaoa_parallel: 0.10695262062797894   -   Time: 97.19035267829895
+None
+                    Running 4_split_ours_iterative_exactly_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 16 ...
+                    Coalition structure value for 4_split_ours_iterative_exactly_qaoa_parallel: 0.06090302529973002   -   Time: 52.416351318359375
+None
+                    Running 4_split_ours_iterative_exactly_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 17 ...
+                    Coalition structure value for 4_split_ours_iterative_exactly_qaoa_parallel: 0.37306828772501177   -   Time: 52.103713274002075
+None
+                    Running 4_split_ours_iterative_exactly_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 18 ...
+                    Coalition structure value for 4_split_ours_iterative_exactly_qaoa_parallel: 0.06615960564805334   -   Time: 49.362635374069214
+None
+                    Running 4_split_ours_iterative_exactly_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 19 ...
+                    Coalition structure value for 4_split_ours_iterative_exactly_qaoa_parallel: 0.24253747559571082   -   Time: 48.18360424041748
+None
+                    Running 4_split_ours_iterative_exactly_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 0 ...
+                    Coalition structure value for 4_split_ours_iterative_exactly_qaoa_parallel: 0.3845667451989172   -   Time: 22048.83214879036
+None
+                    Running 4_split_ours_iterative_exactly_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 1 ...
+                    Coalition structure value for 4_split_ours_iterative_exactly_qaoa_parallel: 0.09565385438810381   -   Time: 21638.957065820694
+None
+                    Running 4_split_ours_iterative_exactly_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 2 ...
+                    Coalition structure value for 4_split_ours_iterative_exactly_qaoa_parallel: 0.0032570984217556997   -   Time: 24039.640327692032
+None
+                    Running 4_split_ours_iterative_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 0 ...
+                    Coalition structure value for 4_split_ours_iterative_at_most_qaoa_parallel: 0.028954843277226416   -   Time: 93.09115600585938
+None
+                    Running 4_split_ours_iterative_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 1 ...
+                    Coalition structure value for 4_split_ours_iterative_at_most_qaoa_parallel: 0.5097074774093997   -   Time: 62.67807626724243
+None
+                    Running 4_split_ours_iterative_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 2 ...
+                    Coalition structure value for 4_split_ours_iterative_at_most_qaoa_parallel: 0.00712843874983804   -   Time: 122.38898944854736
+None
+                    Running 4_split_ours_iterative_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 3 ...
+                    Coalition structure value for 4_split_ours_iterative_at_most_qaoa_parallel: 0.06152625301075432   -   Time: 57.398956298828125
+None
+                    Running 4_split_ours_iterative_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 4 ...
+                    Coalition structure value for 4_split_ours_iterative_at_most_qaoa_parallel: 0.06396917936914548   -   Time: 46.62010669708252
+None
+                    Running 4_split_ours_iterative_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 5 ...
+                    Coalition structure value for 4_split_ours_iterative_at_most_qaoa_parallel: 0.10380144569396066   -   Time: 50.41369676589966
+None
+                    Running 4_split_ours_iterative_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 6 ...
+                    Coalition structure value for 4_split_ours_iterative_at_most_qaoa_parallel: 0.05554082850606079   -   Time: 55.55020356178284
+None
+                    Running 4_split_ours_iterative_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 7 ...
+                    Coalition structure value for 4_split_ours_iterative_at_most_qaoa_parallel: 0.038931269477402   -   Time: 92.51055455207825
+None
+                    Running 4_split_ours_iterative_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 8 ...
+                    Coalition structure value for 4_split_ours_iterative_at_most_qaoa_parallel: 0.042007430425400116   -   Time: 45.31544256210327
+None
+                    Running 4_split_ours_iterative_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 9 ...
+                    Coalition structure value for 4_split_ours_iterative_at_most_qaoa_parallel: 0.000690821587468804   -   Time: 35.581302881240845
+None
+                    Running 4_split_ours_iterative_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 10 ...
+                    Coalition structure value for 4_split_ours_iterative_at_most_qaoa_parallel: 0.20458485738154053   -   Time: 56.92211055755615
+None
+                    Running 4_split_ours_iterative_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 11 ...
+                    Coalition structure value for 4_split_ours_iterative_at_most_qaoa_parallel: 0.26512963725413385   -   Time: 64.13730335235596
+None
+                    Running 4_split_ours_iterative_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 12 ...
+                    Coalition structure value for 4_split_ours_iterative_at_most_qaoa_parallel: 0.06753117632182892   -   Time: 51.60261034965515
+None
+                    Running 4_split_ours_iterative_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 13 ...
+                    Coalition structure value for 4_split_ours_iterative_at_most_qaoa_parallel: 0.01673789206527232   -   Time: 50.46285319328308
+None
+                    Running 4_split_ours_iterative_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 14 ...
+                    Coalition structure value for 4_split_ours_iterative_at_most_qaoa_parallel: 0.03599345154763256   -   Time: 51.81919598579407
+None
+                    Running 4_split_ours_iterative_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 15 ...
+                    Coalition structure value for 4_split_ours_iterative_at_most_qaoa_parallel: 0.10695262062797894   -   Time: 117.12814450263977
+None
+                    Running 4_split_ours_iterative_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 16 ...
+                    Coalition structure value for 4_split_ours_iterative_at_most_qaoa_parallel: 0.06090302529973002   -   Time: 54.13420581817627
+None
+                    Running 4_split_ours_iterative_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 17 ...
+                    Coalition structure value for 4_split_ours_iterative_at_most_qaoa_parallel: 0.35557090440576644   -   Time: 52.999627113342285
+None
+                    Running 4_split_ours_iterative_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 18 ...
+                    Coalition structure value for 4_split_ours_iterative_at_most_qaoa_parallel: 0.06615960564805334   -   Time: 57.781627893447876
+None
+                    Running 4_split_ours_iterative_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 19 ...
+                    Coalition structure value for 4_split_ours_iterative_at_most_qaoa_parallel: 0.24253747559571082   -   Time: 63.18650841712952
+None
+
+          Running 4_split_ours_iterative_exactly_qaoa_parallel...
+
+
+     Graph 13
+
+          Running 4_split_ours_iterative_exactly_qaoa_parallel...
+
+
+     Graph 14
+
+          Running 4_split_ours_iterative_exactly_qaoa_parallel...
+
+
+     Graph 15
+
+          Running 4_split_ours_iterative_exactly_qaoa_parallel...
+
+
+     Graph 16
+
+          Running 4_split_ours_iterative_exactly_qaoa_parallel...
+
+
+     Graph 17
+
+          Running 4_split_ours_iterative_exactly_qaoa_parallel...
+
+
+     Graph 18
+
+          Running 4_split_ours_iterative_exactly_qaoa_parallel...
+
+
+     Graph 19
+
+          Running 4_split_ours_iterative_exactly_qaoa_parallel...
+
+
+
+Test for graphsize 6
+
+
+     Graph 0
+
+          Running 4_split_ours_iterative_exactly_qaoa_parallel...
+
+
+     Graph 1
+
+          Running 4_split_ours_iterative_exactly_qaoa_parallel...
+
+
+     Graph 2
+
+          Running 4_split_ours_iterative_exactly_qaoa_parallel...
+
+
+     Graph 3
+
+          Running 4_split_ours_iterative_exactly_qaoa_parallel...
+                    Error: Running algorithm failed, most likely due to insufficient available memory. Error message:  Command '['python', '-c', "from main import run_algorithm; print(run_algorithm(b'\\x80\\x04\\x95\\xf4\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x8c\\x16ours_iterative_exactly\\x94h\\x00\\x93\\x94)\\x81\\x94}\\x94(\\x8c\\x08category\\x94\\x8c\\x07quantum\\x94\\x8c\\x0enum_coalitions\\x94N\\x8c\\x04seed\\x94\\x8a\\x050\\x1dh\\xeb\\x00\\x8c\\x07timeout\\x94MX\\x02\\x8c\\x04data\\x94N\\x8c\\x0bvalues_sums\\x94]\\x94(K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00e\\x8c\\x04name\\x94\\x8c,4_split_ours_iterative_exactly_qaoa_parallel\\x94\\x8c\\x06solver\\x94\\x8c\\x04qaoa\\x94\\x8c\\x08parallel\\x94\\x88\\x8c\\x01k\\x94K\\x04ub.', b'\\x80\\x04\\x95\\xd1\\x01\\x00\\x00\\x00\\x00\\x00\\x00}\\x94(K\\x00K\\x01\\x86\\x94\\x8c\\x15numpy.core.multiarray\\x94\\x8c\\x06scalar\\x94\\x93\\x94\\x8c\\x05numpy\\x94\\x8c\\x05dtype\\x94\\x93\\x94\\x8c\\x02f8\\x94\\x89\\x88\\x87\\x94R\\x94(K\\x03\\x8c\\x01<\\x94NNNJ\\xff\\xff\\xff\\xffJ\\xff\\xff\\xff\\xffK\\x00t\\x94bC\\x08\\x00\\x90\\x13\\xec[\\xcb\\x9a\\xbf\\x94\\x86\\x94R\\x94K\\x00K\\x02\\x86\\x94h\\x04h\\nC\\x08\\x00\\xd0\\xb8cS\\xbd\\x82\\xbf\\x94\\x86\\x94R\\x94K\\x00K\\x03\\x86\\x94h\\x04h\\nC\\x08\\x00H\\xd4\\xfd\\x81\\x85\\x98\\xbf\\x94\\x86\\x94R\\x94K\\x00K\\x04\\x86\\x94h\\x04h\\nC\\x08\\x000gv+\\xcf\\x9d?\\x94\\x86\\x94R\\x94K\\x00K\\x05\\x86\\x94h\\x04h\\nC\\x08\\x00\\x14u\\xb2\\xb7\\xdc\\xa9\\xbf\\x94\\x86\\x94R\\x94K\\x01K\\x02\\x86\\x94h\\x04h\\nC\\x08\\x00\\xbc\\x1ak\\x9c\\xd9\\xb4?\\x94\\x86\\x94R\\x94K\\x01K\\x03\\x86\\x94h\\x04h\\nC\\x08\\x00\\x10I\\x99F\\xa6\\xa2?\\x94\\x86\\x94R\\x94K\\x01K\\x04\\x86\\x94h\\x04h\\nC\\x08\\x00\\xf0K1\\xfc\\xe1\\x9f?\\x94\\x86\\x94R\\x94K\\x01K\\x05\\x86\\x94h\\x04h\\nC\\x08\\x80g\\xf3\\x8b\\xce+\\xdc\\xbf\\x94\\x86\\x94R\\x94K\\x02K\\x03\\x86\\x94h\\x04h\\nC\\x08\\x00\\xc0\\n\\xf8\\x1fMb\\xbf\\x94\\x86\\x94R\\x94K\\x02K\\x04\\x86\\x94h\\x04h\\nC\\x08\\x00\\xb0\\xd1G\\xebW\\xa5\\xbf\\x94\\x86\\x94R\\x94K\\x02K\\x05\\x86\\x94h\\x04h\\nC\\x08\\x00$\\xa58\\x10\\xd0\\xae\\xbf\\x94\\x86\\x94R\\x94K\\x03K\\x04\\x86\\x94h\\x04h\\nC\\x08\\x00@\\xaf\\xc9Q\\xa2s?\\x94\\x86\\x94R\\x94K\\x03K\\x05\\x86\\x94h\\x04h\\nC\\x08\\x00\\x08\\xbb>3\\xe0\\x96\\xbf\\x94\\x86\\x94R\\x94K\\x04K\\x05\\x86\\x94h\\x04h\\nC\\x08\\x00\\xb0\\t/\\xee\\x90\\x99\\xbf\\x94\\x86\\x94R\\x94u.', 6, b'\\x80\\x04\\x95\\x1e\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x8c\\x1a2024-03-12_19-46-30.836280\\x94.', b'\\x80\\x04\\x95.\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x8c*results/eon_data/quantum/qaoa/parallel/k=4\\x94.', 3))"]' died with <Signals.SIGKILL: 9>.
+
+
+
+Test for graphsize 4
+
+
+     Graph 0
+
+          Running 4_split_ours_iterative_at_most_qaoa_parallel...
+
+
+     Graph 1
+
+          Running 4_split_ours_iterative_at_most_qaoa_parallel...
+
+
+     Graph 2
+
+          Running 4_split_ours_iterative_at_most_qaoa_parallel...
+
+
+     Graph 3
+
+          Running 4_split_ours_iterative_at_most_qaoa_parallel...
+
+
+     Graph 4
+
+          Running 4_split_ours_iterative_at_most_qaoa_parallel...
+
+
+     Graph 5
+
+          Running 4_split_ours_iterative_at_most_qaoa_parallel...
+
+
+     Graph 6
+
+          Running 4_split_ours_iterative_at_most_qaoa_parallel...
+
+
+     Graph 7
+
+          Running 4_split_ours_iterative_at_most_qaoa_parallel...
+
+
+     Graph 8
+
+          Running 4_split_ours_iterative_at_most_qaoa_parallel...
+
+
+     Graph 9
+
+          Running 4_split_ours_iterative_at_most_qaoa_parallel...
+
+
+     Graph 10
+
+          Running 4_split_ours_iterative_at_most_qaoa_parallel...
+
+
+     Graph 11
+
+          Running 4_split_ours_iterative_at_most_qaoa_parallel...
+
+
+     Graph 12
+
+          Running 4_split_ours_iterative_at_most_qaoa_parallel...
+
+
+     Graph 13
+
+          Running 4_split_ours_iterative_at_most_qaoa_parallel...
+
+
+     Graph 14
+
+          Running 4_split_ours_iterative_at_most_qaoa_parallel...
+
+
+     Graph 15
+
+          Running 4_split_ours_iterative_at_most_qaoa_parallel...
+
+
+     Graph 16
+
+          Running 4_split_ours_iterative_at_most_qaoa_parallel...
+
+
+     Graph 17
+
+          Running 4_split_ours_iterative_at_most_qaoa_parallel...
+
+
+     Graph 18
+
+          Running 4_split_ours_iterative_at_most_qaoa_parallel...
+
+
+     Graph 19
+
+          Running 4_split_ours_iterative_at_most_qaoa_parallel...
+
+
+
+Test for graphsize 6
+
+
+     Graph 0
+
+          Running 4_split_ours_iterative_at_most_qaoa_parallel...
+                    Error: Running algorithm failed, most likely due to insufficient available memory. Error message:  Command '['python', '-c', "from main import run_algorithm; print(run_algorithm(b'\\x80\\x04\\x95\\xf4\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x8c\\x16ours_iterative_at_most\\x94h\\x00\\x93\\x94)\\x81\\x94}\\x94(\\x8c\\x08category\\x94\\x8c\\x07quantum\\x94\\x8c\\x0enum_coalitions\\x94N\\x8c\\x04seed\\x94\\x8a\\x050\\x1dh\\xeb\\x00\\x8c\\x07timeout\\x94MX\\x02\\x8c\\x04data\\x94N\\x8c\\x0bvalues_sums\\x94]\\x94(K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00e\\x8c\\x04name\\x94\\x8c,4_split_ours_iterative_at_most_qaoa_parallel\\x94\\x8c\\x06solver\\x94\\x8c\\x04qaoa\\x94\\x8c\\x08parallel\\x94\\x88\\x8c\\x01k\\x94K\\x04ub.', b'\\x80\\x04\\x95\\xd1\\x01\\x00\\x00\\x00\\x00\\x00\\x00}\\x94(K\\x00K\\x01\\x86\\x94\\x8c\\x15numpy.core.multiarray\\x94\\x8c\\x06scalar\\x94\\x93\\x94\\x8c\\x05numpy\\x94\\x8c\\x05dtype\\x94\\x93\\x94\\x8c\\x02f8\\x94\\x89\\x88\\x87\\x94R\\x94(K\\x03\\x8c\\x01<\\x94NNNJ\\xff\\xff\\xff\\xffJ\\xff\\xff\\xff\\xffK\\x00t\\x94bC\\x08\\x00pM\\xdd={\\x89?\\x94\\x86\\x94R\\x94K\\x00K\\x02\\x86\\x94h\\x04h\\nC\\x08\\x00\\x80h[WV\\x8b\\xbf\\x94\\x86\\x94R\\x94K\\x00K\\x03\\x86\\x94h\\x04h\\nC\\x08\\x00\\xa0\\x81~\\xd5\\xa0\\x83\\xbf\\x94\\x86\\x94R\\x94K\\x00K\\x04\\x86\\x94h\\x04h\\nC\\x08\\x00\\x00\\x1f\\x82\\xfe\\x13\\x9d?\\x94\\x86\\x94R\\x94K\\x00K\\x05\\x86\\x94h\\x04h\\nC\\x08\\x00`&\\x1eT0\\x96\\xbf\\x94\\x86\\x94R\\x94K\\x01K\\x02\\x86\\x94h\\x04h\\nC\\x08\\x00\\xb0\\x8b6\\xfb\\x04\\x9c?\\x94\\x86\\x94R\\x94K\\x01K\\x03\\x86\\x94h\\x04h\\nC\\x08\\x00P\\x1a\\xac\\xec?\\x97\\xbf\\x94\\x86\\x94R\\x94K\\x01K\\x04\\x86\\x94h\\x04h\\nC\\x08\\x00,(\\xa0\\xd8~\\xa1?\\x94\\x86\\x94R\\x94K\\x01K\\x05\\x86\\x94h\\x04h\\nC\\x08\\x00\\x12\\xc8\\xf4X\\xca\\xb1\\xbf\\x94\\x86\\x94R\\x94K\\x02K\\x03\\x86\\x94h\\x04h\\nC\\x08\\x00\\xc0\\xf5\\x9a([}\\xbf\\x94\\x86\\x94R\\x94K\\x02K\\x04\\x86\\x94h\\x04h\\nC\\x08\\x80_\\x18 \\xb9\\xe0\\xd3?\\x94\\x86\\x94R\\x94K\\x02K\\x05\\x86\\x94h\\x04h\\nC\\x08\\x00\\xe4\\x03#\\x9d\\x07\\xc2\\xbf\\x94\\x86\\x94R\\x94K\\x03K\\x04\\x86\\x94h\\x04h\\nC\\x08\\x00P\\x9dP\\xa30\\x9c\\xbf\\x94\\x86\\x94R\\x94K\\x03K\\x05\\x86\\x94h\\x04h\\nC\\x08\\x00\\x00\\xfeY\\xf1\\xf4p?\\x94\\x86\\x94R\\x94K\\x04K\\x05\\x86\\x94h\\x04h\\nC\\x08\\x00\\xb6\\xd0\\x94\\x9eK\\xb5?\\x94\\x86\\x94R\\x94u.', 6, b'\\x80\\x04\\x95\\x1e\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x8c\\x1a2024-03-12_19-46-30.836280\\x94.', b'\\x80\\x04\\x95.\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x8c*results/eon_data/quantum/qaoa/parallel/k=4\\x94.', 0))"]' died with <Signals.SIGKILL: 9>.
+
+
+
+Test for graphsize 4
+
+
+     Graph 0
+                    Running 4_split_GCSQ_exactly_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 0 ...
+                    Coalition structure value for 4_split_GCSQ_exactly_qaoa_parallel: 0.028954843277226416   -   Time: 104.50067377090454
+None
+                    Running 4_split_GCSQ_exactly_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 1 ...
+                    Coalition structure value for 4_split_GCSQ_exactly_qaoa_parallel: 0.5097074774093997   -   Time: 63.61061191558838
+None
+                    Running 4_split_GCSQ_exactly_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 2 ...
+                    Coalition structure value for 4_split_GCSQ_exactly_qaoa_parallel: 0.00712843874983804   -   Time: 106.65272116661072
+None
+                    Running 4_split_GCSQ_exactly_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 3 ...
+                    Coalition structure value for 4_split_GCSQ_exactly_qaoa_parallel: 0.06152625301075432   -   Time: 54.68354034423828
+None
+                    Running 4_split_GCSQ_exactly_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 4 ...
+                    Coalition structure value for 4_split_GCSQ_exactly_qaoa_parallel: 0.06396917936914548   -   Time: 60.28296685218811
+None
+                    Running 4_split_GCSQ_exactly_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 5 ...
+                    Coalition structure value for 4_split_GCSQ_exactly_qaoa_parallel: 0.10380144569396066   -   Time: 58.068915605545044
+None
+                    Running 4_split_GCSQ_exactly_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 6 ...
+                    Coalition structure value for 4_split_GCSQ_exactly_qaoa_parallel: 0.05554082850606079   -   Time: 57.90044403076172
+None
+                    Running 4_split_GCSQ_exactly_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 7 ...
+                    Coalition structure value for 4_split_GCSQ_exactly_qaoa_parallel: 0.038931269477402   -   Time: 121.54141426086426
+None
+                    Running 4_split_GCSQ_exactly_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 8 ...
+                    Coalition structure value for 4_split_GCSQ_exactly_qaoa_parallel: 0.042007430425400116   -   Time: 60.07399320602417
+None
+                    Running 4_split_GCSQ_exactly_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 9 ...
+                    Coalition structure value for 4_split_GCSQ_exactly_qaoa_parallel: 0.000690821587468804   -   Time: 43.51866817474365
+None
+                    Running 4_split_GCSQ_exactly_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 10 ...
+                    Coalition structure value for 4_split_GCSQ_exactly_qaoa_parallel: 0.20458485738154053   -   Time: 58.19986319541931
+None
+                    Running 4_split_GCSQ_exactly_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 11 ...
+                    Coalition structure value for 4_split_GCSQ_exactly_qaoa_parallel: 0.26512963725413385   -   Time: 54.59464240074158
+None
+                    Running 4_split_GCSQ_exactly_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 12 ...
+                    Coalition structure value for 4_split_GCSQ_exactly_qaoa_parallel: 0.06753117632182892   -   Time: 67.1068766117096
+None
+                    Running 4_split_GCSQ_exactly_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 13 ...
+                    Coalition structure value for 4_split_GCSQ_exactly_qaoa_parallel: 0.01673789206527232   -   Time: 48.38976168632507
+None
+                    Running 4_split_GCSQ_exactly_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 14 ...
+                    Coalition structure value for 4_split_GCSQ_exactly_qaoa_parallel: 0.03599345154763256   -   Time: 42.8417329788208
+None
+                    Running 4_split_GCSQ_exactly_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 15 ...
+                    Coalition structure value for 4_split_GCSQ_exactly_qaoa_parallel: 0.10695262062797894   -   Time: 121.83564710617065
+None
+                    Running 4_split_GCSQ_exactly_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 16 ...
+                    Coalition structure value for 4_split_GCSQ_exactly_qaoa_parallel: 0.06090302529973002   -   Time: 58.72796130180359
+None
+                    Running 4_split_GCSQ_exactly_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 17 ...
+                    Coalition structure value for 4_split_GCSQ_exactly_qaoa_parallel: 0.35557090440576644   -   Time: 51.51341104507446
+None
+                    Running 4_split_GCSQ_exactly_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 18 ...
+                    Coalition structure value for 4_split_GCSQ_exactly_qaoa_parallel: 0.06615960564805334   -   Time: 46.8705849647522
+None
+                    Running 4_split_GCSQ_exactly_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 19 ...
+                    Coalition structure value for 4_split_GCSQ_exactly_qaoa_parallel: 0.24253747559571082   -   Time: 41.70923328399658
+None
+                    Running 4_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 0 ...
+                    Coalition structure value for 4_split_GCSQ_at_most_qaoa_parallel: 0.028954843277226416   -   Time: 99.92405915260315
+None
+                    Running 4_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 1 ...
+                    Coalition structure value for 4_split_GCSQ_at_most_qaoa_parallel: 0.5097074774093997   -   Time: 54.06542754173279
+None
+                    Running 4_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 2 ...
+                    Coalition structure value for 4_split_GCSQ_at_most_qaoa_parallel: 0.00712843874983804   -   Time: 89.28806161880493
+None
+                    Running 4_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 3 ...
+                    Coalition structure value for 4_split_GCSQ_at_most_qaoa_parallel: 0.06152625301075432   -   Time: 47.22073030471802
+None
+                    Running 4_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 4 ...
+                    Coalition structure value for 4_split_GCSQ_at_most_qaoa_parallel: 0.06396917936914548   -   Time: 42.90735149383545
+None
+                    Running 4_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 5 ...
+                    Coalition structure value for 4_split_GCSQ_at_most_qaoa_parallel: 0.10380144569396066   -   Time: 45.750009059906006
+None
+                    Running 4_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 6 ...
+                    Coalition structure value for 4_split_GCSQ_at_most_qaoa_parallel: 0.05554082850606079   -   Time: 46.76459074020386
+None
+                    Running 4_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 7 ...
+                    Coalition structure value for 4_split_GCSQ_at_most_qaoa_parallel: 0.038931269477402   -   Time: 89.35134100914001
+None
+                    Running 4_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 8 ...
+                    Coalition structure value for 4_split_GCSQ_at_most_qaoa_parallel: 0.042007430425400116   -   Time: 48.17178726196289
+None
+                    Running 4_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 9 ...
+                    Coalition structure value for 4_split_GCSQ_at_most_qaoa_parallel: 0.000690821587468804   -   Time: 31.393836975097656
+None
+                    Running 4_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 10 ...
+                    Coalition structure value for 4_split_GCSQ_at_most_qaoa_parallel: 0.20458485738154053   -   Time: 41.59921193122864
+None
+                    Running 4_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 11 ...
+                    Coalition structure value for 4_split_GCSQ_at_most_qaoa_parallel: 0.26512963725413385   -   Time: 50.41634702682495
+None
+                    Running 4_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 12 ...
+                    Coalition structure value for 4_split_GCSQ_at_most_qaoa_parallel: 0.06753117632182892   -   Time: 42.12923717498779
+None
+                    Running 4_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 13 ...
+                    Coalition structure value for 4_split_GCSQ_at_most_qaoa_parallel: 0.01673789206527232   -   Time: 45.424734115600586
+None
+                    Running 4_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 14 ...
+                    Coalition structure value for 4_split_GCSQ_at_most_qaoa_parallel: 0.03599345154763256   -   Time: 41.6459321975708
+None
+                    Running 4_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 15 ...
+                    Coalition structure value for 4_split_GCSQ_at_most_qaoa_parallel: 0.10695262062797894   -   Time: 85.01120209693909
+None
+                    Running 4_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 16 ...
+                    Coalition structure value for 4_split_GCSQ_at_most_qaoa_parallel: 0.06090302529973002   -   Time: 43.213016510009766
+None
+                    Running 4_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 17 ...
+                    Coalition structure value for 4_split_GCSQ_at_most_qaoa_parallel: 0.35557090440576644   -   Time: 38.817389249801636
+None
+                    Running 4_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 18 ...
+                    Coalition structure value for 4_split_GCSQ_at_most_qaoa_parallel: 0.06615960564805334   -   Time: 43.83024573326111
+None
+                    Running 4_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 19 ...
+                    Coalition structure value for 4_split_GCSQ_at_most_qaoa_parallel: 0.24253747559571082   -   Time: 41.43859624862671
+None
+                    Running 4_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 0 ...
+                    Coalition structure value for 4_split_GCSQ_at_most_qaoa_parallel: 0.18793488998793606   -   Time: 21611.260535001755
+None
+                    Running 4_split_GCSQ_at_most_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 1 ...
+                    Coalition structure value for 4_split_GCSQ_at_most_qaoa_parallel: 0.03314075110051817   -   Time: 19673.12075304985
+None
+
+          Running 4_split_GCSQ_exactly_qaoa_parallel...
+
+
+     Graph 1
+
+          Running 4_split_GCSQ_exactly_qaoa_parallel...
+
+
+     Graph 2
+
+          Running 4_split_GCSQ_exactly_qaoa_parallel...
+
+
+     Graph 3
+
+          Running 4_split_GCSQ_exactly_qaoa_parallel...
+
+
+     Graph 4
+
+          Running 4_split_GCSQ_exactly_qaoa_parallel...
+
+
+     Graph 5
+
+          Running 4_split_GCSQ_exactly_qaoa_parallel...
+
+
+     Graph 6
+
+          Running 4_split_GCSQ_exactly_qaoa_parallel...
+
+
+     Graph 7
+
+          Running 4_split_GCSQ_exactly_qaoa_parallel...
+
+
+     Graph 8
+
+          Running 4_split_GCSQ_exactly_qaoa_parallel...
+
+
+     Graph 9
+
+          Running 4_split_GCSQ_exactly_qaoa_parallel...
+
+
+     Graph 10
+
+          Running 4_split_GCSQ_exactly_qaoa_parallel...
+
+
+     Graph 11
+
+          Running 4_split_GCSQ_exactly_qaoa_parallel...
+
+
+     Graph 12
+
+          Running 4_split_GCSQ_exactly_qaoa_parallel...
+
+
+     Graph 13
+
+          Running 4_split_GCSQ_exactly_qaoa_parallel...
+
+
+     Graph 14
+
+          Running 4_split_GCSQ_exactly_qaoa_parallel...
+
+
+     Graph 15
+
+          Running 4_split_GCSQ_exactly_qaoa_parallel...
+
+
+     Graph 16
+
+          Running 4_split_GCSQ_exactly_qaoa_parallel...
+
+
+     Graph 17
+
+          Running 4_split_GCSQ_exactly_qaoa_parallel...
+
+
+     Graph 18
+
+          Running 4_split_GCSQ_exactly_qaoa_parallel...
+
+
+     Graph 19
+
+          Running 4_split_GCSQ_exactly_qaoa_parallel...
+
+
+
+Test for graphsize 6
+
+
+     Graph 0
+
+          Running 4_split_GCSQ_exactly_qaoa_parallel...
+                    Error: Running algorithm failed, most likely due to insufficient available memory. Error message:  Command '['python', '-c', 'from main import run_algorithm; print(run_algorithm(b\'\\x80\\x04\\x95\\xe8\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x8c\\x14k_split_GCSQ_exactly\\x94h\\x00\\x93\\x94)\\x81\\x94}\\x94(\\x8c\\x08category\\x94\\x8c\\x07quantum\\x94\\x8c\\x0enum_coalitions\\x94N\\x8c\\x04seed\\x94\\x8a\\x050\\x1dh\\xeb\\x00\\x8c\\x07timeout\\x94MX\\x02\\x8c\\x04data\\x94N\\x8c\\x0bvalues_sums\\x94]\\x94(K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00e\\x8c\\x04name\\x94\\x8c"4_split_GCSQ_exactly_qaoa_parallel\\x94\\x8c\\x06solver\\x94\\x8c\\x04qaoa\\x94\\x8c\\x08parallel\\x94\\x88\\x8c\\x01k\\x94K\\x04ub.\', b\'\\x80\\x04\\x95\\xd1\\x01\\x00\\x00\\x00\\x00\\x00\\x00}\\x94(K\\x00K\\x01\\x86\\x94\\x8c\\x15numpy.core.multiarray\\x94\\x8c\\x06scalar\\x94\\x93\\x94\\x8c\\x05numpy\\x94\\x8c\\x05dtype\\x94\\x93\\x94\\x8c\\x02f8\\x94\\x89\\x88\\x87\\x94R\\x94(K\\x03\\x8c\\x01<\\x94NNNJ\\xff\\xff\\xff\\xffJ\\xff\\xff\\xff\\xffK\\x00t\\x94bC\\x08\\x00pM\\xdd={\\x89?\\x94\\x86\\x94R\\x94K\\x00K\\x02\\x86\\x94h\\x04h\\nC\\x08\\x00\\x80h[WV\\x8b\\xbf\\x94\\x86\\x94R\\x94K\\x00K\\x03\\x86\\x94h\\x04h\\nC\\x08\\x00\\xa0\\x81~\\xd5\\xa0\\x83\\xbf\\x94\\x86\\x94R\\x94K\\x00K\\x04\\x86\\x94h\\x04h\\nC\\x08\\x00\\x00\\x1f\\x82\\xfe\\x13\\x9d?\\x94\\x86\\x94R\\x94K\\x00K\\x05\\x86\\x94h\\x04h\\nC\\x08\\x00`&\\x1eT0\\x96\\xbf\\x94\\x86\\x94R\\x94K\\x01K\\x02\\x86\\x94h\\x04h\\nC\\x08\\x00\\xb0\\x8b6\\xfb\\x04\\x9c?\\x94\\x86\\x94R\\x94K\\x01K\\x03\\x86\\x94h\\x04h\\nC\\x08\\x00P\\x1a\\xac\\xec?\\x97\\xbf\\x94\\x86\\x94R\\x94K\\x01K\\x04\\x86\\x94h\\x04h\\nC\\x08\\x00,(\\xa0\\xd8~\\xa1?\\x94\\x86\\x94R\\x94K\\x01K\\x05\\x86\\x94h\\x04h\\nC\\x08\\x00\\x12\\xc8\\xf4X\\xca\\xb1\\xbf\\x94\\x86\\x94R\\x94K\\x02K\\x03\\x86\\x94h\\x04h\\nC\\x08\\x00\\xc0\\xf5\\x9a([}\\xbf\\x94\\x86\\x94R\\x94K\\x02K\\x04\\x86\\x94h\\x04h\\nC\\x08\\x80_\\x18 \\xb9\\xe0\\xd3?\\x94\\x86\\x94R\\x94K\\x02K\\x05\\x86\\x94h\\x04h\\nC\\x08\\x00\\xe4\\x03#\\x9d\\x07\\xc2\\xbf\\x94\\x86\\x94R\\x94K\\x03K\\x04\\x86\\x94h\\x04h\\nC\\x08\\x00P\\x9dP\\xa30\\x9c\\xbf\\x94\\x86\\x94R\\x94K\\x03K\\x05\\x86\\x94h\\x04h\\nC\\x08\\x00\\x00\\xfeY\\xf1\\xf4p?\\x94\\x86\\x94R\\x94K\\x04K\\x05\\x86\\x94h\\x04h\\nC\\x08\\x00\\xb6\\xd0\\x94\\x9eK\\xb5?\\x94\\x86\\x94R\\x94u.\', 6, b\'\\x80\\x04\\x95\\x1e\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x8c\\x1a2024-03-12_19-46-30.836280\\x94.\', b\'\\x80\\x04\\x95.\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x8c*results/eon_data/quantum/qaoa/parallel/k=4\\x94.\', 0))']' died with <Signals.SIGKILL: 9>.
+
+
+
+Test for graphsize 4
+
+
+     Graph 0
+
+          Running 4_split_GCSQ_at_most_qaoa_parallel...
+
+
+     Graph 1
+
+          Running 4_split_GCSQ_at_most_qaoa_parallel...
+
+
+     Graph 2
+
+          Running 4_split_GCSQ_at_most_qaoa_parallel...
+
+
+     Graph 3
+
+          Running 4_split_GCSQ_at_most_qaoa_parallel...
+
+
+     Graph 4
+
+          Running 4_split_GCSQ_at_most_qaoa_parallel...
+
+
+     Graph 5
+
+          Running 4_split_GCSQ_at_most_qaoa_parallel...
+
+
+     Graph 6
+
+          Running 4_split_GCSQ_at_most_qaoa_parallel...
+
+
+     Graph 7
+
+          Running 4_split_GCSQ_at_most_qaoa_parallel...
+
+
+     Graph 8
+
+          Running 4_split_GCSQ_at_most_qaoa_parallel...
+
+
+     Graph 9
+
+          Running 4_split_GCSQ_at_most_qaoa_parallel...
+
+
+     Graph 10
+
+          Running 4_split_GCSQ_at_most_qaoa_parallel...
+
+
+     Graph 11
+
+          Running 4_split_GCSQ_at_most_qaoa_parallel...
+
+
+     Graph 12
+
+          Running 4_split_GCSQ_at_most_qaoa_parallel...
+
+
+     Graph 13
+
+          Running 4_split_GCSQ_at_most_qaoa_parallel...
+
+
+     Graph 14
+
+          Running 4_split_GCSQ_at_most_qaoa_parallel...
+
+
+     Graph 15
+
+          Running 4_split_GCSQ_at_most_qaoa_parallel...
+
+
+     Graph 16
+
+          Running 4_split_GCSQ_at_most_qaoa_parallel...
+
+
+     Graph 17
+
+          Running 4_split_GCSQ_at_most_qaoa_parallel...
+
+
+     Graph 18
+
+          Running 4_split_GCSQ_at_most_qaoa_parallel...
+
+
+     Graph 19
+
+          Running 4_split_GCSQ_at_most_qaoa_parallel...
+
+
+
+Test for graphsize 6
+
+
+     Graph 0
+
+          Running 4_split_GCSQ_at_most_qaoa_parallel...
+
+
+     Graph 1
+
+          Running 4_split_GCSQ_at_most_qaoa_parallel...
+
+
+     Graph 2
+
+          Running 4_split_GCSQ_at_most_qaoa_parallel...
+                    Error: Running algorithm failed, most likely due to insufficient available memory. Error message:                      Running 4_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 0 ...
+                    Coalition structure value for 4_split_R_QUBO-iterative_qaoa_parallel: 0.028954843277226416   -   Time: 9.930298566818237
+None
+                    Running 4_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 1 ...
+                    Coalition structure value for 4_split_R_QUBO-iterative_qaoa_parallel: 0.5097074774093997   -   Time: 5.617995262145996
+None
+                    Running 4_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 2 ...
+                    Coalition structure value for 4_split_R_QUBO-iterative_qaoa_parallel: 0.00712843874983804   -   Time: 9.490262031555176
+None
+                    Running 4_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 3 ...
+                    Coalition structure value for 4_split_R_QUBO-iterative_qaoa_parallel: 0.06152625301075432   -   Time: 5.261474609375
+None
+                    Running 4_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 4 ...
+                    Coalition structure value for 4_split_R_QUBO-iterative_qaoa_parallel: 0.06396917936914548   -   Time: 4.638982057571411
+None
+                    Running 4_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 5 ...
+                    Coalition structure value for 4_split_R_QUBO-iterative_qaoa_parallel: 0.10380144569396066   -   Time: 4.807912349700928
+None
+                    Running 4_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 6 ...
+                    Coalition structure value for 4_split_R_QUBO-iterative_qaoa_parallel: 0.05554082850606079   -   Time: 5.359188079833984
+None
+                    Running 4_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 7 ...
+                    Coalition structure value for 4_split_R_QUBO-iterative_qaoa_parallel: 0.038931269477402   -   Time: 8.920566320419312
+None
+                    Running 4_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 8 ...
+                    Coalition structure value for 4_split_R_QUBO-iterative_qaoa_parallel: 0.042007430425400116   -   Time: 5.898202419281006
+None
+                    Running 4_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 9 ...
+                    Coalition structure value for 4_split_R_QUBO-iterative_qaoa_parallel: 0.0010690439865044254   -   Time: 7.975733757019043
+None
+                    Running 4_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 10 ...
+                    Coalition structure value for 4_split_R_QUBO-iterative_qaoa_parallel: 0.2197142340515299   -   Time: 12.56656002998352
+None
+                    Running 4_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 11 ...
+                    Coalition structure value for 4_split_R_QUBO-iterative_qaoa_parallel: 0.2770576453315883   -   Time: 11.63570761680603
+None
+                    Running 4_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 12 ...
+                    Coalition structure value for 4_split_R_QUBO-iterative_qaoa_parallel: 0.06753117632182892   -   Time: 5.0814948081970215
+None
+                    Running 4_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 13 ...
+                    Coalition structure value for 4_split_R_QUBO-iterative_qaoa_parallel: 0.01673789206527232   -   Time: 5.698288679122925
+None
+                    Running 4_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 14 ...
+                    Coalition structure value for 4_split_R_QUBO-iterative_qaoa_parallel: 0.03599345154763256   -   Time: 5.776012182235718
+None
+                    Running 4_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 15 ...
+                    Coalition structure value for 4_split_R_QUBO-iterative_qaoa_parallel: 0.10695262062797894   -   Time: 9.682485818862915
+None
+                    Running 4_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 16 ...
+                    Coalition structure value for 4_split_R_QUBO-iterative_qaoa_parallel: 0.06090302529973002   -   Time: 5.287497282028198
+None
+                    Running 4_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 17 ...
+                    Coalition structure value for 4_split_R_QUBO-iterative_qaoa_parallel: 0.37306828772501177   -   Time: 7.830645322799683
+None
+                    Running 4_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 18 ...
+                    Coalition structure value for 4_split_R_QUBO-iterative_qaoa_parallel: 0.06615960564805334   -   Time: 5.308062791824341
+None
+                    Running 4_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 4 for graph 19 ...
+                    Coalition structure value for 4_split_R_QUBO-iterative_qaoa_parallel: 0.24253747559571082   -   Time: 5.150119304656982
+None
+                    Running 4_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 0 ...
+                    Coalition structure value for 4_split_R_QUBO-iterative_qaoa_parallel: 0.3230331083861273   -   Time: 205.25922894477844
+None
+                    Running 4_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 1 ...
+                    Coalition structure value for 4_split_R_QUBO-iterative_qaoa_parallel: 0.10916870951121638   -   Time: 224.8296184539795
+None
+                    Running 4_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 2 ...
+                    Coalition structure value for 4_split_R_QUBO-iterative_qaoa_parallel: 0.11852202031924719   -   Time: 243.22954416275024
+None
+                    Running 4_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 3 ...
+                    Coalition structure value for 4_split_R_QUBO-iterative_qaoa_parallel: 0.1447468748308225   -   Time: 256.7207851409912
+None
+                    Running 4_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 4 ...
+                    Coalition structure value for 4_split_R_QUBO-iterative_qaoa_parallel: 0.2074140190053555   -   Time: 247.00898385047913
+None
+                    Running 4_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 5 ...
+                    Coalition structure value for 4_split_R_QUBO-iterative_qaoa_parallel: 0.17725093691964844   -   Time: 178.78810167312622
+None
+                    Running 4_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 6 ...
+                    Coalition structure value for 4_split_R_QUBO-iterative_qaoa_parallel: 0.09554019644497203   -   Time: 514.2754385471344
+None
+                    Running 4_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 7 ...
+                    Coalition structure value for 4_split_R_QUBO-iterative_qaoa_parallel: 0.04707022819133044   -   Time: 233.80402946472168
+None
+                    Running 4_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 8 ...
+                    Coalition structure value for 4_split_R_QUBO-iterative_qaoa_parallel: 0.13737909873700005   -   Time: 499.5242648124695
+None
+                    Running 4_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 9 ...
+                    Coalition structure value for 4_split_R_QUBO-iterative_qaoa_parallel: 0.19178656224324442   -   Time: 194.55594968795776
+None
+                    Running 4_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 10 ...
+                    Coalition structure value for 4_split_R_QUBO-iterative_qaoa_parallel: 0.22560804245064503   -   Time: 223.7611346244812
+None
+                    Running 4_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 11 ...
+                    Coalition structure value for 4_split_R_QUBO-iterative_qaoa_parallel: 0.1310541476422742   -   Time: 331.3967101573944
+None
+                    Running 4_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 12 ...
+                    Coalition structure value for 4_split_R_QUBO-iterative_qaoa_parallel: 0.16550669984845   -   Time: 212.7417595386505
+None
+                    Running 4_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 13 ...
+                    Coalition structure value for 4_split_R_QUBO-iterative_qaoa_parallel: 0.2924666692276716   -   Time: 252.1338288784027
+None
+                    Running 4_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 14 ...
+                    Coalition structure value for 4_split_R_QUBO-iterative_qaoa_parallel: 0.846379385427106   -   Time: 426.82855224609375
+None
+                    Running 4_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 15 ...
+                    Coalition structure value for 4_split_R_QUBO-iterative_qaoa_parallel: 0.27772746371807955   -   Time: 483.0719096660614
+None
+                    Running 4_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 16 ...
+                    Coalition structure value for 4_split_R_QUBO-iterative_qaoa_parallel: 0.5885124948454461   -   Time: 409.40532755851746
+None
+                    Running 4_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 17 ...
+                    Coalition structure value for 4_split_R_QUBO-iterative_qaoa_parallel: 0.15085894830487945   -   Time: 265.6879503726959
+None
+                    Running 4_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 18 ...
+                    Coalition structure value for 4_split_R_QUBO-iterative_qaoa_parallel: 0.09401786484859542   -   Time: 261.7995092868805
+None
+                    Running 4_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 6 for graph 19 ...
+                    Coalition structure value for 4_split_R_QUBO-iterative_qaoa_parallel: 0.7225046254752385   -   Time: 244.4344301223755
+None
+                    Running 4_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 8 for graph 0 ...
+                    Coalition structure value for 4_split_R_QUBO-iterative_qaoa_parallel: 0.37626449477863844   -   Time: 27209.551798582077
+None
+                    Running 4_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 8 for graph 1 ...
+                    Coalition structure value for 4_split_R_QUBO-iterative_qaoa_parallel: 0.12879682515103497   -   Time: 38610.051371097565
+None
+                    Running 4_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 8 for graph 2 ...
+                    Coalition structure value for 4_split_R_QUBO-iterative_qaoa_parallel: 0.12639840396634128   -   Time: 21321.299065589905
+None
+                    Running 4_split_R_QUBO-iterative_qaoa_parallel for seed 3949468976 for graph_size 8 for graph 3 ...
+Command '['python', '-c', 'from main import run_algorithm; print(run_algorithm(b\'\\x80\\x04\\x95\\xe8\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x8c\\x14k_split_GCSQ_at_most\\x94h\\x00\\x93\\x94)\\x81\\x94}\\x94(\\x8c\\x08category\\x94\\x8c\\x07quantum\\x94\\x8c\\x0enum_coalitions\\x94N\\x8c\\x04seed\\x94\\x8a\\x050\\x1dh\\xeb\\x00\\x8c\\x07timeout\\x94MX\\x02\\x8c\\x04data\\x94N\\x8c\\x0bvalues_sums\\x94]\\x94(K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00e\\x8c\\x04name\\x94\\x8c"4_split_GCSQ_at_most_qaoa_parallel\\x94\\x8c\\x06solver\\x94\\x8c\\x04qaoa\\x94\\x8c\\x08parallel\\x94\\x88\\x8c\\x01k\\x94K\\x04ub.\', b\'\\x80\\x04\\x95\\xd1\\x01\\x00\\x00\\x00\\x00\\x00\\x00}\\x94(K\\x00K\\x01\\x86\\x94\\x8c\\x15numpy.core.multiarray\\x94\\x8c\\x06scalar\\x94\\x93\\x94\\x8c\\x05numpy\\x94\\x8c\\x05dtype\\x94\\x93\\x94\\x8c\\x02f8\\x94\\x89\\x88\\x87\\x94R\\x94(K\\x03\\x8c\\x01<\\x94NNNJ\\xff\\xff\\xff\\xffJ\\xff\\xff\\xff\\xffK\\x00t\\x94bC\\x08\\x00\\x08\\x8d\\xa3MC\\x97\\xbf\\x94\\x86\\x94R\\x94K\\x00K\\x02\\x86\\x94h\\x04h\\nC\\x08\\x00\\xb0\\x04\\xfaY\\x9a\\xa0?\\x94\\x86\\x94R\\x94K\\x00K\\x03\\x86\\x94h\\x04h\\nC\\x08\\x00\\x80\\xb2%\\xfa\\x11V?\\x94\\x86\\x94R\\x94K\\x00K\\x04\\x86\\x94h\\x04h\\nC\\x08\\x00\\x00qf\\xa1\\xaej?\\x94\\x86\\x94R\\x94K\\x00K\\x05\\x86\\x94h\\x04h\\nC\\x08\\x00\\xc4\\x7f3\\xa8\\xd9\\xa2\\xbf\\x94\\x86\\x94R\\x94K\\x01K\\x02\\x86\\x94h\\x04h\\nC\\x08\\x00>7@\\xbfb\\xb9?\\x94\\x86\\x94R\\x94K\\x01K\\x03\\x86\\x94h\\x04h\\nC\\x08\\x000\\xb5\\xf28#\\x80\\xbf\\x94\\x86\\x94R\\x94K\\x01K\\x04\\x86\\x94h\\x04h\\nC\\x08\\x00\\xc0\\xc0\\xb4\\xc4Yc\\xbf\\x94\\x86\\x94R\\x94K\\x01K\\x05\\x86\\x94h\\x04h\\nC\\x08\\x00\\xb0\\xc7;\\x02\\xbf\\xc3\\xbf\\x94\\x86\\x94R\\x94K\\x02K\\x03\\x86\\x94h\\x04h\\nC\\x08\\x00\\xc0\\xdf\\xd7\\x86\\xc8}?\\x94\\x86\\x94R\\x94K\\x02K\\x04\\x86\\x94h\\x04h\\nC\\x08\\x00\\x00\\x1a#\\xc3\\xa0R?\\x94\\x86\\x94R\\x94K\\x02K\\x05\\x86\\x94h\\x04h\\nC\\x08\\xc0P\\xf7R\\xe5j\\xe3\\xbf\\x94\\x86\\x94R\\x94K\\x03K\\x04\\x86\\x94h\\x04h\\nC\\x08\\x00\\xa0\\xf7\\xa8\\xca7\\x8e?\\x94\\x86\\x94R\\x94K\\x03K\\x05\\x86\\x94h\\x04h\\nC\\x08\\x00\\x809\\xaa\\xc7\\x9a\\x92\\xbf\\x94\\x86\\x94R\\x94K\\x04K\\x05\\x86\\x94h\\x04h\\nC\\x08\\x00\\x00\\x0e\\xb8H\\x98\\x93\\xbf\\x94\\x86\\x94R\\x94u.\', 6, b\'\\x80\\x04\\x95\\x1e\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x8c\\x1a2024-03-12_19-46-30.836280\\x94.\', b\'\\x80\\x04\\x95.\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x8c*results/eon_data/quantum/qaoa/parallel/k=4\\x94.\', 2))']' died with <Signals.SIGKILL: 9>.
+
+
+
+Test for graphsize 4
+
+
+     Graph 0
+
+          Running 4_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 1
+
+          Running 4_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 2
+
+          Running 4_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 3
+
+          Running 4_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 4
+
+          Running 4_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 5
+
+          Running 4_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 6
+
+          Running 4_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 7
+
+          Running 4_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 8
+
+          Running 4_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 9
+
+          Running 4_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 10
+
+          Running 4_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 11
+
+          Running 4_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 12
+
+          Running 4_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 13
+
+          Running 4_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 14
+
+          Running 4_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 15
+
+          Running 4_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 16
+
+          Running 4_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 17
+
+          Running 4_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 18
+
+          Running 4_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 19
+
+          Running 4_split_R_QUBO-iterative_qaoa_parallel...
+
+
+
+Test for graphsize 6
+
+
+     Graph 0
+
+          Running 4_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 1
+
+          Running 4_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 2
+
+          Running 4_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 3
+
+          Running 4_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 4
+
+          Running 4_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 5
+
+          Running 4_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 6
+
+          Running 4_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 7
+
+          Running 4_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 8
+
+          Running 4_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 9
+
+          Running 4_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 10
+
+          Running 4_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 11
+
+          Running 4_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 12
+
+          Running 4_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 13
+
+          Running 4_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 14
+
+          Running 4_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 15
+
+          Running 4_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 16
+
+          Running 4_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 17
+
+          Running 4_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 18
+
+          Running 4_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 19
+
+          Running 4_split_R_QUBO-iterative_qaoa_parallel...
+
+
+
+Test for graphsize 8
+
+
+     Graph 0
+
+          Running 4_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 1
+
+          Running 4_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 2
+
+          Running 4_split_R_QUBO-iterative_qaoa_parallel...
+
+
+     Graph 3
+
+          Running 4_split_R_QUBO-iterative_qaoa_parallel...
+                    Error: Running algorithm failed, most likely due to insufficient available memory. Error message:  Command '['python', '-c', "from main import run_algorithm; print(run_algorithm(b'\\x80\\x04\\x95\\xe8\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x8c\\x10r_qubo_iterative\\x94h\\x00\\x93\\x94)\\x81\\x94}\\x94(\\x8c\\x08category\\x94\\x8c\\x07quantum\\x94\\x8c\\x0enum_coalitions\\x94N\\x8c\\x04seed\\x94\\x8a\\x050\\x1dh\\xeb\\x00\\x8c\\x07timeout\\x94MX\\x02\\x8c\\x04data\\x94N\\x8c\\x0bvalues_sums\\x94]\\x94(K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00e\\x8c\\x04name\\x94\\x8c&4_split_R_QUBO-iterative_qaoa_parallel\\x94\\x8c\\x06solver\\x94\\x8c\\x04qaoa\\x94\\x8c\\x08parallel\\x94\\x88\\x8c\\x01k\\x94K\\x04ub.', b'\\x80\\x04\\x95\\x94\\x02\\x00\\x00\\x00\\x00\\x00\\x00}\\x94(K\\x00K\\x01\\x86\\x94\\x8c\\x15numpy.core.multiarray\\x94\\x8c\\x06scalar\\x94\\x93\\x94\\x8c\\x05numpy\\x94\\x8c\\x05dtype\\x94\\x93\\x94\\x8c\\x02f8\\x94\\x89\\x88\\x87\\x94R\\x94(K\\x03\\x8c\\x01<\\x94NNNJ\\xff\\xff\\xff\\xffJ\\xff\\xff\\xff\\xffK\\x00t\\x94bC\\x08\\x00\\x90\\x13\\xec[\\xcb\\x9a\\xbf\\x94\\x86\\x94R\\x94K\\x00K\\x02\\x86\\x94h\\x04h\\nC\\x08\\x00\\xd0\\xb8cS\\xbd\\x82\\xbf\\x94\\x86\\x94R\\x94K\\x00K\\x03\\x86\\x94h\\x04h\\nC\\x08\\x00H\\xd4\\xfd\\x81\\x85\\x98\\xbf\\x94\\x86\\x94R\\x94K\\x00K\\x04\\x86\\x94h\\x04h\\nC\\x08\\x000gv+\\xcf\\x9d?\\x94\\x86\\x94R\\x94K\\x00K\\x05\\x86\\x94h\\x04h\\nC\\x08\\x00\\x14u\\xb2\\xb7\\xdc\\xa9\\xbf\\x94\\x86\\x94R\\x94K\\x01K\\x02\\x86\\x94h\\x04h\\nC\\x08\\x00\\xbc\\x1ak\\x9c\\xd9\\xb4?\\x94\\x86\\x94R\\x94K\\x01K\\x03\\x86\\x94h\\x04h\\nC\\x08\\x00\\x10I\\x99F\\xa6\\xa2?\\x94\\x86\\x94R\\x94K\\x01K\\x04\\x86\\x94h\\x04h\\nC\\x08\\x00\\xf0K1\\xfc\\xe1\\x9f?\\x94\\x86\\x94R\\x94K\\x01K\\x05\\x86\\x94h\\x04h\\nC\\x08\\x80g\\xf3\\x8b\\xce+\\xdc\\xbf\\x94\\x86\\x94R\\x94K\\x02K\\x03\\x86\\x94h\\x04h\\nC\\x08\\x00\\xc0\\n\\xf8\\x1fMb\\xbf\\x94\\x86\\x94R\\x94K\\x02K\\x04\\x86\\x94h\\x04h\\nC\\x08\\x00\\xb0\\xd1G\\xebW\\xa5\\xbf\\x94\\x86\\x94R\\x94K\\x02K\\x05\\x86\\x94h\\x04h\\nC\\x08\\x00$\\xa58\\x10\\xd0\\xae\\xbf\\x94\\x86\\x94R\\x94K\\x03K\\x04\\x86\\x94h\\x04h\\nC\\x08\\x00@\\xaf\\xc9Q\\xa2s?\\x94\\x86\\x94R\\x94K\\x03K\\x05\\x86\\x94h\\x04h\\nC\\x08\\x00\\x08\\xbb>3\\xe0\\x96\\xbf\\x94\\x86\\x94R\\x94K\\x04K\\x05\\x86\\x94h\\x04h\\nC\\x08\\x00\\xb0\\t/\\xee\\x90\\x99\\xbf\\x94\\x86\\x94R\\x94K\\x00K\\x06\\x86\\x94G\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00K\\x00K\\x07\\x86\\x94G\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00K\\x01K\\x06\\x86\\x94G\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00K\\x01K\\x07\\x86\\x94G\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00K\\x02K\\x06\\x86\\x94G\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00K\\x02K\\x07\\x86\\x94G\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00K\\x03K\\x06\\x86\\x94G\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00K\\x03K\\x07\\x86\\x94G\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00K\\x04K\\x06\\x86\\x94G\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00K\\x04K\\x07\\x86\\x94G\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00K\\x05K\\x06\\x86\\x94G\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00K\\x05K\\x07\\x86\\x94G\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00K\\x06K\\x07\\x86\\x94G\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00u.', 8, b'\\x80\\x04\\x95\\x1e\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x8c\\x1a2024-03-12_19-46-30.836280\\x94.', b'\\x80\\x04\\x95.\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x8c*results/eon_data/quantum/qaoa/parallel/k=4\\x94.', 3))"]' returned non-zero exit status 1.
+Done running tests for k-split algorithms with qaoa in True mode for k=4.

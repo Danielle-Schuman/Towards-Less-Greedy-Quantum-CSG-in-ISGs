@@ -161,20 +161,18 @@ class IterativeQuantumAlgorithm(QuantumAlgorithm, ABC):
         # initialize with grand coalition
         coalitions = [list(range(num_agents))]
         # for a maximum of num_agents steps (as we can at most have num_agents coalitions, one for each agent)
-        for n in range(num_agents):
-            new_coalitions = copy.deepcopy(coalitions)
-            # exclude coalitions that cannot be further split because they already contain only one agent
-            real_coalitions = [coalition for coalition in coalitions if len(coalition) > 1]
+        # exclude coalitions that cannot be further split because they already contain only one agent
+        real_coalitions = [coalition for coalition in coalitions if len(coalition) > 1]
+        if self.parallel:
+            qubo_list = []
+        for coalition in real_coalitions:
             if self.parallel:
-                qubo_list = []
-            for coalition in real_coalitions:
-                if self.parallel:
-                    qubo, num_qubits = self._get_qubo(coalition, edges)
-                    qubo_list.append((qubo, num_qubits))
-                else:
-                    self._measure_embedding_split(coalition, edges)
-            if self.parallel:
-                self.measure_embedding_qubos(qubo_list)
+                qubo, num_qubits = self._get_qubo(coalition, edges)
+                qubo_list.append((qubo, num_qubits))
+            else:
+                self._measure_embedding_split(coalition, edges)
+        if self.parallel:
+            self.measure_embedding_qubos(qubo_list)
 
     @abstractmethod
     def _get_qubo(self, coalition, edges):

@@ -9,19 +9,22 @@ def read_pickle_data(file_path, graph_num_per_size=20):
     all_data = []
     try:
         with open(file_path, 'rb') as file:
-            while True:
-                group_graph_size = []
-                for _ in range(graph_num_per_size):
-                    try:
-                        data = pickle.load(file)
-                        group_graph_size.append(data)
-                    except EOFError:
-                        # Reached end of file
+            if "total" in file_path:
+                all_data = pickle.load(file)
+            else:
+                while True:
+                    group_graph_size = []
+                    for _ in range(graph_num_per_size):
+                        try:
+                            data = pickle.load(file)
+                            group_graph_size.append(data)
+                        except EOFError:
+                            # Reached end of file
+                            break
+                    if group_graph_size:
+                        all_data.append(group_graph_size)
+                    else:
                         break
-                if group_graph_size:
-                    all_data.append(group_graph_size)
-                else:
-                    break
     except FileNotFoundError:
         print(f"The file {file_path} does not exist.")
     except Exception as e:
@@ -37,8 +40,10 @@ def process_folder(folder_path):
                 if file_name.startswith("data_") and file_name.endswith(".pkl"):
                     # Extracting key from file name
                     parts = file_name.split("_")
-                    key = ("_".join(parts[1:-5]), int(parts[-4]))  # Extracting algorithm name and seed for the key
-
+                    if "total.pkl" in parts:
+                        key = ("_".join(parts[1:-4]), int(parts[-3]))  # Extracting algorithm name and seed for the key
+                    else:
+                        key = ("_".join(parts[1:-5]), int(parts[-4]))  # Extracting algorithm name and seed for the key
                     # Load data from file
                     file_path = os.path.join(root, file_name)
                     data = read_pickle_data(file_path)
@@ -56,6 +61,7 @@ def process_folder(folder_path):
 def calculate_statistics_over_seeds(folder_dict):
     dict_avgs = {}
     dict_stds = {}
+    dict_num_succesful_seeds = {}
 
     # Group values by algorithm_name
     algorithm_name_groups = {}
@@ -67,9 +73,12 @@ def calculate_statistics_over_seeds(folder_dict):
 
     # Calculate averages and standard deviations for each algorithm_name group
     for algorithm_name, seed_groups in algorithm_name_groups.items():
-        num_graph_sizes = len(next(iter(seed_groups.values())))
+        num_graph_sizes = max(len(lst) for lst in seed_groups.values())
         averages = [[] for _ in range(num_graph_sizes)]
         stds = [[] for _ in range(num_graph_sizes)]
+        # not every graph could successfully be processed in every run, i.e. for every seed
+        # -> we need to count for how many seeds it was "successful" to create average
+        num_seeds = [[] for _ in range(num_graph_sizes)]
 
         for seed, graph_sizes_list in seed_groups.items():
             for i, graph_list in enumerate(graph_sizes_list):
@@ -77,13 +86,16 @@ def calculate_statistics_over_seeds(folder_dict):
                     if len(averages[i]) <= j:
                         averages[i].append((item[1], item[2]))
                         stds[i].append(([item[1]], [item[2]]))
+                        num_seeds[i].append(1)
                     else:
                         averages[i][j] = (averages[i][j][0] + item[1], averages[i][j][1] + item[2])
+                        num_seeds[i][j] = num_seeds[i][j] + 1
                         stds[i][j][0].append(item[1])
                         stds[i][j][1].append(item[2])
 
         for i, graph_list in enumerate(averages):
-            averages[i] = [(value_sum / len(seed_groups), time_sum / len(seed_groups)) for (value_sum, time_sum) in graph_list]
+            for j, item in enumerate(graph_list):
+                averages[i][j] = (averages[i][j][0] / num_seeds[i][j], averages[i][j][1] / num_seeds[i][j])
 
         for i, graph_list in enumerate(stds):
             for j, seeds_list in enumerate(graph_list):
@@ -101,8 +113,9 @@ def calculate_statistics_over_seeds(folder_dict):
 
         dict_avgs[algorithm_name] = averages
         dict_stds[algorithm_name] = stds
+        dict_num_succesful_seeds[algorithm_name] = num_seeds
 
-    return dict_avgs, dict_stds
+    return dict_avgs, dict_stds, dict_num_succesful_seeds
 
 
 def sum_over_same_sized_graphs(dict_avg):
@@ -339,18 +352,27 @@ def get_barchart_win_lose_draw(algo1_name, algo2_name, results_dict, seed, note=
     plt.close()
 
 if __name__ == "__main__":
-     data_path = "results/eon_data/quantum/qbsolv"
+     data_path = "results/eon_data/classical"
      #data_path = "results/eon_data/quantum/qbsolv/parallel/k=12/data_12_split_GCSQ_exactly_qbsolv_parallel__3949468976__2024-01-26_13-12-53.747804.pkl"
      data = process_folder(data_path)
      #data = read_pickle_data(data_path)
      #print(data)
 
-     data_avgs, data_stds = calculate_statistics_over_seeds(data)
+     data_avgs, data_stds, data_num_successful_seeds = calculate_statistics_over_seeds(data)
      print(data_avgs, "\n", data_stds)
      avg_data_summed = sum_over_same_sized_graphs(data_avgs)
-     print(avg_data_summed)
+     stds_summed = sum_over_same_sized_graphs(data_stds)
+     sorted_avg_summed = sorted(avg_data_summed.items())
+     print(sorted_avg_summed)
+     print("\n")
+     sorted_stds_summed = sorted(stds_summed.items())
+     print(sorted_stds_summed)
+     sorted_num_seeds = sorted(data_num_successful_seeds.items())
+     print(sorted_num_seeds)
+     '''
      compare_ks_GCSQ_exactly(avg_data_summed)
      compare_ks_GCSQ_at_most(avg_data_summed)
      compare_ours_iterative_exactly(avg_data_summed)
      compare_ours_iterative_at_most(avg_data_summed)
      compare_r_qubo_iterative(avg_data_summed)
+     '''

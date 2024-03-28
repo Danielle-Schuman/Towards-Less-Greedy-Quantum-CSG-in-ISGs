@@ -72,4 +72,4 @@ def merge_and_sort_files(directory):
 
 
 # Example usage
-merge_and_sort_files('results/eon_data/quantum/dwave/parallel/k=2')
+merge_and_sort_files('results/eon_data/quantum/qaoa/parallel/k=2')

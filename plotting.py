@@ -3,6 +3,7 @@ import numpy as np
 import pickle
 import os
 import statistics
+from tabulate import tabulate
 
 
 def read_pickle_data(file_path, graph_num_per_size=20):
@@ -116,6 +117,138 @@ def calculate_statistics_over_seeds(folder_dict):
         dict_num_succesful_seeds[algorithm_name] = num_seeds
 
     return dict_avgs, dict_stds, dict_num_succesful_seeds
+
+# TODO: Decide metric
+def relative_solution_quality(solutions_list, optima_list):
+    rel_solution_qualities = []
+    for i, solution in enumerate(solutions_list):
+        rel_solution = solution / optima_list[i]
+        #or
+        error = abs(solution - optima_list[i]) / optima_list[i]
+        rel_solution = 1 - error
+        rel_solution_qualities.append(rel_solution)
+    return rel_solution_qualities
+
+
+def plot_line_chart_with_stds(algorithm_names, averages_list, std_devs_list, colors, x_ticks, xlabel, ylabel, title):
+    assert len(algorithm_names) == len(averages_list) == len(std_devs_list), "Input lists should have the same length."
+
+    plt.figure(figsize=(10, 6))
+
+    for i in range(len(algorithm_names)):
+        plt.errorbar(x_ticks, averages_list[i], yerr=std_devs_list[i], fmt='o-', color=colors[i], label=algorithm_names[i], capsize=5)
+
+    plt.xlabel(xlabel)
+    plt.ylabel(ylabel)
+    plt.title(title)
+    plt.xticks(x_ticks)
+    plt.legend()
+    #plt.grid(True)
+    plt.savefig(f"plots/{title.replace(' ', '_')}.pdf", format='pdf')
+    # plt.show()
+    plt.close()
+
+def plot_line_chart(algorithm_names, averages_list, x_ticks, colors, xlabel, ylabel, title):
+    assert len(algorithm_names) == len(averages_list), "Input lists should have the same length."
+
+    plt.figure(figsize=(10, 6))
+
+    for i in range(len(algorithm_names)):
+        plt.plot(x_ticks, averages_list[i], marker='o', color=colors[i], label=algorithm_names[i])
+
+    plt.xlabel(xlabel)
+    plt.ylabel(ylabel)
+    plt.title(title)
+    plt.xticks(x_ticks)
+    plt.legend()
+    #plt.grid(True)
+    plt.savefig(f"plots/{title.replace(' ', '_')}.pdf", format='pdf')
+    # plt.show()
+    plt.close()
+
+def plot_vertical_lines_chart(algorithm_names, values, x_ticks, colors, xlabel, ylabel, title):
+    assert len(algorithm_names) == len(values), "Input lists should have the same length."
+    line_distance = 0.02
+    plt.figure(figsize=(10, 6))
+
+    # Calculate the width of each line
+    line_distance_total = len(algorithm_names) * line_distance
+    line_distance_shift = np.linspace(-line_distance_total / 2, line_distance_total / 2, len(algorithm_names))
+
+    for i in range(len(algorithm_names)):
+        assert len(values[i]) == len(
+            x_ticks), f"Values for category {algorithm_names[i]} should have the same length as x_ticks."
+        plt.vlines(x_ticks + line_distance_shift[i], 0, values[i], linestyle='-', linewidth=3, color=colors[i], label=algorithm_names[i])
+
+    plt.xlabel(xlabel)
+    plt.ylabel(ylabel)
+    plt.title(title)
+    plt.xticks(x_ticks)
+    plt.legend(loc='upper left')
+    #plt.grid(True)
+    plt.savefig(f"plots/{title.replace(' ', '_')}.pdf", format='pdf')
+    #plt.show()
+    plt.close()
+
+def generate_latex_table(algorithm_names, values_list, std_devs_list, row_names):
+    # Ensure input lists have the same length
+    assert len(algorithm_names) == len(values_list) == len(std_devs_list), "Input lists should have the same length."
+
+    # Initialize the table data
+    table_data = []
+
+    # Add headers as the first row
+    headers = [""] + algorithm_names
+    table_data.append(headers)
+
+    # Iterate through row names and add corresponding data
+    for i, row_name in enumerate(row_names):
+        row = [row_name]
+        for j in range(len(algorithm_names)):
+            value = f"{values_list[j][i]} $\\pm$ {std_devs_list[j][i]}"
+            row.append(value)
+        table_data.append(row)
+
+    # Generate LaTeX table
+    latex_table = tabulate(table_data, headers="firstrow", tablefmt="latex_raw")
+
+    return latex_table
+
+
+def generate_latex_table_double(algorithm_names, value_sums, stds_value_sums, rel_values, std_rel_values, row_names):
+    # Ensure input lists have the same length
+    assert len(algorithm_names) == len(value_sums) == len(stds_value_sums), "Input lists should have the same length."
+    assert len(algorithm_names) == len(rel_values) == len(std_rel_values), "Input lists should have the same length."
+
+    # Initialize the table data
+    table_data = []
+
+    # Add header for algorithm names
+    header = [""]
+    for name in algorithm_names:
+        header.append(f"\\multicolumn{{2}}{{c}}{{{name}}}")
+    table_data.append(header)
+
+    # Add subheader for averages and standard deviations
+    subheader = [""]
+    for _ in algorithm_names:
+        subheader.extend(["V $\pm$ std", "R $\pm$ std"])
+    table_data.append(subheader)
+
+    # Add data rows
+    for i, row_name in enumerate(row_names):
+        row = [row_name]
+        for j in range(len(algorithm_names)):
+            value1 = f"{value_sums[j][i]} $\pm$ {stds_value_sums[j][i]}"
+            value2 = f"{rel_values[j][i]} $\pm$ {std_rel_values[j][i]}"
+            row.extend([value1, value2])
+        table_data.append(row)
+
+    # Generate LaTeX table
+    latex_table = tabulate(table_data, headers="firstrow", tablefmt="latex_raw")
+
+    # Header lines need to be edited by hand a bit afterwards (remove unnecessary columns in header, add \hline below subheaders)
+    return latex_table
 
 
 def sum_over_same_sized_graphs(dict_avg):
@@ -375,4 +508,16 @@ if __name__ == "__main__":
      compare_ours_iterative_exactly(avg_data_summed)
      compare_ours_iterative_at_most(avg_data_summed)
      compare_r_qubo_iterative(avg_data_summed)
-     '''
+
+    # Example usage:
+    algorithm_names = ['Algorithm A', 'Algorithm B', 'Algorithm C']
+    averages_list1 = [[10, 20, 30], [15, 25, 35], [12, 22, 32]]
+    std_devs_list1 = [[1, 2, 3], [1.5, 2.5, 3.5], [1.2, 2.2, 3.2]]
+    averages_list2 = [[11, 21, 31], [16, 26, 36], [13, 23, 33]]
+    std_devs_list2 = [[1.1, 2.1, 3.1], [1.6, 2.6, 3.6], [1.3, 2.3, 3.3]]
+    row_names = [4, 6, 28]
+
+    latex_table = generate_latex_table_double(algorithm_names, averages_list1, std_devs_list1, averages_list2, std_devs_list2, row_names)
+    print(latex_table)
+    '''
+

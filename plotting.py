@@ -124,8 +124,8 @@ def relative_solution_quality(solutions_list, optima_list):
     for i, solution in enumerate(solutions_list):
         rel_solution = solution / optima_list[i]
         #or
-        error = abs(solution - optima_list[i]) / optima_list[i]
-        rel_solution = 1 - error
+        #error = abs(solution - optima_list[i]) / optima_list[i]
+        #rel_solution = 1 - error
         rel_solution_qualities.append(rel_solution)
     return rel_solution_qualities
 

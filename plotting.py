@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import bisect
 import pickle
 import os
 import statistics
@@ -59,10 +60,34 @@ def process_folder(folder_path):
     return folder_contents
 
 
+def coalitions_feasible(coalition_structure):
+    agents_used = []
+    coalition_structure_feasible = True
+    for coalition in coalition_structure:
+        for agent in coalition:
+            if agent in agents_used:
+                coalition_structure_feasible = False
+            else:
+                agents_used.append(agent)
+    return coalition_structure_feasible
+
+
+def filter_infeasible_coalitions(folder_dict):
+    for key, graph_size_list in folder_dict.items():
+        for i, graph_list in enumerate(graph_size_list):
+            for j, tuple in enumerate(graph_list):
+                if not coalitions_feasible(tuple[0]):
+                    folder_dict[key][i][j] = (tuple[0], "infeasible", tuple[2])
+    return folder_dict
+
+
 def calculate_statistics_over_seeds(folder_dict):
-    dict_avgs = {}
-    dict_stds = {}
+    dict_avgs_values = {}
+    dict_stds_values = {}
+    dict_avgs_times = {}
+    dict_stds_times = {}
     dict_num_succesful_seeds = {}
+    dict_num_feasible_seeds = {}
 
     # Group values by algorithm_name
     algorithm_name_groups = {}
@@ -75,59 +100,109 @@ def calculate_statistics_over_seeds(folder_dict):
     # Calculate averages and standard deviations for each algorithm_name group
     for algorithm_name, seed_groups in algorithm_name_groups.items():
         num_graph_sizes = max(len(lst) for lst in seed_groups.values())
-        averages = [[] for _ in range(num_graph_sizes)]
-        stds = [[] for _ in range(num_graph_sizes)]
+        averages_values = [[] for _ in range(num_graph_sizes)]
+        stds_values = [[] for _ in range(num_graph_sizes)]
+        averages_times = [[] for _ in range(num_graph_sizes)]
+        stds_times = [[] for _ in range(num_graph_sizes)]
         # not every graph could successfully be processed in every run, i.e. for every seed
         # -> we need to count for how many seeds it was "successful" to create average
         num_seeds = [[] for _ in range(num_graph_sizes)]
+        num_seeds_feasible = [[] for _ in range(num_graph_sizes)]
 
         for seed, graph_sizes_list in seed_groups.items():
             for i, graph_list in enumerate(graph_sizes_list):
                 for j, item in enumerate(graph_list):
-                    if len(averages[i]) <= j:
-                        averages[i].append((item[1], item[2]))
-                        stds[i].append(([item[1]], [item[2]]))
+                    if len(averages_values[i]) <= j:
+                        averages_values[i].append(item[1])
+                        stds_values[i].append([item[1]])
+                        # if solution is feasible
+                        if isinstance(item[1], (int, float)):
+                            num_seeds_feasible[i].append(1)
+                        else:
+                            num_seeds_feasible[i].append(0)
+                        averages_times[i].append(item[2])
+                        stds_times[i].append([item[2]])
                         num_seeds[i].append(1)
                     else:
-                        averages[i][j] = (averages[i][j][0] + item[1], averages[i][j][1] + item[2])
+                        # if solution is feasible
+                        if isinstance(item[1], (int, float)):
+                            if isinstance(averages_values[i][j], (int, float)):
+                                averages_values[i][j] = averages_values[i][j] + item[1]
+                                stds_values[i][j].append(item[1])
+                            else:
+                                # current average value / last value in stds says "infeasible" -> needs to be replaced
+                                averages_values[i][j] = item[1]
+                                stds_values[i][j][-1] = item[1]
+                            num_seeds_feasible[i][j] = num_seeds_feasible[i][j] + 1
+                        averages_times[i][j] = averages_times[i][j] + item[2]
+                        stds_times[i][j].append(item[2])
                         num_seeds[i][j] = num_seeds[i][j] + 1
-                        stds[i][j][0].append(item[1])
-                        stds[i][j][1].append(item[2])
 
-        for i, graph_list in enumerate(averages):
+        for i, graph_list in enumerate(averages_values):
             for j, item in enumerate(graph_list):
-                averages[i][j] = (averages[i][j][0] / num_seeds[i][j], averages[i][j][1] / num_seeds[i][j])
+                if isinstance(averages_values[i][j], (int, float)):
+                    averages_values[i][j] = averages_values[i][j] / num_seeds_feasible[i][j]
+                averages_times[i][j] = averages_times[i][j] / num_seeds[i][j]
 
-        for i, graph_list in enumerate(stds):
+        for i, graph_list in enumerate(stds_values):
             for j, seeds_list in enumerate(graph_list):
-                if len(seeds_list[0]) > 1:
-                    to_evaluate = [float(x) for x in seeds_list[0]]
-                    stds_values = statistics.stdev(to_evaluate)
+                if len(seeds_list) > 1:
+                    to_evaluate = [float(x) for x in seeds_list]
+                    stds_value = statistics.stdev(to_evaluate)
                 else:
-                    stds_values = 0.0
-                if len(seeds_list[1]) > 1:
-                    to_evaluate = [float(x) for x in seeds_list[1]]
-                    stds_times = statistics.stdev(to_evaluate)
-                else:
-                    stds_times = 0.0
-                stds[i][j] = (stds_values, stds_times)
+                    # for only infeasible solutions, we will also use 0 as std
+                    stds_value = 0.0
+                stds_values[i][j] = stds_value
 
-        dict_avgs[algorithm_name] = averages
-        dict_stds[algorithm_name] = stds
+        for i, graph_list in enumerate(stds_times):
+            for j, seeds_list in enumerate(graph_list):
+                if len(seeds_list) > 1:
+                    to_evaluate = [float(x) for x in seeds_list]
+                    stds_time = statistics.stdev(to_evaluate)
+                else:
+                    stds_time = 0.0
+                stds_times[i][j] = stds_time
+
+        dict_avgs_values[algorithm_name] = averages_values
+        dict_stds_values[algorithm_name] = stds_values
+        dict_num_feasible_seeds[algorithm_name] = num_seeds_feasible
+        dict_avgs_times[algorithm_name] = averages_times
+        dict_stds_times[algorithm_name] = stds_times
         dict_num_succesful_seeds[algorithm_name] = num_seeds
 
-    return dict_avgs, dict_stds, dict_num_succesful_seeds
+    return dict_avgs_values, dict_stds_values, dict_num_feasible_seeds, dict_avgs_times, dict_stds_times, dict_num_succesful_seeds
 
-# TODO: Decide metric
-def relative_solution_quality(solutions_list, optima_list):
-    rel_solution_qualities = []
-    for i, solution in enumerate(solutions_list):
-        rel_solution = solution / optima_list[i]
-        #or
-        #error = abs(solution - optima_list[i]) / optima_list[i]
-        #rel_solution = 1 - error
-        rel_solution_qualities.append(rel_solution)
-    return rel_solution_qualities
+
+def relative_solution_quality(solutions_dict, optima_list):
+    rel_values_dict = {}
+    for algorithm_name, solutions_list in solutions_dict.items():
+        rel_solution_qualities = []
+        # check if is k-split with k > 4 -> solution_list starts at later graph size
+        parts = algorithm_name.split("_")
+        if parts[0].isnumeric():
+            k = int(parts[0])
+            graph_sizes = [4,6,8,10,12,14,16,18,20,22,24,26,28]
+            start = bisect.bisect_left(graph_sizes, k)
+            optima_list_relevant = optima_list[start:]
+        else:
+            optima_list_relevant = optima_list
+        # shorten in case algorithm couldn't solve the large sizes
+        num_graph_sizes = len(solutions_list)
+        optima_list_relevant = optima_list_relevant[:num_graph_sizes]
+        for i, solution_sublist in enumerate(solutions_list):
+            rel_solution_qualities.append([])
+            for j, solution in enumerate(solution_sublist):
+                if solution != "infeasible":
+                    rel_solution = round(solution, 6) / optima_list_relevant[i][j]
+                    #or
+                    #error = abs(round(solution, 6) - optima_list_relevant[i][j]) / optima_list_relevant[i][j]
+                    #rel_solution = 1 - error
+                else:
+                    # We assign a relative solution quality of 0 to infeasible solutions
+                    rel_solution = 0.0
+                rel_solution_qualities[i].append(rel_solution)
+        rel_values_dict[algorithm_name] = rel_solution_qualities
+    return rel_values_dict
 
 
 def plot_line_chart_with_stds(algorithm_names, averages_list, std_devs_list, colors, x_ticks, xlabel, ylabel, title):
@@ -148,6 +223,7 @@ def plot_line_chart_with_stds(algorithm_names, averages_list, std_devs_list, col
     # plt.show()
     plt.close()
 
+
 def plot_line_chart(algorithm_names, averages_list, x_ticks, colors, xlabel, ylabel, title):
     assert len(algorithm_names) == len(averages_list), "Input lists should have the same length."
 
@@ -165,6 +241,7 @@ def plot_line_chart(algorithm_names, averages_list, x_ticks, colors, xlabel, yla
     plt.savefig(f"plots/{title.replace(' ', '_')}.pdf", format='pdf')
     # plt.show()
     plt.close()
+
 
 def plot_vertical_lines_chart(algorithm_names, values, x_ticks, colors, xlabel, ylabel, title):
     assert len(algorithm_names) == len(values), "Input lists should have the same length."
@@ -189,6 +266,34 @@ def plot_vertical_lines_chart(algorithm_names, values, x_ticks, colors, xlabel, 
     plt.savefig(f"plots/{title.replace(' ', '_')}.pdf", format='pdf')
     #plt.show()
     plt.close()
+
+
+def plot_vertical_lines_chart_with_stds(algorithm_names, values, std_devs, x_ticks, colors, xlabel, ylabel, title):
+    assert len(algorithm_names) == len(values), "Input lists should have the same length."
+    line_distance = 0.02
+    plt.figure(figsize=(10, 6))
+
+    # Calculate the width of each line
+    line_distance_total = len(algorithm_names) * line_distance
+    line_distance_shift = np.linspace(-line_distance_total / 2, line_distance_total / 2, len(algorithm_names))
+
+    for i in range(len(algorithm_names)):
+        assert len(values[i]) == len(
+            x_ticks), f"Values for category {algorithm_names[i]} should have the same length as x_ticks."
+        plt.vlines(x_ticks + line_distance_shift[i], 0, values[i], linestyle='-', linewidth=3, color=colors[i], label=algorithm_names[i])
+        # Add error bars for standard deviations
+        plt.errorbar(x_ticks + line_distance_shift[i], values[i], yerr=std_devs[i], fmt='o', color='black')
+
+    plt.xlabel(xlabel)
+    plt.ylabel(ylabel)
+    plt.title(title)
+    plt.xticks(x_ticks)
+    plt.legend(loc='upper left')
+    #plt.grid(True)
+    #plt.savefig(f"plots/{title.replace(' ', '_')}.pdf", format='pdf')
+    plt.show()
+    #plt.close()
+
 
 def generate_latex_table(algorithm_names, values_list, std_devs_list, row_names):
     # Ensure input lists have the same length
@@ -257,12 +362,55 @@ def sum_over_same_sized_graphs(dict_avg):
     for algorithm_name, graph_size_lists in dict_avg.items():
         summed_graph_size_lists = []
         for graph_list in graph_size_lists:
-            value_sum = sum(item[0] for item in graph_list)
-            time_sum = sum(item[1] for item in graph_list)
-            summed_graph_size_lists.append((value_sum, time_sum))
+            feasible_graphlist = [item for item in graph_list if isinstance(item, (int, float))]
+            if len(feasible_graphlist) > 0:
+                sum_graphs = sum(feasible_graphlist)
+            else:
+                sum_graphs = "infeasible"
+            summed_graph_size_lists.append(sum_graphs)
         dict_sums[algorithm_name] = summed_graph_size_lists
 
     return dict_sums
+
+
+def average_over_same_sized_graphs(dict_avg):
+    dict_avgs = {}
+    dict_stds = {}
+
+    for algorithm_name, graph_size_lists in dict_avg.items():
+        averaged_graph_size_lists = []
+        stds_graph_size_lists = []
+        for graph_list in graph_size_lists:
+            feasible_graphlist = [item for item in graph_list if isinstance(item, (int, float))]
+            if len(feasible_graphlist) > 0:
+                avg = sum(feasible_graphlist) / len(feasible_graphlist)
+                if len(feasible_graphlist) > 1:
+                    std = statistics.stdev(feasible_graphlist)
+                else:
+                    std = 0.0
+            else:
+                avg = "infeasible"
+                std = 0.0
+            averaged_graph_size_lists.append(avg)
+            stds_graph_size_lists.append(std)
+        dict_avgs[algorithm_name] = averaged_graph_size_lists
+        dict_stds[algorithm_name] = stds_graph_size_lists
+
+    return dict_avgs, dict_stds
+
+
+def unzip_dictionaries(zipped_dictionaries):
+    values_dict = {}
+    times_dict = {}
+
+    for algorithm_name, graph_size_lists in zipped_dictionaries.items():
+        # unzip
+        value_list_total = [[tup[0] for tup in graph_list] for graph_list in graph_size_lists]
+        times_list_total = [[tup[1] for tup in graph_list] for graph_list in graph_size_lists]
+        values_dict[algorithm_name] = value_list_total
+        times_dict[algorithm_name] = times_list_total
+
+    return values_dict, times_dict
 
 
 def filter_dict_by_substring(original_dict, substring):
@@ -485,30 +633,55 @@ def get_barchart_win_lose_draw(algo1_name, algo2_name, results_dict, seed, note=
     plt.close()
 
 if __name__ == "__main__":
-     data_path = "results/eon_data/classical"
-     #data_path = "results/eon_data/quantum/qbsolv/parallel/k=12/data_12_split_GCSQ_exactly_qbsolv_parallel__3949468976__2024-01-26_13-12-53.747804.pkl"
-     data = process_folder(data_path)
-     #data = read_pickle_data(data_path)
-     #print(data)
+    # data_path = "results/eon_data/quantum/qbsolv/parallel/k=12/data_12_split_GCSQ_exactly_qbsolv_parallel__3949468976__2024-01-26_13-12-53.747804.pkl"
+    # data = read_pickle_data(data_path)
+    # print(data)
+    data_path = "results/eon_data/quantum/dwave"
+    data_path_optima = "results/eon_data/classical"
+    data_different_seeds = process_folder(data_path)
+    feasible_data_different_seeds = filter_infeasible_coalitions(data_different_seeds)
 
-     data_avgs, data_stds, data_num_successful_seeds = calculate_statistics_over_seeds(data)
-     print(data_avgs, "\n", data_stds)
-     avg_data_summed = sum_over_same_sized_graphs(data_avgs)
-     stds_summed = sum_over_same_sized_graphs(data_stds)
-     sorted_avg_summed = sorted(avg_data_summed.items())
-     print(sorted_avg_summed)
-     print("\n")
-     sorted_stds_summed = sorted(stds_summed.items())
-     print(sorted_stds_summed)
-     sorted_num_seeds = sorted(data_num_successful_seeds.items())
-     print(sorted_num_seeds)
-     '''
-     compare_ks_GCSQ_exactly(avg_data_summed)
-     compare_ks_GCSQ_at_most(avg_data_summed)
-     compare_ours_iterative_exactly(avg_data_summed)
-     compare_ours_iterative_at_most(avg_data_summed)
-     compare_r_qubo_iterative(avg_data_summed)
+    # get baseline
+    data_classical = process_folder(data_path_optima)
+    optima_dict, _, _, times_classical_dict, _, _ = calculate_statistics_over_seeds(data_classical)
+    optima_list, times_classical_list = optima_dict['belyi'], times_classical_dict['belyi']
 
+    data_values, stds_over_seeds, num_feasible_seeds, times, stds_times, num_successful_seeds = calculate_statistics_over_seeds(feasible_data_different_seeds)
+    print(data_values, "\n", stds_over_seeds)
+
+    # Absolute values
+    data_summed = sum_over_same_sized_graphs(data_values)
+    stds_summed = sum_over_same_sized_graphs(stds_over_seeds)
+    times_summed = sum_over_same_sized_graphs(times)
+    '''
+    sorted_data_summed = sorted(data_summed.items())
+    print(sorted_data_summed)
+    print("\n")
+    sorted_stds_summed = sorted(stds_summed.items())
+    print(sorted_stds_summed)
+    sorted_num_seeds = sorted(num_successful_seeds.items())
+    print(sorted_num_seeds)
+    '''
+
+    # Relative values
+    relative_values = relative_solution_quality(data_values, optima_list)
+    rel_values_avg_over_graph_sizes, rel_values_std_over_graph_sizes = average_over_same_sized_graphs(relative_values)
+    nums_successful_over_graph_sizes, std_num_over_graph_sizes = average_over_same_sized_graphs(num_successful_seeds)
+    nums_feasible_over_graph_sizes, std_num_feasible_over_graph_sizes = average_over_same_sized_graphs(num_feasible_seeds)
+    for algorithm_name, graph_size_list in relative_values.items():
+        for i, graph_list in enumerate(graph_size_list):
+            for j, n in enumerate(graph_list):
+                if n > 1.0:
+                    print(algorithm_name, i, j, n)
+    pass
+
+    '''
+    compare_ks_GCSQ_exactly(avg_data_summed)
+    compare_ks_GCSQ_at_most(avg_data_summed)
+    compare_ours_iterative_exactly(avg_data_summed)
+    compare_ours_iterative_at_most(avg_data_summed)
+    compare_r_qubo_iterative(avg_data_summed)
+    
     # Example usage:
     algorithm_names = ['Algorithm A', 'Algorithm B', 'Algorithm C']
     averages_list1 = [[10, 20, 30], [15, 25, 35], [12, 22, 32]]
@@ -516,8 +689,20 @@ if __name__ == "__main__":
     averages_list2 = [[11, 21, 31], [16, 26, 36], [13, 23, 33]]
     std_devs_list2 = [[1.1, 2.1, 3.1], [1.6, 2.6, 3.6], [1.3, 2.3, 3.3]]
     row_names = [4, 6, 28]
-
+    
     latex_table = generate_latex_table_double(algorithm_names, averages_list1, std_devs_list1, averages_list2, std_devs_list2, row_names)
     print(latex_table)
+    
+    
+    # Example usage:
+    algorithm_names = ['Algorithm A', 'Algorithm B']
+    averages_list = [[10, 20, 30], [15, 25, 35]]
+    std_devs_list = [[1, 2, 3], [1.5, 2.5, 3.5]]
+    x_ticks = [1, 2, 3]
+    x_label = 'Categories'
+    y_label = 'Values'
+    colors = ['red', 'blue', 'green']
+    title = 'Vlines with Standard Deviations'
+    
+    plot_vertical_lines_chart_with_stds(algorithm_names, averages_list, std_devs_list, x_ticks, colors, x_label, y_label, title)
     '''
-

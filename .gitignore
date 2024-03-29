@@ -1,9 +1,9 @@
 .idea/*
 __pycache__/*
 .DS_Store
-secrets/private_keys
-secrets/public_keys
-secrets/config.json
+secrets_folder/private_keys
+secrets_folder/public_keys
+secrets_folder/config.json
 .envrc
 .direnv/
 .python-version

@@ -1,0 +1,524 @@
+                    Running ours_n_qaoa for seed 4038098247 for graph_size 4 for graph 0 ...
+                    Coalition structure value for ours_n_qaoa: 0.028954843277226416   -   Time: 139.13077211380005
+None
+                    Running ours_n_qaoa for seed 4038098247 for graph_size 4 for graph 1 ...
+                    Coalition structure value for ours_n_qaoa: 0.5708825220945002   -   Time: 60.680673122406006
+None
+                    Running ours_n_qaoa for seed 4038098247 for graph_size 4 for graph 2 ...
+                    Coalition structure value for ours_n_qaoa: 0.006379590663762258   -   Time: 62.1950523853302
+None
+                    Running ours_n_qaoa for seed 4038098247 for graph_size 4 for graph 3 ...
+                    Coalition structure value for ours_n_qaoa: 0.04971320924304479   -   Time: 91.09489178657532
+None
+                    Running ours_n_qaoa for seed 4038098247 for graph_size 4 for graph 4 ...
+                    Coalition structure value for ours_n_qaoa: 0.046346216147753694   -   Time: 71.3883728981018
+None
+                    Running ours_n_qaoa for seed 4038098247 for graph_size 4 for graph 5 ...
+                    Coalition structure value for ours_n_qaoa: 0.07161653214043184   -   Time: 106.24548292160034
+None
+                    Running ours_n_qaoa for seed 4038098247 for graph_size 4 for graph 6 ...
+                    Coalition structure value for ours_n_qaoa: 0.04894947953113871   -   Time: 87.7391836643219
+None
+                    Running ours_n_qaoa for seed 4038098247 for graph_size 4 for graph 7 ...
+                    Coalition structure value for ours_n_qaoa: 0.038931269477402   -   Time: 71.03127455711365
+None
+                    Running ours_n_qaoa for seed 4038098247 for graph_size 4 for graph 8 ...
+                    Coalition structure value for ours_n_qaoa: 0.032182110713542045   -   Time: 88.9007396697998
+None
+                    Running ours_n_qaoa for seed 4038098247 for graph_size 4 for graph 9 ...
+                    Coalition structure value for ours_n_qaoa: 0.0003782223990356215   -   Time: 42.26330900192261
+None
+                    Running ours_n_qaoa for seed 4038098247 for graph_size 4 for graph 10 ...
+                    Coalition structure value for ours_n_qaoa: 0.2197142340515299   -   Time: 50.01544666290283
+None
+                    Running ours_n_qaoa for seed 4038098247 for graph_size 4 for graph 11 ...
+                    Coalition structure value for ours_n_qaoa: 0.2770576453315883   -   Time: 50.708603382110596
+None
+                    Running ours_n_qaoa for seed 4038098247 for graph_size 4 for graph 12 ...
+                    Coalition structure value for ours_n_qaoa: 0.04683299132417318   -   Time: 71.74002027511597
+None
+                    Running ours_n_qaoa for seed 4038098247 for graph_size 4 for graph 13 ...
+                    Coalition structure value for ours_n_qaoa: 0.009122933619323703   -   Time: 81.9818503856659
+None
+                    Running ours_n_qaoa for seed 4038098247 for graph_size 4 for graph 14 ...
+                    Coalition structure value for ours_n_qaoa: 0.027826847004988053   -   Time: 79.96828174591064
+None
+                    Running ours_n_qaoa for seed 4038098247 for graph_size 4 for graph 15 ...
+                    Coalition structure value for ours_n_qaoa: 0.10695262062797894   -   Time: 70.0921528339386
+None
+                    Running ours_n_qaoa for seed 4038098247 for graph_size 4 for graph 16 ...
+                    Coalition structure value for ours_n_qaoa: 0.051239707515868815   -   Time: 80.42803478240967
+None
+                    Running ours_n_qaoa for seed 4038098247 for graph_size 4 for graph 17 ...
+                    Coalition structure value for ours_n_qaoa: 0.37306828772501177   -   Time: 56.04155421257019
+None
+                    Running ours_n_qaoa for seed 4038098247 for graph_size 4 for graph 18 ...
+                    Coalition structure value for ours_n_qaoa: 0.05116200797886705   -   Time: 69.76130032539368
+None
+                    Running ours_n_qaoa for seed 4038098247 for graph_size 4 for graph 19 ...
+                    Coalition structure value for ours_n_qaoa: 0.24253747559571082   -   Time: 48.859068393707275
+None
+                    Running ours_n_qaoa for seed 4038098247 for graph_size 6 for graph 0 ...
+                    Running n_split_GCSQ_qaoa for seed 4038098247 for graph_size 4 for graph 0 ...
+                    Coalition structure value for n_split_GCSQ_qaoa: 0.028954843277226416   -   Time: 98.99177122116089
+None
+                    Running n_split_GCSQ_qaoa for seed 4038098247 for graph_size 4 for graph 1 ...
+                    Coalition structure value for n_split_GCSQ_qaoa: 0.5708825220945002   -   Time: 57.580864906311035
+None
+                    Running n_split_GCSQ_qaoa for seed 4038098247 for graph_size 4 for graph 2 ...
+                    Coalition structure value for n_split_GCSQ_qaoa: 0.0065826186112047935   -   Time: 83.49712228775024
+None
+                    Running n_split_GCSQ_qaoa for seed 4038098247 for graph_size 4 for graph 3 ...
+                    Coalition structure value for n_split_GCSQ_qaoa: 0.04971320924304479   -   Time: 55.74039673805237
+None
+                    Running n_split_GCSQ_qaoa for seed 4038098247 for graph_size 4 for graph 4 ...
+                    Coalition structure value for n_split_GCSQ_qaoa: 0.046346216147753694   -   Time: 76.64213037490845
+None
+                    Running n_split_GCSQ_qaoa for seed 4038098247 for graph_size 4 for graph 5 ...
+                    Coalition structure value for n_split_GCSQ_qaoa: 0.10380144569396066   -   Time: 100.27066254615784
+None
+                    Running n_split_GCSQ_qaoa for seed 4038098247 for graph_size 4 for graph 6 ...
+                    Coalition structure value for n_split_GCSQ_qaoa: 0.04894947953113871   -   Time: 150.21128034591675
+None
+                    Running n_split_GCSQ_qaoa for seed 4038098247 for graph_size 4 for graph 7 ...
+                    Coalition structure value for n_split_GCSQ_qaoa: 0.038931269477402   -   Time: 108.32181978225708
+None
+                    Running n_split_GCSQ_qaoa for seed 4038098247 for graph_size 4 for graph 8 ...
+                    Coalition structure value for n_split_GCSQ_qaoa: 0.032182110713542045   -   Time: 154.44666957855225
+None
+                    Running n_split_GCSQ_qaoa for seed 4038098247 for graph_size 4 for graph 9 ...
+                    Coalition structure value for n_split_GCSQ_qaoa: 0.0003782223990356215   -   Time: 69.90629053115845
+None
+                    Running n_split_GCSQ_qaoa for seed 4038098247 for graph_size 4 for graph 10 ...
+                    Coalition structure value for n_split_GCSQ_qaoa: 0.2197142340515299   -   Time: 69.1498372554779
+None
+                    Running n_split_GCSQ_qaoa for seed 4038098247 for graph_size 4 for graph 11 ...
+                    Coalition structure value for n_split_GCSQ_qaoa: 0.2770576453315883   -   Time: 66.85118412971497
+None
+                    Running n_split_GCSQ_qaoa for seed 4038098247 for graph_size 4 for graph 12 ...
+                    Coalition structure value for n_split_GCSQ_qaoa: 0.06753117632182892   -   Time: 100.91910243034363
+None
+                    Running n_split_GCSQ_qaoa for seed 4038098247 for graph_size 4 for graph 13 ...
+                    Coalition structure value for n_split_GCSQ_qaoa: 0.009122933619323703   -   Time: 71.47326898574829
+None
+                    Running n_split_GCSQ_qaoa for seed 4038098247 for graph_size 4 for graph 14 ...
+                    Coalition structure value for n_split_GCSQ_qaoa: 0.027826847004988053   -   Time: 77.8475251197815
+None
+                    Running n_split_GCSQ_qaoa for seed 4038098247 for graph_size 4 for graph 15 ...
+                    Coalition structure value for n_split_GCSQ_qaoa: 0.10695262062797894   -   Time: 70.9396243095398
+None
+                    Running n_split_GCSQ_qaoa for seed 4038098247 for graph_size 4 for graph 16 ...
+                    Coalition structure value for n_split_GCSQ_qaoa: 0.051239707515868815   -   Time: 105.23853635787964
+None
+                    Running n_split_GCSQ_qaoa for seed 4038098247 for graph_size 4 for graph 17 ...
+                    Coalition structure value for n_split_GCSQ_qaoa: 0.37306828772501177   -   Time: 54.30550742149353
+None
+                    Running n_split_GCSQ_qaoa for seed 4038098247 for graph_size 4 for graph 18 ...
+                    Coalition structure value for n_split_GCSQ_qaoa: 0.06615960564805334   -   Time: 87.182461977005
+None
+                    Running n_split_GCSQ_qaoa for seed 4038098247 for graph_size 4 for graph 19 ...
+                    Coalition structure value for n_split_GCSQ_qaoa: 0.24253747559571082   -   Time: 56.59933686256409
+None
+                    Running n_split_GCSQ_qaoa for seed 4038098247 for graph_size 6 for graph 0 ...
+                    Running R-QUBO_qaoa for seed 4038098247 for graph_size 4 for graph 0 ...
+                    Coalition structure value for R-QUBO_qaoa: 0.028954843277226416   -   Time: 6.693091869354248
+None
+                    Running R-QUBO_qaoa for seed 4038098247 for graph_size 4 for graph 1 ...
+                    Coalition structure value for R-QUBO_qaoa: 0.5708825220945002   -   Time: 6.41951584815979
+None
+                    Running R-QUBO_qaoa for seed 4038098247 for graph_size 4 for graph 2 ...
+                    Coalition structure value for R-QUBO_qaoa: 0.00712843874983804   -   Time: 8.824591398239136
+None
+                    Running R-QUBO_qaoa for seed 4038098247 for graph_size 4 for graph 3 ...
+                    Coalition structure value for R-QUBO_qaoa: 0.06152625301075432   -   Time: 8.71580457687378
+None
+                    Running R-QUBO_qaoa for seed 4038098247 for graph_size 4 for graph 4 ...
+                    Coalition structure value for R-QUBO_qaoa: 0.06396917936914548   -   Time: 10.840206384658813
+None
+                    Running R-QUBO_qaoa for seed 4038098247 for graph_size 4 for graph 5 ...
+                    Coalition structure value for R-QUBO_qaoa: 0.10380144569396066   -   Time: 9.946020126342773
+None
+                    Running R-QUBO_qaoa for seed 4038098247 for graph_size 4 for graph 6 ...
+                    Coalition structure value for R-QUBO_qaoa: 0.05554082850606079   -   Time: 9.071523427963257
+None
+                    Running R-QUBO_qaoa for seed 4038098247 for graph_size 4 for graph 7 ...
+                    Coalition structure value for R-QUBO_qaoa: 0.038931269477402   -   Time: 9.012925863265991
+None
+                    Running R-QUBO_qaoa for seed 4038098247 for graph_size 4 for graph 8 ...
+                    Coalition structure value for R-QUBO_qaoa: 0.042007430425400116   -   Time: 8.878298044204712
+None
+                    Running R-QUBO_qaoa for seed 4038098247 for graph_size 4 for graph 9 ...
+                    Coalition structure value for R-QUBO_qaoa: 0.0010690439865044254   -   Time: 5.585064649581909
+None
+                    Running R-QUBO_qaoa for seed 4038098247 for graph_size 4 for graph 10 ...
+                    Coalition structure value for R-QUBO_qaoa: 0.2197142340515299   -   Time: 8.502351760864258
+None
+                    Running R-QUBO_qaoa for seed 4038098247 for graph_size 4 for graph 11 ...
+                    Coalition structure value for R-QUBO_qaoa: 0.2770576453315883   -   Time: 10.156610250473022
+None
+                    Running R-QUBO_qaoa for seed 4038098247 for graph_size 4 for graph 12 ...
+                    Coalition structure value for R-QUBO_qaoa: 0.06753117632182892   -   Time: 8.570143222808838
+None
+                    Running R-QUBO_qaoa for seed 4038098247 for graph_size 4 for graph 13 ...
+                    Coalition structure value for R-QUBO_qaoa: 0.014666747418495163   -   Time: 6.551630735397339
+None
+Seed: 4038098247
+
+
+
+Test for graphsize 4
+
+
+     Graph 0
+
+          Running ours_n_qaoa...
+
+
+     Graph 1
+
+          Running ours_n_qaoa...
+
+
+     Graph 2
+
+          Running ours_n_qaoa...
+
+
+     Graph 3
+
+          Running ours_n_qaoa...
+
+
+     Graph 4
+
+          Running ours_n_qaoa...
+
+
+     Graph 5
+
+          Running ours_n_qaoa...
+
+
+     Graph 6
+
+          Running ours_n_qaoa...
+
+
+     Graph 7
+
+          Running ours_n_qaoa...
+
+
+     Graph 8
+
+          Running ours_n_qaoa...
+
+
+     Graph 9
+
+          Running ours_n_qaoa...
+
+
+     Graph 10
+
+          Running ours_n_qaoa...
+
+
+     Graph 11
+
+          Running ours_n_qaoa...
+
+
+     Graph 12
+
+          Running ours_n_qaoa...
+
+
+     Graph 13
+
+          Running ours_n_qaoa...
+
+
+     Graph 14
+
+          Running ours_n_qaoa...
+
+
+     Graph 15
+
+          Running ours_n_qaoa...
+
+
+     Graph 16
+
+          Running ours_n_qaoa...
+
+
+     Graph 17
+
+          Running ours_n_qaoa...
+
+
+     Graph 18
+
+          Running ours_n_qaoa...
+
+
+     Graph 19
+
+          Running ours_n_qaoa...
+
+
+
+Test for graphsize 6
+
+
+     Graph 0
+
+          Running ours_n_qaoa...
+                    Error: Running algorithm failed, most likely due to insufficient available memory. Error message:  Command '['python', '-c', "from main import run_algorithm; print(run_algorithm(b'\\x80\\x04\\x95\\xbc\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x8c\\x08danielle\\x94\\x8c\\x08Danielle\\x94\\x93\\x94)\\x81\\x94}\\x94(\\x8c\\x08category\\x94\\x8c\\x07quantum\\x94\\x8c\\x0enum_coalitions\\x94N\\x8c\\x04seed\\x94\\x8a\\x05G}\\xb0\\xf0\\x00\\x8c\\x07timeout\\x94MX\\x02\\x8c\\x04data\\x94N\\x8c\\x0bvalues_sums\\x94]\\x94(K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00e\\x8c\\x04name\\x94\\x8c\\x0bours_n_qaoa\\x94\\x8c\\x06solver\\x94\\x8c\\x04qaoa\\x94ub.', b'\\x80\\x04\\x95\\xd1\\x01\\x00\\x00\\x00\\x00\\x00\\x00}\\x94(K\\x00K\\x01\\x86\\x94\\x8c\\x15numpy.core.multiarray\\x94\\x8c\\x06scalar\\x94\\x93\\x94\\x8c\\x05numpy\\x94\\x8c\\x05dtype\\x94\\x93\\x94\\x8c\\x02f8\\x94\\x89\\x88\\x87\\x94R\\x94(K\\x03\\x8c\\x01<\\x94NNNJ\\xff\\xff\\xff\\xffJ\\xff\\xff\\xff\\xffK\\x00t\\x94bC\\x08\\x00pM\\xdd={\\x89?\\x94\\x86\\x94R\\x94K\\x00K\\x02\\x86\\x94h\\x04h\\nC\\x08\\x00\\x80h[WV\\x8b\\xbf\\x94\\x86\\x94R\\x94K\\x00K\\x03\\x86\\x94h\\x04h\\nC\\x08\\x00\\xa0\\x81~\\xd5\\xa0\\x83\\xbf\\x94\\x86\\x94R\\x94K\\x00K\\x04\\x86\\x94h\\x04h\\nC\\x08\\x00\\x00\\x1f\\x82\\xfe\\x13\\x9d?\\x94\\x86\\x94R\\x94K\\x00K\\x05\\x86\\x94h\\x04h\\nC\\x08\\x00`&\\x1eT0\\x96\\xbf\\x94\\x86\\x94R\\x94K\\x01K\\x02\\x86\\x94h\\x04h\\nC\\x08\\x00\\xb0\\x8b6\\xfb\\x04\\x9c?\\x94\\x86\\x94R\\x94K\\x01K\\x03\\x86\\x94h\\x04h\\nC\\x08\\x00P\\x1a\\xac\\xec?\\x97\\xbf\\x94\\x86\\x94R\\x94K\\x01K\\x04\\x86\\x94h\\x04h\\nC\\x08\\x00,(\\xa0\\xd8~\\xa1?\\x94\\x86\\x94R\\x94K\\x01K\\x05\\x86\\x94h\\x04h\\nC\\x08\\x00\\x12\\xc8\\xf4X\\xca\\xb1\\xbf\\x94\\x86\\x94R\\x94K\\x02K\\x03\\x86\\x94h\\x04h\\nC\\x08\\x00\\xc0\\xf5\\x9a([}\\xbf\\x94\\x86\\x94R\\x94K\\x02K\\x04\\x86\\x94h\\x04h\\nC\\x08\\x80_\\x18 \\xb9\\xe0\\xd3?\\x94\\x86\\x94R\\x94K\\x02K\\x05\\x86\\x94h\\x04h\\nC\\x08\\x00\\xe4\\x03#\\x9d\\x07\\xc2\\xbf\\x94\\x86\\x94R\\x94K\\x03K\\x04\\x86\\x94h\\x04h\\nC\\x08\\x00P\\x9dP\\xa30\\x9c\\xbf\\x94\\x86\\x94R\\x94K\\x03K\\x05\\x86\\x94h\\x04h\\nC\\x08\\x00\\x00\\xfeY\\xf1\\xf4p?\\x94\\x86\\x94R\\x94K\\x04K\\x05\\x86\\x94h\\x04h\\nC\\x08\\x00\\xb6\\xd0\\x94\\x9eK\\xb5?\\x94\\x86\\x94R\\x94u.', 6, b'\\x80\\x04\\x95\\x1e\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x8c\\x1a2024-02-21_18-47-13.579361\\x94.', b'\\x80\\x04\\x95!\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x8c\\x1dresults/eon_data/quantum/qaoa\\x94.', 0))"]' returned non-zero exit status 1.
+
+
+
+Test for graphsize 4
+
+
+     Graph 0
+
+          Running n_split_GCSQ_qaoa...
+
+
+     Graph 1
+
+          Running n_split_GCSQ_qaoa...
+
+
+     Graph 2
+
+          Running n_split_GCSQ_qaoa...
+
+
+     Graph 3
+
+          Running n_split_GCSQ_qaoa...
+
+
+     Graph 4
+
+          Running n_split_GCSQ_qaoa...
+
+
+     Graph 5
+
+          Running n_split_GCSQ_qaoa...
+
+
+     Graph 6
+
+          Running n_split_GCSQ_qaoa...
+
+
+     Graph 7
+
+          Running n_split_GCSQ_qaoa...
+
+
+     Graph 8
+
+          Running n_split_GCSQ_qaoa...
+
+
+     Graph 9
+
+          Running n_split_GCSQ_qaoa...
+
+
+     Graph 10
+
+          Running n_split_GCSQ_qaoa...
+
+
+     Graph 11
+
+          Running n_split_GCSQ_qaoa...
+
+
+     Graph 12
+
+          Running n_split_GCSQ_qaoa...
+
+
+     Graph 13
+
+          Running n_split_GCSQ_qaoa...
+
+
+     Graph 14
+
+          Running n_split_GCSQ_qaoa...
+
+
+     Graph 15
+
+          Running n_split_GCSQ_qaoa...
+
+
+     Graph 16
+
+          Running n_split_GCSQ_qaoa...
+
+
+     Graph 17
+
+          Running n_split_GCSQ_qaoa...
+
+
+     Graph 18
+
+          Running n_split_GCSQ_qaoa...
+
+
+     Graph 19
+
+          Running n_split_GCSQ_qaoa...
+
+
+
+Test for graphsize 6
+
+
+     Graph 0
+
+          Running n_split_GCSQ_qaoa...
+                    Error: Running algorithm failed, most likely due to insufficient available memory. Error message:  Command '['python', '-c', "from main import run_algorithm; print(run_algorithm(b'\\x80\\x04\\x95\\xbd\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x8c\\x0cn_split_GCSQ\\x94h\\x00\\x93\\x94)\\x81\\x94}\\x94(\\x8c\\x08category\\x94\\x8c\\x07quantum\\x94\\x8c\\x0enum_coalitions\\x94N\\x8c\\x04seed\\x94\\x8a\\x05G}\\xb0\\xf0\\x00\\x8c\\x07timeout\\x94MX\\x02\\x8c\\x04data\\x94N\\x8c\\x0bvalues_sums\\x94]\\x94(K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00K\\x00e\\x8c\\x04name\\x94\\x8c\\x11n_split_GCSQ_qaoa\\x94\\x8c\\x06solver\\x94\\x8c\\x04qaoa\\x94ub.', b'\\x80\\x04\\x95\\xd1\\x01\\x00\\x00\\x00\\x00\\x00\\x00}\\x94(K\\x00K\\x01\\x86\\x94\\x8c\\x15numpy.core.multiarray\\x94\\x8c\\x06scalar\\x94\\x93\\x94\\x8c\\x05numpy\\x94\\x8c\\x05dtype\\x94\\x93\\x94\\x8c\\x02f8\\x94\\x89\\x88\\x87\\x94R\\x94(K\\x03\\x8c\\x01<\\x94NNNJ\\xff\\xff\\xff\\xffJ\\xff\\xff\\xff\\xffK\\x00t\\x94bC\\x08\\x00pM\\xdd={\\x89?\\x94\\x86\\x94R\\x94K\\x00K\\x02\\x86\\x94h\\x04h\\nC\\x08\\x00\\x80h[WV\\x8b\\xbf\\x94\\x86\\x94R\\x94K\\x00K\\x03\\x86\\x94h\\x04h\\nC\\x08\\x00\\xa0\\x81~\\xd5\\xa0\\x83\\xbf\\x94\\x86\\x94R\\x94K\\x00K\\x04\\x86\\x94h\\x04h\\nC\\x08\\x00\\x00\\x1f\\x82\\xfe\\x13\\x9d?\\x94\\x86\\x94R\\x94K\\x00K\\x05\\x86\\x94h\\x04h\\nC\\x08\\x00`&\\x1eT0\\x96\\xbf\\x94\\x86\\x94R\\x94K\\x01K\\x02\\x86\\x94h\\x04h\\nC\\x08\\x00\\xb0\\x8b6\\xfb\\x04\\x9c?\\x94\\x86\\x94R\\x94K\\x01K\\x03\\x86\\x94h\\x04h\\nC\\x08\\x00P\\x1a\\xac\\xec?\\x97\\xbf\\x94\\x86\\x94R\\x94K\\x01K\\x04\\x86\\x94h\\x04h\\nC\\x08\\x00,(\\xa0\\xd8~\\xa1?\\x94\\x86\\x94R\\x94K\\x01K\\x05\\x86\\x94h\\x04h\\nC\\x08\\x00\\x12\\xc8\\xf4X\\xca\\xb1\\xbf\\x94\\x86\\x94R\\x94K\\x02K\\x03\\x86\\x94h\\x04h\\nC\\x08\\x00\\xc0\\xf5\\x9a([}\\xbf\\x94\\x86\\x94R\\x94K\\x02K\\x04\\x86\\x94h\\x04h\\nC\\x08\\x80_\\x18 \\xb9\\xe0\\xd3?\\x94\\x86\\x94R\\x94K\\x02K\\x05\\x86\\x94h\\x04h\\nC\\x08\\x00\\xe4\\x03#\\x9d\\x07\\xc2\\xbf\\x94\\x86\\x94R\\x94K\\x03K\\x04\\x86\\x94h\\x04h\\nC\\x08\\x00P\\x9dP\\xa30\\x9c\\xbf\\x94\\x86\\x94R\\x94K\\x03K\\x05\\x86\\x94h\\x04h\\nC\\x08\\x00\\x00\\xfeY\\xf1\\xf4p?\\x94\\x86\\x94R\\x94K\\x04K\\x05\\x86\\x94h\\x04h\\nC\\x08\\x00\\xb6\\xd0\\x94\\x9eK\\xb5?\\x94\\x86\\x94R\\x94u.', 6, b'\\x80\\x04\\x95\\x1e\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x8c\\x1a2024-02-21_18-47-13.579361\\x94.', b'\\x80\\x04\\x95!\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x8c\\x1dresults/eon_data/quantum/qaoa\\x94.', 0))"]' returned non-zero exit status 1.
+
+
+
+Test for graphsize 4
+
+
+     Graph 0
+
+          Running R-QUBO_qaoa...
+
+
+     Graph 1
+
+          Running R-QUBO_qaoa...
+
+
+     Graph 2
+
+          Running R-QUBO_qaoa...
+
+
+     Graph 3
+
+          Running R-QUBO_qaoa...
+
+
+     Graph 4
+
+          Running R-QUBO_qaoa...
+
+
+     Graph 5
+
+          Running R-QUBO_qaoa...
+
+
+     Graph 6
+
+          Running R-QUBO_qaoa...
+
+
+     Graph 7
+
+          Running R-QUBO_qaoa...
+
+
+     Graph 8
+
+          Running R-QUBO_qaoa...
+
+
+     Graph 9
+
+          Running R-QUBO_qaoa...
+
+
+     Graph 10
+
+          Running R-QUBO_qaoa...
+
+
+     Graph 11
+
+          Running R-QUBO_qaoa...
+
+
+     Graph 12
+
+          Running R-QUBO_qaoa...
+
+
+     Graph 13
+
+          Running R-QUBO_qaoa...
+                    Running R-QUBO_qaoa for seed 4038098247 for graph_size 4 for graph 14 ...
+                    Coalition structure value for R-QUBO_qaoa: 0.03599345154763256   -   Time: 6.294508695602417
+None
+                    Running R-QUBO_qaoa for seed 4038098247 for graph_size 4 for graph 15 ...
+                    Coalition structure value for R-QUBO_qaoa: 0.10695262062797894   -   Time: 11.707622289657593
+None
+                    Running R-QUBO_qaoa for seed 4038098247 for graph_size 4 for graph 16 ...
+                    Coalition structure value for R-QUBO_qaoa: 0.06090302529973002   -   Time: 8.824066400527954
+None
+                    Running R-QUBO_qaoa for seed 4038098247 for graph_size 4 for graph 17 ...
+                    Coalition structure value for R-QUBO_qaoa: 0.37306828772501177   -   Time: 7.527964353561401
+None
+                    Running R-QUBO_qaoa for seed 4038098247 for graph_size 4 for graph 18 ...
+                    Coalition structure value for R-QUBO_qaoa: 0.06615960564805334   -   Time: 7.232773303985596
+None
+                    Running R-QUBO_qaoa for seed 4038098247 for graph_size 4 for graph 19 ...
+                    Coalition structure value for R-QUBO_qaoa: 0.24253747559571082   -   Time: 6.739354848861694
+None
+
+
+     Graph 14
+
+          Running R-QUBO_qaoa...
+
+
+     Graph 15
+
+          Running R-QUBO_qaoa...
+
+
+     Graph 16
+
+          Running R-QUBO_qaoa...
+
+
+     Graph 17
+
+          Running R-QUBO_qaoa...
+
+
+     Graph 18
+
+          Running R-QUBO_qaoa...
+
+
+     Graph 19
+
+          Running R-QUBO_qaoa...
+
+
+
+Test for graphsize 6
+
+
+     Graph 0
+
+          Running R-QUBO_qaoa...

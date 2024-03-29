@@ -78,11 +78,17 @@ def main(algorithm_list, data, graph_sizes, num_graphs_per_size, experiment, dir
     for algorithm in algorithm_list:
         #too_large = False
         if isinstance(algorithm, IterativeQuantumAlgorithmWithK):
-            agents = graph_sizes
+            if(isinstance(algorithm, ours_iterative_exactly) and algorithm.k == 13):
+                agents = [14,16,18,20,22,24,26,28]
+            else:
+                agents = graph_sizes
             for num_agents in agents:
                 if algorithm.k <= num_agents:
                     print(f"\n\n\nTest for graphsize {num_agents}")
-                    this_range = range(num_graphs_per_size)
+                    if (isinstance(algorithm, ours_iterative_exactly) and algorithm.k == 13 and num_agents == 14):
+                        this_range = range(17, num_graphs_per_size)
+                    else:
+                        this_range = range(num_graphs_per_size)
                     for graph_num in this_range:
                         print(f"\n\n     Graph {graph_num}")
                         graph = data[num_agents][graph_num]
@@ -200,7 +206,7 @@ if __name__ == "__main__":
         # Simulate
         solvers = ["qbsolv"] #"qaoa"]
         parallel = [True]  #, False] -> Try sequential later (maybe)
-        k_list = [i for i in range(2, graph_sizes[-1])]
+        k_list = [i for i in range(13, graph_sizes[-1])]
 
         # D-Wave -> uncomment this and comment simulate for running with D-Wave
         '''
@@ -210,6 +216,7 @@ if __name__ == "__main__":
         '''
 
         for solver in solvers:
+            '''
             algorithm_list = [Jonas(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver),
                               Danielle(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver),
                               n_split_GCSQ(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver),
@@ -220,7 +227,9 @@ if __name__ == "__main__":
             if directory_exists:
                 main(algorithm_list=algorithm_list, data=data, graph_sizes=graph_sizes, num_graphs_per_size=num_graphs_per_size,
                      experiment=f"non-iterative algorithms with {solver}", directory=directory)
+            '''
             for mode in parallel:
+                '''
                 algorithm_list = [GCSQ(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode)]
                 directory = f"results/{data_name}/quantum/{solver}/{'parallel' if mode else 'sequential'}"
                 directory_exists = create_nested_directory(directory)
@@ -228,6 +237,7 @@ if __name__ == "__main__":
                     main(algorithm_list=algorithm_list, data=data, graph_sizes=graph_sizes,
                          num_graphs_per_size=num_graphs_per_size, experiment=f"GCS-Q with {solver} in {mode} mode",
                          directory=directory)
+                '''
                 for k in k_list:
                     algorithm_list = [ours_iterative_exactly(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
                                       #ours_iterative_at_most(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),

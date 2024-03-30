@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import bisect
 import numbers
+import math
 import pickle
 import os
 import statistics
@@ -328,7 +329,89 @@ def plot_vertical_lines_chart_with_stds(algorithm_names, values, std_devs, x_tic
     #plt.close()
 
 
+def get_max(values_list_padded, num_rows, num_columns):
+    max = []
+    for i in range(num_rows):
+        max_row = float('-inf')
+        for j in range(num_columns):
+            if isinstance(values_list_padded[j][i], (numbers.Number, np.number)):
+                if values_list_padded[j][i] > max_row:
+                    max_row = values_list_padded[j][i]
+        max.append(max_row)
+    return max
+
+
+# pad with -
+def pad(values_list):
+    values_list_padded = []
+    for i, column in enumerate(values_list):
+        if (i + 2) > 4:
+            padded_column = (((math.ceil((i + 2) / 2)) - 2) * ["-"]) + column
+        else:
+            padded_column = column
+        while len(padded_column) < 13:
+            padded_column.append("-")
+        values_list_padded.append(padded_column)
+    return values_list_padded
+
 def generate_latex_table(column_names, values_list, std_devs_list, row_names):
+    # Ensure input lists have the same length
+    assert len(row_names) == len(values_list) == len(std_devs_list), "Input lists should have the same length."
+
+    # Initialize the table data
+    table_data = []
+
+    # Add headers as the first row
+    headers = ["k"] + [f"n={c}" for c in column_names]
+    table_data.append(headers)
+
+    # pad with -
+    values_list_padded = pad(values_list)
+    std_devs_list_padded = pad(std_devs_list)
+
+    # Find the maximum value in each column
+    max_values = get_max(values_list_padded, len(column_names), len(row_names))
+
+    # Iterate through row names and add corresponding data
+    for i, row_name in enumerate(row_names):
+        row = [row_name]
+        for j in range(len(column_names)):
+            if isinstance(values_list_padded[i][j], (numbers.Number, np.number)):
+                value = f"{round(values_list_padded[i][j], 3)} $\\pm$ {round(std_devs_list_padded[i][j], 3)}"
+                if values_list_padded[i][j] == max_values[j]:  # If cell value equals maximum in the column
+                    value = "\\textbf{" + value + "}"  # Make it bold
+            else:
+                value = f"{values_list_padded[i][j]}"
+            row.append(value)
+        table_data.append(row)
+
+    # Generate LaTeX table
+    latex_table = tabulate(split_table_horizontally(table_data), headers="firstrow", tablefmt="latex_raw")
+
+    return latex_table
+
+
+def split_table_horizontally(table):
+    # Calculate the index to split each row
+    split_index = math.ceil(len(table[0]) / 2) + 1
+
+    # Split each row horizontally
+    left_half = []
+    right_half = []
+    for row in table:
+        if row[1:split_index] != len(row[1:split_index]) * ["-"]:
+            left_half.append(row[:split_index])
+        else:
+            pass
+        right_half.append([row[0]] + row[split_index:])
+
+    # Concatenate the right half to the bottom of the left half
+    left_half.extend(right_half)
+
+    return left_half
+
+
+def generate_latex_table_horizontal(column_names, values_list, std_devs_list, row_names):
     # Ensure input lists have the same length
     assert len(column_names) == len(values_list) == len(std_devs_list), "Input lists should have the same length."
 
@@ -336,36 +419,31 @@ def generate_latex_table(column_names, values_list, std_devs_list, row_names):
     table_data = []
 
     # Add headers as the first row
-    headers = [""] + column_names
+    headers = ["n"] + [f"k={c}" for c in column_names]
     table_data.append(headers)
 
-    # Find the maximum value in each row
-    # TODO: Fix
-    max_values = [max(row) for row in transposed_values_list]
-
     # pad with -
-    values_list_padded = []
-    for i, column in enumerate(values_list):
-        padded_column = [i * "-"] + column
-        while len(padded_column) < 13:
-            padded_column.append("-")
-        values_list_padded.append(padded_column)
+    values_list_padded = pad(values_list)
+    std_devs_list_padded = pad(std_devs_list)
+
+    # Find the maximum value in each row
+    max_values = get_max(values_list_padded, len(row_names), len(column_names))
 
     # Iterate through row names and add corresponding data
     for i, row_name in enumerate(row_names):
         row = [row_name]
         for j in range(len(column_names)):
-            if isinstance(values_list[j][i], (numbers.Number, np.number)):
-                value = f"{values_list[j][i]} $\\pm$ {std_devs_list[j][i]}"
-                if values_list[j][i] == max_values[i]:  # If cell value equals maximum in the row
+            if isinstance(values_list_padded[j][i], (numbers.Number, np.number)):
+                value = f"{round(values_list_padded[j][i], 3)} $\\pm$ {round(std_devs_list_padded[j][i], 3)}"
+                if values_list_padded[j][i] == max_values[i]:  # If cell value equals maximum in the row
                     value = "\\textbf{" + value + "}"  # Make it bold
             else:
-                value = f"{values_list[j][i]}"
+                value = f"{values_list_padded[j][i]}"
             row.append(value)
         table_data.append(row)
 
     # Generate LaTeX table
-    latex_table = tabulate(table_data, headers="firstrow", tablefmt="latex_raw")
+    latex_table = tabulate(split_table_horizontally(table_data), headers="firstrow", tablefmt="latex_raw")
 
     return latex_table
 
@@ -807,14 +885,16 @@ if __name__ == "__main__":
 
     # Plots k's
     # relative values
+
     algorithm_names = ["iterative Kochenberger", "our iterative approach", "iterative R-QUBO", "k-split GCS-Q (exactly)", "k-split GCS-Q (at most)"]
+    colors = ["C0", "C1", "C2", "C3", "C4"]
+
     averages_list_rel = [compare_ours_iterative_exactly(rel_values_over_graph_sizes), compare_ours_iterative_at_most(rel_values_over_graph_sizes), compare_r_qubo_iterative(rel_values_over_graph_sizes), compare_ks_GCSQ_exactly(rel_values_over_graph_sizes), compare_ks_GCSQ_at_most(rel_values_over_graph_sizes)]
     stds_list_rel = [compare_ours_iterative_exactly(rel_values_over_graph_sizes_std),
                      compare_ours_iterative_at_most(rel_values_over_graph_sizes_std),
                      compare_r_qubo_iterative(rel_values_over_graph_sizes_std),
                      compare_ks_GCSQ_exactly(rel_values_over_graph_sizes_std),
                      compare_ks_GCSQ_at_most(rel_values_over_graph_sizes_std)]
-    colors = ["C0", "C1", "C2", "C3", "C4"]
     plot_line_chart(algorithm_names=algorithm_names,averages_list=averages_list_rel,x_ticks=list(range(2,28)),colors=colors,xlabel="k",ylabel="Relative solution quality",title=f"Relative solution quality of k-split approaches using {solver}")
     # num optima found
     averages_list_opt = [compare_ours_iterative_exactly(num_opt_found_avg_over_graph_sizes),
@@ -828,6 +908,7 @@ if __name__ == "__main__":
                      compare_ks_GCSQ_exactly(stds_num_opt_found_avg_over_graph_sizes),
                      compare_ks_GCSQ_at_most(stds_num_opt_found_avg_over_graph_sizes)]
     plot_vertical_lines_chart(algorithm_names=algorithm_names, values=averages_list_opt, x_ticks=list(range(2,28)),colors=colors,xlabel="k",ylabel="Average number of optima found per graph size",title=f"Average number of optima found of k-split approaches using {solver}")
+
     # absolute values
     averages_list_sums = [compare_ours_iterative_exactly(data_summed),
                          compare_ours_iterative_at_most(data_summed),
@@ -841,37 +922,6 @@ if __name__ == "__main__":
                      compare_ks_GCSQ_at_most(stds_summed)]
     for a, algorithm in enumerate(algorithm_names):
         print(algorithm, ": ")
-        generate_latex_table(column_names=list(range(2,28)), values_list=averages_list_sums[a], std_devs_list=stds_list_sums[a], row_names=[4,6,8,10,12,14,16,18,20,22,24,26,28])
-
-
-    '''
-    compare_ks_GCSQ_exactly(avg_data_summed)
-    compare_ks_GCSQ_at_most(avg_data_summed)
-    compare_ours_iterative_exactly(avg_data_summed)
-    compare_ours_iterative_at_most(avg_data_summed)
-    compare_r_qubo_iterative(avg_data_summed)
-    
-    # Example usage:
-    algorithm_names = ['Algorithm A', 'Algorithm B', 'Algorithm C']
-    averages_list1 = [[10, 20, 30], [15, 25, 35], [12, 22, 32]]
-    std_devs_list1 = [[1, 2, 3], [1.5, 2.5, 3.5], [1.2, 2.2, 3.2]]
-    averages_list2 = [[11, 21, 31], [16, 26, 36], [13, 23, 33]]
-    std_devs_list2 = [[1.1, 2.1, 3.1], [1.6, 2.6, 3.6], [1.3, 2.3, 3.3]]
-    row_names = [4, 6, 28]
-    
-    latex_table = generate_latex_table_double(algorithm_names, averages_list1, std_devs_list1, averages_list2, std_devs_list2, row_names)
-    print(latex_table)
-    
-    
-    # Example usage:
-    algorithm_names = ['Algorithm A', 'Algorithm B']
-    averages_list = [[10, 20, 30], [15, 25, 35]]
-    std_devs_list = [[1, 2, 3], [1.5, 2.5, 3.5]]
-    x_ticks = [1, 2, 3]
-    x_label = 'Categories'
-    y_label = 'Values'
-    colors = ['red', 'blue', 'green']
-    title = 'Vlines with Standard Deviations'
-    
-    plot_vertical_lines_chart_with_stds(algorithm_names, averages_list, std_devs_list, x_ticks, colors, x_label, y_label, title)
-    '''
+        table = generate_latex_table(column_names=[4,6,8,10,12,14,16,18,20,22,24,26,28], values_list=averages_list_sums[a], std_devs_list=stds_list_sums[a], row_names=list(range(2,28)))
+        print(table)
+        print("\n\n")

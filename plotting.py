@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import bisect
+import numbers
 import pickle
 import os
 import statistics
@@ -116,7 +117,7 @@ def calculate_statistics_over_seeds(folder_dict):
                         averages_values[i].append(item[1])
                         stds_values[i].append([item[1]])
                         # if solution is feasible
-                        if isinstance(item[1], (int, float)):
+                        if isinstance(item[1], (numbers.Number, np.number)):
                             num_seeds_feasible[i].append(1)
                         else:
                             num_seeds_feasible[i].append(0)
@@ -125,8 +126,8 @@ def calculate_statistics_over_seeds(folder_dict):
                         num_seeds[i].append(1)
                     else:
                         # if solution is feasible
-                        if isinstance(item[1], (int, float)):
-                            if isinstance(averages_values[i][j], (int, float)):
+                        if isinstance(item[1], (numbers.Number, np.number)):
+                            if isinstance(averages_values[i][j], (numbers.Number, np.number)):
                                 averages_values[i][j] = averages_values[i][j] + item[1]
                                 stds_values[i][j].append(item[1])
                             else:
@@ -140,7 +141,7 @@ def calculate_statistics_over_seeds(folder_dict):
 
         for i, graph_list in enumerate(averages_values):
             for j, item in enumerate(graph_list):
-                if isinstance(averages_values[i][j], (int, float)):
+                if isinstance(averages_values[i][j], (numbers.Number, np.number)):
                     averages_values[i][j] = averages_values[i][j] / num_seeds_feasible[i][j]
                 averages_times[i][j] = averages_times[i][j] / num_seeds[i][j]
 
@@ -205,6 +206,38 @@ def relative_solution_quality(solutions_dict, optima_list):
     return rel_values_dict
 
 
+def optimum_found(solutions_dict, optima_list):
+    opt_found_dict = {}
+    for (algorithm_name, seed), solutions_list in solutions_dict.items():
+        opt_found = []
+        # check if is k-split with k > 4 -> solution_list starts at later graph size
+        parts = algorithm_name.split("_")
+        if parts[0].isnumeric():
+            k = int(parts[0])
+            graph_sizes = [4,6,8,10,12,14,16,18,20,22,24,26,28]
+            start = bisect.bisect_left(graph_sizes, k)
+            optima_list_relevant = optima_list[start:]
+        else:
+            optima_list_relevant = optima_list
+        # shorten in case algorithm couldn't solve the large sizes
+        num_graph_sizes = len(solutions_list)
+        optima_list_relevant = optima_list_relevant[:num_graph_sizes]
+        for i, solution_sublist in enumerate(solutions_list):
+            opt_found.append([])
+            for j, (coalitions, solution, time) in enumerate(solution_sublist):
+                if solution != "infeasible":
+                    if round(solution, 6) == optima_list_relevant[i][j]:
+                        found = 1
+                    else:
+                        found = 0
+                else:
+                    # We assign a found value 0 to infeasible solutions
+                    found = 0
+                opt_found[i].append((coalitions, found, time))
+        opt_found_dict[(algorithm_name, seed)] = opt_found
+    return opt_found_dict
+
+
 def plot_line_chart_with_stds(algorithm_names, averages_list, std_devs_list, colors, x_ticks, xlabel, ylabel, title):
     assert len(algorithm_names) == len(averages_list) == len(std_devs_list), "Input lists should have the same length."
 
@@ -218,7 +251,7 @@ def plot_line_chart_with_stds(algorithm_names, averages_list, std_devs_list, col
     plt.title(title)
     plt.xticks(x_ticks)
     plt.legend()
-    #plt.grid(True)
+    plt.grid(True)
     plt.savefig(f"plots/{title.replace(' ', '_')}.pdf", format='pdf')
     # plt.show()
     plt.close()
@@ -237,7 +270,7 @@ def plot_line_chart(algorithm_names, averages_list, x_ticks, colors, xlabel, yla
     plt.title(title)
     plt.xticks(x_ticks)
     plt.legend()
-    #plt.grid(True)
+    plt.grid(True)
     plt.savefig(f"plots/{title.replace(' ', '_')}.pdf", format='pdf')
     # plt.show()
     plt.close()
@@ -245,7 +278,7 @@ def plot_line_chart(algorithm_names, averages_list, x_ticks, colors, xlabel, yla
 
 def plot_vertical_lines_chart(algorithm_names, values, x_ticks, colors, xlabel, ylabel, title):
     assert len(algorithm_names) == len(values), "Input lists should have the same length."
-    line_distance = 0.02
+    line_distance = 0.1
     plt.figure(figsize=(10, 6))
 
     # Calculate the width of each line
@@ -255,14 +288,14 @@ def plot_vertical_lines_chart(algorithm_names, values, x_ticks, colors, xlabel, 
     for i in range(len(algorithm_names)):
         assert len(values[i]) == len(
             x_ticks), f"Values for category {algorithm_names[i]} should have the same length as x_ticks."
-        plt.vlines(x_ticks + line_distance_shift[i], 0, values[i], linestyle='-', linewidth=3, color=colors[i], label=algorithm_names[i])
+        plt.vlines(x_ticks + line_distance_shift[i], 0, values[i], linestyle='-', linewidth=1, color=colors[i], label=algorithm_names[i])
 
     plt.xlabel(xlabel)
     plt.ylabel(ylabel)
     plt.title(title)
     plt.xticks(x_ticks)
-    plt.legend(loc='upper left')
-    #plt.grid(True)
+    plt.legend(loc='upper right')
+    plt.grid(True)
     plt.savefig(f"plots/{title.replace(' ', '_')}.pdf", format='pdf')
     #plt.show()
     plt.close()
@@ -270,7 +303,7 @@ def plot_vertical_lines_chart(algorithm_names, values, x_ticks, colors, xlabel, 
 
 def plot_vertical_lines_chart_with_stds(algorithm_names, values, std_devs, x_ticks, colors, xlabel, ylabel, title):
     assert len(algorithm_names) == len(values), "Input lists should have the same length."
-    line_distance = 0.02
+    line_distance = 0.1
     plt.figure(figsize=(10, 6))
 
     # Calculate the width of each line
@@ -280,7 +313,7 @@ def plot_vertical_lines_chart_with_stds(algorithm_names, values, std_devs, x_tic
     for i in range(len(algorithm_names)):
         assert len(values[i]) == len(
             x_ticks), f"Values for category {algorithm_names[i]} should have the same length as x_ticks."
-        plt.vlines(x_ticks + line_distance_shift[i], 0, values[i], linestyle='-', linewidth=3, color=colors[i], label=algorithm_names[i])
+        plt.vlines(x_ticks + line_distance_shift[i], 0, values[i], linestyle='-', linewidth=1, color=colors[i], label=algorithm_names[i])
         # Add error bars for standard deviations
         plt.errorbar(x_ticks + line_distance_shift[i], values[i], yerr=std_devs[i], fmt='o', color='black')
 
@@ -288,29 +321,46 @@ def plot_vertical_lines_chart_with_stds(algorithm_names, values, std_devs, x_tic
     plt.ylabel(ylabel)
     plt.title(title)
     plt.xticks(x_ticks)
-    plt.legend(loc='upper left')
-    #plt.grid(True)
+    plt.legend(loc='upper right')
+    plt.grid(True)
     #plt.savefig(f"plots/{title.replace(' ', '_')}.pdf", format='pdf')
     plt.show()
     #plt.close()
 
 
-def generate_latex_table(algorithm_names, values_list, std_devs_list, row_names):
+def generate_latex_table(column_names, values_list, std_devs_list, row_names):
     # Ensure input lists have the same length
-    assert len(algorithm_names) == len(values_list) == len(std_devs_list), "Input lists should have the same length."
+    assert len(column_names) == len(values_list) == len(std_devs_list), "Input lists should have the same length."
 
     # Initialize the table data
     table_data = []
 
     # Add headers as the first row
-    headers = [""] + algorithm_names
+    headers = [""] + column_names
     table_data.append(headers)
+
+    # Find the maximum value in each row
+    # TODO: Fix
+    max_values = [max(row) for row in transposed_values_list]
+
+    # pad with -
+    values_list_padded = []
+    for i, column in enumerate(values_list):
+        padded_column = [i * "-"] + column
+        while len(padded_column) < 13:
+            padded_column.append("-")
+        values_list_padded.append(padded_column)
 
     # Iterate through row names and add corresponding data
     for i, row_name in enumerate(row_names):
         row = [row_name]
-        for j in range(len(algorithm_names)):
-            value = f"{values_list[j][i]} $\\pm$ {std_devs_list[j][i]}"
+        for j in range(len(column_names)):
+            if isinstance(values_list[j][i], (numbers.Number, np.number)):
+                value = f"{values_list[j][i]} $\\pm$ {std_devs_list[j][i]}"
+                if values_list[j][i] == max_values[i]:  # If cell value equals maximum in the row
+                    value = "\\textbf{" + value + "}"  # Make it bold
+            else:
+                value = f"{values_list[j][i]}"
             row.append(value)
         table_data.append(row)
 
@@ -320,32 +370,39 @@ def generate_latex_table(algorithm_names, values_list, std_devs_list, row_names)
     return latex_table
 
 
-def generate_latex_table_double(algorithm_names, value_sums, stds_value_sums, rel_values, std_rel_values, row_names):
+def generate_latex_table_double(column_names, value_sums, stds_value_sums, rel_values, std_rel_values, row_names):
     # Ensure input lists have the same length
-    assert len(algorithm_names) == len(value_sums) == len(stds_value_sums), "Input lists should have the same length."
-    assert len(algorithm_names) == len(rel_values) == len(std_rel_values), "Input lists should have the same length."
+    assert len(column_names) == len(value_sums) == len(stds_value_sums), "Input lists should have the same length."
+    assert len(column_names) == len(rel_values) == len(std_rel_values), "Input lists should have the same length."
 
     # Initialize the table data
     table_data = []
 
     # Add header for algorithm names
     header = [""]
-    for name in algorithm_names:
+    for name in column_names:
         header.append(f"\\multicolumn{{2}}{{c}}{{{name}}}")
     table_data.append(header)
 
     # Add subheader for averages and standard deviations
     subheader = [""]
-    for _ in algorithm_names:
-        subheader.extend(["V $\pm$ std", "R $\pm$ std"])
+    for _ in column_names:
+        subheader.extend(["V $\\pm$ std", "R $\\pm$ std"])
     table_data.append(subheader)
+
+    # Find the maximum value in each row for both V and R
+    max_value_v = [max(row) for row in value_sums]
+    max_value_r = [max(row) for row in rel_values]
 
     # Add data rows
     for i, row_name in enumerate(row_names):
         row = [row_name]
-        for j in range(len(algorithm_names)):
-            value1 = f"{value_sums[j][i]} $\pm$ {stds_value_sums[j][i]}"
-            value2 = f"{rel_values[j][i]} $\pm$ {std_rel_values[j][i]}"
+        for j in range(len(column_names)):
+            value1 = f"{value_sums[j][i]} $\\pm$ {stds_value_sums[j][i]}"
+            value2 = f"{rel_values[j][i]} $\\pm$ {std_rel_values[j][i]}"
+            if value_sums[j][i] == max_value_v[j] or rel_values[j][i] == max_value_r[j]:  # If cell value equals maximum in the row
+                value1 = "\\textbf{" + value1 + "}"  # Make it bold
+                value2 = "\\textbf{" + value2 + "}"  # Make it bold
             row.extend([value1, value2])
         table_data.append(row)
 
@@ -362,7 +419,7 @@ def sum_over_same_sized_graphs(dict_avg):
     for algorithm_name, graph_size_lists in dict_avg.items():
         summed_graph_size_lists = []
         for graph_list in graph_size_lists:
-            feasible_graphlist = [item for item in graph_list if isinstance(item, (int, float))]
+            feasible_graphlist = [item for item in graph_list if isinstance(item, (numbers.Number, np.number))]
             if len(feasible_graphlist) > 0:
                 sum_graphs = sum(feasible_graphlist)
             else:
@@ -381,7 +438,7 @@ def average_over_same_sized_graphs(dict_avg):
         averaged_graph_size_lists = []
         stds_graph_size_lists = []
         for graph_list in graph_size_lists:
-            feasible_graphlist = [item for item in graph_list if isinstance(item, (int, float))]
+            feasible_graphlist = [item for item in graph_list if isinstance(item, (numbers.Number, np.number))]
             if len(feasible_graphlist) > 0:
                 avg = sum(feasible_graphlist) / len(feasible_graphlist)
                 if len(feasible_graphlist) > 1:
@@ -399,14 +456,46 @@ def average_over_same_sized_graphs(dict_avg):
     return dict_avgs, dict_stds
 
 
+def average_over_graph_sizes(dict_avg):
+    dict_avgs = {}
+    for algorithm_name, graph_size_lists in dict_avg.items():
+        feasible_graph_size_list = [item for item in graph_size_lists if isinstance(item, (numbers.Number, np.number))]
+        if len(feasible_graph_size_list) > 0:
+            avg = np.mean(np.array(feasible_graph_size_list))
+        else:
+            # if all infeasible, we set rel. solution quality to zero
+            avg = 0.0
+        dict_avgs[algorithm_name] = avg
+    return dict_avgs
+
+
+def std_over_graph_sizes(dict_avg):
+    dict_stds = {}
+    for algorithm_name, graph_size_lists in dict_avg.items():
+        feasible_graph_size_list = [item for item in graph_size_lists if isinstance(item, (numbers.Number, np.number))]
+        if len(feasible_graph_size_list) > 0:
+            std = np.std(np.array(feasible_graph_size_list))
+        else:
+            # if all infeasible, we set rel. solution quality to zero
+            std = 0.0
+        dict_stds[algorithm_name] = std
+    return dict_stds
+
+
 def unzip_dictionaries(zipped_dictionaries):
     values_dict = {}
     times_dict = {}
 
     for algorithm_name, graph_size_lists in zipped_dictionaries.items():
         # unzip
-        value_list_total = [[tup[0] for tup in graph_list] for graph_list in graph_size_lists]
-        times_list_total = [[tup[1] for tup in graph_list] for graph_list in graph_size_lists]
+        if len(graph_size_lists[0]) == 2:
+            value_list_total = [[tup[0] for tup in graph_list] for graph_list in graph_size_lists]
+            times_list_total = [[tup[1] for tup in graph_list] for graph_list in graph_size_lists]
+        elif len(graph_size_lists[0]) == 3:
+            value_list_total = [[tup[1] for tup in graph_list] for graph_list in graph_size_lists]
+            times_list_total = [[tup[2] for tup in graph_list] for graph_list in graph_size_lists]
+        else:
+            raise Exception("Behaviour of unzip undefined for this tuple length")
         values_dict[algorithm_name] = value_list_total
         times_dict[algorithm_name] = times_list_total
 
@@ -461,12 +550,14 @@ def split_dicts_by_graphsizes(original_dict, graph_sizes):
 
 
 def compare_ks_GCSQ_exactly(dict_sums):
-    # get results from k=2 (GCS-Q) to k=n (n_split), and combine them into one dict
+    # get results from k=2 (GCS-Q) to k=n-1, and combine them into one dict
     dict_GCSQ = filter_dict_by_substring(dict_sums, "GCS-Q_")
     dict_k_split_GCSQ = filter_dict_by_substring(dict_sums, "_split_GCSQ_exactly")
-    dict_n_split_GCSQ = filter_dict_by_substring(dict_sums, "n_split_GCSQ")
-    dict_all = {**dict_GCSQ, **dict_k_split_GCSQ, **dict_n_split_GCSQ}
-    plot_values_and_times(dict_all, "GCS-Q exactly")
+    #dict_n_split_GCSQ = filter_dict_by_substring(dict_sums, "n_split_GCSQ")
+    dict_all = {**dict_GCSQ, **dict_k_split_GCSQ} #, **dict_n_split_GCSQ}
+    #plot_values_and_times(dict_all, "GCS-Q exactly")
+    list_all = sort_by_k(dict_all, "GCS-Q exactly")
+    return list_all
 
 
 def compare_ks_GCSQ_at_most(dict_sums):
@@ -474,31 +565,58 @@ def compare_ks_GCSQ_at_most(dict_sums):
     dict_GCSQ = filter_dict_by_substring(dict_sums, "GCS-Q_")
     dict_k_split_GCSQ = filter_dict_by_substring(dict_sums, "_split_GCSQ_at_most")
     dict_all = {**dict_GCSQ, **dict_k_split_GCSQ}
-    plot_values_and_times(dict_all, "GCS-Q at most")
+    #plot_values_and_times(dict_all, "GCS-Q at most")
+    list_all = sort_by_k(dict_all, "GCS-Q at most")
+    return list_all
+
 
 
 def compare_ours_iterative_exactly(dict_sums):
-    # get results from k=2 to k=n (ours_n), and combine them into one dict
+    # get results from k=2 to k=n-1
     dict_k_split = filter_dict_by_substring(dict_sums, "_split_ours_iterative_exactly")
-    dict_n_split = filter_dict_by_substring(dict_sums, "ours_n_q")  # added the q to exclude the ours_n_half
-    dict_all = {**dict_k_split, **dict_n_split}
-    plot_values_and_times(dict_all, "Ours exactly")
+    #dict_n_split = filter_dict_by_substring(dict_sums, "ours_n_q")  # added the q to exclude the ours_n_half
+    #dict_all = {**dict_k_split, **dict_n_split}
+    #plot_values_and_times(dict_all, "Ours exactly")
+    list_all = sort_by_k(dict_k_split, "Ours exactly")
+    return list_all
 
 
 def compare_ours_iterative_at_most(dict_sums):
-    # get results from k=2 to k=n (ours_n_half), and combine them into one dict
+    # get results from k=2 to k=n-1
     dict_k_split = filter_dict_by_substring(dict_sums, "_split_ours_iterative_at_most")
-    dict_n_split = filter_dict_by_substring(dict_sums, "ours_n_half")
-    dict_all = {**dict_k_split, **dict_n_split}
-    plot_values_and_times(dict_all, "Ours at most")
+    #dict_n_split = filter_dict_by_substring(dict_sums, "ours_n_half")
+    #dict_all = {**dict_k_split, **dict_n_split}
+    #plot_values_and_times(dict_all, "Ours at most")
+    list_all = sort_by_k(dict_k_split, "Ours at most")
+    return list_all
 
 
 def compare_r_qubo_iterative(dict_sums):
-    # get results from k=2 to k=n (r_qubo), and combine them into one dict
+    # get results from k=2 to k=n-1
     dict_k_split = filter_dict_by_substring(dict_sums, "_split_R_QUBO-iterative")
-    dict_n_split = filter_dict_by_substring(dict_sums, "R-QUBO")
-    dict_all = {**dict_k_split, **dict_n_split}
-    plot_values_and_times(dict_all, "R-QUBO")
+    #dict_n_split = filter_dict_by_substring(dict_sums, "R-QUBO")
+    #dict_all = {**dict_k_split, **dict_n_split}
+    #plot_values_and_times(dict_all, "R-QUBO")
+    list_all = sort_by_k(dict_k_split, "R-QUBO")
+    return list_all
+
+
+def sort_by_k(input_dict, title):
+    if "GCS-Q exactly" in title:
+        labels_x_axis = ['GCS-Q'] + list(range(3,28))
+    elif "GCS-Q at most" in title:
+        labels_x_axis = ['GCS-Q'] + list(range(3,28))
+    elif "Ours exactly" in title:
+        labels_x_axis = list(range(2,28))
+    elif "Ours at most" in title:
+        labels_x_axis = list(range(2,28))
+    elif "R-QUBO" in title:
+        labels_x_axis = list(range(2,28))
+    else:
+        raise Exception("Algorithm to plot unknown -> can't sort by k")
+    input = split_keys_at_underscore(input_dict)
+    values_qbsolv = [input[str(key)] for key in labels_x_axis]
+    return values_qbsolv
 
 
 def get_labels_x_axis(input_dict, title):
@@ -542,10 +660,11 @@ def split_keys_at_underscore(original_dict):
     for key, value in original_dict.items():
         if "split" in key:
             new_key = key.split('_', 1)[0]  # Split at the first occurrence of '_', before "split"
-        elif "parallel" in key:
-            new_key = key.split('_p', 1)[0]  # Split of the '_parallel'
         else:
-            new_key = key
+            if '_q' in key:
+                new_key = key.split('_q', 1)[0]  # Split of the '_qbsolv_parallel' or '_qaoa_parallel'
+            elif '_d' in key:
+                new_key = key.split('_d', 1)[0]  # Split of the '_dwave_parallel'
         new_dict[new_key] = value
 
     return new_dict
@@ -636,7 +755,8 @@ if __name__ == "__main__":
     # data_path = "results/eon_data/quantum/qbsolv/parallel/k=12/data_12_split_GCSQ_exactly_qbsolv_parallel__3949468976__2024-01-26_13-12-53.747804.pkl"
     # data = read_pickle_data(data_path)
     # print(data)
-    data_path = "results/eon_data/quantum/dwave"
+    data_path = "results/eon_data/quantum/qbsolv"
+    solver = [solver for solver in ["qbsolv", "qaoa", "dwave", "classical"] if solver in data_path][0]
     data_path_optima = "results/eon_data/classical"
     data_different_seeds = process_folder(data_path)
     feasible_data_different_seeds = filter_infeasible_coalitions(data_different_seeds)
@@ -647,7 +767,7 @@ if __name__ == "__main__":
     optima_list, times_classical_list = optima_dict['belyi'], times_classical_dict['belyi']
 
     data_values, stds_over_seeds, num_feasible_seeds, times, stds_times, num_successful_seeds = calculate_statistics_over_seeds(feasible_data_different_seeds)
-    print(data_values, "\n", stds_over_seeds)
+    #print(data_values, "\n", stds_over_seeds)
 
     # Absolute values
     data_summed = sum_over_same_sized_graphs(data_values)
@@ -665,15 +785,64 @@ if __name__ == "__main__":
 
     # Relative values
     relative_values = relative_solution_quality(data_values, optima_list)
-    rel_values_avg_over_graph_sizes, rel_values_std_over_graph_sizes = average_over_same_sized_graphs(relative_values)
-    nums_successful_over_graph_sizes, std_num_over_graph_sizes = average_over_same_sized_graphs(num_successful_seeds)
-    nums_feasible_over_graph_sizes, std_num_feasible_over_graph_sizes = average_over_same_sized_graphs(num_feasible_seeds)
     for algorithm_name, graph_size_list in relative_values.items():
         for i, graph_list in enumerate(graph_size_list):
             for j, n in enumerate(graph_list):
                 if n > 1.0:
                     print(algorithm_name, i, j, n)
-    pass
+    rel_values_avg_over_same_sized_graphs, rel_values_std_over_same_sized_graphs = average_over_same_sized_graphs(relative_values)
+    nums_successful_over_graph_sizes, std_num_over_graph_sizes = average_over_same_sized_graphs(num_successful_seeds)
+    nums_feasible_over_graph_sizes, std_num_feasible_over_graph_sizes = average_over_same_sized_graphs(num_feasible_seeds)
+    rel_values_over_graph_sizes = average_over_graph_sizes(rel_values_avg_over_same_sized_graphs)
+    rel_values_over_graph_sizes_std = std_over_graph_sizes(rel_values_avg_over_same_sized_graphs)
+
+    # Num optima found values
+    optima_found_dict = optimum_found(feasible_data_different_seeds, optima_list)
+    avg_optima_found_over_seeds, std_optima_found_over_seeds, _, _, _, _ = calculate_statistics_over_seeds(optima_found_dict)
+    optima_found_over_same_sized_graphs = sum_over_same_sized_graphs(avg_optima_found_over_seeds)
+    stds_optima_found_over_same_sized_graphs = sum_over_same_sized_graphs(std_optima_found_over_seeds)
+    num_opt_found_avg_over_graph_sizes = average_over_graph_sizes(optima_found_over_same_sized_graphs)
+    stds_num_opt_found_avg_over_graph_sizes = std_over_graph_sizes(optima_found_over_same_sized_graphs)
+
+
+    # Plots k's
+    # relative values
+    algorithm_names = ["iterative Kochenberger", "our iterative approach", "iterative R-QUBO", "k-split GCS-Q (exactly)", "k-split GCS-Q (at most)"]
+    averages_list_rel = [compare_ours_iterative_exactly(rel_values_over_graph_sizes), compare_ours_iterative_at_most(rel_values_over_graph_sizes), compare_r_qubo_iterative(rel_values_over_graph_sizes), compare_ks_GCSQ_exactly(rel_values_over_graph_sizes), compare_ks_GCSQ_at_most(rel_values_over_graph_sizes)]
+    stds_list_rel = [compare_ours_iterative_exactly(rel_values_over_graph_sizes_std),
+                     compare_ours_iterative_at_most(rel_values_over_graph_sizes_std),
+                     compare_r_qubo_iterative(rel_values_over_graph_sizes_std),
+                     compare_ks_GCSQ_exactly(rel_values_over_graph_sizes_std),
+                     compare_ks_GCSQ_at_most(rel_values_over_graph_sizes_std)]
+    colors = ["C0", "C1", "C2", "C3", "C4"]
+    plot_line_chart(algorithm_names=algorithm_names,averages_list=averages_list_rel,x_ticks=list(range(2,28)),colors=colors,xlabel="k",ylabel="Relative solution quality",title=f"Relative solution quality of k-split approaches using {solver}")
+    # num optima found
+    averages_list_opt = [compare_ours_iterative_exactly(num_opt_found_avg_over_graph_sizes),
+                         compare_ours_iterative_at_most(num_opt_found_avg_over_graph_sizes),
+                         compare_r_qubo_iterative(num_opt_found_avg_over_graph_sizes),
+                         compare_ks_GCSQ_exactly(num_opt_found_avg_over_graph_sizes),
+                         compare_ks_GCSQ_at_most(num_opt_found_avg_over_graph_sizes)]
+    stds_list_opt = [compare_ours_iterative_exactly(stds_num_opt_found_avg_over_graph_sizes),
+                     compare_ours_iterative_at_most(stds_num_opt_found_avg_over_graph_sizes),
+                     compare_r_qubo_iterative(stds_num_opt_found_avg_over_graph_sizes),
+                     compare_ks_GCSQ_exactly(stds_num_opt_found_avg_over_graph_sizes),
+                     compare_ks_GCSQ_at_most(stds_num_opt_found_avg_over_graph_sizes)]
+    plot_vertical_lines_chart(algorithm_names=algorithm_names, values=averages_list_opt, x_ticks=list(range(2,28)),colors=colors,xlabel="k",ylabel="Average number of optima found per graph size",title=f"Average number of optima found of k-split approaches using {solver}")
+    # absolute values
+    averages_list_sums = [compare_ours_iterative_exactly(data_summed),
+                         compare_ours_iterative_at_most(data_summed),
+                         compare_r_qubo_iterative(data_summed),
+                         compare_ks_GCSQ_exactly(data_summed),
+                         compare_ks_GCSQ_at_most(data_summed)]
+    stds_list_sums = [compare_ours_iterative_exactly(stds_summed),
+                     compare_ours_iterative_at_most(stds_summed),
+                     compare_r_qubo_iterative(stds_summed),
+                     compare_ks_GCSQ_exactly(stds_summed),
+                     compare_ks_GCSQ_at_most(stds_summed)]
+    for a, algorithm in enumerate(algorithm_names):
+        print(algorithm, ": ")
+        generate_latex_table(column_names=list(range(2,28)), values_list=averages_list_sums[a], std_devs_list=stds_list_sums[a], row_names=[4,6,8,10,12,14,16,18,20,22,24,26,28])
+
 
     '''
     compare_ks_GCSQ_exactly(avg_data_summed)

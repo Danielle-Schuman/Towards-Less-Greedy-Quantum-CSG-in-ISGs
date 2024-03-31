@@ -1,5 +1,6 @@
 import networkx as nx
 import pickle
+import numpy as np
 
 def transform_for_nx(naeimeh_graph):
     edges = []
@@ -21,3 +22,21 @@ for num_agents in graph_sizes:
         G = nx.Graph()
         G.add_weighted_edges_from(edges)
         nx.write_weighted_edgelist(G, f"eon_data_edgelists/eon_graph_size_{num_agents}_num_{graph_num}.edgelist")
+
+# Also, while we are at it anyway, determine some stats on the graph weights
+max = 0
+min = 0
+list = []
+for key, graph_size_list in data.items():
+    for graph_list in graph_size_list:
+        for key, value in graph_list.items():
+            if value < min:
+                min = value
+            elif value > max:
+                max = value
+            list.append(value)
+print(min, max)
+list = np.array(list)
+avg = np.mean(list)
+std = np.std(list)
+print(avg, std)

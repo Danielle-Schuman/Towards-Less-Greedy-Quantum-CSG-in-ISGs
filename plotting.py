@@ -244,8 +244,13 @@ def plot_line_chart_with_stds(algorithm_names, averages_list, std_devs_list, col
 
     plt.figure(figsize=(10, 6))
 
+    # Calculate the width of each line
+    line_distance = 0.05
+    line_distance_total = len(algorithm_names) * line_distance
+    line_distance_shift = np.linspace(-line_distance_total / 2, line_distance_total / 2, len(algorithm_names))
+
     for i in range(len(algorithm_names)):
-        plt.errorbar(x_ticks, averages_list[i], yerr=std_devs_list[i], fmt='o-', color=colors[i], label=algorithm_names[i], capsize=5)
+        plt.errorbar(x_ticks + line_distance_shift[i], averages_list[i], yerr=std_devs_list[i], fmt='o-', color=colors[i], label=algorithm_names[i], capsize=5)
 
     plt.xlabel(xlabel)
     plt.ylabel(ylabel)
@@ -884,6 +889,7 @@ if __name__ == "__main__":
 
 
     # Plots k's
+    '''
     # relative values
 
     algorithm_names = ["iterative Kochenberger", "our iterative approach", "iterative R-QUBO", "k-split GCS-Q (exactly)", "k-split GCS-Q (at most)"]
@@ -925,3 +931,73 @@ if __name__ == "__main__":
         table = generate_latex_table(column_names=[4,6,8,10,12,14,16,18,20,22,24,26,28], values_list=averages_list_sums[a], std_devs_list=stds_list_sums[a], row_names=list(range(2,28)))
         print(table)
         print("\n\n")
+    '''
+
+    # plot graph sizes
+    graph_sizes = [4,6,8,10,12,14,16,18,20,22,24,26,28]
+    # non-iterative algorithms
+    algorithm_names_non_iterative = [f"GCS-Q", "Kochenberger", "our approach", "R-QUBO", "n-split GCS-Q"]
+    algorithm_keys_non_iterative = [f"GCS-Q_{solver}_parallel", f"ours_n_{solver}", f"ours_n_half_{solver}", f"R-QUBO_{solver}", f"n_split_GCSQ_{solver}"]
+    colors_non_iterative = ["C6", "C0", "C1", "C2", "C3"]
+
+    # Relative values
+    avgs_list_non_it = [rel_values_avg_over_same_sized_graphs[a] for a in algorithm_keys_non_iterative]
+    stds_list_non_it = [rel_values_std_over_same_sized_graphs[a] for a in algorithm_keys_non_iterative]
+    plot_line_chart_with_stds(algorithm_names=algorithm_names_non_iterative, averages_list=avgs_list_non_it, std_devs_list=stds_list_non_it,colors=colors_non_iterative,x_ticks=graph_sizes, xlabel="n", ylabel="Relative solution quality",title=f"Relative solution quality of non-iterative approaches using {solver} with respect to n")
+
+    # without n_split GCS-Q and GCS-Q
+    avgs_list_non_it = [rel_values_avg_over_same_sized_graphs[a] for a in algorithm_keys_non_iterative[1:-1]]
+    stds_list_non_it = [rel_values_std_over_same_sized_graphs[a] for a in algorithm_keys_non_iterative[1:-1]]
+    plot_line_chart_with_stds(algorithm_names=algorithm_names_non_iterative[1:-1], averages_list=avgs_list_non_it,
+                              std_devs_list=stds_list_non_it, colors=colors_non_iterative[1:-1], x_ticks=graph_sizes,
+                              xlabel="n", ylabel="Relative solution quality",
+                              title=f"Relative solution quality of non-iterative approaches using {solver} with respect to n (2)")
+
+    for k in [2, 3, 4, 5]:
+        if k == 2:
+            algorithm_names_iterative = ["iterative Kochenberger", "our iterative approach", "iterative R-QUBO", "GCS-Q"]
+            algorithm_keys_iterative = [f"{k}_split_ours_iterative_exactly_{solver}_parallel",
+                                            f"{k}_split_ours_iterative_at_most_{solver}_parallel",
+                                            f"{k}_split_R_QUBO-iterative_{solver}_parallel",
+                                            f"GCS-Q_{solver}_parallel"]
+            colors_iterative = ["C0", "C1", "C2", "C6"]
+        else:
+            algorithm_names_iterative = ["iterative Kochenberger", "our iterative approach", "iterative R-QUBO",
+                               "k-split GCS-Q (exactly)", "k-split GCS-Q (at most)"]
+            algorithm_keys_iterative = [f"{k}_split_ours_iterative_exactly_{solver}_parallel", f"{k}_split_ours_iterative_at_most_{solver}_parallel", f"{k}_split_R_QUBO-iterative_{solver}_parallel",
+                                            f"{k}_split_GCSQ_exactly_{solver}_parallel", f"{k}_split_GCSQ_at_most_{solver}_parallel"]
+            colors_iterative = ["C0", "C1", "C2", "C3", "C4"]
+        avgs_list_it = [rel_values_avg_over_same_sized_graphs[a] for a in algorithm_keys_iterative]
+        stds_list_it = [rel_values_std_over_same_sized_graphs[a] for a in algorithm_keys_iterative]
+        if k == 5:
+            x_ticks = graph_sizes[1:]
+        else:
+            x_ticks = graph_sizes
+        plot_line_chart_with_stds(algorithm_names=algorithm_names_iterative, averages_list=avgs_list_it,
+                                  std_devs_list=stds_list_it, colors=colors_iterative, x_ticks=x_ticks,
+                                  xlabel="n", ylabel="Relative solution quality",
+                                  title=f"Relative solution quality of {k}-split approaches using {solver} with respect to n")
+        if k > 2:
+            plot_line_chart_with_stds(algorithm_names=algorithm_names_iterative[:4], averages_list=avgs_list_it[:4],
+                                      std_devs_list=stds_list_it[:4], colors=colors_iterative[:4], x_ticks=x_ticks,
+                                      xlabel="n", ylabel="Relative solution quality",
+                                      title=f"Relative solution quality of {k}-split approaches using {solver} with respect to n (2)")
+            plot_line_chart_with_stds(algorithm_names=algorithm_names_iterative[:3], averages_list=avgs_list_it[:3],
+                                      std_devs_list=stds_list_it[:3], colors=colors_iterative[:3], x_ticks=x_ticks,
+                                      xlabel="n", ylabel="Relative solution quality",
+                                      title=f"Relative solution quality of {k}-split approaches using {solver} with respect to n (3)")
+
+    algorithm_names_iterative = ["iterative Kochenberger", "our iterative approach", "iterative R-QUBO",
+                                 "k-split GCS-Q (exactly)", "k-split GCS-Q (at most)"]
+    colors_iterative = [(0.12156862745098039, 0.4666666666666667, 0.7058823529411765, 1.0), (1.0, 0.4980392156862745, 0.054901960784313725, 1.0), (0.17254901960784313, 0.6274509803921569, 0.17254901960784313, 1.0), (0.8392156862745098, 0.15294117647058825, 0.1568627450980392, 1.0), (0.5803921568627451, 0.403921568627451, 0.7411764705882353, 1.0)]
+    # C6: (0.8901960784313725, 0.4666666666666667, 0.7607843137254902, 1.0)
+    algorithm_keys_iterative = [f"_split_ours_iterative_exactly_{solver}_parallel",
+                                f"_split_ours_iterative_at_most_{solver}_parallel",
+                                f"_split_R_QUBO-iterative_{solver}_parallel",
+                                f"_split_GCSQ_exactly_{solver}_parallel",
+                                f"_split_GCSQ_at_most_{solver}_parallel"]
+    ks = [2, 3, 4, 5]
+    for algorithm in algorithm_keys_iterative:
+        avgs_list_it = [rel_values_avg_over_same_sized_graphs[k + algorithm] for k in ks]
+        stds_list_it = [rel_values_std_over_same_sized_graphs[k + algorithm] for k in ks]
+

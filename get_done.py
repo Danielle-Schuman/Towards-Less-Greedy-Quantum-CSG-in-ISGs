@@ -27,7 +27,12 @@ def process_folder(folder_path):
     return folder_contents
 
 if __name__ == "__main__":
-    data_path = "results/eon_data/quantum/qaoa/parallel"
+    '''
+    data_path = "results/eon_data/quantum/unused_for_plotting/other_unused_qaoa/k=2_originals/data_2_split_ours_iterative_at_most_qaoa_parallel__3949468976__2024-03-21_23-39-40.139813.pkl"
+    data = read_pickle_data(data_path)
+    print(data)
+    '''
+    data_path = "results/eon_data/quantum/qaoa/parallel/k=2"
     done_different_seeds = process_folder(data_path)
     sorted = sorted(done_different_seeds.items())
     for algorith_name, data in sorted:

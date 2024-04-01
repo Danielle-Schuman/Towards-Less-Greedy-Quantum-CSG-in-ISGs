@@ -980,6 +980,22 @@ def plot_over_graph_sizes_with_classical_baseline(averages_dict, stds_dict, solv
                               xlabel="n", ylabel=ylabel,
                               title=f"{title} non-iterative approaches using {solver} with respect to n")
 
+    algorithm_names_iterative = ["Belyi", "GCS-Q", "iterative Kochenberger", "our iterative approach", "iterative R-QUBO",
+                                 "k-split GCS-Q (exactly)", "k-split GCS-Q (at most)"]
+    algorithm_keys_iterative = [f"GCS-Q_{solver}_parallel", f"4_split_ours_iterative_exactly_{solver}_parallel",
+                                f"4_split_ours_iterative_at_most_{solver}_parallel",
+                                f"4_split_R_QUBO-iterative_{solver}_parallel",
+                                f"4_split_GCSQ_exactly_{solver}_parallel",
+                                f"4_split_GCSQ_at_most_{solver}_parallel"]
+    colors_iterative = ["0.8", "C6", "C0", "C1", "C2", "C3", "C4"]
+    avgs_list_it = [classical] + [averages_dict[a] for a in algorithm_keys_iterative]
+    stds_list_it = [classical_stds] + [stds_dict[a] for a in algorithm_keys_iterative]
+    x_ticks = graph_sizes
+    function(algorithm_names=algorithm_names_iterative, values=avgs_list_it,
+                              std_devs=stds_list_it, colors=colors_iterative, x_ticks=x_ticks,
+                              xlabel="n", ylabel=ylabel,
+                              title=f"{title} 4-split approaches using {solver} with respect to n")
+
     # total best (at least for QBSolv)
     algorithm_names_all = ["Belyi", f"GCS-Q", "our approach", "R-QUBO", "iterative R-QUBO (4-split)",
                            "our iterative approach (3-split)"]

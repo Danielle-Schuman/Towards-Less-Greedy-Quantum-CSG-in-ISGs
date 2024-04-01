@@ -5,6 +5,7 @@ import numbers
 import math
 import pickle
 import os
+import copy
 import statistics
 from tabulate import tabulate
 
@@ -941,12 +942,17 @@ def plot_over_graph_sizes(averages_dict, stds_dict, solver, ylabel, title, funct
     # colors_iterative = [(0.12156862745098039, 0.4666666666666667, 0.7058823529411765, 1.0), (1.0, 0.4980392156862745, 0.054901960784313725, 1.0), (0.17254901960784313, 0.6274509803921569, 0.17254901960784313, 1.0), (0.8392156862745098, 0.15294117647058825, 0.1568627450980392, 1.0), (0.5803921568627451, 0.403921568627451, 0.7411764705882353, 1.0)]
     # C6: (0.8901960784313725, 0.4666666666666667, 0.7607843137254902, 1.0)
     colors_iterative = ["C5", "C7", "C8", "C9"]
-    algorithm_keys_iterative = [f"_split_ours_iterative_exactly_{solver}_parallel",
-                                f"_split_ours_iterative_at_most_{solver}_parallel",
-                                f"_split_R_QUBO-iterative_{solver}_parallel",
-                                f"_split_GCSQ_exactly_{solver}_parallel",
-                                f"_split_GCSQ_at_most_{solver}_parallel"]
-
+    if solver == "dwave":
+        algorithm_keys_iterative = [f"_split_ours_iterative_exactly_{solver}_parallel",
+                                    f"_split_ours_iterative_at_most_{solver}_parallel",
+                                    f"_split_R_QUBO-iterative_{solver}_parallel",
+                                    f"_split_GCSQ_exactly_{solver}_parallel"]
+    else:
+        algorithm_keys_iterative = [f"_split_ours_iterative_exactly_{solver}_parallel",
+                                    f"_split_ours_iterative_at_most_{solver}_parallel",
+                                    f"_split_R_QUBO-iterative_{solver}_parallel",
+                                    f"_split_GCSQ_exactly_{solver}_parallel",
+                                    f"_split_GCSQ_at_most_{solver}_parallel"]
     print("Plotting iterative algorithms")
     ks = [2, 3, 4, 5]
     k_names = ["k=2", "k=3", "k=4", "k=5"]
@@ -1004,9 +1010,20 @@ def plot_over_graph_sizes(averages_dict, stds_dict, solver, ylabel, title, funct
                                   x_ticks=graph_sizes,
                                   xlabel="n", ylabel=ylabel,
                                   title=f"{title} the best approaches using {solver} with respect to n (+ GCS-Q)")
-    elif solver == "qaoa":
-        pass
-        # iterative approaches are alredy best.
+    else:
+        # total best (at least for QAOA and D-Wave)
+        algorithm_names_all_1 = [f"GCS-Q", "iterative R-QUBO (2-split)"]
+        algorithm_keys_all_1 = [f"GCS-Q_{solver}_parallel", f"2_split_R_QUBO-iterative_{solver}_parallel"]
+        colors_all_1 = ["C6", "C8"]
+        avgs_list_all, algorithm_names_all, colors_all = adjust_lists_with_existing(averages_dict, algorithm_keys_all_1,
+                                                                                    algorithm_names_all_1, colors_all_1)
+        stds_list_all, _, _ = adjust_lists_with_existing(stds_dict, algorithm_keys_all_1,
+                                                         algorithm_names_all_1, colors_all_1)
+        function(algorithm_names=algorithm_names_all, values=avgs_list_all,
+                 std_devs=stds_list_all, colors=colors_all,
+                 x_ticks=graph_sizes,
+                 xlabel="n", ylabel=ylabel,
+                 title=f"{title} the best approaches using {solver} with respect to n")
 
 
 def plot_over_graph_sizes_with_classical_baseline(averages_dict, stds_dict, solver, ylabel, title, function, classical):
@@ -1020,6 +1037,8 @@ def plot_over_graph_sizes_with_classical_baseline(averages_dict, stds_dict, solv
         k = 2
     elif solver == "qbsolv":
         k = 4
+    else: # dwave
+        k = 2
 
     # non-iterative algorithms
     algorithm_names_non_iterative = ["Belyi", f"GCS-Q", "Kochenberger", "our approach", "R-QUBO", "n-split GCS-Q"]
@@ -1072,7 +1091,28 @@ def plot_over_graph_sizes_with_classical_baseline(averages_dict, stds_dict, solv
                                   x_ticks=graph_sizes,
                                   xlabel="n", ylabel=ylabel,
                                   title=f"{title} the best approaches using {solver} with respect to n (+ GCS-Q)")
+    else:
+        # total best (at least for QAOA and D-Wave)
+        algorithm_names_all_1 = ["Belyi", f"GCS-Q", "iterative R-QUBO (2-split)"]
+        algorithm_keys_all_1 = ["belyi", f"GCS-Q_{solver}_parallel", f"2_split_R_QUBO-iterative_{solver}_parallel"]
+        colors_all_1 = ["0.8", "C6", "C8"]
+        avgs_list_all, algorithm_names_all, colors_all = adjust_lists_with_existing(averages_dict, algorithm_keys_all_1,
+                                                                                    algorithm_names_all_1, colors_all_1)
+        stds_list_all, _, _ = adjust_lists_with_existing(stds_dict, algorithm_keys_all_1,
+                                                         algorithm_names_all_1, colors_all_1)
+        function(algorithm_names=algorithm_names_all, values=avgs_list_all,
+                 std_devs=stds_list_all, colors=colors_all,
+                 x_ticks=graph_sizes,
+                 xlabel="n", ylabel=ylabel,
+                 title=f"{title} the best approaches using {solver} with respect to n")
 
+
+
+def get_percent_feasible(num_successful, num_feasible):
+    percent_feasible = {}
+    for algorithm in num_successful:
+        percent_feasible[algorithm] = [[x / y for x, y in zip(sublist1, sublist2)] for sublist1, sublist2 in zip(num_feasible[algorithm], num_successful[algorithm])]
+    return percent_feasible
 
 
 
@@ -1080,7 +1120,7 @@ if __name__ == "__main__":
     # data_path = "results/eon_data/quantum/qbsolv/parallel/k=12/data_12_split_GCSQ_exactly_qbsolv_parallel__3949468976__2024-01-26_13-12-53.747804.pkl"
     # data = read_pickle_data(data_path)
     # print(data)
-    data_path = "results/eon_data/quantum/qaoa"
+    data_path = "results/eon_data/quantum/dwave"
     solver = [solver for solver in ["qbsolv", "qaoa", "dwave", "classical"] if solver in data_path][0]
     data_path_optima = "results/eon_data/classical"
     data_different_seeds = process_folder(data_path)
@@ -1119,10 +1159,16 @@ if __name__ == "__main__":
                 if n > 1.0:
                     print(algorithm_name, i, j, n)
     rel_values_over_same_sized_graphs, stds_rel_values_over_same_sized_graphs = average_over_same_sized_graphs(relative_values)
-    nums_successful_over_same_sized_graphs, std_num_over_same_sized_graphs = average_over_same_sized_graphs(num_successful_seeds)
-    nums_feasible_over_same_sized_graphs, std_num_feasible_over_same_sized_graphs = average_over_same_sized_graphs(num_feasible_seeds)
     rel_values_over_graph_sizes = average_over_graph_sizes(rel_values_over_same_sized_graphs)
     rel_values_over_graph_sizes_std = std_over_graph_sizes(rel_values_over_same_sized_graphs)
+
+    # Num solutions
+    nums_successful_over_same_sized_graphs, std_num_over_same_sized_graphs = average_over_same_sized_graphs(
+        num_successful_seeds)
+    nums_feasible_over_same_sized_graphs, std_num_feasible_over_same_sized_graphs = average_over_same_sized_graphs(
+        num_feasible_seeds)
+    percent_feasible = get_percent_feasible(num_successful_seeds, num_feasible_seeds)
+    percent_feasible_over_same_sized_graphs, stds_percent_feasible_over_same_sized_graphs = average_over_same_sized_graphs(percent_feasible)
 
     # Num optima found values
     optima_found_dict = optimum_found(feasible_data_different_seeds, optima_list)
@@ -1134,47 +1180,114 @@ if __name__ == "__main__":
 
 
     # Plots k's
-    # relative values
+    # make copy for later
+    copy_times = copy.deepcopy(times_summed)
+    copy_times_std = copy.deepcopy(stds_times_summed)
 
-    algorithm_names = ["iterative Kochenberger", "our iterative approach", "iterative R-QUBO", "k-split GCS-Q (exactly)", "k-split GCS-Q (at most)"]
-    colors = ["C0", "C1", "C2", "C3", "C4"]
+    if solver == "dwave":
+        algorithm_names = ["iterative Kochenberger", "our iterative approach", "iterative R-QUBO",
+                           "k-split GCS-Q (exactly)"]
+        colors = ["C0", "C1", "C2", "C3"]
 
-    averages_list_rel = [compare_ours_iterative_exactly(rel_values_over_graph_sizes), compare_ours_iterative_at_most(rel_values_over_graph_sizes), compare_r_qubo_iterative(rel_values_over_graph_sizes), compare_ks_GCSQ_exactly(rel_values_over_graph_sizes), compare_ks_GCSQ_at_most(rel_values_over_graph_sizes)]
-    stds_list_rel = [compare_ours_iterative_exactly(rel_values_over_graph_sizes_std),
-                     compare_ours_iterative_at_most(rel_values_over_graph_sizes_std),
-                     compare_r_qubo_iterative(rel_values_over_graph_sizes_std),
-                     compare_ks_GCSQ_exactly(rel_values_over_graph_sizes_std),
-                     compare_ks_GCSQ_at_most(rel_values_over_graph_sizes_std)]
+        averages_list_rel = [compare_ours_iterative_exactly(rel_values_over_graph_sizes),
+                             compare_ours_iterative_at_most(rel_values_over_graph_sizes),
+                             compare_r_qubo_iterative(rel_values_over_graph_sizes),
+                             compare_ks_GCSQ_exactly(rel_values_over_graph_sizes)]
+        stds_list_rel = [compare_ours_iterative_exactly(rel_values_over_graph_sizes_std),
+                         compare_ours_iterative_at_most(rel_values_over_graph_sizes_std),
+                         compare_r_qubo_iterative(rel_values_over_graph_sizes_std),
+                         compare_ks_GCSQ_exactly(rel_values_over_graph_sizes_std)]
+        # num optima found
+        averages_list_opt = [compare_ours_iterative_exactly(num_opt_found_avg_over_graph_sizes),
+                             compare_ours_iterative_at_most(num_opt_found_avg_over_graph_sizes),
+                             compare_r_qubo_iterative(num_opt_found_avg_over_graph_sizes),
+                             compare_ks_GCSQ_exactly(num_opt_found_avg_over_graph_sizes)]
+        stds_list_opt = [compare_ours_iterative_exactly(stds_num_opt_found_avg_over_graph_sizes),
+                         compare_ours_iterative_at_most(stds_num_opt_found_avg_over_graph_sizes),
+                         compare_r_qubo_iterative(stds_num_opt_found_avg_over_graph_sizes),
+                         compare_ks_GCSQ_exactly(stds_num_opt_found_avg_over_graph_sizes)]
+        # abs values
+        averages_list_sums = [compare_ours_iterative_exactly(data_summed),
+                              compare_ours_iterative_at_most(data_summed),
+                              compare_r_qubo_iterative(data_summed),
+                              compare_ks_GCSQ_exactly(data_summed)]
+        stds_list_sums = [compare_ours_iterative_exactly(stds_summed),
+                          compare_ours_iterative_at_most(stds_summed),
+                          compare_r_qubo_iterative(stds_summed),
+                          compare_ks_GCSQ_exactly(stds_summed)]
+        # times
+        averages_times_sums = [compare_ours_iterative_exactly(copy_times),
+                               compare_ours_iterative_at_most(copy_times),
+                               compare_r_qubo_iterative(copy_times),
+                               compare_ks_GCSQ_exactly(copy_times)]
+        stds_times_sums = [compare_ours_iterative_exactly(copy_times_std),
+                           compare_ours_iterative_at_most(copy_times_std),
+                           compare_r_qubo_iterative(copy_times_std),
+                           compare_ks_GCSQ_exactly(copy_times_std)]
+    else:
+        algorithm_names = ["iterative Kochenberger", "our iterative approach", "iterative R-QUBO", "k-split GCS-Q (exactly)", "k-split GCS-Q (at most)"]
+        colors = ["C0", "C1", "C2", "C3", "C4"]
+        # relative values
+        averages_list_rel = [compare_ours_iterative_exactly(rel_values_over_graph_sizes), compare_ours_iterative_at_most(rel_values_over_graph_sizes), compare_r_qubo_iterative(rel_values_over_graph_sizes), compare_ks_GCSQ_exactly(rel_values_over_graph_sizes), compare_ks_GCSQ_at_most(rel_values_over_graph_sizes)]
+        stds_list_rel = [compare_ours_iterative_exactly(rel_values_over_graph_sizes_std),
+                         compare_ours_iterative_at_most(rel_values_over_graph_sizes_std),
+                         compare_r_qubo_iterative(rel_values_over_graph_sizes_std),
+                         compare_ks_GCSQ_exactly(rel_values_over_graph_sizes_std),
+                         compare_ks_GCSQ_at_most(rel_values_over_graph_sizes_std)]
+        # num optima found
+        averages_list_opt = [compare_ours_iterative_exactly(num_opt_found_avg_over_graph_sizes),
+                             compare_ours_iterative_at_most(num_opt_found_avg_over_graph_sizes),
+                             compare_r_qubo_iterative(num_opt_found_avg_over_graph_sizes),
+                             compare_ks_GCSQ_exactly(num_opt_found_avg_over_graph_sizes),
+                             compare_ks_GCSQ_at_most(num_opt_found_avg_over_graph_sizes)]
+        stds_list_opt = [compare_ours_iterative_exactly(stds_num_opt_found_avg_over_graph_sizes),
+                         compare_ours_iterative_at_most(stds_num_opt_found_avg_over_graph_sizes),
+                         compare_r_qubo_iterative(stds_num_opt_found_avg_over_graph_sizes),
+                         compare_ks_GCSQ_exactly(stds_num_opt_found_avg_over_graph_sizes),
+                         compare_ks_GCSQ_at_most(stds_num_opt_found_avg_over_graph_sizes)]
+        # abs values
+        averages_list_sums = [compare_ours_iterative_exactly(data_summed),
+                              compare_ours_iterative_at_most(data_summed),
+                              compare_r_qubo_iterative(data_summed),
+                              compare_ks_GCSQ_exactly(data_summed),
+                              compare_ks_GCSQ_at_most(data_summed)]
+        stds_list_sums = [compare_ours_iterative_exactly(stds_summed),
+                          compare_ours_iterative_at_most(stds_summed),
+                          compare_r_qubo_iterative(stds_summed),
+                          compare_ks_GCSQ_exactly(stds_summed),
+                          compare_ks_GCSQ_at_most(stds_summed)]
+        # times
+        averages_times_sums = [compare_ours_iterative_exactly(copy_times),
+                              compare_ours_iterative_at_most(copy_times),
+                              compare_r_qubo_iterative(copy_times),
+                              compare_ks_GCSQ_exactly(copy_times),
+                              compare_ks_GCSQ_at_most(copy_times)]
+        stds_times_sums = [compare_ours_iterative_exactly(copy_times_std),
+                          compare_ours_iterative_at_most(copy_times_std),
+                          compare_r_qubo_iterative(copy_times_std),
+                          compare_ks_GCSQ_exactly(copy_times_std),
+                          compare_ks_GCSQ_at_most(copy_times_std)]
     x_ticks = list(range(2, 28))[:len(averages_list_rel[0])]
     plot_line_chart(algorithm_names=algorithm_names, values=averages_list_rel, x_ticks=x_ticks, colors=colors, xlabel="k", ylabel="Relative solution quality", title=f"Relative solution quality of k-split approaches using {solver}")
     # num optima found
-    averages_list_opt = [compare_ours_iterative_exactly(num_opt_found_avg_over_graph_sizes),
-                         compare_ours_iterative_at_most(num_opt_found_avg_over_graph_sizes),
-                         compare_r_qubo_iterative(num_opt_found_avg_over_graph_sizes),
-                         compare_ks_GCSQ_exactly(num_opt_found_avg_over_graph_sizes),
-                         compare_ks_GCSQ_at_most(num_opt_found_avg_over_graph_sizes)]
-    stds_list_opt = [compare_ours_iterative_exactly(stds_num_opt_found_avg_over_graph_sizes),
-                     compare_ours_iterative_at_most(stds_num_opt_found_avg_over_graph_sizes),
-                     compare_r_qubo_iterative(stds_num_opt_found_avg_over_graph_sizes),
-                     compare_ks_GCSQ_exactly(stds_num_opt_found_avg_over_graph_sizes),
-                     compare_ks_GCSQ_at_most(stds_num_opt_found_avg_over_graph_sizes)]
     plot_vertical_lines_chart(algorithm_names=algorithm_names, values=averages_list_opt, x_ticks=x_ticks,colors=colors,xlabel="k",ylabel="Average number of optima found per graph size",title=f"Average number of optima found of k-split approaches using {solver}")
 
     # absolute values
-    averages_list_sums = [compare_ours_iterative_exactly(data_summed),
-                         compare_ours_iterative_at_most(data_summed),
-                         compare_r_qubo_iterative(data_summed),
-                         compare_ks_GCSQ_exactly(data_summed),
-                         compare_ks_GCSQ_at_most(data_summed)]
-    stds_list_sums = [compare_ours_iterative_exactly(stds_summed),
-                     compare_ours_iterative_at_most(stds_summed),
-                     compare_r_qubo_iterative(stds_summed),
-                     compare_ks_GCSQ_exactly(stds_summed),
-                     compare_ks_GCSQ_at_most(stds_summed)]
     for a, algorithm in enumerate(algorithm_names):
         print(algorithm, ": ")
         row_names = list(range(2, 28))[:len(averages_list_sums[a])]
         table = generate_latex_table(column_names=[4,6,8,10,12,14,16,18,20,22,24,26,28], values_list=averages_list_sums[a], std_devs_list=stds_list_sums[a], row_names=row_names)
+        print(table)
+        print("\n\n")
+
+    # times
+    print("\n\nTimes:\n")
+    for a, algorithm in enumerate(algorithm_names):
+        print(algorithm, ": ")
+        row_names = list(range(2, 28))[:len(averages_times_sums[a])]
+        table = generate_latex_table(column_names=[4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28],
+                                     values_list=averages_times_sums[a], std_devs_list=stds_times_sums[a],
+                                     row_names=row_names)
         print(table)
         print("\n\n")
 
@@ -1194,6 +1307,9 @@ if __name__ == "__main__":
     print("Plotting num feasible solutions")
     plot_over_graph_sizes(nums_feasible_over_same_sized_graphs, std_num_feasible_over_same_sized_graphs, solver,
                           "Number of feasible solutions found", "Number of feasible solutions found by", plot_vertical_lines_chart)
+    # percentage feasible solutions found
+    print("Plotting percentage feasible solutions")
+    plot_over_graph_sizes(percent_feasible_over_same_sized_graphs, stds_percent_feasible_over_same_sized_graphs, solver,"Proportion of feasible solutions found", "Proportion of feasible solutions found by", plot_vertical_lines_chart)
     # time taken
     print("Plotting time")
     plot_over_graph_sizes(times_summed, stds_times_summed, solver,
@@ -1201,5 +1317,6 @@ if __name__ == "__main__":
     plot_over_graph_sizes_with_classical_baseline(times_summed, stds_times_summed, solver,
                           "Time (in seconds)", "Time taken by", plot_line_chart_with_stds, times_classical_summed)
     print("Done.")
+
 
 

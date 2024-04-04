@@ -74,7 +74,7 @@ def main(algorithm_list, data, graph_sizes, num_graphs_per_size, experiment, dir
     for algorithm in algorithm_list:
         too_large = False
         if isinstance(algorithm, IterativeQuantumAlgorithmWithK):
-            agents = graph_sizes[4:]
+            agents = graph_sizes[4:8]
             for num_agents in agents:
                 if algorithm.k <= num_agents:
                     print(f"\n\n\nTest for graphsize {num_agents}")
@@ -166,7 +166,7 @@ def main(algorithm_list, data, graph_sizes, num_graphs_per_size, experiment, dir
 
 if __name__ == "__main__":
     # TODO: Determine sensible number of seeds for statistical significance
-    seeds = [3949468976, 2223921875, 1665964778, 1980386705, 1364436995, 2881126339]
+    seeds = [2223921875, 1665964778, 1980386705, 1364436995, 2881126339]
     #seeds = [3949468976, 2223921875, 1665964778, 1980386705, 1364436995, 2881126339, 2777013863, 3875681486, 4038098247, 3748732874]
     for seed in seeds:
         # Setting the seed

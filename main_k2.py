@@ -74,7 +74,7 @@ def main(algorithm_list, data, graph_sizes, num_graphs_per_size, experiment, dir
     for algorithm in algorithm_list:
         too_large = False
         if isinstance(algorithm, IterativeQuantumAlgorithmWithK):
-            agents = graph_sizes[4:8]
+            agents = [20]
             for num_agents in agents:
                 if algorithm.k <= num_agents:
                     print(f"\n\n\nTest for graphsize {num_agents}")

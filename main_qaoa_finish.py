@@ -174,7 +174,7 @@ if __name__ == "__main__":
     for _ in range(num_seeds):
         # Setting the seed
         #seed = args.seed
-        seed = 2223921875
+        seed = 3949468976
         random.seed(seed)
         np.random.seed(seed)
         print(f"Seed: {seed}")

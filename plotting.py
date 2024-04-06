@@ -307,7 +307,10 @@ def plot_vertical_lines_chart(algorithm_names, values, x_ticks, colors, xlabel, 
     plt.ylabel(ylabel)
     plt.title(title)
     plt.xticks(x_ticks)
-    plt.legend(loc='lower left')
+    if "qaoa" in title:
+        plt.legend(loc='upper right')
+    else:
+        plt.legend(loc='lower left')
     plt.grid(True)
     plt.savefig(f"plots/{title.replace(' ', '_')}.pdf", format='pdf')
     #plt.show()
@@ -925,22 +928,33 @@ def plot_over_graph_sizes(averages_dict, stds_dict, solver, ylabel, title, funct
                                           xlabel="n", ylabel=ylabel,
                                           title=f"{title} {k}-split approaches using {solver} with respect to n")
             else:
-                function(algorithm_names=names, values=avgs_list_it,
-                         std_devs=stds_list_it, colors=colors, x_ticks=x_ticks,
-                         xlabel="n", ylabel=ylabel,
-                         title=f"{title} {k}-split approaches using {solver} with respect to n (inkl. k-split GCS-Q (at most))")
-                function(algorithm_names=names[:4], values=avgs_list_it[:4],
-                                          std_devs=stds_list_it[:4], colors=colors[:4], x_ticks=x_ticks,
-                                          xlabel="n", ylabel=ylabel,
-                                          title=f"{title} {k}-split approaches using {solver} with respect to n")
-                function(algorithm_names=names[:3], values=avgs_list_it[:3],
-                                          std_devs=stds_list_it[:3], colors=colors[:3], x_ticks=x_ticks,
-                                          xlabel="n", ylabel=ylabel,
-                                          title=f"{title} {k}-split approaches using {solver} with respect to n (3)")
-                function(algorithm_names=names[1:3], values=avgs_list_it[1:3],
-                                          std_devs=stds_list_it[1:3], colors=colors[1:3], x_ticks=x_ticks,
-                                          xlabel="n", ylabel=ylabel,
-                                          title=f"{title} {k}-split approaches using {solver} with respect to n (4)")
+                if solver == "qbsolv":
+                    function(algorithm_names=names, values=avgs_list_it,
+                             std_devs=stds_list_it, colors=colors, x_ticks=x_ticks,
+                             xlabel="n", ylabel=ylabel,
+                             title=f"{title} {k}-split approaches using {solver} with respect to n (inkl. k-split GCS-Q (at most))")
+                    function(algorithm_names=names[:4], values=avgs_list_it[:4],
+                                              std_devs=stds_list_it[:4], colors=colors[:4], x_ticks=x_ticks,
+                                              xlabel="n", ylabel=ylabel,
+                                              title=f"{title} {k}-split approaches using {solver} with respect to n")
+                    function(algorithm_names=names[:3], values=avgs_list_it[:3],
+                                              std_devs=stds_list_it[:3], colors=colors[:3], x_ticks=x_ticks,
+                                              xlabel="n", ylabel=ylabel,
+                                              title=f"{title} {k}-split approaches using {solver} with respect to n (3)")
+                    function(algorithm_names=names[1:3], values=avgs_list_it[1:3],
+                                              std_devs=stds_list_it[1:3], colors=colors[1:3], x_ticks=x_ticks,
+                                              xlabel="n", ylabel=ylabel,
+                                              title=f"{title} {k}-split approaches using {solver} with respect to n (4)")
+                elif solver == "dwave":
+                    function(algorithm_names=names[:3], values=function(algorithm_names=names[:4], values=avgs_list_it[:4],
+                                              std_devs=stds_list_it[:4], colors=colors[:4], x_ticks=x_ticks,
+                                              xlabel="n", ylabel=ylabel,
+                                              title=f"{title} {k}-split approaches using {solver} with respect to n"))
+                elif solver == "qaoa":
+                    function(algorithm_names=names, values=avgs_list_it,
+                             std_devs=stds_list_it, colors=colors, x_ticks=x_ticks,
+                             xlabel="n", ylabel=ylabel,
+                             title=f"{title} {k}-split approaches using {solver} with respect to n")
 
     algorithm_names_iterative = ["iterative Kochenberger", "our iterative approach", "iterative R-QUBO",
                                  "k-split GCS-Q (exactly)", "k-split GCS-Q (at most)"]
@@ -979,18 +993,24 @@ def plot_over_graph_sizes(averages_dict, stds_dict, solver, ylabel, title, funct
             avgs_list_it[-1] = avgs_list_it[-1][:-1]
             stds_list_it[-1].insert(0, np.nan)
             stds_list_it[-1] = stds_list_it[-1][:-1]
-        function(algorithm_names=names, values=avgs_list_it,
-                                  std_devs=stds_list_it, colors=colors, x_ticks=graph_sizes,
-                                  xlabel="n", ylabel=ylabel,
-                                  title=f"{title} {algorithm_names_iterative[i]} using {solver} with respect to n (2)")
-        function(algorithm_names=names[1:], values=avgs_list_it[1:],
-                                  std_devs=stds_list_it[1:], colors=colors[1:], x_ticks=graph_sizes,
-                                  xlabel="n", ylabel=ylabel,
-                                  title=f"{title} {algorithm_names_iterative[i]} using {solver} with respect to n")
-        function(algorithm_names=names[2:], values=avgs_list_it[2:],
-                                  std_devs=stds_list_it[2:], colors=colors[2:], x_ticks=graph_sizes,
-                                  xlabel="n", ylabel=ylabel,
-                                  title=f"{title} {algorithm_names_iterative[i]} using {solver} with respect to n (3)")
+        if solver == "qbsolv":
+            function(algorithm_names=names, values=avgs_list_it,
+                                      std_devs=stds_list_it, colors=colors, x_ticks=graph_sizes,
+                                      xlabel="n", ylabel=ylabel,
+                                      title=f"{title} {algorithm_names_iterative[i]} using {solver} with respect to n (2)")
+            function(algorithm_names=names[1:], values=avgs_list_it[1:],
+                                      std_devs=stds_list_it[1:], colors=colors[1:], x_ticks=graph_sizes,
+                                      xlabel="n", ylabel=ylabel,
+                                      title=f"{title} {algorithm_names_iterative[i]} using {solver} with respect to n")
+            function(algorithm_names=names[2:], values=avgs_list_it[2:],
+                                      std_devs=stds_list_it[2:], colors=colors[2:], x_ticks=graph_sizes,
+                                      xlabel="n", ylabel=ylabel,
+                                      title=f"{title} {algorithm_names_iterative[i]} using {solver} with respect to n (3)")
+        else:
+            function(algorithm_names=names, values=avgs_list_it,
+                     std_devs=stds_list_it, colors=colors, x_ticks=graph_sizes,
+                     xlabel="n", ylabel=ylabel,
+                     title=f"{title} {algorithm_names_iterative[i]} using {solver} with respect to n")
 
     # total best
     if solver == "qbsolv":
@@ -1124,7 +1144,7 @@ if __name__ == "__main__":
     # data_path = "results/eon_data/quantum/qbsolv/parallel/k=12/data_12_split_GCSQ_exactly_qbsolv_parallel__3949468976__2024-01-26_13-12-53.747804.pkl"
     # data = read_pickle_data(data_path)
     # print(data)
-    data_path = "results/eon_data/quantum/qbsolv"
+    data_path = "results/eon_data/quantum/qaoa"
     solver = [solver for solver in ["qbsolv", "qaoa", "dwave", "classical"] if solver in data_path][0]
     data_path_optima = "results/eon_data/classical"
     data_different_seeds = process_folder(data_path)

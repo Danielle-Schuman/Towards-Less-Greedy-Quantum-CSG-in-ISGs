@@ -75,10 +75,11 @@ def main(algorithm_list, data, graph_sizes, num_graphs_per_size, experiment, dir
     for algorithm in algorithm_list:
         too_large = False
         if isinstance(algorithm, IterativeQuantumAlgorithmWithK):
-            for num_agents in graph_sizes:
+            agents = [8] #graph_sizes
+            for num_agents in agents:
                 if algorithm.k <= num_agents:
                     print(f"\n\n\nTest for graphsize {num_agents}")
-                    for graph_num in range(11, num_graphs_per_size):
+                    for graph_num in range(num_graphs_per_size):
                         print(f"\n\n     Graph {graph_num}")
                         graph = data[num_agents][graph_num]
                         if synthetic:
@@ -113,7 +114,8 @@ def main(algorithm_list, data, graph_sizes, num_graphs_per_size, experiment, dir
                 else:
                     pass
         else:
-            for num_agents in graph_sizes:
+            agents = [6] #graph_sizes
+            for num_agents in agents:
                 print(f"\n\n\nTest for graphsize {num_agents}")
                 this_range = range(num_graphs_per_size)
                 for graph_num in this_range:
@@ -188,7 +190,7 @@ if __name__ == "__main__":
         else:
             data_name = "eon_data"
 
-        graph_sizes = [8] #list(data.keys())  # is [4,6,8,10,12,14,16,18,20,22,24,26,28] for E.ON data
+        graph_sizes = list(data.keys())  # is [4,6,8,10,12,14,16,18,20,22,24,26,28] for E.ON data
         num_graphs_per_size = len(data[graph_sizes[0]])  # is 20 for E.ON data
         num_graph_sizes = len(graph_sizes)
 

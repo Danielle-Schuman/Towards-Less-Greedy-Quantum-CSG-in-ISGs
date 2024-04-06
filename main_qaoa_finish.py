@@ -188,14 +188,14 @@ if __name__ == "__main__":
         else:
             data_name = "eon_data"
 
-        graph_sizes = [4] #list(data.keys())  # is [4,6,8,10,12,14,16,18,20,22,24,26,28] for E.ON data
+        graph_sizes = [8] #list(data.keys())  # is [4,6,8,10,12,14,16,18,20,22,24,26,28] for E.ON data
         num_graphs_per_size = len(data[graph_sizes[0]])  # is 20 for E.ON data
         num_graph_sizes = len(graph_sizes)
 
         # Simulate
         solvers = ["qaoa"]
         parallel = [True]  #, False] -> Try sequential later (maybe)
-        k_list = [4]
+        k_list = [3]
 
         # D-Wave -> uncomment this and comment simulate for running with D-Wave
         '''
@@ -205,7 +205,6 @@ if __name__ == "__main__":
         '''
 
         for solver in solvers:
-            '''
             algorithm_list = [ #Jonas(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver),
                               Danielle(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver),
                               #n_split_GCSQ(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver),
@@ -216,7 +215,6 @@ if __name__ == "__main__":
             if directory_exists:
                 main(algorithm_list=algorithm_list, data=data, graph_sizes=graph_sizes, num_graphs_per_size=num_graphs_per_size,
                      experiment=f"non-iterative algorithms with {solver}", directory=directory)
-            '''
             for mode in parallel:
                 '''
                 algorithm_list = [GCSQ(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode)]
@@ -228,8 +226,8 @@ if __name__ == "__main__":
                          directory=directory)
                 '''
                 for k in k_list:
-                    algorithm_list = [ours_iterative_exactly(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
-                                      #ours_iterative_at_most(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
+                    algorithm_list = [#ours_iterative_exactly(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
+                                      ours_iterative_at_most(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
                                       #k_split_GCSQ_exactly(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
                                       #k_split_GCSQ_at_most(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k),
                                       #r_qubo_iterative(seed=seed, num_graph_sizes=num_graph_sizes, solver=solver, parallel=mode, k=k)

@@ -253,7 +253,7 @@ def plot_line_chart_with_stds(algorithm_names, values, std_devs, colors, x_ticks
     for i in range(len(algorithm_names)):
         plt.errorbar(x_ticks + line_distance_shift[i], values[i], yerr=std_devs[i], fmt='o-', color=colors[i], label=algorithm_names[i], capsize=5)
 
-    if "Time" in title and "qaoa" in title:
+    if "Time" in title and not ("qbsolv" in title or "dwave" in title):
         plt.yscale('log')
 
     plt.xlabel(xlabel)
@@ -275,7 +275,7 @@ def plot_line_chart(algorithm_names, values, x_ticks, colors, xlabel, ylabel, ti
     for i in range(len(algorithm_names)):
         plt.plot(x_ticks, values[i], marker='o', color=colors[i], label=algorithm_names[i])
 
-    if "Time" in title and "qaoa" in title:
+    if "Time" in title and not ("qbsolv" in title or "dwave" in title):
         plt.yscale('log')
 
     plt.xlabel(xlabel)

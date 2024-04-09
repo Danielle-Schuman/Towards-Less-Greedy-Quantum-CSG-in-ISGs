@@ -253,7 +253,7 @@ def plot_line_chart_with_stds(algorithm_names, values, std_devs, colors, x_ticks
     for i in range(len(algorithm_names)):
         plt.errorbar(x_ticks + line_distance_shift[i], values[i], yerr=std_devs[i], fmt='o-', color=colors[i], label=algorithm_names[i], capsize=5)
 
-    if "Time" in title and "qaoa" in title:
+    if "Time" in title and not ("qbsolv" in title or "dwave" in title):
         plt.yscale('log')
 
     plt.xlabel(xlabel)
@@ -275,7 +275,7 @@ def plot_line_chart(algorithm_names, values, x_ticks, colors, xlabel, ylabel, ti
     for i in range(len(algorithm_names)):
         plt.plot(x_ticks, values[i], marker='o', color=colors[i], label=algorithm_names[i])
 
-    if "Time" in title and "qaoa" in title:
+    if "Time" in title and not ("qbsolv" in title or "dwave" in title):
         plt.yscale('log')
 
     plt.xlabel(xlabel)
@@ -1100,6 +1100,29 @@ def plot_over_graph_sizes_with_classical_baseline(averages_dict, stds_dict, solv
              std_devs=stds_list_it, colors=colors, x_ticks=x_ticks,
              xlabel="n", ylabel=ylabel,
              title=f"{title} {k}-split approaches using {solver} with respect to n")
+
+    if solver == "qaoa":
+        for k in [3,4]:
+            algorithm_names_iterative = ["Belyi", "GCS-Q", "iterative Kochenberger", "our iterative approach",
+                                         "iterative R-QUBO",
+                                         "k-split GCS-Q (exactly)", "k-split GCS-Q (at most)"]
+            algorithm_keys_iterative = ["belyi", f"GCS-Q_{solver}_parallel",
+                                        f"{k}_split_ours_iterative_exactly_{solver}_parallel",
+                                        f"{k}_split_ours_iterative_at_most_{solver}_parallel",
+                                        f"{k}_split_R_QUBO-iterative_{solver}_parallel",
+                                        f"{k}_split_GCSQ_exactly_{solver}_parallel",
+                                        f"{k}_split_GCSQ_at_most_{solver}_parallel"]
+            colors_iterative = ["0.8", "C6", "C0", "C1", "C2", "C3", "C4"]
+            avgs_list_it, names, colors = adjust_lists_with_existing(averages_dict, algorithm_keys_iterative,
+                                                                     algorithm_names_iterative,
+                                                                     colors_iterative)
+            stds_list_it, _, _ = adjust_lists_with_existing(stds_dict, algorithm_keys_iterative,
+                                                            algorithm_names_iterative, colors_iterative)
+            x_ticks = graph_sizes
+            function(algorithm_names=names, values=avgs_list_it,
+                     std_devs=stds_list_it, colors=colors, x_ticks=x_ticks,
+                     xlabel="n", ylabel=ylabel,
+                     title=f"{title} {k}-split approaches using {solver} with respect to n")
 
     # total best (at least for QBSolv)
     if solver == "qbsolv":

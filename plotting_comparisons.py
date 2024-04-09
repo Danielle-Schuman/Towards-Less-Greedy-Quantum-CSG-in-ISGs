@@ -72,9 +72,9 @@ def plotting_comparisons(averages_dict, stds_dict, ylabel, title, function):
 
     # total best
     # TODO: Possibly adapt after receiving final it. R-QUBO results for QAOA
-    algorithm_names_best = ["QBSolv: 4-split iterative R-QUBO", "D-Wave: GCS-Q", "QAOA: GCS-Q", "QAOA: 2-split iterative R-QUBO"]
-    algorithm_keys_best = ["4_split_R_QUBO-iterative_qbsolv_parallel", "GCS-Q_dwave_parallel", "GCS-Q_qaoa_parallel", "2_split_R_QUBO-iterative_qaoa_parallel"]
-    colors_best = ["C0", "C1", "C2", "C8"]
+    algorithm_names_best = ["QBSolv: 4-split iterative R-QUBO", "D-Wave: GCS-Q", "D-Wave: 2-split iterative R-QUBO", "QAOA: GCS-Q", "QAOA: 2-split iterative R-QUBO"]
+    algorithm_keys_best = ["4_split_R_QUBO-iterative_qbsolv_parallel", "GCS-Q_dwave_parallel", "2_split_R_QUBO-iterative_dwave_parallel", "GCS-Q_qaoa_parallel", "2_split_R_QUBO-iterative_qaoa_parallel"]
+    colors_best = ["C0", "C1", "C5", "C2", "C8"]
     avgs_list_it, names, colors = adjust_lists_with_existing(averages_dict, algorithm_keys_best,
                                                              algorithm_names_best,
                                                              colors_best)
@@ -124,9 +124,12 @@ def plotting_comparisons_with_classical_baseline(averages_dict, stds_dict, ylabe
 
     # total best
     # TODO: Possibly adapt after receiving final it. R-QUBO results for QAOA
-    algorithm_names_best = ["QBSolv: 4-split iterative R-QUBO", "D-Wave: GCS-Q", "QAOA: GCS-Q", "QAOA: 2-split iterative R-QUBO", "Belyi"]
-    algorithm_keys_best = ["4_split_R_QUBO-iterative_qbsolv_parallel", "GCS-Q_dwave_parallel", "GCS-Q_qaoa_parallel", "2_split_R_QUBO-iterative_qaoa_parallel", "belyi"]
-    colors_best = ["C0", "C1", "C2", "C8", "0.8"]
+    algorithm_names_best = ["QBSolv: 4-split iterative R-QUBO", "D-Wave: GCS-Q", "D-Wave: 2-split iterative R-QUBO",
+                            "QAOA: GCS-Q", "QAOA: 2-split iterative R-QUBO", "Belyi"]
+    algorithm_keys_best = ["4_split_R_QUBO-iterative_qbsolv_parallel", "GCS-Q_dwave_parallel",
+                           "2_split_R_QUBO-iterative_dwave_parallel", "GCS-Q_qaoa_parallel",
+                           "2_split_R_QUBO-iterative_qaoa_parallel", "belyi"]
+    colors_best = ["C0", "C1", "C5", "C2", "C8", "0.8"]
     avgs_list_it, names, colors = adjust_lists_with_existing(averages_dict, algorithm_keys_best,
                                                              algorithm_names_best,
                                                              colors_best)

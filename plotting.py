@@ -877,6 +877,12 @@ def plot_over_graph_sizes(averages_dict, stds_dict, solver, ylabel, title, funct
     algorithm_keys_non_iterative = [f"GCS-Q_{solver}_parallel", f"ours_n_{solver}", f"ours_n_half_{solver}",
                                     f"R-QUBO_{solver}", f"n_split_GCSQ_{solver}"]
     colors_non_iterative = ["C6", "C0", "C1", "C2", "C3"]
+    if solver == "dwave":
+        algorithm_names_non_iterative = [f"GCS-Q", "Kochenberger", "our approach", "R-QUBO"]
+        algorithm_keys_non_iterative = [f"GCS-Q_{solver}_parallel", f"ours_n_{solver}", f"ours_n_half_{solver}",
+                                        f"R-QUBO_{solver}"]
+        colors_non_iterative = ["C6", "C0", "C1", "C2"]
+
 
     avgs_list_non_it, names, colors = adjust_lists_with_existing(averages_dict, algorithm_keys_non_iterative, algorithm_names_non_iterative, colors_non_iterative)
     stds_list_non_it, _, _ = adjust_lists_with_existing(stds_dict, algorithm_keys_non_iterative, algorithm_names_non_iterative, colors_non_iterative)
@@ -885,11 +891,12 @@ def plot_over_graph_sizes(averages_dict, stds_dict, solver, ylabel, title, funct
                               xlabel="n", ylabel=ylabel,
                               title=f"{title} non-iterative approaches using {solver} with respect to n")
 
-    # without n_split GCS-Q and GCS-Q
-    function(algorithm_names=names[1:-1], values=avgs_list_non_it[1:-1],
-                              std_devs=stds_list_non_it[1:-1], colors=colors[1:-1], x_ticks=graph_sizes,
-                              xlabel="n", ylabel=ylabel,
-                              title=f"{title} non-iterative approaches using {solver} with respect to n (2)")
+    if solver == "qbsolv":
+        # without n_split GCS-Q and GCS-Q
+        function(algorithm_names=names[1:-1], values=avgs_list_non_it[1:-1],
+                                  std_devs=stds_list_non_it[1:-1], colors=colors[1:-1], x_ticks=graph_sizes,
+                                  xlabel="n", ylabel=ylabel,
+                                  title=f"{title} non-iterative approaches using {solver} with respect to n (2)")
 
     print("Plotting ks")
     for k in [2, 3, 4, 5]:
@@ -946,10 +953,10 @@ def plot_over_graph_sizes(averages_dict, stds_dict, solver, ylabel, title, funct
                                               xlabel="n", ylabel=ylabel,
                                               title=f"{title} {k}-split approaches using {solver} with respect to n (4)")
                 elif solver == "dwave":
-                    function(algorithm_names=names[:3], values=function(algorithm_names=names[:4], values=avgs_list_it[:4],
+                    function(algorithm_names=names[:4], values=avgs_list_it[:4],
                                               std_devs=stds_list_it[:4], colors=colors[:4], x_ticks=x_ticks,
                                               xlabel="n", ylabel=ylabel,
-                                              title=f"{title} {k}-split approaches using {solver} with respect to n"))
+                                              title=f"{title} {k}-split approaches using {solver} with respect to n")
                 elif solver == "qaoa":
                     function(algorithm_names=names, values=avgs_list_it,
                              std_devs=stds_list_it, colors=colors, x_ticks=x_ticks,

@@ -12,7 +12,7 @@ class Danielle(QuantumAlgorithm):
     def solve(self, num_agents, edges):
         if not self.num_coalitions:  # self.num_coalitions is still None
             self.num_coalitions = num_agents
-        # create the QUBOgi
+        # create the QUBO
         Q = {}
         # TODO: Find good value for penalty using penalty engineering
         # sum of all the edges absolute values to use as a penalty value later

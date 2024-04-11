@@ -2,6 +2,31 @@ from plotting import *
 import copy
 
 
+def fix_file(file_path):
+    all_data = []
+    try:
+        with open(file_path, 'rb') as file:
+            data_list = []
+            while True:
+                try:
+                    data = pickle.load(file)
+                    data_list.append(data)
+                except EOFError:
+                    # Reached end of file
+                    break
+        data_list.remove(384)
+        with open(file_path, 'wb') as file:
+            pickle.dump(data_list[0], file)
+        with open(file_path, 'ab') as file:
+            for data_point in data_list[1:]:
+                pickle.dump(data_point, file)
+    except FileNotFoundError:
+        print(f"The file {file_path} does not exist.")
+    except Exception as e:
+        print(f"An error occurred while reading {file_path}: {e}")
+    return all_data
+
+
 def process_folder_physical_qubits(folder_path):
     folder_contents = {}
     try:
@@ -51,3 +76,7 @@ if __name__ == "__main__":
     data = prune_zeros(data)
     averages, stds = average_over_same_sized_graphs(data)
     plot_over_graph_sizes(averages, stds, "dwave", "Number of qubits needed", "Number of qubits needed by", plot_line_chart_with_stds)
+    '''
+    data_path = "embeddings/physical_qubits_3_split_R_QUBO-iterative_dwave_parallel.pkl"
+    fix_file(data_path)
+    '''

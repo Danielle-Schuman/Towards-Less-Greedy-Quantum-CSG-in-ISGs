@@ -1,0 +1,5 @@
+GCS-Q:
+
+Graph 6, 0: 6 log. qubits, 21 couplers (non-0)
+Graph 8, 0: 8 lo. qubits, 36 log. coupler, aber alle mit Verbindung zu letzten qubits mit Gewicht -0 (0 auf Diagonalen)
+→ Anzahl physical. qubits wächst trotzdem auch (→ falsche "Übersetzung" -0) 

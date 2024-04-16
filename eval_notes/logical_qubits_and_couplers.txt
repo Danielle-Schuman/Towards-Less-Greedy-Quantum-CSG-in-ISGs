@@ -1,0 +1,19 @@
+Logical qubits & couplers vs. physical qubits
+
+Graph 12,0:
+Kochenberger: 144 logical qubits, 1728 "logical couplers", less physical qubits
+R-QUBO: 132 logical qubits, but 8778 "logical couplers", more physical qubits
+→ Makes sense: Just more / different values in QUBO formulation
+
+5-split:
+Graph 26, 0: Kochenberger: 130 logical qubits, 2015 logical couplers, less physical qubits
+R-QUBO: 104 logical qubits, 5460 logical couplers, more physical qubits
+
+4-split:
+Graph 26, 0:
+Kochenberger: 104 logical qubits, 1560 logical couplers, more physical qubits
+R-QUBO: 78 logical qubits, 3081 logical couplers, less physical qubits
+
+=> there seems to be some point / threshold at which the "more logical couplers" outweighs the "less logical qubits" for embedding
+
+#Masterarbeit 

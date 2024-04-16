@@ -1,0 +1,37 @@
+Best k's
+
+GCS-Q exactly:
+Optimum zwischen 3 und 6 (jew. einschließlich), oft mehrere (kaum Unterschied), welche genau ist unterschiedlich
+
+GCS-Q at most:
+Up to & including graph size 8, better than GCS-Q, all ks the same; After that GCS-Q (almost) always better (apart from graph size 26, where for some reason k = 3 is best)
+Otherwise, no clear pattern: Mostly, everything is good apart from 3, apart from when 3 is best (is some little cases), and then there's some where 4 & 5 are good, along with some other numbers
+→ Idea: Only run on D-Wave for low graph sizes (<= 8), with low k (e.g. k = 4)??
+→ Is crap (see ranking) → don't run on D-Wave at all
+
+Ours exactly (including ours_n):
+Bis zu graph size 20: Alle k über 2 (in einem Fall über 3) gleich gut
+Danach 4 am besten (einmal zusammen mit 3, einmal mit 5 und 7, einmal mit 5 bis 9, 12 und 22 bis n)
+
+Ours at most (including n_half):
+Mostly all results optimal except 2 (mostly significantly worse), sometimes also except 3 (one time) and the last upper 2, sometimes also except some other high numbers; Ours_n_half and 4 through 10 consistently optimal until & incl. graph size 24; after that only 3 and 4 (one time 3 better) (sometimes up to 8, and add. 10)
+→ 3 and 4 best
+
+R-QUBO:
+Up to & incl. graph_size 24, everything apart from 2 and 3 (lower graph_sizes only 2) optimal
+After that: 4 & 5, (6-) 7 - 11, (12-) 15, (18 -) 19, (20-) 24, (- n)
+
+=> Wir testen k=4, wenn Zeit k=3 und ggf. k=5 (für alle Iterativen Ansätze außer GCS-Q at most)
+Non-iterative approaches: We test R-QUBO, ours_n_half and ours_n, and GCS-Q as "QC Baseline" (we leave out n_split_GCS-Q because that seems to be crap)
+
+Ranking (checked "from above" until and incl. graph size 16):
+R-QUBO >= Ours at most >= GCS-Q exactly = (sometimes GCS-Q e. better, sometime ours e.) Ours exactly (has more consistent results across k's than GCS-Q exactly → might be easier to find optimum / good result with fixed k??; GCS-Q e. better for very large → ??) >> GCS-Q >> GSC-Q at most
+→ One plot with all of them??
+
+
+Times:
+- Non-iterative approach usually faster than iterative approaches of about same size k (but slower than smaller k); apart from ours_n: consistently slower, apart from in very small problems, and n_split_GCSQ: only in very large problems faster than the ones with large k, otherwise consistently slower
+- Smaller k faster than larger k until some graph size going when starting from the largest size, then "tipping point": larger faster than smaller (and non-iterative faster than smaller); medium sizes (around k=4 or 5 -ish? "always" good → parabola-form in "tipping region", stair-form before / after) => small problems: splitting into small number of groups = larger number of steps → overhead compared to sloving "one" (or small amount of) medium-size QUBOs; larger problems: solving large QUBOs takes more time than solving more small ones → might be different on D-Wave?? (Do smaller QUBOs take less time here, too?; More steps has more overhead because of queue)
+- GCS-Q behaves pretty k=2-ish: very fast for large problems, slow for smaller ones
+
+#Masterarbeit 

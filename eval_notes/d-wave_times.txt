@@ -1,0 +1,63 @@
+D-Wave times (Advantage4.1)
+
+Quota before:
+60000000
+
+ours_iterative_exactly with k = 4: 
+Quota after: 59961218 → took 38782 ys = 39 ms (one call → might be two calls: 78 ms)
+
+ours_iterative_at_most with k = 4:
+Quota after: 59929548 → took 31670 ys = 32 ms (one call → might be two calls: 64 ms)
+
+k_split_GCSQ_exactly with k = 4:
+Quota after: 59891662 → took 37886 ys = 38 ms (one call → might be two calls: 76 ms)
+
+r_qubo_iterative with k = 4:
+Quota after: 59856772 → took 34890 ys = 35 ms (one call → might be two calls: 70 ms)
+
+GCS-Q:
+Quota after: 59771801 → took 84971 ys = 85 ms
+
+Quota after all of these a second time: 59539750 → about 0.2 seconds in total
+
+Nach Quota-Update: 900000000
+
+
+Thomas quota before: 271967693
+
+ours_n_half (for graph_size 20, Everything larger: D-Wave: Embedding not found):
+Quota after: 271925936 → took: 41757 ys = 42 ms
+
+ours_n (for graph size 12):
+Quota after: 271888000 → took: 37936 ys = 38 ms
+(for graph size 14): 
+Quota after: 271847058 → took: 40942 ys = 41 ms
+
+R-QUBO (for graph size 12):
+Quota after: 271804504 → took: 42554 ys = 43 ms
+
+
+Nach Quota-Update: 900000000
+
+Quota nach non-iterative und k = 4:
+822943084
+
+nach k = 3:
+775731297
+
+Quota Zwischenstand k = 5:
+748779325
+
+Quota am Ende:
+744692330
+
+Fehlt:
+5-split R-QUBO graphsizes 12 bis 28 graphs 0 bis 12
+
+Quota danach:
+739075679
+
+Quota nach k=2:
+688864205
+
+#Masterarbeit 

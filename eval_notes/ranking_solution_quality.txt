@@ -1,0 +1,38 @@
+Ranking Solution quality
+
+QBSolv (for small graph sizes good): performance drops very slightly with larger n for most algos (apart from some early outliers); exceptions: 2-split appraoches \& GCS-Q (more or less constant, less stds with larger n); drop not necessarily worse with larger k, but with ranking (see below)
+- general ranking of k's and non-it  per solver:
+- Kochenberger: 2-split < non-it ≤ 3-split (on smaller graphsizes outlier, but more optima on larger n) < 5-split < 4-split
+- ours: 2-split < non-it < 3-split (on smaller graphsizes outlier) ≤ 5-split (on n=28 outlier) < 4 split (also outlier on n=28, but not as much as 5-split)
+- R-QUBO: 2-split < 3-split < non-it < 5-split = 4-split
+- GCS-Q exactly: non-it < 5-split (on smaller graphsizes outlier) < 3-split < 4-split
+- GCS-Q at most: pretty much all k the same, just 3 sometimes better or worse
+- GCS-Q: as bad as all other 2-split approaches (perform all exactly the same -> thus worse than all other appraoches with larger k), apart from 2-split ours, which is often a little better; bad for small, good for large graph sizes -> here < n-split GCS-Q (but still smaller all other non-it), otherwise >
+algo ranking: 
+- 2-split: GCS-Q = Koch = R-QUBO < ours
+- non-it: (GCS-Q (bad on small) /) n-split GCS-Q (bad on large) < Koch < ours < R-QUBO
+- 3-split: GCS-Q at most < R-QUBO < Koch < GCS-Q exactly < ours
+- 4-split: GCS-Q at most < GCS-Q exactly (on smaller graphsizes outlier) < Koch < ours < R-QUBO
+- 5-split: GCS-Q at most < GCS-Q exactly (on smaller graphsizes outlier) < Koch < ours < R-QUBO
+
+D-Wave: clear trend: drop steeper with larger k / n
+- Ranking K's for all solvers (apart from small graph sizes, there larger k's often slightly better, esp. for R-QUBO; order always 5 < 4 < 3, though): non-it (not always feasible) < 5-split < 4-split < 3-split (better on small graph sizes) < 2-split (< GCS-Q)
+algo ranking:
+- non-it (for small graph sizes good): Koch (not always feasible) < R-QUBO (apart from it can be run for one less n; not always feasible) < ours
+- 2-split: ours < Koch < R-QUBO < GCS-Q
+- 3-split \& 4-split: ours (better for small graph sizes, even more often better for 4-split, but finds less optima) < Koch < GCS-Q exactly < R-QUBO
+- 5-split: Koch < GCS-Q exactly (finds less optima) < ours < R-QUBO
+
+QAOA: steeper drop with larger k
+- Koch: non-it < 4 < 3 < 2
+- ours: 4 < non-it (but n/2 = 2 or 3 < 4, so... counts as smaller k) < 3 < 2
+- R-QUBO: non-it < 4 < 3 (better on small graph sizes in R, but not num opt) < 2
+- GCS-Q (exactly): non-it < 4 < 3 (< GCS-Q)
+- GCS-Q at most: 4 < 3 (< GCS-Q)
+algo ranking:
+- non-it: Koch < n-spilt GCS-Q < R-QUBO < ours
+- 2-split: ours < Koch < R-QUBO = GCS-Q 
+- 3-split: GCS-Q (exactly) (better R \& num opt on n=4, but slightly less feasible solutions, \& less opt on n=6) < Koch < ours (performs well on n=4, scales to n=8) ≤ GCS-Q (at most) < R-QUBO
+- 4-split: ours (finds more feasible solutions on n=6, but slightly less optima on n=4) ≤ GCS-Q (at most) (good for $n=4$ -> finds also more optima here) ≤ Koch < GCS-Q (exactly) < R-QUBO
+
+#Masterarbeit 

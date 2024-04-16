@@ -1,0 +1,42 @@
+Ranking Time:
+Seldom clear ranking (usually ranking different for some n) -> for most n
+
+QBSolv: time tends to grow more with larger k; grows with n
+- general ranking of k's and non-it per solver:
+- Kochenberger: 2-split < 4-split < 5-split < 3-split (on smaller graphsizes outlier, but more on larger n) < non-it
+- ours: 2-split < 3-split < 4-split < 5 split ≤ non-it
+- R-QUBO: 2-split < 3-split (larger on large n) ≤ 4-split (about equal on medium n) ≤ 5 split ≤ non-it
+- GCS-Q exactly: GCS-Q < 3-split (smaller on small, larger on medium / large; large stds) = 4-split < 5 split << non-it
+- GCS-Q at most: GCS-Q < 3-split < 4-split < 5 split
+algo ranking: Largest runtime have larger stds
+- 2-split: Koch = ours (just for large graph sizes (n > 22), for small graphs sizes rather worse (n < 14) or equal) > GCS-Q = R-QUBO
+- 3-split: Koch > GCS-Q exactly > GCS-Q at most = ours (apart from n > 22, there R-QUBO ≥) > R-QUBO
+- 4-split: GCS-Q at most = GCS-Q exactly (on smaller graphsizes outlier) = Koch = ours > R-QUBO
+- 5-split: GCS-Q exactly >≥ Koch ≥ GCS-Q at most = ours > R-QUBO
+- non-it: n-split GCS-Q (bad on large) ≥ Koch > ours = R-QUBO
+
+D-Wave: time tends to grow more with larger k; grows with n; Koch "pointy" -> UQO crash
+- Koch: 2 < 4 < 5 ≤ 3 (very pointy / jumpy -> large point shortly befor UQO crash) < non-it (very pointy / jumpy -> befor UQO crash)
+- ours: 2 < 3 < 4 ≤ 5 (smaller for n > 22) ≤ non-it (very large for n > 14)
+- R-QUBO: 3 < 2 < 4 < 5 < non-it
+- GCS-Q exactly: GCS-Q = 3 < 4 < 5 
+algo ranking:
+- non-it: Koch (outlier at 10) > R-QUBO > ours
+- 2-split: ours < Koch = R-QUBO = GCS-Q
+- 3-split: ours (worse for small graph sizes, even more often for 4-split) ≤ GCS-Q exactly = R-QUBO << Koch (apart from n > 20 where it is ≥)
+- 4-split: Koch = ours ≤ GCS-Q exactly < R-QUBO
+- 5-split: ours < GCS-Q exactly < R-QUBO < Koch (again "pointy" -> D-Wave just busy?)
+
+QAOA: time tends to grow more with larger k; grows with n
+- Koch: 2 < 3 < non-it < 4 
+- ours: 2 < non-it < 3 < 4
+- R-QUBO: 2 < 3 < non-it ≤ 4
+- GCS-Q (exactly): GCS-Q < 3 < non-it < 4 
+- GCS-Q at most: GCS-Q < 3 < 4 
+algo ranking:
+- non-it: ours < R-QUBO < Koch = n-split GCS-Q
+- 2-split: R-QUBO = GCS-Q < ours = Koch
+- 3-split: R-QUBO < GCS-Q (at most) = GCS-Q (exactly) = Koch = ours
+- 4-split: R-QUBO < GCS-Q (at most) = GCS-Q (exactly) = Koch = ours
+
+#Masterarbeit 

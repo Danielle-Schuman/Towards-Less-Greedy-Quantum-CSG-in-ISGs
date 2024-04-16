@@ -1,0 +1,37 @@
+Best k's from plots
+
+QBSolv:
+- Kochenberger: 4
+- ours / Jonas: 4
+- R-QUBO: 4 or 5 (equally good)
+- k-split GCS-Q exactly: no clear "winner", but 4 most consistent / stably good → 4
+- k-GCS-Q at most: Almost always worse than GCS-Q, 4 and 5 almost exactly the same → 5 slightly better slightly more often???
+=> 4 best
+
+=> Total 4-split R-QUBO best (finds Optimum every single time) (non-iterative R-QUBO close second, followed by 4-split ours close 2nd)
+
+Time: GCS-Q best, but iterative R-QUBO 2nd and scales very well with problem size
+
+QAOA: (Limited all k=2 except GCS-Q and Kochenberger for a few runs for one seed to n=10, for time reasons)
+- Kochenberger: 2
+- ours / Jonas: 2
+- R-QUBO: 2: 2 finds more optima and has better rel. solution quality for n=10, 3 has better R for small graph sizes, but "crashes" later → ought to have run k = 2 for n > 10
+- k-split GCS-Q exactly: GCS-Q (by far)
+- k-GCS-Q at most: GCS-Q (by far)
+=> 2 best
+
+=> GCS-Q and 2-split R-QUBO match exactly and are best → More runs necessary!!!
+- Time better for it. R-QUBO
+
+D-Wave:
+- Kochenberger: 2 (although 3 found more optima for n=6 and n=8)
+- ours / Jonas: 2 (although 3 found more optima for n=6 and has better R for n=6 and n=8)
+- R-QUBO: 2 (although 3 found more optima for and has better R for n=6 and n=8)
+- k-split GCS-Q exactly: GCS-Q better (although 3 found more optima for and has better R for n=6 and n=8)
+- k-GCS-Q at most: -
+=> 2 best
+
+=> GCS-Q best and 2-split R-QUBO close 2nd
+- Time GCS-Q better, but not by a lot
+
+=> Conclusion: it. R-QUBO very promising, esp. as hardware noise and connectivity improves 

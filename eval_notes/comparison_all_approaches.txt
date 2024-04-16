@@ -1,0 +1,18 @@
+Comparison all approaches:
+
+- non-iterative approaches: D-Wave outperforms QAOA, matches QBSolv on first (or in case of our approach first 2 datapoints), then drops hard, but slower, the less qubits the approach needs; same for num. optima: QAOA also better on our approach (otherwise only finds optima on $n=4$), D-Wave never finds optima beyond $n=8$
+- GCS-Q: All exact same performance up to $n=10$, then QAOA starts dropping; D-Wave stays the same as QBSolv throughout, apart from re. solution quality on $n=26$ (here slightly worse, optima same though)
+- 2-split it: D. \& QAOA close to or equal for first three graph sizes, then drop apart from D-Wave in GCS-Q \& it. R-QUBO: Pretty much same performance as QBSolv (D-Wave, QAOA up to $n=10$, drops after that)! D-Wave better than QAOA for all except 2-spli it. Koch.; same for Num optima
+- 3-split: D-Wave = QBSolv for first 3 n, then drop; QAOA crap (drop pattern always similar to both, just sometimes higher or lower per algo); Same for num optima: D-Wave finds all optima for first 3 n for most algos, or at least like qbsolv, then 2 (almost) none and then a few for $n=14$ and $n=18$ again; QAOA only finds a lot (most) optima for $n=4$ most of the time
+- 4-split: same thing as for 3-split, only drops faster (first 3 n close, but only first matches) (QAOA more shit, though); QAOA performs decent for R-QUBO (esp. n = 8), though; same for num optima, apart from R-QUBO, which is better, all algos "same picture" (three split already had lots of similarities between pics, but this really the same)
+- 5-split: D-Wave just a lot worse than QBSolv, just halfway decent for R-QUBO at n=8; similar for optima: $n=6$ ok-ish too for our approach and R-QUBO
+- interesting: Small-to-medium-ish amount of optima found by D-Wave at $n=14$ and $n=18$ stays the same across almost all algos (different approaches as well as ks)
+- best variants (with respect to k): see, two-split, only qbsolv just an insane amount better for all but $n=6$ (and $n=14$ in case of \acs{GCS-Q} and it. R-QUBO); same for num-optima
+=> exemplarisch plots zeigen (eventl. R-QUBO plots interssant; eventl. Rest in Anhang)
+
+- total best: QBSolv strongly outperforms, QAOA and D-Wave equal until $n=10$, then QAOA starts dropping
+=> Ranking stays QBSolv, D-Wave, QAOA; but D-Wave promising (?) (maybe add D-Wave it. R-QUBO to best plot to hint that it's promising)
+
+Time: QBSolv always fastest, D-Wave slower, but still a lot faster than QAOA as on all but first 2 (or first 14 in case of it. R-QUBO / 12 in case of GCS-Q) (2-split), first (or first two in case of R-QUBO and ours it.) (3-split) / non (or first) (4-split -> here, just R-QUBO faster \& non-it), as QAOA shows exponential growth; while runtimes are pretty long for D-Wave, it scales pretty well with n for the iterative algos (at least linearly, maybe even better for 2-split approaches: curves seem to get flatter with larger graphs sizes) and does so very consistently (small stds) (<-> QBSolv: Weird logarithmic steps -> ?)
+
+#Masterarbeit 

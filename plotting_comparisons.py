@@ -18,7 +18,7 @@ def plotting_comparisons(averages_dict, stds_dict, ylabel, title, function):
         function(algorithm_names=names, values=avgs_list_non_it,
                                   std_devs=stds_list_non_it, colors=colors, x_ticks=graph_sizes,
                                   xlabel="n", ylabel=ylabel,
-                                  title=f"{title} {algorithm_name} with respect to n")
+                                  title=f"{title} {algorithm_name}")
 
     # iterative algorithms
     for k in [2, 3, 4, 5]:
@@ -49,7 +49,7 @@ def plotting_comparisons(averages_dict, stds_dict, ylabel, title, function):
             function(algorithm_names=names, values=avgs_list_it,
                                           std_devs=stds_list_it, colors=colors, x_ticks=x_ticks,
                                           xlabel="n", ylabel=ylabel,
-                                          title=f"{title} {k}-split {algorithm_name} with respect to n")
+                                          title=f"{title} {k}-split {algorithm_name}")
 
     # with best k's for solvers
     algorithm_names_iterative = ["iterative Kochenberger", "our iterative approach", "iterative R-QUBO",
@@ -68,7 +68,7 @@ def plotting_comparisons(averages_dict, stds_dict, ylabel, title, function):
         function(algorithm_names=names, values=avgs_list_it,
                  std_devs=stds_list_it, colors=colors, x_ticks=graph_sizes,
                  xlabel="n", ylabel=ylabel,
-                 title=f"{title} best {algorithm_name} variant with respect to n")
+                 title=f"{title} the best {algorithm_name} variant")
 
     # total best
     # TODO: Possibly adapt after receiving final it. R-QUBO results for QAOA
@@ -83,7 +83,7 @@ def plotting_comparisons(averages_dict, stds_dict, ylabel, title, function):
     function(algorithm_names=names, values=avgs_list_it,
              std_devs=stds_list_it, colors=colors, x_ticks=graph_sizes,
              xlabel="n", ylabel=ylabel,
-             title=f"{title} best algorithm variants with respect to n")
+             title=f"{title} the best algorithm variants")
 
 
 def plotting_comparisons_with_classical_baseline(averages_dict, stds_dict, ylabel, title, function, classical):
@@ -106,7 +106,7 @@ def plotting_comparisons_with_classical_baseline(averages_dict, stds_dict, ylabe
     function(algorithm_names=names, values=avgs_list_non_it,
              std_devs=stds_list_non_it, colors=colors, x_ticks=graph_sizes,
              xlabel="n", ylabel=ylabel,
-             title=f"{title} GCS-Q with respect to n")
+             title=f"{title} GCS-Q")
 
     # with best k's for solvers
     # (this list comprehension has been coded with the help of ChatGPT)
@@ -120,7 +120,7 @@ def plotting_comparisons_with_classical_baseline(averages_dict, stds_dict, ylabe
     function(algorithm_names=names, values=avgs_list_it,
              std_devs=stds_list_it, colors=colors, x_ticks=graph_sizes,
              xlabel="n", ylabel=ylabel,
-             title=f"{title} best iterative R-QUBO variant with respect to n")
+             title=f"{title} the best iterative R-QUBO variant")
 
     # total best
     # TODO: Possibly adapt after receiving final it. R-QUBO results for QAOA
@@ -138,7 +138,7 @@ def plotting_comparisons_with_classical_baseline(averages_dict, stds_dict, ylabe
     function(algorithm_names=names, values=avgs_list_it,
              std_devs=stds_list_it, colors=colors, x_ticks=graph_sizes,
              xlabel="n", ylabel=ylabel,
-             title=f"{title} best algorithm variants with respect to n")
+             title=f"{title} the best algorithm variants")
 
 
 if __name__ == "__main__":

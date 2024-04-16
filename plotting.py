@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import matplotlib.ticker as ticker
 import numpy as np
 import bisect
 import numbers
@@ -245,24 +246,30 @@ def plot_line_chart_with_stds(algorithm_names, values, std_devs, colors, x_ticks
 
     plt.figure(figsize=(10, 6))
 
-    # Calculate the width of each line
-    line_distance = 0.05
+    line_distance = 0.1
     line_distance_total = len(algorithm_names) * line_distance
     line_distance_shift = np.linspace(-line_distance_total / 2, line_distance_total / 2, len(algorithm_names))
 
     for i in range(len(algorithm_names)):
-        plt.errorbar(x_ticks + line_distance_shift[i], values[i], yerr=std_devs[i], fmt='o-', color=colors[i], label=algorithm_names[i], capsize=5)
+        plt.errorbar(x_ticks + line_distance_shift[i], values[i], yerr=std_devs[i], fmt='o-', color=colors[i], label=algorithm_names[i], linewidth=2, markersize=10, capsize=7, capthick=2)
 
     if "Time" in title and not ("qbsolv" in title or "dwave" in title):
         plt.yscale('log')
+    else:
+        # Get the current axes
+        ax = plt.gca()
+        # Set the tick formatter for the y-axis
+        formatter = ticker.ScalarFormatter(useOffset=False)
+        ax.yaxis.set_major_formatter(formatter)
 
-    plt.xlabel(xlabel)
-    plt.ylabel(ylabel)
-    plt.title(title)
-    plt.xticks(x_ticks)
-    plt.legend()
+    plt.xlabel(xlabel, fontsize=14)
+    plt.ylabel(ylabel, fontsize=14)
+    plt.title(title, fontsize=16)
+    plt.xticks(x_ticks, fontsize=12)
+    plt.yticks(fontsize=14)
+    plt.legend(fontsize=12)
     plt.grid(True)
-    plt.savefig(f"plots/{title.replace(' ', '_')}.pdf", format='pdf')
+    plt.savefig(f"plots/{title.replace(' ', '_')}.pdf", format='pdf', bbox_inches='tight')
     # plt.show()
     plt.close()
 
@@ -273,25 +280,33 @@ def plot_line_chart(algorithm_names, values, x_ticks, colors, xlabel, ylabel, ti
     plt.figure(figsize=(10, 6))
 
     for i in range(len(algorithm_names)):
-        plt.plot(x_ticks, values[i], marker='o', color=colors[i], label=algorithm_names[i])
+        plt.plot(x_ticks, values[i], marker='o', color=colors[i], label=algorithm_names[i], markersize=8)
 
     if "Time" in title and not ("qbsolv" in title or "dwave" in title):
         plt.yscale('log')
+    else:
+        # Get the current axes
+        ax = plt.gca()
+        # Set the tick formatter for the y-axis
+        formatter = ticker.ScalarFormatter(useOffset=False)
+        ax.yaxis.set_major_formatter(formatter)
 
-    plt.xlabel(xlabel)
-    plt.ylabel(ylabel)
-    plt.title(title)
-    plt.xticks(x_ticks)
+    plt.xlabel(xlabel, fontsize=14)
+    plt.ylabel(ylabel, fontsize=14)
+    plt.title(title, fontsize=16)
+    plt.xticks(x_ticks, fontsize=12)
+    plt.yticks(fontsize=14)
+    #plt.legend(fontsize=12)
     plt.legend()
     plt.grid(True)
-    plt.savefig(f"plots/{title.replace(' ', '_')}.pdf", format='pdf')
+    plt.savefig(f"plots/{title.replace(' ', '_')}.pdf", format='pdf', bbox_inches='tight')
     # plt.show()
     plt.close()
 
 
 def plot_vertical_lines_chart(algorithm_names, values, x_ticks, colors, xlabel, ylabel, title, std_devs=None):
     assert len(algorithm_names) == len(values), "Input lists should have the same length."
-    line_distance = 0.1
+    line_distance = 0.19
     plt.figure(figsize=(10, 6))
 
     # Calculate the width of each line
@@ -301,18 +316,19 @@ def plot_vertical_lines_chart(algorithm_names, values, x_ticks, colors, xlabel, 
     for i in range(len(algorithm_names)):
         assert len(values[i]) == len(
             x_ticks), f"Values for category {algorithm_names[i]} should have the same length as x_ticks."
-        plt.vlines(x_ticks + line_distance_shift[i], 0, values[i], linestyle='-', linewidth=1.5, color=colors[i], label=algorithm_names[i])
+        plt.vlines(x_ticks + line_distance_shift[i], 0, values[i], linestyle='-', linewidth=4, color=colors[i], label=algorithm_names[i])
 
-    plt.xlabel(xlabel)
-    plt.ylabel(ylabel)
-    plt.title(title)
-    plt.xticks(x_ticks)
+    plt.xlabel(xlabel, fontsize=14)
+    plt.ylabel(ylabel, fontsize=14)
+    plt.title(title, fontsize=16)
+    plt.xticks(x_ticks, fontsize=12)
+    plt.yticks(fontsize=14)
     if "qaoa" in title:
-        plt.legend(loc='upper right')
+        plt.legend(loc='upper right', fontsize=12)
     else:
-        plt.legend(loc='lower left')
+        plt.legend(loc='lower left', fontsize=12)
     plt.grid(True)
-    plt.savefig(f"plots/{title.replace(' ', '_')}.pdf", format='pdf')
+    plt.savefig(f"plots/{title.replace(' ', '_')}.pdf", format='pdf', bbox_inches='tight')
     #plt.show()
     plt.close()
 
@@ -333,13 +349,14 @@ def plot_vertical_lines_chart_with_stds(algorithm_names, values, std_devs, x_tic
         # Add error bars for standard deviations
         plt.errorbar(x_ticks + line_distance_shift[i], values[i], yerr=std_devs[i], fmt='o', color='black')
 
-    plt.xlabel(xlabel)
-    plt.ylabel(ylabel)
-    plt.title(title)
-    plt.xticks(x_ticks)
-    plt.legend(loc='upper right')
+    plt.xlabel(xlabel, fontsize=14)
+    plt.ylabel(ylabel, fontsize=14)
+    plt.title(title, fontsize=16)
+    plt.xticks(x_ticks, fontsize=12)
+    plt.yticks(fontsize=14)
+    plt.legend(loc='upper right', fontsize=12)
     plt.grid(True)
-    #plt.savefig(f"plots/{title.replace(' ', '_')}.pdf", format='pdf')
+    #plt.savefig(f"plots/{title.replace(' ', '_')}.pdf", format='pdf', bbox_inches='tight')
     plt.show()
     #plt.close()
 
@@ -889,14 +906,14 @@ def plot_over_graph_sizes(averages_dict, stds_dict, solver, ylabel, title, funct
     function(algorithm_names=names, values=avgs_list_non_it,
                               std_devs=stds_list_non_it, colors=colors, x_ticks=graph_sizes,
                               xlabel="n", ylabel=ylabel,
-                              title=f"{title} non-iterative approaches using {solver} with respect to n")
+                              title=f"{title} our non-iterative approaches using {solver}")
 
     if solver == "qbsolv":
         # without n_split GCS-Q and GCS-Q
         function(algorithm_names=names[1:-1], values=avgs_list_non_it[1:-1],
                                   std_devs=stds_list_non_it[1:-1], colors=colors[1:-1], x_ticks=graph_sizes,
                                   xlabel="n", ylabel=ylabel,
-                                  title=f"{title} non-iterative approaches using {solver} with respect to n (2)")
+                                  title=f"{title} our non-iterative approaches using {solver} (2)")
 
     print("Plotting ks")
     for k in [2, 3, 4, 5]:
@@ -933,35 +950,35 @@ def plot_over_graph_sizes(averages_dict, stds_dict, solver, ylabel, title, funct
                 function(algorithm_names=names, values=avgs_list_it,
                                           std_devs=stds_list_it, colors=colors, x_ticks=x_ticks,
                                           xlabel="n", ylabel=ylabel,
-                                          title=f"{title} {k}-split approaches using {solver} with respect to n")
+                                          title=f"{title} our {k}-split approaches using {solver}")
             else:
                 if solver == "qbsolv":
                     function(algorithm_names=names, values=avgs_list_it,
                              std_devs=stds_list_it, colors=colors, x_ticks=x_ticks,
                              xlabel="n", ylabel=ylabel,
-                             title=f"{title} {k}-split approaches using {solver} with respect to n (inkl. k-split GCS-Q (at most))")
+                             title=f"{title} all our {k}-split approaches using {solver}")
                     function(algorithm_names=names[:4], values=avgs_list_it[:4],
                                               std_devs=stds_list_it[:4], colors=colors[:4], x_ticks=x_ticks,
                                               xlabel="n", ylabel=ylabel,
-                                              title=f"{title} {k}-split approaches using {solver} with respect to n")
+                                              title=f"{title} our {k}-split approaches using {solver}")
                     function(algorithm_names=names[:3], values=avgs_list_it[:3],
                                               std_devs=stds_list_it[:3], colors=colors[:3], x_ticks=x_ticks,
                                               xlabel="n", ylabel=ylabel,
-                                              title=f"{title} {k}-split approaches using {solver} with respect to n (3)")
+                                              title=f"{title} our {k}-split approaches using {solver} (3)")
                     function(algorithm_names=names[1:3], values=avgs_list_it[1:3],
                                               std_devs=stds_list_it[1:3], colors=colors[1:3], x_ticks=x_ticks,
                                               xlabel="n", ylabel=ylabel,
-                                              title=f"{title} {k}-split approaches using {solver} with respect to n (4)")
+                                              title=f"{title} our {k}-split approaches using {solver} (4)")
                 elif solver == "dwave":
                     function(algorithm_names=names[:4], values=avgs_list_it[:4],
                                               std_devs=stds_list_it[:4], colors=colors[:4], x_ticks=x_ticks,
                                               xlabel="n", ylabel=ylabel,
-                                              title=f"{title} {k}-split approaches using {solver} with respect to n")
+                                              title=f"{title} our {k}-split approaches using {solver}")
                 elif solver == "qaoa":
                     function(algorithm_names=names, values=avgs_list_it,
                              std_devs=stds_list_it, colors=colors, x_ticks=x_ticks,
                              xlabel="n", ylabel=ylabel,
-                             title=f"{title} {k}-split approaches using {solver} with respect to n")
+                             title=f"{title} our {k}-split approaches using {solver}")
 
     algorithm_names_iterative = ["iterative Kochenberger", "our iterative approach", "iterative R-QUBO",
                                  "k-split GCS-Q (exactly)", "k-split GCS-Q (at most)"]
@@ -1004,20 +1021,20 @@ def plot_over_graph_sizes(averages_dict, stds_dict, solver, ylabel, title, funct
             function(algorithm_names=names, values=avgs_list_it,
                                       std_devs=stds_list_it, colors=colors, x_ticks=graph_sizes,
                                       xlabel="n", ylabel=ylabel,
-                                      title=f"{title} {algorithm_names_iterative[i]} using {solver} with respect to n (2)")
+                                      title=f"{title} {algorithm_names_iterative[i]} using {solver} (2)")
             function(algorithm_names=names[1:], values=avgs_list_it[1:],
                                       std_devs=stds_list_it[1:], colors=colors[1:], x_ticks=graph_sizes,
                                       xlabel="n", ylabel=ylabel,
-                                      title=f"{title} {algorithm_names_iterative[i]} using {solver} with respect to n")
+                                      title=f"{title} {algorithm_names_iterative[i]} using {solver}")
             function(algorithm_names=names[2:], values=avgs_list_it[2:],
                                       std_devs=stds_list_it[2:], colors=colors[2:], x_ticks=graph_sizes,
                                       xlabel="n", ylabel=ylabel,
-                                      title=f"{title} {algorithm_names_iterative[i]} using {solver} with respect to n (3)")
+                                      title=f"{title} {algorithm_names_iterative[i]} using {solver} (3)")
         else:
             function(algorithm_names=names, values=avgs_list_it,
                      std_devs=stds_list_it, colors=colors, x_ticks=graph_sizes,
                      xlabel="n", ylabel=ylabel,
-                     title=f"{title} {algorithm_names_iterative[i]} using {solver} with respect to n")
+                     title=f"{title} {algorithm_names_iterative[i]} using {solver}")
 
     # total best
     if solver == "qbsolv":
@@ -1033,17 +1050,17 @@ def plot_over_graph_sizes(averages_dict, stds_dict, solver, ylabel, title, funct
                  std_devs=stds_list_all[1:], colors=colors_all[1:],
                  x_ticks=graph_sizes,
                  xlabel="n", ylabel=ylabel,
-                 title=f"{title} the best approaches using {solver} with respect to n")
+                 title=f"{title} the best approaches using {solver}")
         function(algorithm_names=algorithm_names_all[3:], values=avgs_list_all[3:],
                                   std_devs=stds_list_all[3:], colors=colors_all[3:],
                                   x_ticks=graph_sizes,
                                   xlabel="n", ylabel=ylabel,
-                                  title=f"{title} the best approaches using {solver} with respect to n (2)")
+                                  title=f"{title} the best approaches using {solver} (2)")
         function(algorithm_names=algorithm_names_all, values=avgs_list_all,
                                   std_devs=stds_list_all, colors=colors_all,
                                   x_ticks=graph_sizes,
                                   xlabel="n", ylabel=ylabel,
-                                  title=f"{title} the best approaches using {solver} with respect to n (+ GCS-Q)")
+                                  title=f"{title} the best approaches using {solver} (& GCS-Q)")
     else:
         # total best (at least for QAOA and D-Wave)
         algorithm_names_all_1 = [f"GCS-Q", "iterative R-QUBO (2-split)"]
@@ -1057,7 +1074,7 @@ def plot_over_graph_sizes(averages_dict, stds_dict, solver, ylabel, title, funct
                  std_devs=stds_list_all, colors=colors_all,
                  x_ticks=graph_sizes,
                  xlabel="n", ylabel=ylabel,
-                 title=f"{title} the best approaches using {solver} with respect to n")
+                 title=f"{title} the best approaches using {solver}")
 
 
 def plot_over_graph_sizes_with_classical_baseline(averages_dict, stds_dict, solver, ylabel, title, function, classical):
@@ -1087,7 +1104,7 @@ def plot_over_graph_sizes_with_classical_baseline(averages_dict, stds_dict, solv
     function(algorithm_names=names, values=avgs_list_non_it,
              std_devs=stds_list_non_it, colors=colors, x_ticks=graph_sizes,
              xlabel="n", ylabel=ylabel,
-             title=f"{title} non-iterative approaches using {solver} with respect to n")
+             title=f"{title} our non-iterative approaches using {solver}")
 
     algorithm_names_iterative = ["Belyi", "GCS-Q", "iterative Kochenberger", "our iterative approach", "iterative R-QUBO",
                                  "k-split GCS-Q (exactly)", "k-split GCS-Q (at most)"]
@@ -1106,7 +1123,7 @@ def plot_over_graph_sizes_with_classical_baseline(averages_dict, stds_dict, solv
     function(algorithm_names=names, values=avgs_list_it,
              std_devs=stds_list_it, colors=colors, x_ticks=x_ticks,
              xlabel="n", ylabel=ylabel,
-             title=f"{title} {k}-split approaches using {solver} with respect to n")
+             title=f"{title} our {k}-split approaches using {solver}")
 
     if solver == "qaoa":
         for k in [3,4]:
@@ -1129,7 +1146,7 @@ def plot_over_graph_sizes_with_classical_baseline(averages_dict, stds_dict, solv
             function(algorithm_names=names, values=avgs_list_it,
                      std_devs=stds_list_it, colors=colors, x_ticks=x_ticks,
                      xlabel="n", ylabel=ylabel,
-                     title=f"{title} {k}-split approaches using {solver} with respect to n")
+                     title=f"{title} our {k}-split approaches using {solver}")
 
     # total best (at least for QBSolv)
     if solver == "qbsolv":
@@ -1144,7 +1161,7 @@ def plot_over_graph_sizes_with_classical_baseline(averages_dict, stds_dict, solv
                                   std_devs=stds_list_all, colors=colors_all,
                                   x_ticks=graph_sizes,
                                   xlabel="n", ylabel=ylabel,
-                                  title=f"{title} the best approaches using {solver} with respect to n (+ GCS-Q)")
+                                  title=f"{title} the best approaches using {solver} (& GCS-Q)")
     else:
         # total best (at least for QAOA and D-Wave)
         algorithm_names_all_1 = ["Belyi", f"GCS-Q", "iterative R-QUBO (2-split)"]
@@ -1158,7 +1175,7 @@ def plot_over_graph_sizes_with_classical_baseline(averages_dict, stds_dict, solv
                  std_devs=stds_list_all, colors=colors_all,
                  x_ticks=graph_sizes,
                  xlabel="n", ylabel=ylabel,
-                 title=f"{title} the best approaches using {solver} with respect to n")
+                 title=f"{title} the best approaches using {solver}")
 
 
 
@@ -1174,7 +1191,7 @@ if __name__ == "__main__":
     # data_path = "results/eon_data/quantum/qbsolv/parallel/k=12/data_12_split_GCSQ_exactly_qbsolv_parallel__3949468976__2024-01-26_13-12-53.747804.pkl"
     # data = read_pickle_data(data_path)
     # print(data)
-    data_path = "results/eon_data/quantum/qaoa"
+    data_path = "results/eon_data/quantum/dwave"
     solver = [solver for solver in ["qbsolv", "qaoa", "dwave", "classical"] if solver in data_path][0]
     data_path_optima = "results/eon_data/classical"
     data_different_seeds = process_folder(data_path)
@@ -1322,9 +1339,9 @@ if __name__ == "__main__":
                           compare_ks_GCSQ_exactly(copy_times_std),
                           compare_ks_GCSQ_at_most(copy_times_std)]
     x_ticks = list(range(2, 28))[:len(averages_list_rel[0])]
-    plot_line_chart(algorithm_names=algorithm_names, values=averages_list_rel, x_ticks=x_ticks, colors=colors, xlabel="k", ylabel="Relative solution quality", title=f"Relative solution quality of k-split approaches using {solver}")
+    plot_line_chart(algorithm_names=algorithm_names, values=averages_list_rel, x_ticks=x_ticks, colors=colors, xlabel="k", ylabel="Relative solution quality", title=f"Relative solution quality of our k-split approaches using {solver}")
     # num optima found
-    plot_vertical_lines_chart(algorithm_names=algorithm_names, values=averages_list_opt, x_ticks=x_ticks,colors=colors,xlabel="k",ylabel="Average number of optima found per graph size",title=f"Average number of optima found of k-split approaches using {solver}")
+    plot_vertical_lines_chart(algorithm_names=algorithm_names, values=averages_list_opt, x_ticks=x_ticks,colors=colors,xlabel="k",ylabel="Average number of optima found per graph size",title=f"Average number of optima found by our k-split approaches using {solver}")
 
     # absolute values
     for a, algorithm in enumerate(algorithm_names):
@@ -1349,6 +1366,7 @@ if __name__ == "__main__":
     # relative values
     print("Plotting relative values")
     plot_over_graph_sizes(rel_values_over_same_sized_graphs, stds_rel_values_over_same_sized_graphs, solver, "Relative solution quality", "Relative solution quality of", plot_line_chart_with_stds)
+
     # optima
     print("Plotting optima")
     plot_over_graph_sizes(optima_found_over_same_sized_graphs, stds_optima_found_over_same_sized_graphs, solver, "Number of optima found", "Number of optima found by", plot_vertical_lines_chart)

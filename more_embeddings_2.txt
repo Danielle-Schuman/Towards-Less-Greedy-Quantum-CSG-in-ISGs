@@ -1,0 +1,339 @@
+                    Measuring embedding of 3_split_R_QUBO-iterative_dwave_parallel for graph_size 26 for graph 7 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-04-10_10-13-25.467572
+                    Physical qubits:  360
+None
+                    Measuring embedding of 3_split_R_QUBO-iterative_dwave_parallel for graph_size 26 for graph 8 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-04-10_10-13-49.987571
+                    Physical qubits:  368
+None
+                    Measuring embedding of 3_split_R_QUBO-iterative_dwave_parallel for graph_size 26 for graph 9 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-04-10_10-14-02.809414
+                    Physical qubits:  354
+None
+                    Measuring embedding of 3_split_R_QUBO-iterative_dwave_parallel for graph_size 26 for graph 10 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-04-10_10-14-16.552224
+                    Physical qubits:  350
+None
+                    Measuring embedding of 3_split_R_QUBO-iterative_dwave_parallel for graph_size 26 for graph 11 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-04-10_10-14-40.036195
+                    Physical qubits:  373
+None
+                    Measuring embedding of 3_split_R_QUBO-iterative_dwave_parallel for graph_size 26 for graph 12 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-04-10_10-14-57.443150
+                    Physical qubits:  332
+None
+                    Measuring embedding of 3_split_R_QUBO-iterative_dwave_parallel for graph_size 26 for graph 13 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-04-10_10-15-14.433040
+                    Physical qubits:  417
+None
+                    Measuring embedding of 3_split_R_QUBO-iterative_dwave_parallel for graph_size 26 for graph 14 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-04-10_10-15-28.954762
+                    Physical qubits:  327
+None
+                    Measuring embedding of 3_split_R_QUBO-iterative_dwave_parallel for graph_size 26 for graph 15 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-04-10_10-15-45.685393
+                    Physical qubits:  357
+None
+                    Measuring embedding of 3_split_R_QUBO-iterative_dwave_parallel for graph_size 26 for graph 16 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-04-10_10-16-04.534180
+                    Physical qubits:  378
+None
+                    Measuring embedding of 3_split_R_QUBO-iterative_dwave_parallel for graph_size 26 for graph 17 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-04-10_10-16-20.361231
+                    Physical qubits:  347
+None
+                    Measuring embedding of 3_split_R_QUBO-iterative_dwave_parallel for graph_size 26 for graph 18 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-04-10_10-16-36.871861
+                    Physical qubits:  402
+None
+                    Measuring embedding of 3_split_R_QUBO-iterative_dwave_parallel for graph_size 26 for graph 19 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-04-10_10-16-58.534764
+                    Physical qubits:  385
+None
+                    Measuring embedding of 3_split_R_QUBO-iterative_dwave_parallel for graph_size 28 for graph 0 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-04-10_10-17-22.246513
+                    Physical qubits:  454
+None
+                    Measuring embedding of 3_split_R_QUBO-iterative_dwave_parallel for graph_size 28 for graph 1 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-04-10_10-17-37.500218
+                    Physical qubits:  417
+None
+                    Measuring embedding of 3_split_R_QUBO-iterative_dwave_parallel for graph_size 28 for graph 2 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-04-10_10-17-53.318822
+                    Physical qubits:  378
+None
+                    Measuring embedding of 3_split_R_QUBO-iterative_dwave_parallel for graph_size 28 for graph 3 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-04-10_10-18-14.578405
+                    Physical qubits:  467
+None
+                    Measuring embedding of 3_split_R_QUBO-iterative_dwave_parallel for graph_size 28 for graph 4 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-04-10_10-18-35.188745
+                    Physical qubits:  399
+None
+                    Measuring embedding of 3_split_R_QUBO-iterative_dwave_parallel for graph_size 28 for graph 5 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-04-10_10-18-50.397828
+                    Physical qubits:  433
+None
+                    Measuring embedding of 3_split_R_QUBO-iterative_dwave_parallel for graph_size 28 for graph 6 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-04-10_10-19-05.174990
+                    Physical qubits:  401
+None
+                    Measuring embedding of 3_split_R_QUBO-iterative_dwave_parallel for graph_size 28 for graph 7 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-04-10_10-19-27.729673
+                    Physical qubits:  432
+None
+                    Measuring embedding of 3_split_R_QUBO-iterative_dwave_parallel for graph_size 28 for graph 8 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-04-10_10-19-45.527003
+                    Physical qubits:  430
+None
+                    Measuring embedding of 3_split_R_QUBO-iterative_dwave_parallel for graph_size 28 for graph 9 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-04-10_10-20-09.777990
+                    Physical qubits:  412
+None
+                    Measuring embedding of 3_split_R_QUBO-iterative_dwave_parallel for graph_size 28 for graph 10 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-04-10_10-20-28.125862
+                    Physical qubits:  380
+None
+                    Measuring embedding of 3_split_R_QUBO-iterative_dwave_parallel for graph_size 28 for graph 11 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-04-10_10-20-49.776645
+                    Physical qubits:  377
+None
+                    Measuring embedding of 3_split_R_QUBO-iterative_dwave_parallel for graph_size 28 for graph 12 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-04-10_10-21-14.239873
+                    Physical qubits:  422
+None
+                    Measuring embedding of 3_split_R_QUBO-iterative_dwave_parallel for graph_size 28 for graph 13 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-04-10_10-21-29.435889
+                    Physical qubits:  422
+None
+                    Measuring embedding of 3_split_R_QUBO-iterative_dwave_parallel for graph_size 28 for graph 14 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-04-10_10-21-59.492268
+                    Physical qubits:  416
+None
+                    Measuring embedding of 3_split_R_QUBO-iterative_dwave_parallel for graph_size 28 for graph 15 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-04-10_10-22-14.998805
+                    Physical qubits:  392
+None
+                    Measuring embedding of 3_split_R_QUBO-iterative_dwave_parallel for graph_size 28 for graph 16 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-04-10_10-22-35.376109
+                    Physical qubits:  406
+None
+                    Measuring embedding of 3_split_R_QUBO-iterative_dwave_parallel for graph_size 28 for graph 17 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-04-10_10-22-54.663771
+                    Physical qubits:  426
+None
+                    Measuring embedding of 3_split_R_QUBO-iterative_dwave_parallel for graph_size 28 for graph 18 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-04-10_10-23-16.080679
+                    Physical qubits:  401
+None
+                    Measuring embedding of 3_split_R_QUBO-iterative_dwave_parallel for graph_size 28 for graph 19 ...
+                    Searching for embedding...
+                        Saved embedding at 2024-04-10_10-23-29.224151
+                    Physical qubits:  406
+None
+Seed: 0
+
+
+
+Test for graphsize 26
+
+
+     Graph 7
+
+          Running 3_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 8
+
+          Running 3_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 9
+
+          Running 3_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 10
+
+          Running 3_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 11
+
+          Running 3_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 12
+
+          Running 3_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 13
+
+          Running 3_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 14
+
+          Running 3_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 15
+
+          Running 3_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 16
+
+          Running 3_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 17
+
+          Running 3_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 18
+
+          Running 3_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 19
+
+          Running 3_split_R_QUBO-iterative_dwave_parallel...
+
+
+
+Test for graphsize 28
+
+
+     Graph 0
+
+          Running 3_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 1
+
+          Running 3_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 2
+
+          Running 3_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 3
+
+          Running 3_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 4
+
+          Running 3_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 5
+
+          Running 3_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 6
+
+          Running 3_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 7
+
+          Running 3_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 8
+
+          Running 3_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 9
+
+          Running 3_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 10
+
+          Running 3_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 11
+
+          Running 3_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 12
+
+          Running 3_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 13
+
+          Running 3_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 14
+
+          Running 3_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 15
+
+          Running 3_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 16
+
+          Running 3_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 17
+
+          Running 3_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 18
+
+          Running 3_split_R_QUBO-iterative_dwave_parallel...
+
+
+     Graph 19
+
+          Running 3_split_R_QUBO-iterative_dwave_parallel...

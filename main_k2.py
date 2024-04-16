@@ -167,7 +167,8 @@ def main(algorithm_list, data, graph_sizes, num_graphs_per_size, experiment, dir
 if __name__ == "__main__":
     # TODO: Determine sensible number of seeds for statistical significance
     #seeds = [3949468976]
-    seeds = [2223921875, 1665964778, 1980386705, 1364436995, 2881126339]
+    #seeds = [2223921875, 1665964778, 1980386705, 1364436995, 2881126339]
+    seeds = [2881126339, 1364436995, 1980386705, 1665964778]
     #seeds = [3949468976, 2223921875, 1665964778, 1980386705, 1364436995, 2881126339, 2777013863, 3875681486, 4038098247, 3748732874]
     for seed in seeds:
         # Setting the seed

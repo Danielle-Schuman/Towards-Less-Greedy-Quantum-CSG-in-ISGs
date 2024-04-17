@@ -68,6 +68,7 @@ Graph ReadFromEdgelist(const string& file_name, double mod_resolution, bool trea
 	file.close();
 	bool is_directed;
 
+    // This if-statement has been added by Daniëlle Schuman (translated from Python with ChatGPT)
 	if (file_name.find("eon") != std::string::npos) {
     	is_directed = false;
 	} else {

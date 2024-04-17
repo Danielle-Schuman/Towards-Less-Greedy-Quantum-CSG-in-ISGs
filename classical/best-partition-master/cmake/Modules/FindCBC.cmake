@@ -1,3 +1,5 @@
+# The contents of this file have been adapted by Daniëlle Schuman
+
 # - Try to find CBC
 # Once done this will define
 #  CBC_FOUND           - System has CBC

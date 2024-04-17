@@ -143,6 +143,7 @@ int run_CPP_rw_test_nets(int test_set, bool compare_with_ILP = false, int num_co
 	return 0;
 }
 
+// This method has been added by Daniëlle Schuman
 int run_eon_data(int test_set, bool compare_with_ILP = false, int num_combo_runs = 2, int text_level = 0)
 {
 	string path = TESTS_FOLDER+"eon_data_edgelists/";

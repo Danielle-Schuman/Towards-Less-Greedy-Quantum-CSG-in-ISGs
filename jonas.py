@@ -4,11 +4,13 @@ import numpy as np
 from algorithm import QuantumAlgorithm
 
 
+# the methods in this class is mostly based on code by Jonas Nüßlein
 class Jonas(QuantumAlgorithm):
     def __init__(self, seed,  num_graph_sizes, solver="qbsolv", num_coalitions=None, timeout=600):
         super().__init__(seed=seed,  num_graph_sizes=num_graph_sizes, solver=solver, num_coalitions=num_coalitions, timeout=timeout)
         self.name = f"ours_n_half_{self.solver}"
 
+    # based on code by Jonas Nüßlein
     def solve(self, num_agents, edges):
         if not self.num_coalitions:  # self.num_coalitions is still None
             self.num_coalitions = num_agents // 2

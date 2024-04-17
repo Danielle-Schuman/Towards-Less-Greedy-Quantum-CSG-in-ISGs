@@ -26,6 +26,9 @@ for num_agents in graph_sizes:
 # Also, while we are at it anyway, determine some stats on the graph weights
 max = 0
 min = 0
+zero_weighted = 0
+positive = 0
+negative = 0
 list = []
 for key, graph_size_list in data.items():
     for graph_list in graph_size_list:
@@ -35,8 +38,15 @@ for key, graph_size_list in data.items():
             elif value > max:
                 max = value
             list.append(value)
-print(min, max)
+            if value > 0:
+                positive = positive + 1
+            elif value < 0:
+                negative = negative + 1
+            elif value == 0:
+                zero_weighted = zero_weighted + 1
+print(f"Max: {max}, Min: {min}")
 list = np.array(list)
 avg = np.mean(list)
 std = np.std(list)
-print(avg, std)
+print(f"Average: {avg}, Std: {std}")
+print(f"Zero-weighted: {zero_weighted}, positive: {positive}, negative: {negative}; non-zero-weighted: {positive + negative}")

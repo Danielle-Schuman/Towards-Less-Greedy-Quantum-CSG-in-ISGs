@@ -1,8 +1,8 @@
-# Code for the thesis "Towards Less Greedy Quantum Coalition Structure Generation in Induced Subgraph Games"
+# Code for the paper "Towards Less Greedy Quantum Coalition Structure Generation in Induced Subgraph Games"
 
-This project contains the code for the master's thesis entitled 
+This project contains the code for the paper entitled 
 "Towards Less Greedy Quantum Coalition Structure Generation in Induced Subgraph Games"
-which was written by Daniëlle Schuman.
+which was written by Jonas Nüßlein, Daniëlle Schuman, David Bucher, et al.
 
 Most parts of the code in this project have been written by Daniëlle Schuman as well, with a few exceptions:
 - Some methods in this project have been written by, or are adapted from, Code written by Jonas Nüßlein. These Methods are marked accordingly.

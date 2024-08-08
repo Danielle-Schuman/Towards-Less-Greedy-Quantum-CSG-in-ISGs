@@ -17,7 +17,7 @@ def plotting_comparisons(averages_dict, stds_dict, ylabel, title, function):
         stds_list_non_it, _, _ = adjust_lists_with_existing(stds_dict, algorithm_keys_non_iterative[a], labels_template, colors_template)
         function(algorithm_names=names, values=avgs_list_non_it,
                                   std_devs=stds_list_non_it, colors=colors, x_ticks=graph_sizes,
-                                  xlabel="n", ylabel=ylabel,
+                                  xlabel="$n \in \mathbb{N}$", ylabel=ylabel,
                                   title=f"{title} {algorithm_name}")
 
     # iterative algorithms
@@ -48,7 +48,7 @@ def plotting_comparisons(averages_dict, stds_dict, ylabel, title, function):
                 x_ticks = graph_sizes
             function(algorithm_names=names, values=avgs_list_it,
                                           std_devs=stds_list_it, colors=colors, x_ticks=x_ticks,
-                                          xlabel="n", ylabel=ylabel,
+                                          xlabel="$n \in \mathbb{N}$", ylabel=ylabel,
                                           title=f"{title} {k}-split {algorithm_name}")
 
     # with best k's for solvers
@@ -67,7 +67,7 @@ def plotting_comparisons(averages_dict, stds_dict, ylabel, title, function):
                                                         labels_template, colors_template)
         function(algorithm_names=names, values=avgs_list_it,
                  std_devs=stds_list_it, colors=colors, x_ticks=graph_sizes,
-                 xlabel="n", ylabel=ylabel,
+                 xlabel="$n \in \mathbb{N}$", ylabel=ylabel,
                  title=f"{title} the best {algorithm_name} variant")
 
     # total best
@@ -82,7 +82,7 @@ def plotting_comparisons(averages_dict, stds_dict, ylabel, title, function):
                                                     algorithm_names_best, colors_best)
     function(algorithm_names=names, values=avgs_list_it,
              std_devs=stds_list_it, colors=colors, x_ticks=graph_sizes,
-             xlabel="n", ylabel=ylabel,
+             xlabel="$n \in \mathbb{N}$", ylabel=ylabel,
              title=f"{title} the best algorithm variants")
 
 
@@ -105,7 +105,7 @@ def plotting_comparisons_with_classical_baseline(averages_dict, stds_dict, ylabe
                                                         colors_template)
     function(algorithm_names=names, values=avgs_list_non_it,
              std_devs=stds_list_non_it, colors=colors, x_ticks=graph_sizes,
-             xlabel="n", ylabel=ylabel,
+             xlabel="$n \in \mathbb{N}$", ylabel=ylabel,
              title=f"{title} GCS-Q")
 
     # with best k's for solvers
@@ -119,7 +119,7 @@ def plotting_comparisons_with_classical_baseline(averages_dict, stds_dict, ylabe
                                                     labels_template, colors_template)
     function(algorithm_names=names, values=avgs_list_it,
              std_devs=stds_list_it, colors=colors, x_ticks=graph_sizes,
-             xlabel="n", ylabel=ylabel,
+             xlabel="$n \in \mathbb{N}$", ylabel=ylabel,
              title=f"{title} the best iterative R-QUBO variant")
 
     # total best
@@ -137,8 +137,37 @@ def plotting_comparisons_with_classical_baseline(averages_dict, stds_dict, ylabe
                                                     algorithm_names_best, colors_best)
     function(algorithm_names=names, values=avgs_list_it,
              std_devs=stds_list_it, colors=colors, x_ticks=graph_sizes,
-             xlabel="n", ylabel=ylabel,
+             xlabel="$n \in \mathbb{N}$", ylabel=ylabel,
              title=f"{title} the best algorithm variants")
+
+    # for paper
+    algorithm_names_best = ["GCS-Q (qb)", "4-split it. Kochenb. (qb)", "ZEnS (qb)", "4-split it. ZEnS (qb)", "R-QUBO (qb)", "4-split it. R-QUBO (qb)",
+                            "GCS-Q (dw)", "2-split it. Kochenb. (dw)", "2-split it. ZEnS (dw)", "2-split it. R-QUBO (dw)", "Belyi"]
+    algorithm_keys_best = ["GCS-Q_qbsolv_parallel", "4_split_ours_iterative_exactly_qbsolv_parallel", "ours_n_half_qbsolv", "4_split_ours_iterative_at_most_qbsolv_parallel", "R-QUBO_qbsolv", "4_split_R_QUBO-iterative_qbsolv_parallel",
+                           "GCS-Q_dwave_parallel", "2_split_ours_iterative_exactly_dwave_parallel", "2_split_ours_iterative_at_most_dwave_parallel", "2_split_R_QUBO-iterative_dwave_parallel", "belyi"]
+    colors_best = ["C4", "C9", "C1", "C5", "C2", "C8", "C6", "C0", "C7", "C3", "0.8"]
+    avgs_list_it, names, colors = adjust_lists_with_existing(averages_dict, algorithm_keys_best,
+                                                             algorithm_names_best,
+                                                             colors_best)
+    stds_list_it, _, _ = adjust_lists_with_existing(stds_dict, algorithm_keys_best,
+                                                    algorithm_names_best, colors_best)
+    function(algorithm_names=names, values=avgs_list_it,
+             std_devs=stds_list_it, colors=colors, x_ticks=graph_sizes,
+             xlabel="$n \in \mathbb{N}$", ylabel=ylabel,
+             title=f"{title} our best approaches (& GCS-Q)")
+
+
+def plotting_ks(averages_list, ylabel, title):
+    # for paper
+    names = ["it. Kochenb. (qb)", "it. ZEnS (qb)", "it. R-QUBO (qb)", "k-split GCS-Q (qb)",
+                            "it. Kochenb. (dw)", "it. ZEnS (dw)", "it. R-QUBO (dw)", "k-split GCS-Q (dw)"]
+    colors = ["C9", "C5", "C8", "C4", "C0", "C7", "C3", "C6"]
+    x_ticks = list(range(2, 28))[:len(averages_list[0])]
+    averages_list = pad_with_nan(averages_list, len(x_ticks))
+    plot_line_chart(algorithm_names=names, values=averages_list,
+             std_devs=None, colors=colors, x_ticks=x_ticks,
+             xlabel="k", ylabel=ylabel,
+             title=f"{title} (& GCS-Q)")
 
 
 if __name__ == "__main__":
@@ -151,7 +180,7 @@ if __name__ == "__main__":
     optima_summed = [sum(l) for l in optima_list]
 
     data_path_root = "results/eon_data/quantum/"
-    solvers = ["qbsolv", "dwave", "qaoa"]
+    solvers = ["qbsolv", "dwave"] #, "qaoa"]
     times_summed = {}
     stds_times_summed = {}
     rel_values_over_same_sized_graphs, stds_rel_values_over_same_sized_graphs = {}, {}
@@ -160,6 +189,8 @@ if __name__ == "__main__":
     percent_feasible_over_same_sized_graphs, stds_percent_feasible_over_same_sized_graphs = {}, {}
     optima_found_over_same_sized_graphs = {}
     stds_optima_found_over_same_sized_graphs = {}
+    averages_list_rel = []
+    averages_list_opt = []
 
     for solver in solvers:
         data_path = data_path_root + solver
@@ -183,6 +214,11 @@ if __name__ == "__main__":
             relative_values)
         rel_values_over_same_sized_graphs.update(rel_values_over_same_sized_graphs_this_solver)
         stds_rel_values_over_same_sized_graphs.update(stds_rel_values_over_same_sized_graphs_this_solver)
+        rel_values_over_graph_sizes = average_over_graph_sizes(rel_values_over_same_sized_graphs_this_solver)
+        averages_list_rel.extend([compare_ours_iterative_exactly(rel_values_over_graph_sizes),
+                             compare_ours_iterative_at_most(rel_values_over_graph_sizes),
+                             compare_r_qubo_iterative(rel_values_over_graph_sizes),
+                             compare_ks_GCSQ_exactly(rel_values_over_graph_sizes)])
 
         # Num solutions
         nums_successful_over_same_sized_graphs_this_solver, std_num_over_same_sized_graphs_this_solver = average_over_same_sized_graphs(
@@ -203,8 +239,14 @@ if __name__ == "__main__":
         optima_found_dict = optimum_found(feasible_data_different_seeds, optima_list)
         avg_optima_found_over_seeds, std_optima_found_over_seeds, _, _, _, _ = calculate_statistics_over_seeds(
             optima_found_dict)
-        optima_found_over_same_sized_graphs.update(sum_over_same_sized_graphs(avg_optima_found_over_seeds))
+        num_optima_this_solver = sum_over_same_sized_graphs(avg_optima_found_over_seeds)
+        optima_found_over_same_sized_graphs.update(num_optima_this_solver)
         stds_optima_found_over_same_sized_graphs.update(sum_over_same_sized_graphs(std_optima_found_over_seeds))
+        num_opt_found_avg_over_graph_sizes = average_over_graph_sizes(num_optima_this_solver)
+        averages_list_opt.extend([compare_ours_iterative_exactly(num_opt_found_avg_over_graph_sizes),
+                             compare_ours_iterative_at_most(num_opt_found_avg_over_graph_sizes),
+                             compare_r_qubo_iterative(num_opt_found_avg_over_graph_sizes),
+                             compare_ks_GCSQ_exactly(num_opt_found_avg_over_graph_sizes)])
 
     # plot over graph sizes
     # num solutions found
@@ -226,7 +268,7 @@ if __name__ == "__main__":
     # relative values
     print("Plotting relative values")
     plotting_comparisons(rel_values_over_same_sized_graphs, stds_rel_values_over_same_sized_graphs,
-                         "Relative solution quality", "Relative solution quality of", plot_line_chart_with_stds)
+                         "Approximation ratio", "Approximation ratio of", plot_line_chart_with_stds)
     # optima
     print("Plotting optima")
     plotting_comparisons(optima_found_over_same_sized_graphs, stds_optima_found_over_same_sized_graphs,
@@ -235,9 +277,14 @@ if __name__ == "__main__":
     # time taken
     print("Plotting time")
     plotting_comparisons(times_summed, stds_times_summed,
-                          "Time (in seconds)", "Time taken by", plot_line_chart_with_stds)
+                          "Time (in seconds)", "Runtime of", plot_line_chart_with_stds)
     plotting_comparisons_with_classical_baseline(times_summed, stds_times_summed,
-                                                  "Time (in seconds)", "Time taken by", plot_line_chart_with_stds,
+                                                  "Wall clock time (in seconds)", "Runtime of", plot_line_chart_with_stds,
                                                   times_classical_summed)
+
+    # plotting ks
+    print("Plotting ks")
+    plotting_ks(averages_list_rel, "Approximation ratio", "AR of our k-split approaches")
+    plotting_ks(averages_list_opt, "Average number of optima found per graph size", "Average NO by our k-split approaches")
 
     print("Done.")
